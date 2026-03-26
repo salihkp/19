@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- ===== Form View ===== -->
+        <record id="view_crops_tasks_template_form" model="ir.ui.view">
+            <field name="name">crops.tasks.template.form</field>
+            <field name="model">crops.tasks.template</field>
+            <field name="arch" type="xml">
+                <form string="Crop Task Template">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="task_id"/>
+                            </group>
+                            <group>
+                                <field name="crop_id"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Equipments" name="equipment_ids">
+                                <field name="equipment_ids"/>
+                            </page>
+
+                            <page string="Animals" name="animal_ids">
+                                <field name="animal_ids" widget="section_and_note_one2many" mode="list">
+                                    <form>
+                                        <sheet>
+                                            <group>
+                                                <group>
+                                                    <field name="partner_id"/>
+                                                    <field name="start_date"/>
+                                                </group>
+                                                <group>
+                                                    <field name="end_date"/>
+                                                    <field name="quantity"/>
+                                                    <field name="description"/>
+                                                </group>
+                                            </group>
+                                        </sheet>
+                                    </form>
+                                    <list string="Animals" editable="bottom">
+                                        <field name="partner_id"/>
+                                        <field name="start_date"/>
+                                        <field name="end_date"/>
+                                        <field name="quantity"/>
+                                        <field name="description"/>
+                                    </list>
+                                </field>
+                            </page>
+
+                            <page string="Fleets" name="fleet_ids">
+                                <field name="fleet_ids" widget="section_and_note_one2many" mode="list">
+                                    <form>
+                                        <sheet>
+                                            <group>
+                                                <group>
+                                                    <field name="vehicle_id"/>
+                                                    <field name="start_date"/>
+                                                </group>
+                                                <group>
+                                                    <field name="end_date"/>
+                                                    <field name="quantity"/>
+                                                    <field name="description"/>
+                                                </group>
+                                            </group>
+                                        </sheet>
+                                    </form>
+                                    <list string="Fleets" editable="bottom">
+                                        <field name="vehicle_id"/>
+                                        <field name="start_date"/>
+                                        <field name="end_date"/>
+                                        <field name="quantity"/>
+                                        <field name="description"/>
+                                    </list>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- ===== List View ===== -->
+        <record id="view_crops_tasks_template_list" model="ir.ui.view">
+            <field name="name">crops.tasks.template.list</field>
+            <field name="model">crops.tasks.template</field>
+            <field name="arch" type="xml">
+                <list string="Crop Task Templates">
+                    <field name="task_id"/>
+                    <field name="crop_id"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- ===== Search View (مبسّط مؤقتاً) ===== -->
+        <record id="view_crops_tasks_template_search" model="ir.ui.view">
+            <field name="name">crops.tasks.template.search</field>
+            <field name="model">crops.tasks.template</field>
+            <field name="arch" type="xml">
+                <search string="Crop Task Templates"/>
+            </field>
+        </record>
+
+        <!-- ===== Action ===== -->
+        <record model="ir.actions.act_window" id="action_crops_tasks_template">
+            <field name="name">Crop Process Templates</field>
+            <field name="res_model">crops.tasks.template</field>
+            <field name="view_mode">list,form</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- ===== Form View ===== -->
+        <record id="view_farmer_location_crop_form" model="ir.ui.view">
+            <field name="name">farmer.location.crops.form</field>
+            <field name="model">farmer.location.crops</field>
+            <field name="arch" type="xml">
+                <form string="Crop">
+                    <sheet>
+                        <field name="image" widget="image" class="oe_avatar"/>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="crop_period_start"/>
+                                <field name="crop_period_end"/>
+                            </group>
+                            <group>
+                                <field name="warehouse_id"/>
+                                <field name="location_id"/>
+                            </group>
+                        </group>
+
+                        <notebook>
+                            <!-- Crop Materials -->
+                            <page name="crops_materials" string="Crop Materials">
+                                <field name="crop_material_ids"
+                                       context="{'default_internal_type': 'material'}"
+                                       widget="section_and_note_one2many"
+                                       mode="list"/>
+                            </page>
+
+                            <!-- Crop Labours -->
+                            <page name="crops_labour" string="Crop Labours">
+                                <field name="crop_labour_ids"
+                                       context="{'default_internal_type': 'labour'}"
+                                       widget="section_and_note_one2many"
+                                       mode="list"/>
+                            </page>
+
+                            <!-- Crop Overheads -->
+                            <page name="crops_overhead" string="Crop Overheads">
+                                <field name="crop_overhead_ids"
+                                       context="{'default_internal_type': 'overhead'}"
+                                       widget="section_and_note_one2many"
+                                       mode="list"/>
+                            </page>
+
+                            <!-- Crop Diseases -->
+                            <page string="Crop Diseases" name="crops_dieases_ids">
+                                <field name="crops_dieases_ids"
+                                       widget="section_and_note_one2many"
+                                       mode="list"/>
+                            </page>
+
+                            <!-- Crop Processes -->
+                            <page string="Crop Processes" name="crop_task_ids">
+                                <field name="crop_task_ids"
+                                       widget="section_and_note_one2many"
+                                       mode="list"/>
+                            </page>
+
+                            <!-- Description -->
+                            <page string="Description">
+                                <field name="description"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- ===== List View ===== -->
+        <record id="view_farmer_location_crop_list" model="ir.ui.view">
+            <field name="name">farmer.location.crops.list</field>
+            <field name="model">farmer.location.crops</field>
+            <field name="arch" type="xml">
+                <list string="Crops">
+                    <field name="name"/>
+                    <field name="crop_period_start"/>
+                    <field name="crop_period_end"/>
+                    <field name="warehouse_id"/>
+                    <field name="location_id"/>
+                    <field name="description"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- ===== Search View (مبسّط جدًا) ===== -->
+        <record id="view_farmer_location_crop_search" model="ir.ui.view">
+            <field name="name">farmer.location.crops.search</field>
+            <field name="model">farmer.location.crops</field>
+            <field name="arch" type="xml">
+                <search string="Crops">
+                    <field name="name" string="Crop"/>
+                </search>
+            </field>
+        </record>
+
+        <!-- ===== Action ===== -->
+        <record id="action_farmer_location_crop" model="ir.actions.act_window">
+            <field name="name">Crops</field>
+            <field name="res_model">farmer.location.crops</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+    </data>
+</odoo>

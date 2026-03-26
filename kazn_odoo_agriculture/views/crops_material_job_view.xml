@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- ===== Form View ===== -->
+        <record id="view_crops_materials_job_form" model="ir.ui.view">
+            <field name="name">crops.materials.job.form</field>
+            <field name="model">crops.materials.job</field>
+            <field name="arch" type="xml">
+                <form string="Crop Materials Job">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="internal_type"/>
+                                <field name="crop_id"/>
+                                <field name="product_id"/>
+                            </group>
+                            <group>
+                                <field name="uom_id"/>
+                                <field name="quantity"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page name="internal_note" string="Internal Note">
+                                <field name="internal_note"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- ===== List View ===== -->
+        <record id="view_crops_materials_job_list" model="ir.ui.view">
+            <field name="name">crops.materials.job.list</field>
+            <field name="model">crops.materials.job</field>
+            <field name="arch" type="xml">
+                <list string="Crop Materials Job">
+                    <field name="internal_type"/>
+                    <field name="crop_id"/>
+                    <field name="product_id"/>
+                    <field name="uom_id"/>
+                    <field name="quantity"/>
+                    <field name="internal_note"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- ===== Search View (مبسّط جدًا حاليًا) ===== -->
+        <record id="view_crops_materials_job_search" model="ir.ui.view">
+            <field name="name">crops.materials.job.search</field>
+            <field name="model">crops.materials.job</field>
+            <field name="arch" type="xml">
+                <search string="Crop Materials Job"/>
+            </field>
+        </record>
+
+        <!-- ===== Action ===== -->
+        <record model="ir.actions.act_window" id="action_crops_materials_job">
+            <field name="name">Crops Materials Job</field>
+            <field name="res_model">crops.materials.job</field>
+            <field name="view_mode">list,form</field>
+        </record>
+    </data>
+</odoo>

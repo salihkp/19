@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_patner_view_inherited" model="ir.ui.view">
+        <field name="name">partner.view</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="priority" eval="20"/>
+        <field name="arch" type="xml">
+        <xpath expr="//page[@name='sales_purchases']" position="after">
+            <page name="farmer_deatils" string="Farmer Details">
+                <group name="container_row_2">
+                    <group>
+                        <field name="is_farmer"/>
+                        <field name="is_animal"/>
+                    </group>
+                    <group>
+                        <field name="is_location"/>
+                    </group>
+                </group>
+            </page>
+            <page name="crop_deatils" string="Crops" 
+                invisible="not is_location">
+                <field name='crop_ids'/>
+            </page>
+        </xpath>
+        <xpath expr="//button[@name='action_view_partner_invoices']" position="before"> <!-- odoo13 -->
+            <button name="action_open_location_map"
+               type="object"
+               class="oe_stat_button"
+               icon="fa-pencil-square-o"
+               string="Google Map"/>
+        </xpath>
+       </field>
+    </record>
+    <record id="res_patner_filter_view_inherited" model="ir.ui.view">
+        <field name="name">Filter View</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_res_partner_filter"/>
+        <field name="priority" eval="20"/>
+        <field name="arch" type="xml">
+        <xpath expr="//group/filter[@name='group_country']" position="after">
+            <filter name="Is Farmer?" domain="[('is_farmer','=',True)]" context="{'group_by':'is_farmer'}"/>
+            <filter name="Is Location?" domain="[('is_location','=',True)]" context="{'group_by':'is_location'}"/>
+        </xpath>
+       </field>
+    </record>
+    <record id="action_farmers_form" model="ir.actions.act_window">
+        <field name="name">Farmers</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">kanban,list,form</field>
+        <field name="context">{'default_is_farmer':1}</field>
+        <field name="domain">[('is_farmer','=',True)]</field>
+        <field name="search_view_id" ref="base.view_res_partner_filter"/>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            Create a new customer in your address book
+          </p><p>
+            Odoo helps you easily track all activities related to a customer.
+          </p>
+        </field>
+    </record>
+    <record id="action_locations_form" model="ir.actions.act_window">
+        <field name="name">Farm Locations</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">kanban,list,form</field>
+        <field name="context">{'default_is_location':1}</field>
+        <field name="domain">[('is_location','=',True)]</field>
+        <field name="search_view_id" ref="base.view_res_partner_filter"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new customer in your address book
+            </p><p>
+            Odoo helps you easily track all activities related to a customer.
+        </p>
+        </field>
+    </record>
+    <record id="action_animal_form" model="ir.actions.act_window">
+        <field name="name">Animals</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">kanban,list,form</field>
+        <field name="context">{'default_is_animal':1}</field>
+        <field name="domain">[('is_animal','=',True)]</field>
+        <field name="search_view_id" ref="base.view_res_partner_filter"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new customer in your address book
+            </p><p>
+            Odoo helps you easily track all activities related to a customer.
+        </p>
+        </field>
+    </record>
+    <record id="action_farmers_form_view1" model="ir.actions.act_window.view">
+        <field eval="0" name="sequence"/>
+        <field name="view_mode">kanban</field>
+        <field name="view_id" ref="base.res_partner_kanban_view"/>
+        <field name="act_window_id" ref="action_farmers_form"/>
+    </record>
+    <record id="action_farmers_form_view2" model="ir.actions.act_window.view">
+        <field eval="2" name="sequence"/>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="base.view_partner_form"/>
+        <field name="act_window_id" ref="action_farmers_form"/>
+    </record>
+    <record id="action_farmers_list_view1" model="ir.actions.act_window.view">
+        <field name="sequence" eval="1"/>
+        <field name="view_mode">list</field>
+        <field name="view_id" ref="base.view_partner_tree"/>
+        <field name="act_window_id" ref="action_farmers_form"/>
+    </record>
+</odoo>

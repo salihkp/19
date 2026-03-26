@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- ===== Form View ===== -->
+        <record id="view_crops_fleet_form" model="ir.ui.view">
+            <field name="name">crops.fleet.form</field>
+            <field name="model">crops.fleet</field>
+            <field name="arch" type="xml">
+                <form string="Crops Fleet">
+                    <sheet>
+                        <group>
+                            <!-- نستخدم حقل عام موجود في كل الموديلات -->
+                            <field name="display_name" readonly="1"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- ===== List View ===== -->
+        <record id="view_crops_fleet_list" model="ir.ui.view">
+            <field name="name">crops.fleet.list</field>
+            <field name="model">crops.fleet</field>
+            <field name="arch" type="xml">
+                <list string="Crops Fleet">
+                    <field name="display_name"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- ===== Search View (بسيط جداً) ===== -->
+        <record id="view_crops_fleet_search" model="ir.ui.view">
+            <field name="name">crops.fleet.search</field>
+            <field name="model">crops.fleet</field>
+            <field name="arch" type="xml">
+                <search string="Crops Fleet">
+                    <field name="display_name"/>
+                </search>
+            </field>
+        </record>
+
+        <!-- ===== Action ===== -->
+        <record model="ir.actions.act_window" id="action_crops_fleet">
+            <field name="name">Crops Fleet</field>
+            <field name="res_model">crops.fleet</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+    </data>
+</odoo>

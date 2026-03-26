@@ -1,0 +1,2047 @@
+<!------------------------------------------------ Enhanced Design For Kaizen Agriculture / Farm Management Module -------------------------------->
+<div class="container shadow px-40" style="padding-left: 0px; padding-right: 0px;">
+    <!-- Navbar -->
+       <div class="navbar navbar-expand-md navbar-light bg-white m-0">
+        <div class="container-fluid align-items-center p-2 m-0">
+            <a class="navbar-brand" href="index.html">
+                <img src="icon.png" width="80" height="80" ></a>
+            <div>
+                <ul class="nav nav-tabs ms-auto" id="myTab" style="background-color: #FFFFFF;" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <a aria-controls="overview" class="nav-link active" aria-bs-selected="true"
+                            style="color: #333; font-weight: 500px;" onMouseOver="this.style.color='#7F4994'"
+                            onMouseOut="this.style.color='#333'" href="#overview" id="overview-tab"
+                            data-bs-toggle="tab">Overview</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a aria-controls="features" aria-bs-selected="false" class="nav-link"
+                           style="color: #333; font-weight: 500px;" onMouseOver="this.style.color='#7F4994'"
+                            onMouseOut="this.style.color='#333'" href="#features" id="features-tab"
+                            data-bs-toggle="tab">Features</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a aria-controls="whyKaizen" class="nav-link" aria-bs-selected="false"
+                            style="color: #333; font-weight: 500px;" onMouseOver="this.style.color='#7F4994'"
+                            onMouseOut="this.style.color='#333'" href="#whyKaizen" id="whyKaizen-tab"
+                            data-bs-toggle="tab">Why Kaizen</a>
+                    </li>
+
+                </ul>
+
+            </div>
+            <a href="https://wa.me/+971566828386?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20services"
+                class="btn contact-btn ms-3"
+                style="background-color:#7F4994 ; color:white;font-weight:bold;border: none;  padding: 5px 15px;  border-radius: 5px;"
+                onMouseOver="this.style.color='#000000'" onMouseOut="this.style.color='#ffffff'"><i
+                    class="fa fa-brands fa-whatsapp"></i> +971 56 682 8386</a>
+        </div>
+    </div>
+    <div class="tab-content" id="myTabContent"
+         style="padding-right: 0px; padding-top: 20px; padding-bottom: 20px; border-radius: 0 20px 20px 0;">
+
+        <!-- Overview Tab -->
+        <section class="tab-pane active p-0 m-0" id="overview">
+            <!-- Banner -->
+            <section class="row" style="margin: 20px;">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <h4 style="color: #182023; margin-top: 20px; margin-bottom: 20px; font-size: 48px;">
+                        Kaizen Agriculture / Farm Management
+                        <br>
+                        <span style="color: #7F4994;">for Odoo</span>
+                    </h4>
+                    <p style="font-size: 16px; color: #182023;">
+                        Kaizen Agriculture / Farm Management by Kaizen Principles this module streamlines crop management for agricultural teams by automating key operations and centralizing data. It helps users manage crop seasons, resources, and project tasks efficiently, while also reducing manual effort. Administrators can create Crop Requests linked to seasonal tasks, assign resources such as animals, fleet, and equipment, and automatically generate project tasks for the entire team. Reminders for crop start and end dates are easily scheduled with a single click, ensuring timely follow-ups. The module's intuitive interface simplifies crop tracking, boosts operational efficiency, and ensures complete visibility without overwhelming users with complex workflows or redundant screens..
+                    </p>
+                    <p>
+                    &copy; 2025 Kaizen Principles
+                    </p>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <img width="100%" src="images/banner.png" >
+                </div>
+            </section>
+
+            <!-- Key Highlights -->
+            <section style="background-color: #7F4994; text-align: center; padding: 30px 0px;">
+                <h2 style="color: #ffffff; margin-bottom: 20px;">
+                    What's New in Kaizen Agriculture / Farm Management for Odoo
+                </h2>
+                <div class="d-flex justify-content-center flex-wrap">
+                    <div style="background-color: #7F4994; color: #ffffff; border-radius: 10px; margin: 5px; font-size: 0.9rem; padding: 10px 15px;">
+                        <img width="40px" height="40px" src="images/feature_icon1.png">
+                        <p style="color: #FFFFFF; font-size: 14px; font-weight: bold; margin-top: 10px;">
+                            Create and track crop requests with start and end dates
+                        </p>
+                    </div>
+                    <div style="background-color: #7F4994; color: #ffffff; border-radius: 10px; margin: 5px; font-size: 0.9rem; padding: 10px 15px;">
+                        <img width="40px" height="40px" src="images/feature_icon2.png">
+                        <p style="color: #FFFFFF; font-size: 14px; font-weight: bold; margin-top: 10px;">
+                            Automatically generate projects from crop requests
+                        </p>
+                    </div>
+                    <div class="d-flex justify-content-center flex-wrap">
+                        <div style="background-color: #7F4994; color: #ffffff; border-radius: 10px; margin: 5px; font-size: 0.9rem; padding: 10px 15px;">
+                            <img width="40px" height="40px" src="images/feature_icon3.png">
+                            <p style="color: #FFFFFF; font-size: 14px; font-weight: bold; margin-top: 10px;">
+                                Set reminders for crop start and end dates
+                            </p>
+                        </div>
+                        <div class="d-flex justify-content-center flex-wrap">
+                            <div style="background-color: #7F4994; color: #ffffff; border-radius: 10px; margin: 5px; font-size: 0.9rem; padding: 10px 15px;">
+                                <img width="40px" height="40px" src="images/feature_icon4.png" >
+                                <p style="color: #FFFFFF; font-size: 14px; font-weight: bold; margin-top: 10px;">
+                                    Link resources like animals, fleet, and equipment to tasks
+                                </p>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center flex-wrap">
+                            <div style="background-color: #7F4994; color: #ffffff; border-radius: 10px; margin: 5px; font-size: 0.9rem; padding: 10px 15px;">
+                                <img width="40px" height="40px" src="images/feature_icon5.png" >
+                                <p style="color: #FFFFFF; font-size: 14px; font-weight: bold; margin-top: 10px;">
+                                    Generate detailed reports on crops and project progress
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Call to Action / Contact -->
+            <section style="background-color: #FCF4FF; padding: 50px 15px;">
+                <div class="container d-flex flex-wrap align-items-center justify-content-between">
+                    <div class="col-md-6 text-center">
+                        <h2 style="font-size: 2rem; font-weight: bold; color: #333;">
+                            Kaizen Principles
+                            <br>
+                            <span style="color: #7F4994;">Your Partner</span>
+                        </h2>
+                        <p style="color: #182023; margin-bottom: 20px;">
+                            We're here to support your growth 24/7. Connect with our experts now.
+                        </p>
+                        <div class="gap-3 align-items-center">
+                            <a href="https://wa.me/+971566828386?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20services"
+                               class="btn btn-primary"
+                               style="background-color: #7F4994; border: none;">
+                               <i class="fa fa-brands fa-whatsapp"></i> +971 56 682 8386
+                            </a>
+                            <a href="mailto:sales@kaizenae.com"
+                               class="btn btn-outline-primary"
+                               style="background-color: #1C9CC7; border-color: #1C9CC7; color: #ffffff;"
+                               onMouseOver="this.style.color='#000000'"
+                               onMouseOut="this.style.color='#ffff'">
+                               <i class="fa fa-solid fa-envelope"></i> Mail Us
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-5 text-end align-items-center">
+                        <img height="300" style="max-width: 100%;" src="images/contact_us.png" alt="Contact Us">
+                    </div>
+                </div>
+            </section>
+        <!-- All Features -->
+            <section class="features-section" style="padding: 50px 15px;
+  background-color: #fff;">
+                <h2 style="font-size: 2rem;
+                color: #182023;
+                text-align: center;
+                font-weight: Bold;
+                margin-bottom: 40px;">All Features</h2>
+                <div>
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div style=" border: none;
+                            border-radius: 10px;
+                            padding: 10px 10px;
+                            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                            transition: transform 0.2s, box-shadow 0.2s;
+                            background-color: #EFF8FB;
+                            height: 260px;">
+                                <img style=" border-radius: 10px;
+                                height: 160px;
+                                object-fit: cover;
+                                width: 100%;" src="images/feature_img1.jpg">
+                                <div>
+                                    <h6 style="  font-size: 1rem;
+                                    margin: 15px 0;
+                                    color: #000000;">Crop Request Management: Create and track crop requests with start and end dates, linked to specific farm locations and resources.</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div style=" border: none;
+                            border-radius: 10px;
+                            padding: 10px 10px;
+                            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                            transition: transform 0.2s, box-shadow 0.2s;
+                            background-color: #EFF8FB;
+                            height: 260px;">
+                                <img style="
+                                border-radius: 10px;
+                                height: 160px;
+                                object-fit: cover;
+                                width: 100%;" src="images/feature_img2.jpg">
+                                <div>
+                                    <h6 style="  font-size: 1rem;
+                                    margin: 15px 0;
+                                    color: #000000;">Automated Project Creation: Convert crop requests into full-fledged projects, including tasks, animals, fleet, and equipment assignments</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div style=" border: none;
+                            border-radius: 10px;
+                            padding: 10px 10px;
+
+                            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                            transition: transform 0.2s, box-shadow 0.2s;
+                            background-color: #EFF8FB;
+                            height: 260px;">
+                                <img style="
+                                border-radius: 10px;
+                                height: 160px;
+                                object-fit: cover;
+                                width: 100%;" src="images/feature_img3.jpg">
+                                <div>
+                                    <h6 style="  font-size: 1rem;
+                                    margin: 15px 0;
+                                    color: #000000;">Timeline and Reminders: Automatically schedule reminders for crop start and end dates, helping users stay on track with critical milestones</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div style=" border: none;
+                            border-radius: 10px;
+                            padding: 10px 10px;
+
+                            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                            transition: transform 0.2s, box-shadow 0.2s;
+                            background-color: #EFF8FB;
+                            height: 260px;">
+                                <img style="
+                                border-radius: 10px;
+                                height: 160px;
+                                object-fit: cover;
+                                width: 100%;" src="images/feature_img4.jpg">
+                                <div>
+                                    <h6 style="  font-size: 1rem;
+                                    margin: 15px 0;
+                                    color: #000000;">Resource Tracking: Link materials, labor, overheads, animals, and vehicles to specific crop tasks, ensuring efficient resource allocation</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div style=" border: none;
+                            border-radius: 10px;
+                            padding: 10px 10px;
+
+                            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                            transition: transform 0.2s, box-shadow 0.2s;
+                            background-color: #EFF8FB;
+                            height: 260px;">
+                                <img style="
+                                border-radius: 10px;
+                                height: 160px;
+                                object-fit: cover;
+                                width: 100%;" src="images/feature_img5.jpg">
+                                <div>
+                                    <h6 style="  font-size: 1rem;
+                                    margin: 15px 0;
+                                    color: #000000;">Integrated Reports: Generate detailed crop and project reports, providing insights into progress, costs, and resource utilization</h6>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </section>
+            <section class="apps-section text-center" style="
+            padding: 50px 20px;
+            margin: 30px 0px;
+            background-color: #FCF4FF;">
+                <div>
+                    <div>
+                        <h5 style="font-size: 2rem;
+                        font-weight: bold;
+                        color: #333;
+                        margin-bottom: 10px;"><span style="color: #7F4994;">Kaizen's </span>Top App Recommendations
+                        </h5>
+                        <p style="text-align: center; font-size: .75rem;
+                        color: #555;
+                        margin-top: 10px;
+                        margin-bottom: 10px;
+                        text-align: center;">Take a look at our other Odoo apps designed to make your life
+                            easier with a smooth
+                            workflow. Don't miss the chance to uplift your Odoo ERP experience with our apps!
+                        </p>
+                        <a style="color: #7F4994;
+                        font-weight: bold;
+                        text-decoration: underline;
+                        " href="https://apps.odoo.com/apps/modules/browse?search=kaizen">More
+                            Apps &raquo;</a>
+
+                    </div>
+                    <div class="row " style="margin-top:20px;">
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <div class="h-80" style="height: 280px;
+                            border: 1px solid #f8f9fa;
+                            border-radius: 10px;
+                            background-color: #ffffff;
+                            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                            padding: 10px;
+                            transition: transform 0.3s ease, box-shadow 0.3s ease;
+                            margin-bottom: 20px;">
+                                <div style="padding: 10px;">
+                                    <div class="row">
+                                        <img class="col-4" src="images/tamara_pos.png" width="40px" height="60px"
+                                            alt="POS Tamara">
+                                        <h6 class="col-8" style="font-size: 1rem;
+                                        font-weight: bold;
+                                       text-align: center;
+                                       margin: auto;
+                                        color: #333;">POS Tamara</h6>
+                                    </div>
+                                    <p style="
+  color: #182023; font-size: 14px; margin-top: 10px; text-align: start;"> Pay point of sale orders with tamara payment
+                                        gateway and
+                                        refund orders paid with tamara....</p>
+                                    <a href="https://apps.odoo.com/apps/modules/16.0/pos_tamara" style="color: #7F4994;
+                                        font-weight: bold;
+                                        text-decoration: underline;
+                                        text-align: start;">Learn More &raquo;</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <div class="h-80" style="height: 280px;
+                            border: 1px solid #f8f9fa;
+                            border-radius: 10px;
+                            background-color: #ffffff;
+                            padding: 10px;
+                            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                            transition: transform 0.3s ease, box-shadow 0.3s ease;
+                            margin-bottom: 20px;">
+                                <div>
+                                    <div class="row">
+                                        <img class="col-4" src="images/corporate_tax.png" width="20px"
+                                            height="60px" alt="UAE Corporate Tax">
+                                        <h6 class="col-8" style="font-size: 1rem;
+                                        font-weight: bold;
+                                        margin: auto;
+                                        color: #333;">UAE Corporate Tax
+                                        </h6>
+                                    </div>
+                                    <p style="text-align: start;
+  color: #182023;">Get Complete State-specific legislation view of Company income
+                                        taxes Generate / redraft related journals at any time during the year...</p>
+                                    <a href="https://apps.odoo.com/apps/modules/16.0/corporate_tax" class="learn-more"
+                                        style="color: #7F4994;
+                                        font-weight: bold;
+                                        text-decoration: underline;">Learn More &raquo;</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <div class="h-80" style="height: 280px;
+                            border: 1px solid #f8f9fa;
+                            border-radius: 10px;
+                            padding: 10px;
+                            background-color: #ffffff;
+                            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                            transition: transform 0.3s ease, box-shadow 0.3s ease;
+                            margin-bottom: 20px;">
+                                <div>
+                                    <div class="row">
+                                        <img class="col-4" src="images/stock_report_print.png" width="20px"
+                                            height="40px" alt="Stock Report PDF">
+                                        <h6 class="col-8" style="font-size: 1rem;
+                                        font-weight: bold;
+                                        margin: auto;
+                                        color: #333;">Stock Report PDF </h6>
+                                    </div>
+                                    <p style="text-align: start;
+  color: #666;">PDF report to print inventory transactions using different
+                                        fillters...</p>
+                                    <a href="https://apps.odoo.com/apps/modules/16.0/stock_report_print"
+                                        class="learn-more" style="color: #7F4994;
+                                        font-weight: bold;
+                                        text-decoration: underline">Learn More &raquo;</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <div class="h-80" style="height: 280px;
+                            border: 1px solid #f8f9fa;
+                            border-radius: 10px;
+                            background-color: #ffffff;
+                            padding: 10px;
+                            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                            transition: transform 0.3s ease, box-shadow 0.3s ease;
+                            margin-bottom: 20px;">
+                                <div>
+                                    <div class="row">
+                                        <img class="col-4" src="images/tamara.png" width="20px" height="60px"
+                                            alt="Payment Provider: Tamara">
+                                        <h6 class="col-8" style="font-size: 1rem;
+                                        font-weight: bold;
+                                        margin: auto;
+                                        color: #333;">Payment Provider: Tamara</h6>
+                                    </div>
+                                    <p style="
+  color: #666; text-align: start;">Integration With Tamara Payment Gateway (E-commerce and Point
+                                        of Sale)...</p>
+                                    <a href="https://apps.odoo.com/apps/modules/16.0/tamara" style="color: #7F4994;
+                                    font-weight: bold;
+                                    text-decoration: underline;" class="learn-more">Learn
+                                        More &raquo;</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Notes -->
+            <div class="support-section" style="background-color: #ffffff;
+            padding: 80px 20px;
+            margin-top: 50px;">
+                <div class="row align-items-center">
+                    <div class="col-md-6 mb-4 mb-md-0">
+                        <h2 style="font-size: 28px;
+  font-weight: 700;">Free <span style=" color: #7F4994;">30 Days</span> Support</h2>
+                        <p style=" font-size: 16px;
+  margin: 15px 0;">Kazien Principles will provide FREE 30 days support for any doubt, queries, and bug fixing
+                            (excluding data recovery) or any type of issues related to this module. This is applicable
+                            from the date of purchase.</p>
+                        <div class="note" style="background-color: #eaf7f7;
+                        border-left: 4px solid #00a99d;
+                        padding: 10px 15px;
+                        font-size: 14px;
+                        font-weight: 500;
+                        border-radius: 5px;
+                        display: inline-block;">
+                            Note: Extensively Tested on Odoo Vanilla with Ubuntu OS
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <img style=" max-width: 100%;
+  height: 300px;" src="images/support.png" alt="Support" class="support-image">
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Features Tab -->
+        <section class="tab-pane p-0 m-0 fade" id="features">
+            <div class="why-section" style="text-align: center; height: auto; border-radius: 20px; padding:0px 20px;">
+                <!-- Header -->
+                <h2 class="header-text text-center" style="text-align: center; margin: 20px 0px; font-weight: bold; color: #000000;">
+                    Kaizen Agriculture / Farm Management
+                </h2>
+                <p class="description text-center" style="text-align: center; font-size: 16px; padding: 20px 140px; margin-bottom: 20px;">
+Gain full visibility into crop management processes—users can access, view, and track crop requests, tasks, and resources in real-time through a secure, user-friendly interface. From crop start and end dates to task assignments and resource utilization, everything is automatically generated and updated with each action, eliminating manual tracking. All interactions, including task completions and resource allocations, are logged in Odoo for comprehensive reporting and audit trails. Whether you’re managing seasonal planning, improving task efficiency, or tracking resource costs, this module centralizes your crop management workflow, enhances operational efficiency, and supports proactive decision-making.
+                </p>
+                <img width="100%" height="340px" style="margin-bottom: -10px;" src="images/banner2.png">
+            </div>
+
+            <section class="row" style="background-color: #FCF6FE; border-radius: 20px; padding:0px 20px; margin: 0px 0px;">
+                <div class="align-items-start col-lg-3 col-md-4 col-sm-6">
+                    <div class="d-flex flex-column me-3" style="margin: 10px 0px; margin-bottom: 20px;">
+                        <ul class="nav nav-tabs w-100 row" id="myTab" role="tablist" style="list-style-type: none;">
+                            <li class="nav-item col-12" role="presentation">
+                                <a class="nav-link active"
+                                   style="color: #7F4994; text-align: start;"
+                                   href="#step1-tab"
+                                   data-bs-toggle="tab"
+                                   role="tab">
+                                   <img width="22px" src="images/icon1.png">
+                                    User Role Assignment for Agriculture Management</a>
+                            </li>
+                            <li class="nav-item col-12" role="presentation">
+                                <a class="nav-link"
+                                   style="color: #7F4994; text-align: start;"
+                                   href="#step2-tab"
+                                   data-bs-toggle="tab"
+                                   role="tab">
+                                   <img width="22px" src="images/icon2.png">Crop Request Configuration
+                                </a>
+                            </li>
+                            <li class="nav-item col-12" role="presentation">
+                                <a class="nav-link"
+                                   style="color: #7F4994; text-align: start;"
+                                   href="#step3-tab"
+                                   data-bs-toggle="tab"
+                                   role="tab">
+                                   <img width="22px" src="images/icon3.png">Farmer Configuration Management
+                                </a>
+                            </li>
+                            <li class="nav-item col-12" role="presentation">
+                                <a class="nav-link"
+                                   style="color: #7F4994; text-align: start;"
+                                   href="#step4-tab"
+                                   data-bs-toggle="tab"
+                                   role="tab">
+                                   <img width="22px" src="images/icon4.png">Add New Farmer
+                                </a>
+                            </li>
+                            <li class="nav-item col-12" role="presentation">
+                                <a class="nav-link"
+                                   style="color: #7F4994; text-align: start;"
+                                   href="#step5-tab"
+                                   data-bs-toggle="tab"
+                                   role="tab">
+                                   <img width="22px" src="images/icon5.png">Farmer Details Tab
+                                </a>
+                            </li>
+                            <li class="nav-item col-12" role="presentation">
+                                <a class="nav-link"
+                                   style="color: #7F4994; text-align: start;"
+                                   href="#step6-tab"
+                                   data-bs-toggle="tab"
+                                   role="tab">
+                                   <img width="22px" src="images/icon6.png">Farmer Identification
+                                </a>
+                            </li>
+                            <li class="nav-item col-12" role="presentation">
+                                <a class="nav-link"
+                                   style="color: #7F4994; text-align: start;"
+                                   href="#step7-tab"
+                                   data-bs-toggle="tab"
+                                   role="tab">
+                                   <img width="22px" src="images/icon7.png">Farm Location Configuration
+                                </a>
+                            </li>
+                            <li class="nav-item col-12" role="presentation">
+                                <a class="nav-link"
+                                   style="color: #7F4994; text-align: start;"
+                                   href="#step8-tab"
+                                   data-bs-toggle="tab"
+                                   role="tab">
+                                   <img width="22px" src="images/icon8.png">Add New Farm Location
+                                </a>
+                            </li>
+                            <li class="nav-item col-12" role="presentation">
+                                <a class="nav-link"
+                                   style="color: #7F4994; text-align: start;"
+                                   href="#step9-tab"
+                                   data-bs-toggle="tab"
+                                   role="tab">
+                                   <img width="22px" src="images/icon9.png">Farm Location Details
+                                </a>
+                            </li>
+                            <li class="nav-item col-12" role="presentation">
+                                <a class="nav-link"
+                                   style="color: #7F4994; text-align: start;"
+                                   href="#step10-tab"
+                                   data-bs-toggle="tab"
+                                   role="tab">
+                                   <img width="22px" src="images/icon10.png">Farm Location Identification
+                                </a>
+                            </li>
+                            <li class="nav-item col-12" role="presentation">
+                                <a class="nav-link"
+                                   style="color: #7F4994; text-align: start;"
+                                   href="#step11-tab"
+                                   data-bs-toggle="tab"
+                                   role="tab">
+                                   <img width="22px" src="images/icon11.png">Animal Configuration
+                                </a>
+                            </li>
+                            <li class="nav-item col-12" role="presentation">
+                                <a class="nav-link"
+                                   style="color: #7F4994; text-align: start;"
+                                   href="#step12-tab"
+                                   data-bs-toggle="tab"
+                                   role="tab">
+                                   <img width="22px" src="images/icon12.png">Add New Animal
+                                </a>
+                            </li>
+                            <li class="nav-item col-12" role="presentation">
+                                <a class="nav-link"
+                                   style="color: #7F4994; text-align: start;"
+                                   href="#step13-tab"
+                                   data-bs-toggle="tab"
+                                   role="tab">
+                                   <img width="22px" src="images/icon13.png">Animal Identification
+                                </a>
+                            </li>
+                            <li class="nav-item col-12" role="presentation">
+                                <a class="nav-link"
+                                   style="color: #7F4994; text-align: start;"
+                                   href="#step14-tab"
+                                   data-bs-toggle="tab"
+                                   role="tab">
+                                   <img width="22px" src="images/icon14.png">Fleet Configuration
+                                </a>
+                            </li>
+                            <li class="nav-item col-12" role="presentation">
+                                <a class="nav-link"
+                                   style="color: #7F4994; text-align: start;"
+                                   href="#step15-tab"
+                                   data-bs-toggle="tab"
+                                   role="tab">
+                                   <img width="22px" src="images/icon15.png">Add New Fleet Vehicle
+                                </a>
+                            </li>
+                            <li class="nav-item col-12" role="presentation">
+                                <a class="nav-link"
+                                   style="color: #7F4994; text-align: start;"
+                                   href="#step16-tab"
+                                   data-bs-toggle="tab"
+                                   role="tab">
+                                   <img width="22px" src="images/icon16.png">Fleet Vehicle Details
+                                </a>
+                            </li>
+                            <li class="nav-item col-12" role="presentation">
+                                <a class="nav-link"
+                                   style="color: #7F4994; text-align: start;"
+                                   href="#step17-tab"
+                                   data-bs-toggle="tab"
+                                   role="tab">
+                                   <img width="22px" src="images/icon17.png">Stage Configuration
+                                </a>
+                            </li>
+                            <li class="nav-item col-12" role="presentation">
+                                <a class="nav-link"
+                                   style="color: #7F4994; text-align: start;"
+                                   href="#step18-tab"
+                                   data-bs-toggle="tab"
+                                   role="tab">
+                                   <img width="22px" src="images/icon18.png">Create New Task Stage
+                                </a>
+                            </li>
+                            <li class="nav-item col-12" role="presentation">
+                                <a class="nav-link"
+                                   style="color: #7F4994; text-align: start;"
+                                   href="#step19-tab"
+                                   data-bs-toggle="tab"
+                                   role="tab">
+                                   <img width="22px" src="images/icon19.png">Task Stage Details
+                                </a>
+                            </li>
+                            <li class="nav-item col-12" role="presentation">
+                                <a class="nav-link"
+                                   style="color: #7F4994; text-align: start;"
+                                   href="#step20-tab"
+                                   data-bs-toggle="tab"
+                                   role="tab">
+                                   <img width="22px" src="images/icon20.png">Assign Task Stage to Project
+                                </a>
+                            </li>
+                            <li class="nav-item col-12" role="presentation">
+                                <a class="nav-link"
+                                   style="color: #7F4994; text-align: start;"
+                                   href="#step21-tab"
+                                   data-bs-toggle="tab"
+                                   role="tab">
+                                   <img width="22px" src="images/icon21.png">Crop Project Request Overview
+                                </a>
+                            </li>
+                            <li class="nav-item col-12" role="presentation">
+                                <a class="nav-link"
+                                   style="color: #7F4994; text-align: start;"
+                                   href="#step22-tab"
+                                   data-bs-toggle="tab"
+                                   role="tab">
+                                   <img width="22px" src="images/icon22.png">Navigate to Crop Tasks
+                                </a>
+                            </li>
+                            <li class="nav-item col-12" role="presentation">
+                                <a class="nav-link"
+                                   style="color: #7F4994; text-align: start;"
+                                   href="#step23-tab"
+                                   data-bs-toggle="tab"
+                                   role="tab">
+                                   <img width="22px" src="images/icon23.png">Manage Crops and Process Templates
+                                </a>
+                            </li>
+                            <li class="nav-item col-12" role="presentation">
+                                <a class="nav-link"
+                                   style="color: #7F4994; text-align: start;"
+                                   href="#step24-tab"
+                                   data-bs-toggle="tab"
+                                   role="tab">
+                                   <img width="22px" src="images/icon24.png">Add New Crop
+                                </a>
+                            </li>
+                            <li class="nav-item col-12" role="presentation">
+                                <a class="nav-link"
+                                   style="color: #7F4994; text-align: start;"
+                                   href="#step25-tab"
+                                   data-bs-toggle="tab"
+                                   role="tab">
+                                   <img width="22px" src="images/icon25.png">Crop Details and Materials Management
+                                </a>
+                            </li>
+                            <li class="nav-item col-12" role="presentation">
+                                <a class="nav-link"
+                                   style="color: #7F4994; text-align: start;"
+                                   href="#step26-tab"
+                                   data-bs-toggle="tab"
+                                   role="tab">
+                                   <img width="22px" src="images/icon26.png">Manage Crop Labour
+                                </a>
+                            </li>
+                            <li class="nav-item col-12" role="presentation">
+                                <a class="nav-link"
+                                   style="color: #7F4994; text-align: start;"
+                                   href="#step27-tab"
+                                   data-bs-toggle="tab"
+                                   role="tab">
+                                   <img width="22px" src="images/icon27.png">Manage Crop Overheads
+                                </a>
+                            </li>
+                            <li class="nav-item col-12" role="presentation">
+                                <a class="nav-link"
+                                   style="color: #7F4994; text-align: start;"
+                                   href="#step28-tab"
+                                   data-bs-toggle="tab"
+                                   role="tab">
+                                   <img width="22px" src="images/icon28.png">Manage Crop Diseases
+                                </a>
+                            </li>
+                            <li class="nav-item col-12" role="presentation">
+                                <a class="nav-link"
+                                   style="color: #7F4994; text-align: start;"
+                                   href="#step29-tab"
+                                   data-bs-toggle="tab"
+                                   role="tab">
+                                   <img width="22px" src="images/icon29.png">Create Crop Disease Cure
+                                </a>
+                            </li>
+                            <li class="nav-item col-12" role="presentation">
+                                <a class="nav-link"
+                                   style="color: #7F4994; text-align: start;"
+                                   href="#step30-tab"
+                                   data-bs-toggle="tab"
+                                   role="tab">
+                                   <img width="22px" src="images/icon30.png">Manage Crop Disease Cures
+                                </a>
+                            </li>
+                            <li class="nav-item col-12" role="presentation">
+                                <a class="nav-link"
+                                   style="color: #7F4994; text-align: start;"
+                                   href="#step31-tab"
+                                   data-bs-toggle="tab"
+                                   role="tab">
+                                   <img width="22px" src="images/icon31.png">Manage Crop Processes
+                                </a>
+                            </li>
+                            <li class="nav-item col-12" role="presentation">
+                                <a class="nav-link"
+                                   style="color: #7F4994; text-align: start;"
+                                   href="#step32-tab"
+                                   data-bs-toggle="tab"
+                                   role="tab">
+                                   <img width="22px" src="images/icon32.png">Assign Equipment to Crop Processes
+                                </a>
+                            </li>
+                            <li class="nav-item col-12" role="presentation">
+                                <a class="nav-link"
+                                   style="color: #7F4994; text-align: start;"
+                                   href="#step33-tab"
+                                   data-bs-toggle="tab"
+                                   role="tab">
+                                   <img width="22px" src="images/icon33.png">Equipments Details and Description
+                                </a>
+                            </li>
+                            <li class="nav-item col-12" role="presentation">
+                                <a class="nav-link"
+                                   style="color: #7F4994; text-align: start;"
+                                   href="#step34-tab"
+                                   data-bs-toggle="tab"
+                                   role="tab">
+                                   <img width="22px" src="images/icon34.png">Equipment Product Information
+                                </a>
+                            </li>
+                            <li class="nav-item col-12" role="presentation">
+                                <a class="nav-link"
+                                   style="color: #7F4994; text-align: start;"
+                                   href="#step35-tab"
+                                   data-bs-toggle="tab"
+                                   role="tab">
+                                   <img width="22px" src="images/icon35.png">Assign Animals to Crop Processes
+                                </a>
+                            </li>
+                            <li class="nav-item col-12" role="presentation">
+                                <a class="nav-link"
+                                   style="color: #7F4994; text-align: start;"
+                                   href="#step36-tab"
+                                   data-bs-toggle="tab"
+                                   role="tab">
+                                   <img width="22px" src="images/icon36.png">Assign Fleet Vehicles to Crop Processes
+                                </a>
+                            </li>
+                            <li class="nav-item col-12" role="presentation">
+                                <a class="nav-link"
+                                   style="color: #7F4994; text-align: start;"
+                                   href="#step37-tab"
+                                   data-bs-toggle="tab"
+                                   role="tab">
+                                   <img width="22px" src="images/icon37.png">Crop Description
+                                </a>
+                            </li>
+                            <li class="nav-item col-12" role="presentation">
+                                <a class="nav-link"
+                                   style="color: #7F4994; text-align: start;"
+                                   href="#step38-tab"
+                                   data-bs-toggle="tab"
+                                   role="tab">
+                                   <img width="22px" src="images/icon38.png">Manage Crop Requests
+                                </a>
+                            </li>
+                            <li class="nav-item col-12" role="presentation">
+                                <a class="nav-link"
+                                   style="color: #7F4994; text-align: start;"
+                                   href="#step39-tab"
+                                   data-bs-toggle="tab"
+                                   role="tab">
+                                   <img width="22px" src="images/icon39.png">Create and Confirm Crop Request
+                                </a>
+                            </li>
+                            <li class="nav-item col-12" role="presentation">
+                                <a class="nav-link"
+                                   style="color: #7F4994; text-align: start;"
+                                   href="#step40-tab"
+                                   data-bs-toggle="tab"
+                                   role="tab">
+                                   <img width="22px" src="images/icon40.png">Confirm Crop Request
+                                </a>
+                            </li>
+                            <li class="nav-item col-12" role="presentation">
+                                <a class="nav-link"
+                                   style="color: #7F4994; text-align: start;"
+                                   href="#step41-tab"
+                                   data-bs-toggle="tab"
+                                   role="tab">
+                                   <img width="22px" src="images/icon41.png">Mark Crop Request as In Progress
+                                </a>
+                            </li>
+                            <li class="nav-item col-12" role="presentation">
+                                <a class="nav-link"
+                                   style="color: #7F4994; text-align: start;"
+                                   href="#step42-tab"
+                                   data-bs-toggle="tab"
+                                   role="tab">
+                                   <img width="22px" src="images/icon42.png">Manage Associated Tasks and Resources
+                                </a>
+                            </li>
+                            <li class="nav-item col-12" role="presentation">
+                                <a class="nav-link"
+                                   style="color: #7F4994; text-align: start;"
+                                   href="#step43-tab"
+                                   data-bs-toggle="tab"
+                                   role="tab">
+                                   <img width="22px" src="images/icon43.png">View Crop Project Request
+                                </a>
+                            </li>
+                            <li class="nav-item col-12" role="presentation">
+                                <a class="nav-link"
+                                   style="color: #7F4994; text-align: start;"
+                                   href="#step44-tab"
+                                   data-bs-toggle="tab"
+                                   role="tab">
+                                   <img width="22px" src="images/icon44.png">View Project Settings
+                                </a>
+                            </li>
+                            <li class="nav-item col-12" role="presentation">
+                                <a class="nav-link"
+                                   style="color: #7F4994; text-align: start;"
+                                   href="#step45-tab"
+                                   data-bs-toggle="tab"
+                                   role="tab">
+                                   <img width="22px" src="images/icon45.png">Link Crop Request to Project
+                                </a>
+                            </li>
+                            <li class="nav-item col-12" role="presentation">
+                                <a class="nav-link"
+                                   style="color: #7F4994; text-align: start;"
+                                   href="#step46-tab"
+                                   data-bs-toggle="tab"
+                                   role="tab">
+                                   <img width="22px" src="images/icon46.png">Track Associated Tasks and Resources
+                                </a>
+                            </li>
+                            <li class="nav-item col-12" role="presentation">
+                                <a class="nav-link"
+                                   style="color: #7F4994; text-align: start;"
+                                   href="#step47-tab"
+                                   data-bs-toggle="tab"
+                                   role="tab">
+                                   <img width="22px" src="images/icon47.png">Mark Crop Request as Done
+                                </a>
+                            </li>
+                            <li class="nav-item col-12" role="presentation">
+                                <a class="nav-link"
+                                   style="color: #7F4994; text-align: start;"
+                                   href="#step48-tab"
+                                   data-bs-toggle="tab"
+                                   role="tab">
+                                   <img width="22px" src="images/icon48.png">Finalize Crop Request
+                                </a>
+                            </li>
+                            <li class="nav-item col-12" role="presentation">
+                                <a class="nav-link"
+                                   style="color: #7F4994; text-align: start;"
+                                   href="#step48-tab"
+                                   data-bs-toggle="tab"
+                                   role="tab">
+                                   <img width="22px" src="images/icon48.png">Finalize Crop Request
+                                </a>
+                            </li>
+                            <li class="nav-item col-12" role="presentation">
+                                <a class="nav-link"
+                                   style="color: #7F4994; text-align: start;"
+                                   href="#step49-tab"
+                                   data-bs-toggle="tab"
+                                   role="tab">
+                                   <img width="22px" src="images/icon49.png">Manage Crop Incidents
+                                </a>
+                            </li>
+                            <li class="nav-item col-12" role="presentation">
+                                <a class="nav-link"
+                                   style="color: #7F4994; text-align: start;"
+                                   href="#step50-tab"
+                                   data-bs-toggle="tab"
+                                   role="tab">
+                                   <img width="22px" src="images/icon50.png">Log Crop Incident Details
+                                </a>
+                            </li>
+                            <li class="nav-item col-12" role="presentation">
+                                <a class="nav-link"
+                                   style="color: #7F4994; text-align: start;"
+                                   href="#step51-tab"
+                                   data-bs-toggle="tab"
+                                   role="tab">
+                                   <img width="22px" src="images/icon51.png">Manage Crops for Farm Locations
+                                </a>
+                            </li>
+                            <li class="nav-item col-12" role="presentation">
+                                <a class="nav-link"
+                                   style="color: #7F4994; text-align: start;"
+                                   href="#step52-tab"
+                                   data-bs-toggle="tab"
+                                   role="tab">
+                                   <img width="22px" src="images/icon52.png">Add Crop to Farm Location
+                                </a>
+                            </li>
+                            <li class="nav-item col-12" role="presentation">
+                                <a class="nav-link"
+                                   style="color: #7F4994; text-align: start;"
+                                   href="#step53-tab"
+                                   data-bs-toggle="tab"
+                                   role="tab">
+                                   <img width="22px" src="images/icon53.png">View Farm Location Details
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Tab Content with brief descriptions -->
+                <div class="tab-content col-lg-9 col-md-8 col-sm-6" id="myTabContent" style="padding-right: 0px; padding-top: 0px; border-radius: 0 20px 20px 0;">
+                    <div class="tab-pane fade show active" id="step1-tab" style="padding: 0px 20px;" role="tabpanel">
+                        <h4 style="font-weight: bold; margin-bottom: 20px;">
+                            User Role Assignment for Agriculture Management
+                        </h4>
+                        <img style="  width: 100%;
+                        height: 400PX;
+                        margin-bottom: 10px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;" src="images/Screenshot1.png" >
+                        <p>
+Assign specific roles to users, such as "Agriculture Manager" and "Agriculture User," to control access to agriculture management tasks. Managers have full administrative control, while users have limited access based on assigned tasks and permissions. This feature helps streamline operations by ensuring that each team member has the right level of access.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="step2-tab" style="padding: 0px 20px;" role="tabpanel">
+                        <h4 style="font-weight: bold; margin-bottom: 20px;">
+                            Crop Request Configuration
+                        </h4>
+                        <img style="  width: 100%;
+                        height: 400PX;
+                        margin-bottom: 10px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;" src="images/Screenshot2.png">
+
+                        <p>
+Access the configuration settings for Crop Requests. From this section, you can customize settings and templates for managing crop seasons, tasks, and resource allocation. It's the central hub for configuring workflows, permissions, and related documents for efficient agriculture management.
+                        </p>
+                    </div>
+  <div class="tab-pane fade" id="step3-tab" style="padding: 0px 20px;" role="tabpanel">
+                        <h4 style="font-weight: bold; margin-bottom: 20px;">
+                            Farmer Configuration Management
+                        </h4>
+                        <img style="  width: 100%;
+                        height: 400PX;
+                        margin-bottom: 10px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;" src="images/Screenshot3.png">
+
+                        <p>
+Access the configuration settings for managing farmers, farm locations, and related resources. This section allows you to set up farmers, assign them to specific farm locations, and manage animals, fleets, and farming stages. It's essential for organizing and allocating tasks and resources within the agriculture system
+                        </p>
+                    </div>
+
+  <div class="tab-pane fade" id="step4-tab" style="padding: 0px 20px;" role="tabpanel">
+                        <h4 style="font-weight: bold; margin-bottom: 20px;">
+                            Add New Farmer
+                        </h4>
+                        <img style="  width: 100%;
+                        height: 400PX;
+                        margin-bottom: 10px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;" src="images/Screenshot4.png" >
+
+                        <p>
+Easily create a new farmer record in the system by clicking on "New." This feature allows you to add essential information about farmers, including their contact details, farm location, and other relevant data. It's a streamlined way to manage farmer profiles and ensure accurate records for agriculture management.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="step5-tab" style="padding: 0px 20px;" role="tabpanel">
+                        <h4 style="font-weight: bold; margin-bottom: 20px;">
+                            Farmer Details Tab
+                        </h4>
+                        <img style="  width: 100%;
+                        height: 400PX;
+                        margin-bottom: 10px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;" src="images/Screenshot5.png">
+
+                        <p>
+This tab allows you to enter and manage detailed information about the farmer, including contact details, tax ID, and other personal data. It’s the central place for storing essential information for each farmer in the system, ensuring easy access to their profile and relevant data.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="step6-tab" style="padding: 0px 20px;" role="tabpanel">
+                        <h4 style="font-weight: bold; margin-bottom: 20px;">
+                            Farmer Identification
+                        </h4>
+                        <img style="  width: 100%;
+                        height: 400PX;
+                        margin-bottom: 10px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;" src="images/Screenshot6.png">
+
+                        <p>
+This checkbox allows you to identify whether a contact is a farmer in the system. By marking "Is Farmer?", the contact will be categorized as a farmer, enabling access to agriculture-related data and features. It helps differentiate between regular contacts and those involved in farming operations.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="step7-tab" style="padding: 0px 20px;" role="tabpanel">
+                        <h4 style="font-weight: bold; margin-bottom: 20px;">
+                            Farm Location Configuration
+                        </h4>
+                        <img style="  width: 100%;
+                        height: 400PX;
+                        margin-bottom: 10px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;" src="images/Screenshot7.png">
+
+                        <p>
+Access the settings for managing farm locations. This section allows you to define and configure various locations associated with farming operations. It helps in assigning specific locations to farmers, managing their resources, and organizing agricultural tasks effectively across different farm sites.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="step8-tab" style="padding: 0px 20px;" role="tabpanel">
+                        <h4 style="font-weight: bold; margin-bottom: 20px;">
+                            Add New Farm Location
+                        </h4>
+                        <img style="  width: 100%;
+                        height: 400PX;
+                        margin-bottom: 10px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;" src="images/Screenshot8.png">
+
+                        <p>
+Click "New" to create a new farm location in the system. This allows you to add essential details about a specific farm site, such as location name, address, and related resources. It's an important step for organizing farm operations and associating them with the appropriate farmers.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="step9-tab" style="padding: 0px 20px;" role="tabpanel">
+                        <h4 style="font-weight: bold; margin-bottom: 20px;">
+                           Farm Location Details
+                        </h4>
+                        <img style="  width: 100%;
+                        height: 400PX;
+                        margin-bottom: 10px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;" src="images/Screenshot9.png">
+
+                        <p>
+View and manage detailed information about the selected farm location. This section provides access to the farm's contact details, address, and tax ID. You can also update the "Farmer Details" to link the farm with relevant resources and operations for streamlined agricultural management.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="step10-tab" style="padding: 0px 20px;" role="tabpanel">
+                        <h4 style="font-weight: bold; margin-bottom: 20px;">
+                            Farm Location Identification
+                        </h4>
+                        <img style="  width: 100%;
+                        height: 400PX;
+                        margin-bottom: 10px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;" src="images/Screenshot10.png">
+
+                        <p>
+This checkbox allows you to identify whether a contact is a farm location in the system. By marking "Is Location?", the contact will be categorized as a farm location, enabling access to farm-related tasks, crops, and resource management. It helps distinguish farm locations from other types of contacts.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="step11-tab" style="padding: 0px 20px;" role="tabpanel">
+                        <h4 style="font-weight: bold; margin-bottom: 20px;">
+                            Animal Configuration
+                        </h4>
+                        <img style="  width: 100%;
+                        height: 400PX;
+                        margin-bottom: 10px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;" src="images/Screenshot11.png">
+
+                        <p>
+Access the configuration settings for managing animals. This section allows you to set up and manage animals associated with your farm locations, enabling efficient tracking of livestock, their usage in tasks, and resource planning for agricultural operations.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="step12-tab" style="padding: 0px 20px;" role="tabpanel">
+                        <h4 style="font-weight: bold; margin-bottom: 20px;">
+                            Add New Animal
+                        </h4>
+                        <img style="  width: 100%;
+                        height: 400PX;
+                        margin-bottom: 10px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;" src="images/Screenshot12.png">
+
+                        <p>
+Click "New" to create a new animal record in the system. This feature allows you to add essential information about the animals on your farm, enabling better tracking and management of livestock for agricultural tasks and resource planning.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="step13-tab" style="padding: 0px 20px;" role="tabpanel">
+                        <h4 style="font-weight: bold; margin-bottom: 20px;">
+                            Animal Identification
+                        </h4>
+                        <img style="  width: 100%;
+                        height: 400PX;
+                        margin-bottom: 10px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;" src="images/Screenshot13.png">
+
+                        <p>
+This checkbox allows you to identify whether a contact is an animal in the system. By marking "Is Animal?", the contact will be categorized as livestock, enabling you to manage and track animal resources on your farm, including their roles in tasks and projects.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="step14-tab" style="padding: 0px 20px;" role="tabpanel">
+                        <h4 style="font-weight: bold; margin-bottom: 20px;">
+                            Fleet Configuration
+                        </h4>
+                        <img style="  width: 100%;
+                        height: 400PX;
+                        margin-bottom: 10px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;" src="images/Screenshot14.png">
+
+                        <p>
+Access the configuration settings for managing your fleet of vehicles. This section allows you to set up and manage vehicles associated with farm operations, enabling better resource allocation and task tracking for transport and logistics.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="step15-tab" style="padding: 0px 20px;" role="tabpanel">
+                        <h4 style="font-weight: bold; margin-bottom: 20px;">
+                            Add New Fleet Vehicle
+                        </h4>
+                        <img style="  width: 100%;
+                        height: 400PX;
+                        margin-bottom: 10px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;" src="images/Screenshot15.png">
+
+                        <p>
+Click "New" to add a new vehicle to your farm fleet. This allows you to specify details about the vehicle, including its type, quantity, start and end dates, and a description. Managing vehicles in this way ensures efficient allocation for farm-related transport and logistics.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="step16-tab" style="padding: 0px 20px;" role="tabpanel">
+                        <h4 style="font-weight: bold; margin-bottom: 20px;">
+                            Fleet Vehicle Details
+                        </h4>
+                        <img style="  width: 100%;
+                        height: 400PX;
+                        margin-bottom: 10px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;" src="images/Screenshot16.png">
+
+                        <p>
+This section allows you to enter specific details about the fleet vehicle, including its type, quantity, and a detailed description. You can also set the start and end dates for the vehicle's usage, ensuring proper management of resources for your agricultural tasks and operations.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="step17-tab" style="padding: 0px 20px;" role="tabpanel">
+                        <h4 style="font-weight: bold; margin-bottom: 20px;">
+                           Stage Configuration
+                        </h4>
+                        <img style="  width: 100%;
+                        height: 400PX;
+                        margin-bottom: 10px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;" src="images/Screenshot17.png">
+
+                        <p>
+Access the configuration settings for managing the stages of farm operations or tasks. This section allows you to define and manage different stages that farm tasks or resources go through, ensuring smooth tracking and workflow management for farming activities.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="step18-tab" style="padding: 0px 20px;" role="tabpanel">
+                        <h4 style="font-weight: bold; margin-bottom: 20px;">
+                            Create New Task Stage
+                        </h4>
+                        <img style="  width: 100%;
+                        height: 400PX;
+                        margin-bottom: 10px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;" src="images/Screenshot18.png">
+
+                        <p>
+Click "New" to create a new task stage for your farm operations. This feature lets you define and manage the stages tasks will pass through from creation to completion, helping to streamline and track the progress of each task efficiently.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="step19-tab" style="padding: 0px 20px;" role="tabpanel">
+                        <h4 style="font-weight: bold; margin-bottom: 20px;">
+                            Task Stage Details
+                        </h4>
+                        <img style="  width: 100%;
+                        height: 400PX;
+                        margin-bottom: 10px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;" src="images/Screenshot19.png">
+
+                        <p>
+Enter the details for a specific task stage, such as its name, sequence, and associated templates for SMS and email notifications. This section allows you to define the stage's sequence in the workflow and link it to relevant projects, ensuring organized task management and communication.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="step20-tab" style="padding: 0px 20px;" role="tabpanel">
+                        <h4 style="font-weight: bold; margin-bottom: 20px;">
+                            Assign Task Stage to Project
+                        </h4>
+                        <img style="  width: 100%;
+                        height: 400PX;
+                        margin-bottom: 10px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;" src="images/Screenshot20.png">
+
+                        <p>
+In this step, you can assign a task stage to specific projects. This allows you to associate each stage with a project, ensuring tasks progress through the defined stages. The "Projects" dropdown allows you to select the relevant project for organizing tasks under specific stages.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="step21-tab" style="padding: 0px 20px;" role="tabpanel">
+                        <h4 style="font-weight: bold; margin-bottom: 20px;">
+                            Crop Project Request Overview
+                        </h4>
+                        <img style="  width: 100%;
+                        height: 400PX;
+                        margin-bottom: 10px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;" src="images/Screenshot21.png">
+
+                        <p>
+This section displays an overview of crop project requests, such as the "Soil Health Improvement Plan." You can manage and track tasks associated with each project. It provides a streamlined way to organize crop-related projects, ensuring that tasks are completed according to plan and assigned to the correct resources.
+
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="step22-tab" style="padding: 0px 20px;" role="tabpanel">
+                        <h4 style="font-weight: bold; margin-bottom: 20px;">
+                            Navigate to Crop Tasks
+                        </h4>
+                        <img style="  width: 100%;
+                        height: 400PX;
+                        margin-bottom: 10px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;" src="images/Screenshot22.png">
+
+                        <p>
+This step shows how to navigate between Crop Requests and Tasks within the system. The "Tasks" section allows you to manage the individual tasks linked to crop requests, providing detailed tracking and resource allocation for each task. Use this to ensure tasks are progressing as planned.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="step23-tab" style="padding: 0px 20px;" role="tabpanel">
+                        <h4 style="font-weight: bold; margin-bottom: 20px;">
+                            Manage Crops and Process Templates
+                        </h4>
+                        <img style="  width: 100%;
+                        height: 400PX;
+                        margin-bottom: 10px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;" src="images/Screenshot23.png">
+
+                        <p>
+This section allows you to manage your crops and define process templates. By creating and organizing crops, you can link them to specific tasks and processes to streamline agricultural workflows. The "Process Template" feature helps standardize crop-related tasks for consistent execution across projects.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="step24-tab" style="padding: 0px 20px;" role="tabpanel">
+                        <h4 style="font-weight: bold; margin-bottom: 20px;">
+                            Add New Crop
+                        </h4>
+                        <img style="  width: 100%;
+                        height: 400PX;
+                        margin-bottom: 10px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;" src="images/Screenshot24.png">
+
+                        <p>
+Click "New" to create a new crop entry. This feature allows you to define a new crop, including details such as the crop's start and end period, warehouse location, and description. It’s essential for managing crop-related tasks and resources across the farm.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="step25-tab" style="padding: 0px 20px;" role="tabpanel">
+                        <h4 style="font-weight: bold; margin-bottom: 20px;">
+                            Crop Details and Materials Management
+                        </h4>
+                        <img style="  width: 100%;
+                        height: 400PX;
+                        margin-bottom: 10px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;" src="images/Screenshot25.png">
+
+                        <p>
+Manage detailed information for your crops, such as the crop name, period start and end dates, and warehouse or stock location. This section also allows you to add and track crop materials, including the product name, description, quantity, and unit of measure, ensuring proper resource allocation for each crop cycle.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="step26-tab" style="padding: 0px 20px;" role="tabpanel">
+                        <h4 style="font-weight: bold; margin-bottom: 20px;">
+                            Manage Crop Labour
+                        </h4>
+                        <img style="  width: 100%;
+                        height: 400PX;
+                        margin-bottom: 10px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;" src="images/Screenshot26.png">
+
+                        <p>
+In this section, you can track and manage labor associated with your crops. Add details about the labor required, including the product name, description, quantity, and unit of measure. This helps in planning and allocating labor efficiently for the crops during their growth cycle.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="step27-tab" style="padding: 0px 20px;" role="tabpanel">
+                        <h4 style="font-weight: bold; margin-bottom: 20px;">
+                            Manage Crop Overheads
+                        </h4>
+                        <img style="  width: 100%;
+                        height: 400PX;
+                        margin-bottom: 10px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;" src="images/Screenshot27.png">
+
+                        <p>
+In this section, you can manage and track the overhead costs associated with crops. This includes expenses for irrigation, fuel, electricity, and other operational costs that support crop growth. Adding these overheads ensures accurate cost tracking and resource allocation for each crop cycle.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="step28-tab" style="padding: 0px 20px;" role="tabpanel">
+                        <h4 style="font-weight: bold; margin-bottom: 20px;">
+                            Manage Crop Diseases
+                        </h4>
+                        <img style="  width: 100%;
+                        height: 400PX;
+                        margin-bottom: 10px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;" src="images/Screenshot28.png">
+
+                        <p>
+In this section, you can track and manage any diseases affecting your crops. Add details about specific crop diseases and their cures, helping to ensure timely interventions and effective management of crop health throughout the growth period.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="step29-tab" style="padding: 0px 20px;" role="tabpanel">
+                        <h4 style="font-weight: bold; margin-bottom: 20px;">
+                           Create Crop Disease Cure
+                        </h4>
+                        <img style="  width: 100%;
+                        height: 400PX;
+                        margin-bottom: 10px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;" src="images/Screenshot29.png">
+
+                        <p>
+This step allows you to create a new crop disease cure. You can enter the name and description of the cure, helping you track specific treatments and their effectiveness for combating crop diseases. This ensures proactive disease management in your farming operations.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="step30-tab" style="padding: 0px 20px;" role="tabpanel">
+                        <h4 style="font-weight: bold; margin-bottom: 20px;">
+                            Manage Crop Disease Cures
+                        </h4>
+                        <img style="  width: 100%;
+                        height: 400PX;
+                        margin-bottom: 10px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;" src="images/Screenshot30.png">
+
+                        <p>
+In this section, you can view and manage the crop disease cures associated with a crop. For example, the "Mancozeb Fungicide" treatment is listed here along with its description. This helps you keep track of the treatments applied to crops for disease prevention and management.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="step31-tab" style="padding: 0px 20px;" role="tabpanel">
+                        <h4 style="font-weight: bold; margin-bottom: 20px;">
+                            Manage Crop Processes
+                        </h4>
+                        <img style="  width: 100%;
+                        height: 400PX;
+                        margin-bottom: 10px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;" src="images/Screenshot31.png">
+
+                        <p>
+This section allows you to define and track various processes associated with the crop. Tasks like "Land Preparation," "Seed Preparation," and "Planting" are listed here, helping to organize and monitor the stages of crop growth. It ensures that each task is completed in sequence and allocated the necessary resources.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="step32-tab" style="padding: 0px 20px;" role="tabpanel">
+                        <h4 style="font-weight: bold; margin-bottom: 20px;">
+                            Assign Equipment to Crop Processes
+                        </h4>
+                        <img style="  width: 100%;
+                        height: 400PX;
+                        margin-bottom: 10px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;" src="images/Screenshot32.png">
+
+                        <p>
+In this section, you can assign specific equipment to crop processes. For example, equipment like "Hand hoe" and "Spade/Shovel" are linked to the "Land Preparation" task, along with details like the employee assigned, department, and assigned date. This ensures that the right tools are used for each crop-related task.                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="step33-tab" style="padding: 0px 20px;" role="tabpanel">
+                        <h4 style="font-weight: bold; margin-bottom: 20px;">
+                            Equipments Details and Description
+                        </h4>
+                        <img style="  width: 100%;
+                        height: 400PX;
+                        margin-bottom: 10px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;" src="images/Screenshot33.png">
+
+                        <p>
+This section allows you to add detailed information about the equipment used in crop processes, such as the "Hand Hoe." You can specify the equipment's category, assigned employee, maintenance team, and location. Additionally, a description can be added to define the purpose and use of the equipment, ensuring proper tracking and management.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="step34-tab" style="padding: 0px 20px;" role="tabpanel">
+                        <h4 style="font-weight: bold; margin-bottom: 20px;">
+                            Equipment Product Information
+                        </h4>
+                        <img style="  width: 100%;
+                        height: 400PX;
+                        margin-bottom: 10px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;" src="images/Screenshot34.png">
+
+                        <p>
+This section allows you to add detailed product information for each piece of equipment, such as the vendor, vendor reference, model, and serial number. You can also track the effective date, cost, and warranty expiration date to ensure proper maintenance and financial tracking of the equipment.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="step35-tab" style="padding: 0px 20px;" role="tabpanel">
+                        <h4 style="font-weight: bold; margin-bottom: 20px;">
+                            Assign Animals to Crop Processes
+                        </h4>
+                        <img style="  width: 100%;
+                        height: 400PX;
+                        margin-bottom: 10px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;" src="images/Screenshot35.png">
+
+                        <p>
+In this section, you can assign animals to crop processes, such as land preparation or planting. You can specify the animal type, start and end dates, quantity, and provide descriptions for the animals involved. This helps in organizing and tracking livestock usage in specific crop-related tasks.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="step36-tab" style="padding: 0px 20px;" role="tabpanel">
+                        <h4 style="font-weight: bold; margin-bottom: 20px;">
+                           Assign Fleet Vehicles to Crop Processes
+                        </h4>
+                        <img style="  width: 100%;
+                        height: 400PX;
+                        margin-bottom: 10px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;" src="images/Screenshot36.png">
+
+                        <p>
+In this section, you can assign fleet vehicles, such as tractors, to specific crop processes. You can set the start and end dates, specify the quantity, and provide a detailed description of the vehicle's usage. This helps ensure proper resource allocation for farm operations like planting, plowing, and other field tasks.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="step37-tab" style="padding: 0px 20px;" role="tabpanel">
+                        <h4 style="font-weight: bold; margin-bottom: 20px;">
+                            Crop Description
+                        </h4>
+                        <img style="  width: 100%;
+                        height: 400PX;
+                        margin-bottom: 10px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;" src="images/Screenshot37.png">
+
+                        <p>
+In this section, you can add a detailed description of the crop, including growing conditions, required care, and harvest details. For example, the description for "Potatoes" covers soil requirements, growing cycles, and key tasks like disease control and fertilization, providing valuable information for managing the crop effectively.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="step38-tab" style="padding: 0px 20px;" role="tabpanel">
+                        <h4 style="font-weight: bold; margin-bottom: 20px;">
+                            Manage Crop Requests
+                        </h4>
+                        <img style="  width: 100%;
+                        height: 400PX;
+                        margin-bottom: 10px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;" src="images/Screenshot38.png">
+
+                        <p>
+This section allows you to manage crop requests, where you can specify crop details such as the start and end dates, crop type, warehouse location, and description. By creating crop requests, you can plan and track the progress of your crops and their associated resources effectively.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="step39-tab" style="padding: 0px 20px;" role="tabpanel">
+                        <h4 style="font-weight: bold; margin-bottom: 20px;">
+                           Create and Confirm Crop Request
+                        </h4>
+                        <img style="  width: 100%;
+                        height: 400PX;
+                        margin-bottom: 10px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;" src="images/Screenshot39.png">
+
+                        <p>
+This section allows you to create a new crop request, such as "potato request test," by specifying key details like crop type, start and end dates, supervisor, and responsible user. Once created, you can confirm the request, and it will be tracked through various stages—New, Confirmed, In Progress, and Done. This helps organize and manage crop-related tasks efficiently.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="step40-tab" style="padding: 0px 20px;" role="tabpanel">
+                        <h4 style="font-weight: bold; margin-bottom: 20px;">
+                            Confirm Crop Request
+                        </h4>
+                        <img style="  width: 100%;
+                        height: 400PX;
+                        margin-bottom: 10px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;" src="images/Screenshot40.png">
+
+                        <p>
+This step allows you to confirm the crop request after it has been created. By clicking "Confirm," the request moves into the confirmed stage, indicating that it is officially logged and ready for further processing. This step ensures that crop-related tasks are tracked and organized efficiently.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="step41-tab" style="padding: 0px 20px;" role="tabpanel">
+                        <h4 style="font-weight: bold; margin-bottom: 20px;">
+                            Mark Crop Request as In Progress
+                        </h4>
+                        <img style="  width: 100%;
+                        height: 400PX;
+                        margin-bottom: 10px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;" src="images/Screenshot41.png">
+
+                        <p>
+This step allows you to update the crop request to the "In Progress" stage. Once the crop request is confirmed, you can move it to the "In Progress" status to track active tasks and resources. This helps in managing the workflow and ensures that the crop request is being actively worked on.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="step42-tab" style="padding: 0px 20px;" role="tabpanel">
+                        <h4 style="font-weight: bold; margin-bottom: 20px;">
+                           Manage Associated Tasks and Resources
+                        </h4>
+                        <img style="  width: 100%;
+                        height: 400PX;
+                        margin-bottom: 10px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;" src="images/Screenshot42.png">
+
+                        <p>
+This step shows how to manage and track the resources and tasks associated with a crop request. You can view and update related tasks, equipment, animals, diseases, fleets, and projects under the "More" dropdown. This helps in monitoring and coordinating all necessary elements for successful crop operations.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="step43-tab" style="padding: 0px 20px;" role="tabpanel">
+                        <h4 style="font-weight: bold; margin-bottom: 20px;">
+                            View Crop Project Request
+                        </h4>
+                        <img style="  width: 100%;
+                        height: 400PX;
+                        margin-bottom: 10px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;" src="images/Screenshot43.png">
+
+                        <p>
+In this step, you can view detailed information about a crop project request, such as "potato request test." You can access the associated project, including any tasks and resources linked to the request. This provides an organized view of the crop-related project for effective tracking and management.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="step44-tab" style="padding: 0px 20px;" role="tabpanel">
+                        <h4 style="font-weight: bold; margin-bottom: 20px;">
+                            View Project Settings
+                        </h4>
+                        <img style="  width: 100%;
+                        height: 400PX;
+                        margin-bottom: 10px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;" src="images/Screenshot44.png">
+
+                        <p>
+In this step, you can view and manage the settings for the crop project, such as the project name, project manager, and planned date. The "Settings" tab allows you to customize various project parameters to ensure smooth tracking and organization of crop-related activities.
+
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="step45-tab" style="padding: 0px 20px;" role="tabpanel">
+                        <h4 style="font-weight: bold; margin-bottom: 20px;">
+                           Link Crop Request to Project
+                        </h4>
+                        <img style="  width: 100%;
+                        height: 400PX;
+                        margin-bottom: 10px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;" src="images/Screenshot45.png">
+
+                        <p>
+In this step, you can link a crop project to a crop request. By associating the "potato request test" crop request with the project, you can ensure that the tasks, resources, and timelines are synchronized between both. This feature helps in managing the entire crop cycle and its associated project effectively.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="step46-tab" style="padding: 0px 20px;" role="tabpanel">
+                        <h4 style="font-weight: bold; margin-bottom: 20px;">
+                            Track Associated Tasks and Resources
+                        </h4>
+                        <img style="  width: 100%;
+                        height: 400PX;
+                        margin-bottom: 10px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;" src="images/Screenshot46.png">
+
+                        <p>
+This step shows the associated tasks and resources for the crop project request. You can track the number of tasks, linked crop requests, and crops related to the project. It helps in managing the overall progress by giving you quick access to the essential resources tied to the project.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="step47-tab" style="padding: 0px 20px;" role="tabpanel">
+                        <h4 style="font-weight: bold; margin-bottom: 20px;">
+                            Mark Crop Request as Done
+                        </h4>
+                        <img style="  width: 100%;
+                        height: 400PX;
+                        margin-bottom: 10px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;" src="images/Screenshot47.png">
+
+                        <p>
+In this step, you can mark the crop request as "Done" once all tasks and processes associated with the request have been completed. Changing the status to "Done" helps finalize the request and indicates that the work is complete. This ensures clear tracking of completed tasks in the system.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="step48-tab" style="padding: 0px 20px;" role="tabpanel">
+                        <h4 style="font-weight: bold; margin-bottom: 20px;">
+                            Finalize Crop Request
+                        </h4>
+                        <img style="  width: 100%;
+                        height: 400PX;
+                        margin-bottom: 10px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;" src="images/Screenshot48.png">
+
+                        <p>
+This step allows you to mark the crop request as "Done" once all tasks and processes have been completed. Changing the status to "Done" signifies the completion of the crop request, providing a clear record of finished work and allowing for the closing of the request in the system.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="step49-tab" style="padding: 0px 20px;" role="tabpanel">
+                        <h4 style="font-weight: bold; margin-bottom: 20px;">
+                            Manage Crop Incidents
+                        </h4>
+                        <img style="  width: 100%;
+                        height: 400PX;
+                        margin-bottom: 10px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;" src="images/Screenshot49.png">
+
+                        <p>
+This section allows you to track and manage any incidents that occur during the crop cycle. By accessing the "Incidents" tab, you can log issues such as diseases, equipment malfunctions, or any unforeseen events, helping to ensure timely interventions and proper handling.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="step50-tab" style="padding: 0px 20px;" role="tabpanel">
+                        <h4 style="font-weight: bold; margin-bottom: 20px;">
+                           Log Crop Incident Details
+                        </h4>
+                        <img style="  width: 100%;
+                        height: 400PX;
+                        margin-bottom: 10px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;" src="images/Screenshot50.png">
+
+                        <p>
+This section allows you to log detailed information about crop incidents, such as the "Late Blight Outbreak." You can record the crop affected, task associated, location, and a description of the incident, ensuring proper tracking and resolution for any issues that arise during the crop cycle.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="step51-tab" style="padding: 0px 20px;" role="tabpanel">
+                        <h4 style="font-weight: bold; margin-bottom: 20px;">
+                            Manage Crops for Farm Locations
+                        </h4>
+                        <img style="  width: 100%;
+                        height: 400PX;
+                        margin-bottom: 10px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;" src="images/Screenshot51.png">
+
+                        <p>
+In this section, you can view and manage crops associated with a specific farm location. The "Crops" tab allows you to assign and track the crops planted at the location, ensuring effective resource management and accurate tracking of crop cycles.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="step52-tab" style="padding: 0px 20px;" role="tabpanel">
+                        <h4 style="font-weight: bold; margin-bottom: 20px;">
+                            Add Crop to Farm Location
+                        </h4>
+                        <img style="  width: 100%;
+                        height: 400PX;
+                        margin-bottom: 10px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;" src="images/Screenshot52.png">
+
+                        <p>
+This section allows you to add a new crop to the selected farm location. By clicking "Add a line," you can define the crop name, its crop period start and end dates, warehouse location, and other details, ensuring proper organization of crop-related activities at the farm location.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="step53-tab" style="padding: 0px 20px;" role="tabpanel">
+                        <h4 style="font-weight: bold; margin-bottom: 20px;">
+                            View Farm Location Details
+                        </h4>
+                        <img style="  width: 100%;
+                        height: 400PX;
+                        margin-bottom: 10px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;" src="images/Screenshot53.png">
+
+                        <p>
+This section allows you to view and manage detailed information about a specific farm location. It displays essential contact details, warehouse locations, and crop-related data, providing a comprehensive overview of the farm's operations. This helps with tracking farm locations and associating them with crops, tasks, and resources.                        </p>
+                    </div>
+
+
+
+
+
+                </div>
+            </section>
+        </section>
+
+        <!-- Why Kaizen Tab -->
+        <section class="tab-pane p-0 m-0 fade" id="whyKaizen">
+            <section class="why-section" style="
+            text-align: center;
+            height: auto;
+            border-radius: 20px;
+            padding-top: 20px;
+            padding-bottom: 20px;">
+                <h2 style="font-size: 2.5rem;
+                font-weight: bold;
+                color: #333;
+                padding-top: 40px;">Why <span style="color: #7F4994;">Kaizen</span></h2>
+                <p style="  font-size: 1.2rem;
+                color: #555;
+                margin-top: 10px;">You know us as the makers of the Odoo "Kaizen Agriculture / Farm Management for Odoo".</p>
+            </section>
+
+
+            <section class="apps-section text-center" style="
+margin: 20px 0px;
+padding: 50px 20px;
+            background-color: #FCF6FE;">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 col-sm-12" style="margin: auto; text-align: start; padding-left: 20px;">
+                        <h5 style=" font-size: 2rem;
+                        font-weight: bold;
+                        color: #333;
+                        margin-bottom: 16px;"><span style=" color: #7F4994;
+                        ">Kaizen's </span>Top App Recommendations</h5>
+                        <p class="font-size: .75rem;
+                        color: #555;
+                        margin-top: 10px;
+
+                        margin-bottom: 30px;
+                        text-align: left;">Take a look at our other Odoo apps designed to make your life easier
+                            with a smooth
+                            workflow. Don't miss the chance to uplift your Odoo ERP experience with our apps!
+                        </p>
+                        <a style="color: #FFFFFF;
+                        background-color: #7F4994;
+                        padding: 10px 20px;
+                        font-weight: bold;
+border-radius: 5px;
+text-align: center;
+margin: 30px 0px;
+text-decoration: none;" href="https://apps.odoo.com/apps/modules/browse?search=kaizen">More
+                            Apps &raquo;</a>
+
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <div class="row ">
+
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="h-40" style="height: 280px;
+                            border: 1px solid #f8f9fa;
+                            border-radius: 10px;
+                            background-color: #ffffff;
+                            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                            padding: 10px;
+                            transition: transform 0.3s ease, box-shadow 0.3s ease;
+                            margin-bottom: 20px;">
+                                    <div style="padding: 10px;">
+                                        <div class="row">
+                                            <img class="col-4" src="images/tamara_pos.png" width="40px" height="60px"
+                                                alt="POS Tamara">
+                                            <h6 class="col-8" style="font-size: 1rem;
+                                        font-weight: bold;
+                                       text-align: center;
+                                       margin: auto;
+                                        color: #333;">POS Tamara</h6>
+                                        </div>
+                                        <p style="
+  color: #182023; font-size: 14px; margin-top: 10px; text-align: start;"> Pay point of sale orders with tamara payment
+                                            gateway and
+                                            refund orders paid with tamara....</p>
+                                        <a href="https://apps.odoo.com/apps/modules/16.0/pos_tamara" style="color: #7F4994;
+                                        font-weight: bold;
+                                        text-decoration: underline;
+                                        text-align: start;">Learn More &raquo;</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="h-40" style="height: 280px;
+                            border: 1px solid #f8f9fa;
+                            border-radius: 10px;
+                            background-color: #ffffff;
+                            padding: 10px;
+                            margin: 30px 0px;
+                            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                            transition: transform 0.3s ease, box-shadow 0.3s ease;
+                            margin-bottom: 20px;">
+                                    <div>
+                                        <div class="row">
+                                            <img class="col-4" src="images/corporate_tax.png" width="20px"
+                                                height="60px" alt="UAE Corporate Tax">
+                                            <h6 class="col-8" style="font-size: 1rem;
+                                        font-weight: bold;
+                                        margin: auto;
+                                        color: #333;">UAE Corporate Tax
+                                            </h6>
+                                        </div>
+                                        <p style="text-align: start;
+  color: #182023;">Get Complete State-specific legislation view of Company income
+                                            taxes Generate / redraft related journals at any time during the year...</p>
+                                        <a href="https://apps.odoo.com/apps/modules/16.0/corporate_tax"
+                                            class="learn-more" style="color: #7F4994;
+                                        font-weight: bold;
+                                        text-decoration: underline;">Learn More &raquo;</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="h-60" style="height: 280px;
+                            border: 1px solid #f8f9fa;
+                            border-radius: 10px;
+                            padding: 10px;
+                            background-color: #ffffff;
+                            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                            transition: transform 0.3s ease, box-shadow 0.3s ease;
+                            margin-bottom: 20px;">
+                                    <div>
+                                        <div class="row">
+                                            <img class="col-4" src="images/stock_report_print.png" width="20px"
+                                                height="40px" alt="Stock Report PDF">
+                                            <h6 class="col-8" style="font-size: 1rem;
+                                        font-weight: bold;
+                                        margin: auto;
+                                        color: #333;">Stock Report PDF </h6>
+                                        </div>
+                                        <p style="text-align: start;
+  color: #666;">PDF report to print inventory transactions using different
+                                            fillters...</p>
+                                        <a href="https://apps.odoo.com/apps/modules/16.0/stock_report_print"
+                                            class="learn-more" style="color: #7F4994;
+                                        font-weight: bold;
+                                        text-decoration: underline">Learn More &raquo;</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="h-60" style="height: 280px;
+                            border: 1px solid #f8f9fa;
+                            border-radius: 10px;
+                            background-color: #ffffff;
+                            padding: 10px;
+                            margin: 30px 0px;
+                            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                            transition: transform 0.3s ease, box-shadow 0.3s ease;
+                            margin-bottom: 20px;">
+                                    <div>
+                                        <div class="row">
+                                            <img class="col-4" src="images/tamara.png" width="20px" height="60px"
+                                                alt="Payment Provider: Tamara">
+                                            <h6 class="col-8" style="font-size: 1rem;
+                                        font-weight: bold;
+                                        margin: auto;
+                                        color: #333;">Payment Provider: Tamara</h6>
+                                        </div>
+                                        <p style="
+  color: #666; text-align: start;">Integration With Tamara Payment Gateway (E-commerce and Point
+                                            of Sale)...</p>
+                                        <a href="https://apps.odoo.com/apps/modules/16.0/tamara" style="color: #7F4994;
+                                    font-weight: bold;
+                                    text-decoration: underline;" class="learn-more">Learn
+                                            More &raquo;</a>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="service py-5" style="
+            padding: 40px;
+            border-radius: 20px;">
+                <div class="text-center mb-4">
+                    <h2><span class="section-title">Kaizen</span> Odoo Services</h2>
+                    <p>Upscale your business with expert services from an Odoo Gold Partner.</p>
+                </div>
+                <div class="row g-4">
+
+                    <div class="col-md-4 col-sm-6">
+                        <div style="border-radius: 8px;
+                        padding: 10px;
+                        text-align: center;
+                        height: 200px;">
+                            <img style=" max-width: 120px;
+  margin-bottom: 15px;" src="images/module_development.png" alt="Module Development">
+                            <h5 style="font-size: 1.25rem;
+                            margin-bottom: 10px;
+                            color: #333;">Module Development</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div style="border-radius: 8px;
+                        padding: 10px;
+                        text-align: center;
+                        height: 200px;">
+                            <img style=" max-width: 120px;
+  margin-bottom: 15px;" src="images/Implementation.png" alt="Implementation">
+                            <h5 style="font-size: 1.25rem;
+                            margin-bottom: 10px;
+                            color: #333;">Implementation</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div style="border-radius: 8px;
+                        padding: 10px;
+                        text-align: center;
+                        height: 200px;">
+                            <img style=" max-width: 120px;
+  margin-bottom: 15px;" src="images/Customization.png" alt="Customization">
+                            <h5 style="font-size: 1.25rem;
+                            margin-bottom: 10px;
+                            color: #333;">Customization</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div style="border-radius: 8px;
+                        padding: 10px;
+                        text-align: center;
+                        height: 200px;">
+                            <img style=" max-width: 120px;
+  margin-bottom: 15px;" src="images/integrations.png" alt="Integrations">
+                            <h5 style="font-size: 1.25rem;
+                            margin-bottom: 10px;
+                            color: #333;">Integration</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div style="border-radius: 8px;
+                        padding: 10px;
+                        text-align: center;
+                        height: 200px;">
+                            <img style=" max-width: 120px;
+  margin-bottom: 15px;" src="images/Migration.png" alt="Migration">
+                            <h5 style="font-size: 1.25rem;
+                            margin-bottom: 10px;
+                            color: #333;">Migration</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div style="border-radius: 8px;
+                        padding: 10px;
+                        text-align: center;
+                        height: 200px;">
+                            <img style=" max-width: 120px;
+  margin-bottom: 15px;" src="images/Support_Maintenance.png" alt="Support & Maintenance">
+                            <h5 style="font-size: 1.25rem;
+                            margin-bottom: 10px;
+                            color: #333;">Support & Maintenance</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div style="border-radius: 8px;
+                        padding: 10px;
+                        text-align: center;
+                        height: 200px;">
+                            <img style=" max-width: 120px;
+  margin-bottom: 15px;" src="images/Consulting.png" alt="Consulting">
+                            <h5 style="font-size: 1.25rem;
+                            margin-bottom: 10px;
+                            color: #333;">Consulting</h5>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </section>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="position-relative" style="margin: 25px; height: 240px;">
+        <img class="position-absolute w-100 h-100" src="images/cover.png" alt="Footer Background">
+        <div class="position-relative justify-content-center" style="padding: 50px 0px; margin: auto; text-align: center;">
+            <h1 class="position-relative" style="font-size: 2.5rem; margin-bottom: 20px; color: #ffff;">
+                Try Kaizen Agriculture / Farm Management for Odoo today!
+            </h1>
+            <div>
+                <a href="https://wa.me/+971566828386?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20services"
+                   class="btn btn-contact"
+                   style="background-color: #ffffff; color: #7F4994; border: 2px solid white;">
+                   <i class="fa fa-brands fa-whatsapp"></i> +971 56 682 8386
+                </a>
+            </div>
+        </div>
+    </footer>
+    <div style="height: 20px;"></div>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script src="js/jQuery3.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</div>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem
+            id="agricultural_management_topmenu"
+            name="Agriculture"/>
+    <menuitem
+            id="agriculture_topmenu"
+            name="Agriculture" 
+            parent="agricultural_management_topmenu"/>
+    <menuitem
+            id="croping_request_submenu"
+            name="Crop Requests"
+            sequence="1"
+            parent="agricultural_management_topmenu"/>
+    <menuitem
+            id="farmer_cropping_request_menu"
+            name="Crop Requests"
+            sequence="1"
+            action="kazn_odoo_agriculture.action_farmer_cropping_request"
+            parent="croping_request_submenu"/>
+    <menuitem
+            id="crops_topmenu"
+            name="Crops"
+            sequence="2"
+            parent="agricultural_management_topmenu"/>
+    <menuitem
+            id="crops_submenu"
+            name="Crops"
+            sequence="1"
+            action="kazn_odoo_agriculture.action_farmer_location_crop"
+            parent="crops_topmenu"/>
+    <menuitem
+            id="incident_submenu"
+            name="Incidents"
+            sequence="3"
+            action="kazn_odoo_agriculture.action_crops_incident"
+            parent="agricultural_management_topmenu"/>
+    <menuitem
+            id="crops_tasks_template_submenu"
+            name="Process Template"
+            action="kazn_odoo_agriculture.action_crops_tasks_template"
+            parent="crops_topmenu"/>
+    <menuitem
+            id="dieases_cure_submenu"
+            name="Dieases Cures"
+            sequence="4"
+            action="kazn_odoo_agriculture.action_crops_dieases_cure"
+            parent="agricultural_management_topmenu"/>
+    <menuitem
+            id="projects_topmenu"
+            name="Projects"
+            sequence="6"
+            parent="agricultural_management_topmenu"/>
+    <menuitem
+            id="projects_submenu"
+            name="Projects"
+            sequence="1"
+            action="kazn_odoo_agriculture.action_view_farmer_cropping_project"
+            parent="projects_topmenu"/>
+    <menuitem
+            id="tasks_topmenu"
+            name="Tasks"
+            action="kazn_odoo_agriculture.action_view_farmer_cropping_task"
+            parent="projects_topmenu"/>
+    <menuitem
+            id="configuration_topmenu"
+            name="Configuration"
+            sequence="9"
+            parent="agricultural_management_topmenu"/>
+    <menuitem
+            id="farmer_menu"
+            name="Farmers"
+            sequence="1"
+            action="kazn_odoo_agriculture.action_farmers_form"
+            parent="configuration_topmenu"/>
+    <menuitem
+            id="location_submenu"
+            name="Farm Locations"
+            sequence="2"
+            action="kazn_odoo_agriculture.action_locations_form"
+            parent="configuration_topmenu"/>
+    <menuitem
+            id="animal_submenu"
+            name="Animals"
+            sequence="3"
+            action="kazn_odoo_agriculture.action_animal_form"
+            parent="configuration_topmenu"/>
+    <!-- تم تعديل الـ action هنا -->
+    <menuitem
+            id="fleet_submenu_oo"
+            name="Fleets"
+            sequence="4"
+            action="kazn_odoo_agriculture.action_crops_fleet"
+            parent="configuration_topmenu"/>
+    <menuitem
+            id="stages_topmenu"
+            name="Stages"
+            action="project.open_task_type_form"
+            parent="configuration_topmenu"/>
+</odoo>

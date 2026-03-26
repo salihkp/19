@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- ===== Form View ===== -->
+        <record id="view_crops_animals_form" model="ir.ui.view">
+            <field name="name">crops.animals.form</field>
+            <field name="model">crops.animals</field>
+            <field name="arch" type="xml">
+                <form string="Crops Animals">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="partner_id"/>
+                                <field name="quantity"/>
+                            </group>
+                            <group>
+                                <field name="start_date"/>
+                                <field name="end_date"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page name="description_page" string="Description">
+                                <field name="description"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- ===== List View ===== -->
+        <record id="view_crops_animals_list" model="ir.ui.view">
+            <field name="name">crops.animals.list</field>
+            <field name="model">crops.animals</field>
+            <field name="arch" type="xml">
+                <list string="Crops Animals">
+                    <field name="partner_id"/>
+                    <field name="quantity"/>
+                    <field name="start_date"/>
+                    <field name="end_date"/>
+                    <field name="description"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- ===== Search View (مبسّط مؤقتاً) ===== -->
+        <record id="view_crops_animals_search" model="ir.ui.view">
+            <field name="name">crops.animals.search</field>
+            <field name="model">crops.animals</field>
+            <field name="arch" type="xml">
+                <search string="Crops Animals"/>
+            </field>
+        </record>
+
+        <!-- ===== Action ===== -->
+        <record model="ir.actions.act_window" id="action_crops_animals">
+            <field name="name">Crops Animals</field>
+            <field name="res_model">crops.animals</field>
+            <field name="view_mode">list,form</field>
+        </record>
+    </data>
+</odoo>

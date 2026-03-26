@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="seq_farmer_cropping_request" model="ir.sequence">
+            <field name="name">Farmer Cropping Request</field>
+            <field name="code">farmer.cropping.request</field>
+            <field name="prefix">CROP/REQ/00000</field>
+        </record>
+    </data>
+</odoo>

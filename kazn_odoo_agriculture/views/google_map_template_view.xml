@@ -1,0 +1,10 @@
+<odoo>
+    <template id="partner_details_inherit_location_map" name="Google Map" inherit_id="website_partner.partner_detail" priority="20">
+        <xpath expr="//div[hasclass('col-md-4')]/div" position="before">
+            <ul class="nav">
+                <iframe t-attf-src="/google_map?width=260&amp;height=240&amp;partner_ids=#{partner.ids }&amp;partner_url=/customers/"
+                        style="width:260px; height:240px; border:0; padding:0; margin:0;" scrolling="no"></iframe>
+            </ul>
+        </xpath>
+    </template>
+</odoo>

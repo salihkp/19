@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="report_farmer_cropping_request" model="ir.actions.report">
+            <field name="name">Crop Requests</field>
+            <field name="model">farmer.cropping.request</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">kazn_odoo_agriculture.template_report_farmer_cropping_request</field>
+            <field name="report_file">kazn_odoo_agriculture.template_report_farmer_cropping_request</field>
+            <field name="binding_model_id" ref="model_farmer_cropping_request"/>
+            <field name="binding_type">report</field>
+        </record>
+        <template id="template_report_farmer_cropping_request">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.html_container">
+                    <t t-call="web.internal_layout">
+                        <div class="page">
+                            <div>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <td style="text-align: center;" colspan="4">
+                                                <strong><h3>Crop Requests</h3></strong>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: center;" colspan="4">
+                                                <strong><h3><span t-field="doc.number"/></h3></strong>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <strong><h3><span t-field="doc.crop_ids"/></h3></strong>
+                                            </td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <strong>Name:</strong>
+                                            </td>
+                                            <td>
+                                                <span t-field="doc.name"/>
+                                            </td>
+                                            <td>
+                                                <strong>Start Date: </strong>
+                                            </td>
+                                            <td>
+                                                <span t-field="doc.start_date"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <strong>Supervisor:</strong>
+                                            </td>
+                                            <td>
+                                                <span t-field="doc.user_id.name"/>
+                                            </td>
+                                            <td>
+                                                <strong>End Date: </strong>
+                                            </td>
+                                            <td>
+                                                <span t-field="doc.end_date"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <strong>Responsible User: </strong>
+                                            </td>
+                                            <td>
+                                                <span t-field="doc.responsible_user_id.name"/>
+                                            </td>
+                                            <td>
+                                                <strong>Company: </strong>
+                                            </td>
+                                            <td>
+                                                <span t-field="doc.company_id.name"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <strong>Project: </strong>
+                                            </td>
+                                            <td>
+                                                <span t-field="doc.project_id.name"/><br/>
+                                            </td>
+                                            <td>
+                                                <strong>State: </strong>
+                                            </td>
+                                            <td>
+                                                <span t-field="doc.state"/>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <td><span t-field="doc.description"/></td>
+                                        </tbody>
+                                        <thead>
+                                            <tr>
+                                                <th>Internal Notes</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <td><span t-field="doc.internal_note"/></td>
+                                        </tbody>
+                                    </table>
+                                </table>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

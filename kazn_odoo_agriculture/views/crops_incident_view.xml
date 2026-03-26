@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- ===== Form View ===== -->
+        <record id="view_crops_incident_form" model="ir.ui.view">
+            <field name="name">crops.incident.form</field>
+            <field name="model">crops.incident</field>
+            <field name="arch" type="xml">
+                <form string="Crop Incidents">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="crop_id"/>
+                                <field name="task_id"/>
+                            </group>
+                            <group>
+                                <field name="datetime"/>
+                                <field name="location_id" domain="[('is_location', '=', True)]"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page name="description_page" string="Description">
+                                <field name="description" style="width: 100%;"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- ===== List View ===== -->
+        <record id="view_crops_incident_list" model="ir.ui.view">
+            <field name="name">crops.incident.list</field>
+            <field name="model">crops.incident</field>
+            <field name="arch" type="xml">
+                <list string="Crop Incidents">
+                    <field name="name"/>
+                    <field name="crop_id"/>
+                    <field name="task_id"/>
+                    <field name="datetime"/>
+                    <field name="location_id" domain="[('is_location', '=', True)]"/>
+                    <field name="description"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- ===== Search View (مبسّط جداً مؤقتاً) ===== -->
+        <record id="view_crops_incident_search" model="ir.ui.view">
+            <field name="name">crops.incident.search</field>
+            <field name="model">crops.incident</field>
+            <field name="arch" type="xml">
+                <search string="Crop Incidents"/>
+            </field>
+        </record>
+
+        <!-- ===== Action ===== -->
+        <record model="ir.actions.act_window" id="action_crops_incident">
+            <field name="name">Crop Incidents</field>
+            <field name="res_model">crops.incident</field>
+            <field name="view_mode">list,form</field>
+        </record>
+    </data>
+</odoo>

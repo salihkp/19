@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="project_task_view_inherited" model="ir.ui.view">
+        <field name="name">task.view</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2"/>
+        <field name="priority" eval="20"/>
+        <field name="arch" type="xml">
+        <xpath expr="//field[@name='project_id']" position="after">
+            <field name="custom_request_id"/>
+        </xpath>
+        <xpath expr="//page[last()]" position="after">
+            <page string="Crop Incidents" name='crop_incident_information'>
+                <field name="crop_incident_ids" widget="section_and_note_one2many" mode="list" editable="bottom"/>
+                <field name="is_cropping_request"  invisible="1"/>
+            </page> 
+            <page string="Crop Equipments" name='crop_equipments_information'>
+                <field name="equipment_ids"/>
+            </page>
+            <page string="Crop Animals" name='crop_incident_animals_information'>
+                <field name="animal_ids" widget="section_and_note_one2many" mode="list" editable="bottom"/>
+            </page> 
+            <page string="Crop Fleets" name='crop_fleets_information'>
+                <field name="fleet_ids" widget="section_and_note_one2many" mode="list" editable="bottom"/>
+            </page>
+        </xpath>
+        </field>
+    </record>
+    <record id="action_view_farmer_cropping_task" model="ir.actions.act_window">
+        <field name="name">Crop Task Requests</field>
+        <field name="res_model">project.task</field>
+        <field name="view_mode">kanban,list,form,calendar,pivot,graph,activity</field>
+        <field name="search_view_id" ref="project.view_task_search_form"/>
+        <field name="domain">[('is_cropping_request','=',True)]</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new task
+            </p><p>
+            Odoo's project management allows you to manage the pipeline of your tasks efficiently.<br/>
+            You can track progress, discuss on tasks, attach documents, etc.
+        </p>
+        </field>
+    </record>
+    <record id="project_project_view_inherited" model="ir.ui.view">
+        <field name="name">project.view</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project"/>
+        <field name="priority" eval="20"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='settings']/group/group/field[@name='privacy_visibility']" position="after">
+                <field name="custom_request_id"/>
+            </xpath>
+            <xpath expr="//div[hasclass('oe_button_box')]" position="inside">
+                <button name="action_crops_requests"
+                        type="object"
+                        class="oe_stat_button"
+                        icon="fa-pencil-square-o">
+                    <field  string="Crop Requests" name="crop_request_count" widget="statinfo"/>
+                </button>
+                <button name="action_crops"
+                        type="object"
+                        class="oe_stat_button"
+                        icon="fa-pencil-square-o">
+                    <field  string="Crops" name="crop_count" widget="statinfo"/>
+                </button>
+            </xpath>
+        </field>
+    </record>
+    <record id="action_view_farmer_cropping_project" model="ir.actions.act_window">
+        <field name="name">Crop Project Requests</field>
+        <field name="res_model">project.project</field>
+        <field name="view_mode">kanban,list,form,pivot,graph,activity</field>
+        <field name="search_view_id" ref="project.view_project_project_filter"/>
+        <field name="domain">[]</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new project
+            </p><p>
+                Odoo's project management allows you to manage the pipeline of your tasks efficiently.<br/>
+                You can track progress, discuss on tasks, attach documents, etc.
+            </p>
+        </field>
+    </record>
+</odoo>

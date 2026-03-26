@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_crops_dieases_form" model="ir.ui.view">
+            <field name="name">Crops Dieases View</field>
+            <field name="model">crops.dieases</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name='crops_dieases_cure_id'/>
+                            </group>
+                            <group>
+                                <field name='crops_dieases_cures_id'/>
+                                <field name="description"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="view_crops_dieases_list" model="ir.ui.view">
+                <field name="name">Crops Dieases list View</field>
+                <field name="model">crops.dieases</field>
+                <field name="arch" type="xml">
+                    <list>
+                        <field name='crops_dieases_cure_id'/>
+                        <field name='crops_dieases_cures_id'/>
+                        <field name='description'/>
+                    </list>
+                </field>
+        </record>
+        <record id="view_crops_dieases_search" model="ir.ui.view">
+            <field name="name">Crops Dieases Search View</field>
+            <field name="model">crops.dieases</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name='crops_dieases_cure_id'/>
+                    <field name='crops_dieases_cures_id'/>
+                    <field name='description'/>
+                </search>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="action_crops_dieases">
+            <field name="name">Crop Dieases</field>
+            <field name="res_model">crops.dieases</field>
+            <field name="view_mode">list,form</field>
+        </record>
+    </data>
+    <data>
+        <record id="view_crops_dieases_cure_form" model="ir.ui.view">
+            <field name="name">Crops Dieases Cure View</field>
+            <field name="model">crops.dieases.cure</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name='name'/>
+                            <field name='description'/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="view_crops_dieases_cure_list" model="ir.ui.view">
+            <field name="name">Crops Dieases Cure list View</field>
+            <field name="model">crops.dieases.cure</field>
+            <field name="arch" type="xml">
+                <list>
+                    <field name='name'/>
+                    <field name='description'/>
+                </list>
+            </field>
+        </record>
+        <record id="view_crops_dieases_cure_search" model="ir.ui.view">
+            <field name="name">Crops Dieases Cure Search View</field>
+            <field name="model">crops.dieases.cure</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name='name'/>
+                    <field name='description'/>
+                </search>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="action_crops_dieases_cure">
+            <field name="name">Crop Dieases Cures</field>
+            <field name="res_model">crops.dieases.cure</field>
+            <field name="view_mode">list,form</field>
+        </record>
+    </data>
+</odoo>
