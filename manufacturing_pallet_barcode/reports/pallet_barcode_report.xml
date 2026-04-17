@@ -33,7 +33,7 @@
                 <div class="page" style="width: 100mm; height: 50mm; margin: 0; padding: 0;">
                     <div style="width: 100mm; height: 50mm; border: 1px solid #111; box-sizing: border-box; padding: 3mm 4mm; direction: rtl; font-size: 11px; font-family: DejaVu Sans, sans-serif;">
                         <div t-translation="off" style="text-align: center; font-size: 16px; font-weight: 700; letter-spacing: 0.2px; margin-bottom: 2mm;">
-                            البــــــــــــــــاركــــــــــــــــود
+                            &#1575;&#1604;&#1576;&#1575;&#1585;&#1603;&#1608;&#1583;
                         </div>
 
                         <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 4mm;">
@@ -49,15 +49,15 @@
                             </div>
 
                             <div t-translation="off" style="flex: 1; line-height: 1.65; text-align: right;">
-                                <div><strong>رقم أمر التصنيع:</strong> <t t-esc="package.production_id.name or '-'"/></div>
-                                <div><strong>رقم أمر البيع:</strong> <t t-esc="package.sale_order_ref or '-'"/></div>
+                                <div><strong>&#1585;&#1602;&#1605; &#1571;&#1605;&#1585; &#1575;&#1604;&#1578;&#1589;&#1606;&#1610;&#1593;:</strong> <t t-esc="package.production_id.name or '-'"/></div>
+                                <div><strong>&#1585;&#1602;&#1605; &#1571;&#1605;&#1585; &#1575;&#1604;&#1576;&#1610;&#1593;:</strong> <t t-esc="package.sale_order_ref or '-'"/></div>
                                 <div>
-                                    <strong>تاريخ أمر البيع:</strong>
+                                    <strong>&#1578;&#1575;&#1585;&#1610;&#1582; &#1571;&#1605;&#1585; &#1575;&#1604;&#1576;&#1610;&#1593;:</strong>
                                     <t t-esc="package.sale_order_date and package.sale_order_date.strftime('%Y/%m/%d') or '-'"/>
                                 </div>
-                                <div><strong>اسم المنتج:</strong> <t t-esc="package.product_id.display_name or '-'"/></div>
-                                <div><strong>رقم الطبلية:</strong> <t t-esc="package.name or '-'"/></div>
-                                <div><strong>كمية الطبلية:</strong> <t t-esc="package.product_qty or package.target_qty or 0.0"/></div>
+                                <div><strong>&#1575;&#1587;&#1605; &#1575;&#1604;&#1605;&#1606;&#1578;&#1580;:</strong> <t t-esc="package.product_id.display_name or '-'"/></div>
+                                <div><strong>&#1585;&#1602;&#1605; &#1575;&#1604;&#1591;&#1576;&#1604;&#1610;&#1577;:</strong> <t t-esc="package.name or '-'"/></div>
+                                <div><strong>&#1603;&#1605;&#1610;&#1577; &#1575;&#1604;&#1591;&#1576;&#1604;&#1610;&#1577;:</strong> <t t-esc="package.product_qty or package.target_qty or 0.0"/></div>
                             </div>
                         </div>
                     </div>
