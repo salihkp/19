@@ -12,7 +12,7 @@
         <field name="margin_left">0</field>
         <field name="margin_right">0</field>
         <field name="header_line" eval="False"/>
-        <field name="disable_shrinking" eval="False"/>
+        <field name="disable_shrinking" eval="True"/>
         <field name="dpi">203</field>
     </record>
 
@@ -30,8 +30,8 @@
     <template id="report_pallet_barcode_template">
         <t t-call="web.html_container">
             <t t-foreach="docs" t-as="package">
-                <div class="page" style="width: 100mm; height: 50mm; margin: 0; padding: 0; overflow: hidden;">
-                    <div style="width: 99mm; height: 49mm; margin: 0.5mm; border: 0.24mm solid #111; box-sizing: border-box; direction: rtl; font-family: DejaVu Sans, sans-serif; overflow: hidden; page-break-inside: avoid; background: #fff; padding: 1.7mm 2.2mm 1.2mm;">
+                <div class="page" style="width: 100%; height: 100%; margin: 0; padding: 0; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                    <div style="width: 100mm; height: 50mm; border: 0.24mm solid #111; box-sizing: border-box; direction: rtl; font-family: DejaVu Sans, sans-serif; overflow: hidden; page-break-inside: avoid; background: #fff; padding: 1.7mm 2.2mm 1.2mm;">
                         <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 2.4mm; border-bottom: 0.18mm solid #dadada; padding-bottom: 1.2mm; margin-bottom: 1mm;">
                             <div style="width: 58mm; text-align: center; direction: ltr; line-height: 1;">
                                 <img t-if="package.barcode_image"
