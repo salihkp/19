@@ -30,57 +30,44 @@
     <template id="report_pallet_barcode_template">
         <t t-call="web.html_container">
             <t t-foreach="docs" t-as="package">
-                <div class="page" style="width: 100%; height: 100%; margin: 0; padding: 0; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-                    <div style="width: 100mm; height: 50mm; border: 0.24mm solid #111; box-sizing: border-box; direction: rtl; font-family: DejaVu Sans, sans-serif; overflow: hidden; page-break-inside: avoid; background: #fff; padding: 1.7mm 2.2mm 1.2mm;">
-                        <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 2.4mm; border-bottom: 0.18mm solid #dadada; padding-bottom: 1.2mm; margin-bottom: 1mm;">
-                            <div style="width: 58mm; text-align: center; direction: ltr; line-height: 1;">
-                                <img t-if="package.barcode_image"
-                                     t-att-src="package.barcode_image_src"
-                                     style="width: 56mm; height: 12.5mm; display: block; margin: 0 auto;" alt="Barcode"/>
-                                <div t-if="not package.barcode_image"
-                                     style="width: 56mm; height: 12.5mm; border: 0.18mm solid #999; margin: 0 auto;"/>
-                                <div style="font-size: 8.2px; font-weight: 700; letter-spacing: 0.18px; margin-top: 0.55mm;">
-                                    <t t-esc="package.barcode_display or package.name"/>
-                                </div>
-                            </div>
-
-                            <div t-translation="off" style="flex: 1; min-width: 0; text-align: right; font-size: 7.4px; line-height: 1.15;">
-                                <div style="font-weight: 700; color: #111; white-space: nowrap;">&#1585;&#1602;&#1605; &#1575;&#1604;&#1591;&#1576;&#1604;&#1610;&#1577;:</div>
-                                <div style="direction: ltr; text-align: left; font-size: 8px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                                    <t t-esc="package.name or '-'"/>
-                                </div>
-                                <div style="font-weight: 700; color: #111; margin-top: 0.55mm; white-space: nowrap;">&#1603;&#1605;&#1610;&#1577; &#1575;&#1604;&#1591;&#1576;&#1604;&#1610;&#1577;:</div>
-                                <div style="direction: ltr; text-align: left; font-size: 8px; font-weight: 700; white-space: nowrap;">
-                                    <t t-esc="package.product_qty or package.target_qty or 0.0"/>
-                                </div>
+                <div class="page" style="width: 100mm; height: 50mm; margin: 0; padding: 0; overflow: hidden;">
+                    <div style="width: 100mm; height: 50mm; border: 0.24mm solid #111; box-sizing: border-box; direction: rtl; font-family: DejaVu Sans, sans-serif; overflow: hidden; page-break-inside: avoid; background: #fff; padding: 1.2mm 1.8mm 1.2mm;">
+                        <div style="height: 16.5mm; text-align: center; direction: ltr; line-height: 1; border-bottom: 0.15mm solid #dddddd; padding-bottom: 0.8mm; margin-bottom: 0.7mm;">
+                            <img t-if="package.barcode_image"
+                                 t-att-src="package.barcode_image_src"
+                                 style="width: 64mm; height: 12mm; display: block; margin: 0 auto;" alt="Barcode"/>
+                            <div t-if="not package.barcode_image"
+                                 style="width: 64mm; height: 12mm; border: 0.18mm solid #999; margin: 0 auto;"/>
+                            <div style="font-size: 8.6px; font-weight: 700; letter-spacing: 0.2px; margin-top: 0.5mm;">
+                                <t t-esc="package.barcode_display or package.name"/>
                             </div>
                         </div>
 
-                        <table t-translation="off" style="width: 100%; border-collapse: collapse; table-layout: fixed; font-size: 7.55px; line-height: 1.18;">
+                        <table t-translation="off" style="width: 100%; height: 30.6mm; border-collapse: collapse; table-layout: fixed; font-size: 8px; line-height: 1.08;">
                             <tbody>
-                                <tr style="border-bottom: 0.15mm solid #ececec;">
-                                    <td style="width: 31%; font-weight: 700; color: #111; white-space: nowrap; padding: 0.35mm 0;">&#1585;&#1602;&#1605; &#1571;&#1605;&#1585; &#1575;&#1604;&#1578;&#1589;&#1606;&#1610;&#1593;:</td>
-                                    <td style="width: 69%; direction: ltr; text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding: 0.35mm 0;">
-                                        <t t-esc="package.production_id.name or '-'"/>
-                                    </td>
+                                <tr style="height: 5.1mm; border-bottom: 0.14mm solid #ececec;">
+                                    <td style="width: 35%; font-weight: 700; white-space: nowrap;">&#1585;&#1602;&#1605; &#1575;&#1604;&#1591;&#1576;&#1604;&#1610;&#1577;:</td>
+                                    <td style="width: 65%; direction: ltr; text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><t t-esc="package.name or '-'"/></td>
                                 </tr>
-                                <tr style="border-bottom: 0.15mm solid #ececec;">
-                                    <td style="width: 31%; font-weight: 700; color: #111; white-space: nowrap; padding: 0.35mm 0;">&#1585;&#1602;&#1605; &#1571;&#1605;&#1585; &#1575;&#1604;&#1576;&#1610;&#1593;:</td>
-                                    <td style="width: 69%; direction: ltr; text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding: 0.35mm 0;">
-                                        <t t-esc="package.sale_order_ref or '-'"/>
-                                    </td>
+                                <tr style="height: 5.1mm; border-bottom: 0.14mm solid #ececec;">
+                                    <td style="width: 35%; font-weight: 700; white-space: nowrap;">&#1603;&#1605;&#1610;&#1577; &#1575;&#1604;&#1591;&#1576;&#1604;&#1610;&#1577;:</td>
+                                    <td style="width: 65%; direction: ltr; text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><t t-esc="package.product_qty or package.target_qty or 0.0"/></td>
                                 </tr>
-                                <tr style="border-bottom: 0.15mm solid #ececec;">
-                                    <td style="width: 31%; font-weight: 700; color: #111; white-space: nowrap; padding: 0.35mm 0;">&#1578;&#1575;&#1585;&#1610;&#1582; &#1571;&#1605;&#1585; &#1575;&#1604;&#1576;&#1610;&#1593;:</td>
-                                    <td style="width: 69%; direction: ltr; text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding: 0.35mm 0;">
-                                        <t t-esc="package.sale_order_date and package.sale_order_date.strftime('%Y/%m/%d') or '-'"/>
-                                    </td>
+                                <tr style="height: 5.1mm; border-bottom: 0.14mm solid #ececec;">
+                                    <td style="width: 35%; font-weight: 700; white-space: nowrap;">&#1585;&#1602;&#1605; &#1571;&#1605;&#1585; &#1575;&#1604;&#1578;&#1589;&#1606;&#1610;&#1593;:</td>
+                                    <td style="width: 65%; direction: ltr; text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><t t-esc="package.production_id.name or '-'"/></td>
                                 </tr>
-                                <tr>
-                                    <td style="width: 31%; font-weight: 700; color: #111; white-space: nowrap; padding-top: 0.45mm;">&#1575;&#1587;&#1605; &#1575;&#1604;&#1605;&#1606;&#1578;&#1580;:</td>
-                                    <td style="width: 69%; direction: ltr; text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 7.35px; padding-top: 0.45mm;">
-                                        <t t-esc="package.product_id.display_name or '-'"/>
-                                    </td>
+                                <tr style="height: 5.1mm; border-bottom: 0.14mm solid #ececec;">
+                                    <td style="width: 35%; font-weight: 700; white-space: nowrap;">&#1585;&#1602;&#1605; &#1571;&#1605;&#1585; &#1575;&#1604;&#1576;&#1610;&#1593;:</td>
+                                    <td style="width: 65%; direction: ltr; text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><t t-esc="package.sale_order_ref or '-'"/></td>
+                                </tr>
+                                <tr style="height: 5.1mm; border-bottom: 0.14mm solid #ececec;">
+                                    <td style="width: 35%; font-weight: 700; white-space: nowrap;">&#1578;&#1575;&#1585;&#1610;&#1582; &#1571;&#1605;&#1585; &#1575;&#1604;&#1576;&#1610;&#1593;:</td>
+                                    <td style="width: 65%; direction: ltr; text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><t t-esc="package.sale_order_date and package.sale_order_date.strftime('%Y/%m/%d') or '-'"/></td>
+                                </tr>
+                                <tr style="height: 5.1mm;">
+                                    <td style="width: 35%; font-weight: 700; white-space: nowrap;">&#1575;&#1587;&#1605; &#1575;&#1604;&#1605;&#1606;&#1578;&#1580;:</td>
+                                    <td style="width: 65%; direction: ltr; text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 7.7px;"><t t-esc="package.product_id.display_name or '-'"/></td>
                                 </tr>
                             </tbody>
                         </table>
