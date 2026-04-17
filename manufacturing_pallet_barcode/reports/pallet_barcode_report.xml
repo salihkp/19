@@ -13,7 +13,7 @@
         <field name="margin_right">0</field>
         <field name="header_line" eval="False"/>
         <field name="disable_shrinking" eval="True"/>
-        <field name="dpi">203</field>
+        <field name="dpi">96</field>
     </record>
 
     <record id="report_pallet_barcode" model="ir.actions.report">
@@ -28,46 +28,143 @@
     </record>
 
     <template id="report_pallet_barcode_template">
-        <t t-call="web.html_container">
+        <t t-set="full_width" t-value="True"/>
+        <t t-call="web.report_layout">
+            <style>
+                @page {
+                    size: 100mm 50mm;
+                    margin: 0;
+                }
+                html, body, #wrapwrap, #wrapwrap main {
+                    width: 100% !important;
+                    margin: 0 !important;
+                    padding: 0 !important;
+                }
+                body.o_body_html {
+                    padding: 0 !important;
+                    margin: 0 !important;
+                }
+                body.o_body_html.container,
+                body.o_body_html.container-fluid {
+                    max-width: 100% !important;
+                }
+                .o_pallet_label_sheet {
+                    width: 100mm;
+                    height: 50mm;
+                    margin: 0;
+                    padding: 0;
+                    overflow: hidden;
+                    page-break-inside: avoid;
+                }
+                .o_pallet_label_card {
+                    width: 100mm;
+                    height: 50mm;
+                    box-sizing: border-box;
+                    border: 0.24mm solid #111;
+                    direction: rtl;
+                    font-family: DejaVu Sans, sans-serif;
+                    background: #fff;
+                    overflow: hidden;
+                    padding: 1.2mm 1.8mm 1.2mm;
+                }
+                .o_pallet_label_barcode_zone {
+                    height: 16.5mm;
+                    text-align: center;
+                    direction: ltr;
+                    line-height: 1;
+                    border-bottom: 0.15mm solid #dddddd;
+                    padding-bottom: 0.8mm;
+                    margin-bottom: 0.7mm;
+                }
+                .o_pallet_label_barcode {
+                    width: 64mm;
+                    height: 12mm;
+                    display: block;
+                    margin: 0 auto;
+                }
+                .o_pallet_label_barcode_fallback {
+                    width: 64mm;
+                    height: 12mm;
+                    border: 0.18mm solid #999;
+                    margin: 0 auto;
+                }
+                .o_pallet_label_code_text {
+                    font-size: 8.6px;
+                    font-weight: 700;
+                    letter-spacing: 0.2px;
+                    margin-top: 0.5mm;
+                }
+                .o_pallet_label_table {
+                    width: 100%;
+                    height: 30.6mm;
+                    border-collapse: collapse;
+                    table-layout: fixed;
+                    font-size: 8px;
+                    line-height: 1.08;
+                }
+                .o_pallet_label_table tr {
+                    height: 5.1mm;
+                    border-bottom: 0.14mm solid #ececec;
+                }
+                .o_pallet_label_table tr:last-child {
+                    border-bottom: none;
+                }
+                .o_pallet_label_key {
+                    width: 35%;
+                    font-weight: 700;
+                    white-space: nowrap;
+                }
+                .o_pallet_label_value {
+                    width: 65%;
+                    direction: ltr;
+                    text-align: left;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                .o_pallet_label_product {
+                    font-size: 7.7px;
+                }
+            </style>
+
             <t t-foreach="docs" t-as="package">
-                <div class="page" style="width: 100mm; height: 50mm; margin: 0; padding: 0; overflow: hidden;">
-                    <div style="width: 100mm; height: 50mm; border: 0.24mm solid #111; box-sizing: border-box; direction: rtl; font-family: DejaVu Sans, sans-serif; overflow: hidden; page-break-inside: avoid; background: #fff; padding: 1.2mm 1.8mm 1.2mm;">
-                        <div style="height: 16.5mm; text-align: center; direction: ltr; line-height: 1; border-bottom: 0.15mm solid #dddddd; padding-bottom: 0.8mm; margin-bottom: 0.7mm;">
+                <div class="o_pallet_label_sheet" t-att-style="not package_last and 'page-break-after: always;' or ''">
+                    <div class="o_pallet_label_card">
+                        <div class="o_pallet_label_barcode_zone">
                             <img t-if="package.barcode_image"
                                  t-att-src="package.barcode_image_src"
-                                 style="width: 64mm; height: 12mm; display: block; margin: 0 auto;" alt="Barcode"/>
-                            <div t-if="not package.barcode_image"
-                                 style="width: 64mm; height: 12mm; border: 0.18mm solid #999; margin: 0 auto;"/>
-                            <div style="font-size: 8.6px; font-weight: 700; letter-spacing: 0.2px; margin-top: 0.5mm;">
+                                 class="o_pallet_label_barcode" alt="Barcode"/>
+                            <div t-if="not package.barcode_image" class="o_pallet_label_barcode_fallback"/>
+                            <div class="o_pallet_label_code_text">
                                 <t t-esc="package.barcode_display or package.name"/>
                             </div>
                         </div>
 
-                        <table t-translation="off" style="width: 100%; height: 30.6mm; border-collapse: collapse; table-layout: fixed; font-size: 8px; line-height: 1.08;">
+                        <table t-translation="off" class="o_pallet_label_table">
                             <tbody>
-                                <tr style="height: 5.1mm; border-bottom: 0.14mm solid #ececec;">
-                                    <td style="width: 35%; font-weight: 700; white-space: nowrap;">&#1585;&#1602;&#1605; &#1575;&#1604;&#1591;&#1576;&#1604;&#1610;&#1577;:</td>
-                                    <td style="width: 65%; direction: ltr; text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><t t-esc="package.name or '-'"/></td>
+                                <tr>
+                                    <td class="o_pallet_label_key">&#1585;&#1602;&#1605; &#1575;&#1604;&#1591;&#1576;&#1604;&#1610;&#1577;:</td>
+                                    <td class="o_pallet_label_value"><t t-esc="package.name or '-'"/></td>
                                 </tr>
-                                <tr style="height: 5.1mm; border-bottom: 0.14mm solid #ececec;">
-                                    <td style="width: 35%; font-weight: 700; white-space: nowrap;">&#1603;&#1605;&#1610;&#1577; &#1575;&#1604;&#1591;&#1576;&#1604;&#1610;&#1577;:</td>
-                                    <td style="width: 65%; direction: ltr; text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><t t-esc="package.product_qty or package.target_qty or 0.0"/></td>
+                                <tr>
+                                    <td class="o_pallet_label_key">&#1603;&#1605;&#1610;&#1577; &#1575;&#1604;&#1591;&#1576;&#1604;&#1610;&#1577;:</td>
+                                    <td class="o_pallet_label_value"><t t-esc="package.product_qty or package.target_qty or 0.0"/></td>
                                 </tr>
-                                <tr style="height: 5.1mm; border-bottom: 0.14mm solid #ececec;">
-                                    <td style="width: 35%; font-weight: 700; white-space: nowrap;">&#1585;&#1602;&#1605; &#1571;&#1605;&#1585; &#1575;&#1604;&#1578;&#1589;&#1606;&#1610;&#1593;:</td>
-                                    <td style="width: 65%; direction: ltr; text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><t t-esc="package.production_id.name or '-'"/></td>
+                                <tr>
+                                    <td class="o_pallet_label_key">&#1585;&#1602;&#1605; &#1571;&#1605;&#1585; &#1575;&#1604;&#1578;&#1589;&#1606;&#1610;&#1593;:</td>
+                                    <td class="o_pallet_label_value"><t t-esc="package.production_id.name or '-'"/></td>
                                 </tr>
-                                <tr style="height: 5.1mm; border-bottom: 0.14mm solid #ececec;">
-                                    <td style="width: 35%; font-weight: 700; white-space: nowrap;">&#1585;&#1602;&#1605; &#1571;&#1605;&#1585; &#1575;&#1604;&#1576;&#1610;&#1593;:</td>
-                                    <td style="width: 65%; direction: ltr; text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><t t-esc="package.sale_order_ref or '-'"/></td>
+                                <tr>
+                                    <td class="o_pallet_label_key">&#1585;&#1602;&#1605; &#1571;&#1605;&#1585; &#1575;&#1604;&#1576;&#1610;&#1593;:</td>
+                                    <td class="o_pallet_label_value"><t t-esc="package.sale_order_ref or '-'"/></td>
                                 </tr>
-                                <tr style="height: 5.1mm; border-bottom: 0.14mm solid #ececec;">
-                                    <td style="width: 35%; font-weight: 700; white-space: nowrap;">&#1578;&#1575;&#1585;&#1610;&#1582; &#1571;&#1605;&#1585; &#1575;&#1604;&#1576;&#1610;&#1593;:</td>
-                                    <td style="width: 65%; direction: ltr; text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><t t-esc="package.sale_order_date and package.sale_order_date.strftime('%Y/%m/%d') or '-'"/></td>
+                                <tr>
+                                    <td class="o_pallet_label_key">&#1578;&#1575;&#1585;&#1610;&#1582; &#1571;&#1605;&#1585; &#1575;&#1604;&#1576;&#1610;&#1593;:</td>
+                                    <td class="o_pallet_label_value"><t t-esc="package.sale_order_date and package.sale_order_date.strftime('%Y/%m/%d') or '-'"/></td>
                                 </tr>
-                                <tr style="height: 5.1mm;">
-                                    <td style="width: 35%; font-weight: 700; white-space: nowrap;">&#1575;&#1587;&#1605; &#1575;&#1604;&#1605;&#1606;&#1578;&#1580;:</td>
-                                    <td style="width: 65%; direction: ltr; text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 7.7px;"><t t-esc="package.product_id.display_name or '-'"/></td>
+                                <tr>
+                                    <td class="o_pallet_label_key">&#1575;&#1587;&#1605; &#1575;&#1604;&#1605;&#1606;&#1578;&#1580;:</td>
+                                    <td class="o_pallet_label_value o_pallet_label_product"><t t-esc="package.product_id.display_name or '-'"/></td>
                                 </tr>
                             </tbody>
                         </table>
