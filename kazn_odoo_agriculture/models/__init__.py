@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from . import res_partner
 from . import farmer_cropping_request
 from . import crops

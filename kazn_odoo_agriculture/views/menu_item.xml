@@ -4,10 +4,6 @@
             id="agricultural_management_topmenu"
             name="Agriculture"/>
     <menuitem
-            id="agriculture_topmenu"
-            name="Agriculture" 
-            parent="agricultural_management_topmenu"/>
-    <menuitem
             id="croping_request_submenu"
             name="Crop Requests"
             sequence="1"

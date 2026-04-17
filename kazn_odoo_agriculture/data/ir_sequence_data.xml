@@ -4,7 +4,8 @@
         <record id="seq_farmer_cropping_request" model="ir.sequence">
             <field name="name">Farmer Cropping Request</field>
             <field name="code">farmer.cropping.request</field>
-            <field name="prefix">CROP/REQ/00000</field>
+            <field name="prefix">CROP/REQ/</field>
+            <field name="padding">5</field>
         </record>
     </data>
 </odoo>

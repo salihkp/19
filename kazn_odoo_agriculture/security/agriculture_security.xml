@@ -11,20 +11,26 @@
             <field name="implied_ids"
                    eval="[(4,ref('project.group_project_manager'))]"/>
         </record>
+
+        <!-- User rule: own records only -->
         <record id="agriculture_user" model="ir.rule">
-            <field name="name">Agriculture User</field>
+            <field name="name">Agriculture User: own records</field>
             <field name="model_id" ref="model_farmer_cropping_request"/>
-            <field name="global" eval="True"/>
+            <field name="global" eval="False"/>
             <field name="groups" eval="[(4, ref('kazn_odoo_agriculture.group_agriculture_user'))]"/>
             <field name="domain_force">[('user_id','=',user.id)]</field>
         </record>
+
+        <!-- Manager rule: all records -->
         <record id="agriculture_manager" model="ir.rule">
-            <field name="name">Agriculture Manager</field>
+            <field name="name">Agriculture Manager: all records</field>
             <field name="model_id" ref="model_farmer_cropping_request"/>
-            <field name="global" eval="True"/>
+            <field name="global" eval="False"/>
             <field name="groups" eval="[(4, ref('kazn_odoo_agriculture.group_agriculture_manager'))]"/>
             <field name="domain_force">[(1,'=',1)]</field>
         </record>
+
+        <!-- Multi-company isolation rule (global — applies to all users) -->
         <record model="ir.rule" id="custom_farmer_cropping_request_comp_rule">
             <field name="name">Agriculture multi-company</field>
             <field name="model_id" ref="model_farmer_cropping_request"/>

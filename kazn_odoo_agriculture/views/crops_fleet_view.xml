@@ -10,9 +10,21 @@
                 <form string="Crops Fleet">
                     <sheet>
                         <group>
-                            <!-- نستخدم حقل عام موجود في كل الموديلات -->
-                            <field name="display_name" readonly="1"/>
+                            <group>
+                                <field name="vehicle_id"/>
+                                <field name="start_date"/>
+                                <field name="end_date"/>
+                            </group>
+                            <group>
+                                <field name="quantity"/>
+                                <field name="company_id" groups="base.group_multi_company"/>
+                            </group>
                         </group>
+                        <notebook>
+                            <page name="description_page" string="Description">
+                                <field name="description"/>
+                            </page>
+                        </notebook>
                     </sheet>
                 </form>
             </field>
@@ -24,18 +36,22 @@
             <field name="model">crops.fleet</field>
             <field name="arch" type="xml">
                 <list string="Crops Fleet">
-                    <field name="display_name"/>
+                    <field name="vehicle_id"/>
+                    <field name="start_date"/>
+                    <field name="end_date"/>
+                    <field name="quantity"/>
+                    <field name="description"/>
                 </list>
             </field>
         </record>
 
-        <!-- ===== Search View (بسيط جداً) ===== -->
+        <!-- ===== Search View ===== -->
         <record id="view_crops_fleet_search" model="ir.ui.view">
             <field name="name">crops.fleet.search</field>
             <field name="model">crops.fleet</field>
             <field name="arch" type="xml">
                 <search string="Crops Fleet">
-                    <field name="display_name"/>
+                    <field name="vehicle_id"/>
                 </search>
             </field>
         </record>
