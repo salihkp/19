@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="stock_package_form_inherit_pallet" model="ir.ui.view">
+        <field name="name">stock.package.form.pallet</field>
+        <field name="model">stock.package</field>
+        <field name="inherit_id" ref="stock.stock_package_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="before">
+                <header>
+                    <button name="action_print_barcode"
+                            type="object"
+                            string="Print Barcode"
+                            class="btn btn-primary"
+                            invisible="not production_id"/>
+                </header>
+            </xpath>
+            <xpath expr="//sheet" position="inside">
+                <group string="Pallet Information" invisible="not production_id">
+                    <group>
+                        <field name="production_id" readonly="1"/>
+                        <field name="product_id" readonly="1"/>
+                        <field name="pallet_state"/>
+                    </group>
+                    <group>
+                        <field name="barcode_display" readonly="1"/>
+                        <field name="product_qty" readonly="1"/>
+                    </group>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="stock_package_tree_inherit_pallet" model="ir.ui.view">
+        <field name="name">stock.package.tree.pallet</field>
+        <field name="model">stock.package</field>
+        <field name="inherit_id" ref="stock.stock_package_view_list"/>
+        <field name="arch" type="xml">
+            <xpath expr="//list" position="inside">
+                <header>
+                    <button name="action_print_barcode"
+                            type="object"
+                            string="Print Barcode"/>
+                </header>
+                <field name="production_id" optional="show"/>
+                <field name="product_id" optional="show"/>
+                <field name="pallet_state" optional="show"/>
+                <field name="barcode_display" optional="show"/>
+                <field name="product_qty" optional="show"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="stock_package_search_inherit_pallet" model="ir.ui.view">
+        <field name="name">stock.package.search.pallet</field>
+        <field name="model">stock.package</field>
+        <field name="inherit_id" ref="stock.stock_package_view_search"/>
+        <field name="arch" type="xml">
+            <xpath expr="//search" position="inside">
+                <field name="barcode_display" string="Pallet Barcode"/>
+                <field name="production_id" string="Manufacturing Order"/>
+                <filter name="filter_with_sticker" string="With Sticker"
+                        domain="[('pallet_state', '=', 'with_sticker')]"/>
+                <filter name="filter_without_sticker" string="Without Sticker"
+                        domain="[('pallet_state', '=', 'without_sticker')]"/>
+                <group>
+                    <filter name="group_production" string="Manufacturing Order"
+                            context="{'group_by': 'production_id'}"/>
+                    <filter name="group_pallet_state" string="Sticker State"
+                            context="{'group_by': 'pallet_state'}"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

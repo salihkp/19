@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="mrp_pick_package_wizard_form_view" model="ir.ui.view">
+        <field name="name">mrp.pick.package.wizard.form</field>
+        <field name="model">mrp.pick.package.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Pick Packages">
+                <group>
+                    <field name="production_id" invisible="1"/>
+                    <field name="parent_location_id" invisible="1"/>
+                    <p class="oe_grey">
+                        اختر الطبليات المتاحة في المخزن ليتم استهلاكها مباشرة في أمر التصنيع.
+                    </p>
+                </group>
+                <field name="package_ids" widget="many2many">
+                    <list decoration-info="True">
+                        <field name="name"/>
+                        <field name="location_id"/>
+                        <field name="product_id" string="المنتج الأساسي"/>
+                        <field name="product_qty" string="الكمية"/>
+                    </list>
+                </field>
+                <footer>
+                    <button name="action_confirm_picking" string="Confirm Picking" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

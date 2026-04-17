@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="paperformat_pallet_barcode_label" model="report.paperformat">
+        <field name="name">Pallet Barcode Label 100x50</field>
+        <field name="default" eval="False"/>
+        <field name="format">custom</field>
+        <field name="page_width">100</field>
+        <field name="page_height">50</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">0</field>
+        <field name="margin_bottom">0</field>
+        <field name="margin_left">0</field>
+        <field name="margin_right">0</field>
+        <field name="header_line" eval="False"/>
+        <field name="disable_shrinking" eval="True"/>
+        <field name="dpi">96</field>
+    </record>
+
+    <record id="report_pallet_barcode" model="ir.actions.report">
+        <field name="name">Pallet Barcode Label</field>
+        <field name="model">stock.package</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">manufacturing_pallet_barcode.report_pallet_barcode_template</field>
+        <field name="report_file">manufacturing_pallet_barcode.report_pallet_barcode_template</field>
+        <field name="paperformat_id" ref="manufacturing_pallet_barcode.paperformat_pallet_barcode_label"/>
+        <field name="binding_model_id" ref="stock.model_stock_package"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <template id="report_pallet_barcode_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="package">
+                <div class="page" style="width: 100mm; height: 50mm; margin: 0; padding: 0;">
+                    <div style="width: 100mm; height: 50mm; border: 1px solid #111; box-sizing: border-box; padding: 3mm 4mm; direction: rtl; font-size: 11px; font-family: DejaVu Sans, sans-serif;">
+                        <div t-translation="off" style="text-align: center; font-size: 16px; font-weight: 700; letter-spacing: 0.2px; margin-bottom: 2mm;">
+                            البــــــــــــــــاركــــــــــــــــود
+                        </div>
+
+                        <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 4mm;">
+                            <div style="width: 34mm; text-align: center; direction: ltr;">
+                                <img t-if="package.barcode_image"
+                                     t-att-src="package.barcode_image_src"
+                                     style="width: 32mm; height: 12mm;" alt="Barcode"/>
+                                <div t-if="not package.barcode_image"
+                                     style="width: 32mm; height: 12mm; border: 1px solid #999; margin: 0 auto;"/>
+                                <div style="font-size: 9px; margin-top: 1mm;">
+                                    <t t-esc="package.barcode_display or package.name"/>
+                                </div>
+                            </div>
+
+                            <div t-translation="off" style="flex: 1; line-height: 1.65; text-align: right;">
+                                <div><strong>رقم أمر التصنيع:</strong> <t t-esc="package.production_id.name or '-'"/></div>
+                                <div><strong>رقم أمر البيع:</strong> <t t-esc="package.sale_order_ref or '-'"/></div>
+                                <div>
+                                    <strong>تاريخ أمر البيع:</strong>
+                                    <t t-esc="package.sale_order_date and package.sale_order_date.strftime('%Y/%m/%d') or '-'"/>
+                                </div>
+                                <div><strong>اسم المنتج:</strong> <t t-esc="package.product_id.display_name or '-'"/></div>
+                                <div><strong>رقم الطبلية:</strong> <t t-esc="package.name or '-'"/></div>
+                                <div><strong>كمية الطبلية:</strong> <t t-esc="package.product_qty or package.target_qty or 0.0"/></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

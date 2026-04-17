@@ -1,0 +1,179 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* manufacturing_pallet_barcode
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-01 10:00+0000\n"
+"PO-Revision-Date: 2024-03-01 10:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: manufacturing_pallet_barcode
+#: model_terms:ir.ui.view,arch_db:manufacturing_pallet_barcode.mrp_production_form_inherit
+msgid "➕ Create Pallet"
+msgstr "➕ إنشاء طبلية"
+
+#. module: manufacturing_pallet_barcode
+#: model_terms:ir.ui.view,arch_db:manufacturing_pallet_barcode.mrp_production_form_inherit
+msgid "🏷️ Confirm Sticker Application"
+msgstr "🏷️ تأكيد لصق الستيكر"
+
+#. module: manufacturing_pallet_barcode
+#: model_terms:ir.ui.view,arch_db:manufacturing_pallet_barcode.stock_package_form_inherit_pallet
+msgid "🖨️ Print Barcode"
+msgstr "🖨️ طباعة باركود"
+
+#. module: manufacturing_pallet_barcode
+#: model_terms:ir.ui.view,arch_db:manufacturing_pallet_barcode.stock_package_form_inherit_pallet
+msgid "Pallet Information"
+msgstr "معلومات الطبلية"
+
+#. module: manufacturing_pallet_barcode
+#: model_terms:ir.ui.view,arch_db:manufacturing_pallet_barcode.stock_package_search_inherit_pallet
+msgid "Pallet Barcode"
+msgstr "باركود الطبلية"
+
+#. module: manufacturing_pallet_barcode
+#: model_terms:ir.ui.view,arch_db:manufacturing_pallet_barcode.stock_package_search_inherit_pallet
+msgid "Manufacturing Order"
+msgstr "أمر التصنيع"
+
+#. module: manufacturing_pallet_barcode
+#: model_terms:ir.ui.view,arch_db:manufacturing_pallet_barcode.stock_package_search_inherit_pallet
+msgid "With Sticker"
+msgstr "بستيكر"
+
+#. module: manufacturing_pallet_barcode
+#: model_terms:ir.ui.view,arch_db:manufacturing_pallet_barcode.stock_package_search_inherit_pallet
+msgid "Without Sticker"
+msgstr "بدون ستيكر"
+
+#. module: manufacturing_pallet_barcode
+#: model_terms:ir.ui.view,arch_db:manufacturing_pallet_barcode.stock_package_search_inherit_pallet
+msgid "Sticker State"
+msgstr "حالة الستيكر"
+
+#. module: manufacturing_pallet_barcode
+#: model_terms:ir.ui.view,arch_db:manufacturing_pallet_barcode.mrp_production_form_inherit
+msgid "Pallets"
+msgstr "طبلية"
+
+#. module: manufacturing_pallet_barcode
+#: code:addons/manufacturing_pallet_barcode/wizard/mrp_pallet_wizard.py:0
+#, python-format
+msgid "Wizard to Create Pallet with Quantity"
+msgstr "معالج إنشاء الطبلية بالكمية"
+
+#. module: manufacturing_pallet_barcode
+#: code:addons/manufacturing_pallet_barcode/wizard/mrp_pallet_wizard.py:0
+#, python-format
+msgid "Quantity per Pallet"
+msgstr "الكمية في الطبلية"
+
+#. module: manufacturing_pallet_barcode
+#: code:addons/manufacturing_pallet_barcode/wizard/mrp_pallet_wizard.py:0
+#, python-format
+msgid "A new pallet has been created: <b>%s</b> (State: %s, Qty: %s)"
+msgstr "تم إنشاء طبلية جديدة: <b>%s</b> (الحالة: %s, الكمية: %s)"
+
+#. module: manufacturing_pallet_barcode
+#: code:addons/manufacturing_pallet_barcode/models/mrp_production.py:0
+#, python-format
+msgid "Create Pallet"
+msgstr "إنشاء طبلية"
+
+#. module: manufacturing_pallet_barcode
+#: code:addons/manufacturing_pallet_barcode/models/mrp_production.py:0
+#, python-format
+msgid "Successfully applied stickers on <b>%d</b> pallets"
+msgstr "تم تأكيد لصق الستيكر بنجاح على <b>%d</b> طبلية"
+
+#. module: manufacturing_pallet_barcode
+#: code:addons/manufacturing_pallet_barcode/models/mrp_production.py:0
+#, python-format
+msgid "Sticker Consumption - %s"
+msgstr "استهلاك ستيكر - %s"
+
+#. module: manufacturing_pallet_barcode
+#: code:addons/manufacturing_pallet_barcode/models/mrp_production.py:0
+#, python-format
+msgid "Please configure a sticker product on the product template."
+msgstr "يرجى إعداد منتج ستيكر في شاشة المنتج أولاً."
+
+#. module: manufacturing_pallet_barcode
+#: code:addons/manufacturing_pallet_barcode/models/product_template.py:0
+#, python-format
+msgid "Needs Sticker"
+msgstr "يحتاج ستيكر"
+
+#. module: manufacturing_pallet_barcode
+#: code:addons/manufacturing_pallet_barcode/models/product_template.py:0
+#, python-format
+msgid "Check if this product requires applying a sticker to its pallets during manufacturing"
+msgstr "حدد إذا كان المنتج ده محتاج لصق ستيكر على الطبليات أثناء التصنيع"
+
+#. module: manufacturing_pallet_barcode
+#: code:addons/manufacturing_pallet_barcode/models/product_template.py:0
+#, python-format
+msgid "Sticker Product"
+msgstr "منتج الستيكر"
+
+#. module: manufacturing_pallet_barcode
+#: code:addons/manufacturing_pallet_barcode/models/product_template.py:0
+#, python-format
+msgid "The product that is consumed as a sticker when applying stickers to pallets"
+msgstr "المنتج اللي بيتم استهلاكه كستيكر عند تأكيد لصق الستيكر على الطبليات"
+
+#. module: manufacturing_pallet_barcode
+#: code:addons/manufacturing_pallet_barcode/models/stock_package.py:0
+#, python-format
+msgid "Pallet State"
+msgstr "حالة الطبلية"
+
+#. module: manufacturing_pallet_barcode
+#: code:addons/manufacturing_pallet_barcode/models/stock_package.py:0
+#, python-format
+msgid "Product Quantity"
+msgstr "عدد المنتجات"
+
+#. module: manufacturing_pallet_barcode
+#: code:addons/manufacturing_pallet_barcode/models/stock_package.py:0
+#, python-format
+msgid "Pallet Barcode"
+msgstr "باركود الطبلية"
+
+#. module: manufacturing_pallet_barcode
+#: code:addons/manufacturing_pallet_barcode/models/stock_package.py:0
+#, python-format
+msgid "Pallet Barcode - Changes based on sticker state"
+msgstr "باركود الطبلية — بيتغير حسب حالة الستيكر"
+
+#. module: manufacturing_pallet_barcode
+#: code:addons/manufacturing_pallet_barcode/models/stock_package.py:0
+#, python-format
+msgid "Product"
+msgstr "المنتج"
+
+#. module: manufacturing_pallet_barcode
+#: code:addons/manufacturing_pallet_barcode/models/stock_package.py:0
+#, python-format
+msgid "MO Name"
+msgstr "رقم أمر التصنيع"
+
+#. module: manufacturing_pallet_barcode
+#: model_terms:ir.ui.view,arch_db:manufacturing_pallet_barcode.mrp_pallet_wizard_form_view
+msgid "Create"
+msgstr "إنشاء"
+
+#. module: manufacturing_pallet_barcode
+#: model_terms:ir.ui.view,arch_db:manufacturing_pallet_barcode.mrp_pallet_wizard_form_view
+msgid "Cancel"
+msgstr "إلغاء"
