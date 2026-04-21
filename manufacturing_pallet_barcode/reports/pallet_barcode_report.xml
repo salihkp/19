@@ -6,7 +6,7 @@
         <field name="format">custom</field>
         <field name="page_width">100</field>
         <field name="page_height">50</field>
-        <field name="orientation">Portrait</field>
+        <field name="orientation">Landscape</field>
         <field name="margin_top">0</field>
         <field name="margin_bottom">0</field>
         <field name="margin_left">0</field>
@@ -32,11 +32,12 @@
         <t t-call="web.report_layout">
             <style>
                 @page {
-                    size: 100mm 50mm;
+                    size: 50mm 100mm;
                     margin: 0;
                 }
                 html, body, #wrapwrap, #wrapwrap main {
                     width: 100% !important;
+                    height: 100% !important;
                     margin: 0 !important;
                     padding: 0 !important;
                 }
@@ -49,81 +50,84 @@
                     max-width: 100% !important;
                 }
                 .o_pallet_label_sheet {
-                    width: 100mm;
-                    height: 50mm;
+                    width: 50mm;
+                    height: 100mm;
                     margin: 0;
                     padding: 0;
                     overflow: hidden;
                     page-break-inside: avoid;
                 }
                 .o_pallet_label_card {
-                    width: 100mm;
-                    height: 50mm;
+                    width: 50mm;
+                    height: 100mm;
                     box-sizing: border-box;
-                    border: 0.24mm solid #111;
-                    direction: rtl;
+                    direction: ltr;
                     font-family: DejaVu Sans, sans-serif;
                     background: #fff;
                     overflow: hidden;
-                    padding: 1.2mm 1.8mm 1.2mm;
+                    padding: 1.8mm 1.6mm 1.4mm;
                 }
                 .o_pallet_label_barcode_zone {
-                    height: 16.5mm;
+                    height: 24mm;
                     text-align: center;
                     direction: ltr;
                     line-height: 1;
                     border-bottom: 0.15mm solid #dddddd;
-                    padding-bottom: 0.8mm;
-                    margin-bottom: 0.7mm;
+                    padding: 1mm 0 1.1mm;
+                    margin-bottom: 1mm;
                 }
                 .o_pallet_label_barcode {
-                    width: 64mm;
-                    height: 12mm;
+                    width: 44mm;
+                    height: 13mm;
                     display: block;
                     margin: 0 auto;
                 }
                 .o_pallet_label_barcode_fallback {
-                    width: 64mm;
-                    height: 12mm;
+                    width: 44mm;
+                    height: 13mm;
                     border: 0.18mm solid #999;
                     margin: 0 auto;
                 }
                 .o_pallet_label_code_text {
-                    font-size: 8.6px;
+                    font-size: 8.4px;
                     font-weight: 700;
-                    letter-spacing: 0.2px;
-                    margin-top: 0.5mm;
+                    letter-spacing: 0.1px;
+                    margin-top: 1.1mm;
                 }
-                .o_pallet_label_table {
+
+                .o_pallet_label_meta {
                     width: 100%;
-                    height: 30.6mm;
-                    border-collapse: collapse;
-                    table-layout: fixed;
-                    font-size: 8px;
-                    line-height: 1.08;
+                    height: 72mm;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
                 }
-                .o_pallet_label_table tr {
-                    height: 5.1mm;
-                    border-bottom: 0.14mm solid #ececec;
+                .o_pallet_label_item {
+                    border-bottom: 0.12mm dashed #e6e6e6;
+                    padding: 0.5mm 0;
                 }
-                .o_pallet_label_table tr:last-child {
+                .o_pallet_label_item:last-child {
                     border-bottom: none;
                 }
                 .o_pallet_label_key {
-                    width: 35%;
+                    direction: rtl;
+                    text-align: right;
+                    font-size: 7.5px;
                     font-weight: 700;
-                    white-space: nowrap;
+                    line-height: 1.05;
                 }
                 .o_pallet_label_value {
-                    width: 65%;
                     direction: ltr;
                     text-align: left;
+                    font-size: 8.2px;
+                    line-height: 1.14;
+                    margin-top: 0.3mm;
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
                 }
-                .o_pallet_label_product {
-                    font-size: 7.7px;
+                .o_pallet_label_value_product {
+                    font-size: 7.6px;
                 }
             </style>
 
@@ -140,34 +144,32 @@
                             </div>
                         </div>
 
-                        <table t-translation="off" class="o_pallet_label_table">
-                            <tbody>
-                                <tr>
-                                    <td class="o_pallet_label_key">&#1585;&#1602;&#1605; &#1575;&#1604;&#1591;&#1576;&#1604;&#1610;&#1577;:</td>
-                                    <td class="o_pallet_label_value"><t t-esc="package.name or '-'"/></td>
-                                </tr>
-                                <tr>
-                                    <td class="o_pallet_label_key">&#1603;&#1605;&#1610;&#1577; &#1575;&#1604;&#1591;&#1576;&#1604;&#1610;&#1577;:</td>
-                                    <td class="o_pallet_label_value"><t t-esc="package.product_qty or package.target_qty or 0.0"/></td>
-                                </tr>
-                                <tr>
-                                    <td class="o_pallet_label_key">&#1585;&#1602;&#1605; &#1571;&#1605;&#1585; &#1575;&#1604;&#1578;&#1589;&#1606;&#1610;&#1593;:</td>
-                                    <td class="o_pallet_label_value"><t t-esc="package.production_id.name or '-'"/></td>
-                                </tr>
-                                <tr>
-                                    <td class="o_pallet_label_key">&#1585;&#1602;&#1605; &#1571;&#1605;&#1585; &#1575;&#1604;&#1576;&#1610;&#1593;:</td>
-                                    <td class="o_pallet_label_value"><t t-esc="package.sale_order_ref or '-'"/></td>
-                                </tr>
-                                <tr>
-                                    <td class="o_pallet_label_key">&#1578;&#1575;&#1585;&#1610;&#1582; &#1571;&#1605;&#1585; &#1575;&#1604;&#1576;&#1610;&#1593;:</td>
-                                    <td class="o_pallet_label_value"><t t-esc="package.sale_order_date and package.sale_order_date.strftime('%Y/%m/%d') or '-'"/></td>
-                                </tr>
-                                <tr>
-                                    <td class="o_pallet_label_key">&#1575;&#1587;&#1605; &#1575;&#1604;&#1605;&#1606;&#1578;&#1580;:</td>
-                                    <td class="o_pallet_label_value o_pallet_label_product"><t t-esc="package.product_id.display_name or '-'"/></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div t-translation="off" class="o_pallet_label_meta">
+                            <div class="o_pallet_label_item">
+                                <div class="o_pallet_label_key">&#1585;&#1602;&#1605; &#1575;&#1604;&#1591;&#1576;&#1604;&#1610;&#1577;:</div>
+                                <div class="o_pallet_label_value"><t t-esc="package.name or '-'"/></div>
+                            </div>
+                            <div class="o_pallet_label_item">
+                                <div class="o_pallet_label_key">&#1603;&#1605;&#1610;&#1577; &#1575;&#1604;&#1591;&#1576;&#1604;&#1610;&#1577;:</div>
+                                <div class="o_pallet_label_value"><t t-esc="package.product_qty or package.target_qty or 0.0"/></div>
+                            </div>
+                            <div class="o_pallet_label_item">
+                                <div class="o_pallet_label_key">&#1585;&#1602;&#1605; &#1571;&#1605;&#1585; &#1575;&#1604;&#1578;&#1589;&#1606;&#1610;&#1593;:</div>
+                                <div class="o_pallet_label_value"><t t-esc="package.production_id.name or '-'"/></div>
+                            </div>
+                            <div class="o_pallet_label_item">
+                                <div class="o_pallet_label_key">&#1585;&#1602;&#1605; &#1571;&#1605;&#1585; &#1575;&#1604;&#1576;&#1610;&#1593;:</div>
+                                <div class="o_pallet_label_value"><t t-esc="package.sale_order_ref or '-'"/></div>
+                            </div>
+                            <div class="o_pallet_label_item">
+                                <div class="o_pallet_label_key">&#1578;&#1575;&#1585;&#1610;&#1582; &#1571;&#1605;&#1585; &#1575;&#1604;&#1576;&#1610;&#1593;:</div>
+                                <div class="o_pallet_label_value"><t t-esc="package.sale_order_date and package.sale_order_date.strftime('%Y/%m/%d') or '-'"/></div>
+                            </div>
+                            <div class="o_pallet_label_item">
+                                <div class="o_pallet_label_key">&#1575;&#1587;&#1605; &#1575;&#1604;&#1605;&#1606;&#1578;&#1580;:</div>
+                                <div class="o_pallet_label_value o_pallet_label_value_product"><t t-esc="package.product_id.display_name or '-'"/></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </t>
