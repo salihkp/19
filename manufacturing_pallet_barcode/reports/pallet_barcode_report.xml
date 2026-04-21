@@ -42,28 +42,28 @@
             <table t-translation="off" class="o_pallet_label_meta_table">
                 <tbody>
                     <tr>
-                        <td class="o_pallet_label_key">&#1585;&#1602;&#1605; &#1575;&#1604;&#1591;&#1576;&#1604;&#1610;&#1577;:</td>
                         <td class="o_pallet_label_value"><t t-esc="package.name or '-'"/></td>
+                        <td class="o_pallet_label_key">&#1585;&#1602;&#1605; &#1575;&#1604;&#1591;&#1576;&#1604;&#1610;&#1577;:</td>
                     </tr>
                     <tr>
-                        <td class="o_pallet_label_key">&#1603;&#1605;&#1610;&#1577; &#1575;&#1604;&#1591;&#1576;&#1604;&#1610;&#1577;:</td>
                         <td class="o_pallet_label_value"><t t-esc="package.pallet_qty or package.target_qty or package.product_qty or 0.0"/></td>
+                        <td class="o_pallet_label_key">&#1603;&#1605;&#1610;&#1577; &#1575;&#1604;&#1591;&#1576;&#1604;&#1610;&#1577;:</td>
                     </tr>
                     <tr>
-                        <td class="o_pallet_label_key">&#1585;&#1602;&#1605; &#1571;&#1605;&#1585; &#1575;&#1604;&#1578;&#1589;&#1606;&#1610;&#1593;:</td>
                         <td class="o_pallet_label_value"><t t-esc="package.production_id.name or '-'"/></td>
+                        <td class="o_pallet_label_key">&#1585;&#1602;&#1605; &#1571;&#1605;&#1585; &#1575;&#1604;&#1578;&#1589;&#1606;&#1610;&#1593;:</td>
                     </tr>
                     <tr>
-                        <td class="o_pallet_label_key">&#1585;&#1602;&#1605; &#1571;&#1605;&#1585; &#1575;&#1604;&#1576;&#1610;&#1593;:</td>
                         <td class="o_pallet_label_value"><t t-esc="package.sale_order_ref or '-'"/></td>
+                        <td class="o_pallet_label_key">&#1585;&#1602;&#1605; &#1571;&#1605;&#1585; &#1575;&#1604;&#1576;&#1610;&#1593;:</td>
                     </tr>
                     <tr>
-                        <td class="o_pallet_label_key">&#1578;&#1575;&#1585;&#1610;&#1582; &#1571;&#1605;&#1585; &#1575;&#1604;&#1576;&#1610;&#1593;:</td>
                         <td class="o_pallet_label_value"><t t-esc="package.sale_order_date and package.sale_order_date.strftime('%Y/%m/%d') or '-'"/></td>
+                        <td class="o_pallet_label_key">&#1578;&#1575;&#1585;&#1610;&#1582; &#1571;&#1605;&#1585; &#1575;&#1604;&#1576;&#1610;&#1593;:</td>
                     </tr>
                     <tr>
-                        <td class="o_pallet_label_key">&#1575;&#1587;&#1605; &#1575;&#1604;&#1605;&#1606;&#1578;&#1580;:</td>
                         <td class="o_pallet_label_value o_pallet_label_value_product"><t t-esc="package.product_id.display_name or '-'"/></td>
+                        <td class="o_pallet_label_key">&#1575;&#1587;&#1605; &#1575;&#1604;&#1605;&#1606;&#1578;&#1580;:</td>
                     </tr>
                 </tbody>
             </table>
@@ -159,7 +159,8 @@
                     height: 31.5mm;
                     border-collapse: collapse;
                     table-layout: fixed;
-                    font-size: 7.2px;
+                    direction: ltr;
+                    font-size: 7.1px;
                     line-height: 1.05;
                 }
                 .o_pallet_label_meta_table tr {
@@ -170,23 +171,25 @@
                     border-bottom: none;
                 }
                 .o_pallet_label_key {
-                    width: 39%;
+                    width: 43%;
                     direction: rtl;
                     text-align: right;
                     font-weight: 700;
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
-                    padding: 0 0.7mm 0 0;
+                    padding: 0 0.2mm 0 0.6mm;
+                    vertical-align: middle;
                 }
                 .o_pallet_label_value {
-                    width: 61%;
+                    width: 57%;
                     direction: ltr;
                     text-align: left;
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
-                    padding: 0 0 0 0.7mm;
+                    padding: 0 0.6mm 0 0;
+                    vertical-align: middle;
                 }
                 .o_pallet_label_value_product {
                     font-size: 6.9px;
