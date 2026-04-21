@@ -1,12 +1,12 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <record id="paperformat_pallet_barcode_label" model="report.paperformat">
-        <field name="name">Pallet Barcode Label 100x50</field>
+        <field name="name">Pallet Barcode Label 100x50 (2 Columns)</field>
         <field name="default" eval="False"/>
         <field name="format">custom</field>
         <field name="page_width">100</field>
         <field name="page_height">50</field>
-        <field name="orientation">Landscape</field>
+        <field name="orientation">Portrait</field>
         <field name="margin_top">0</field>
         <field name="margin_bottom">0</field>
         <field name="margin_left">0</field>
@@ -27,12 +27,55 @@
         <field name="binding_type">report</field>
     </record>
 
+    <template id="report_pallet_barcode_single_label">
+        <div class="o_pallet_label_card">
+            <div class="o_pallet_label_barcode_zone">
+                <img t-if="package.barcode_image"
+                     t-att-src="package.barcode_image_src"
+                     class="o_pallet_label_barcode" alt="Barcode"/>
+                <div t-if="not package.barcode_image" class="o_pallet_label_barcode_fallback"/>
+                <div class="o_pallet_label_code_text">
+                    <t t-esc="package.barcode_display or package.name"/>
+                </div>
+            </div>
+
+            <table t-translation="off" class="o_pallet_label_meta_table">
+                <tbody>
+                    <tr>
+                        <td class="o_pallet_label_key">&#1585;&#1602;&#1605; &#1575;&#1604;&#1591;&#1576;&#1604;&#1610;&#1577;:</td>
+                        <td class="o_pallet_label_value"><t t-esc="package.name or '-'"/></td>
+                    </tr>
+                    <tr>
+                        <td class="o_pallet_label_key">&#1603;&#1605;&#1610;&#1577; &#1575;&#1604;&#1591;&#1576;&#1604;&#1610;&#1577;:</td>
+                        <td class="o_pallet_label_value"><t t-esc="package.pallet_qty or package.target_qty or package.product_qty or 0.0"/></td>
+                    </tr>
+                    <tr>
+                        <td class="o_pallet_label_key">&#1585;&#1602;&#1605; &#1571;&#1605;&#1585; &#1575;&#1604;&#1578;&#1589;&#1606;&#1610;&#1593;:</td>
+                        <td class="o_pallet_label_value"><t t-esc="package.production_id.name or '-'"/></td>
+                    </tr>
+                    <tr>
+                        <td class="o_pallet_label_key">&#1585;&#1602;&#1605; &#1571;&#1605;&#1585; &#1575;&#1604;&#1576;&#1610;&#1593;:</td>
+                        <td class="o_pallet_label_value"><t t-esc="package.sale_order_ref or '-'"/></td>
+                    </tr>
+                    <tr>
+                        <td class="o_pallet_label_key">&#1578;&#1575;&#1585;&#1610;&#1582; &#1571;&#1605;&#1585; &#1575;&#1604;&#1576;&#1610;&#1593;:</td>
+                        <td class="o_pallet_label_value"><t t-esc="package.sale_order_date and package.sale_order_date.strftime('%Y/%m/%d') or '-'"/></td>
+                    </tr>
+                    <tr>
+                        <td class="o_pallet_label_key">&#1575;&#1587;&#1605; &#1575;&#1604;&#1605;&#1606;&#1578;&#1580;:</td>
+                        <td class="o_pallet_label_value o_pallet_label_value_product"><t t-esc="package.product_id.display_name or '-'"/></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </template>
+
     <template id="report_pallet_barcode_template">
         <t t-set="full_width" t-value="True"/>
         <t t-call="web.report_layout">
             <style>
                 @page {
-                    size: 50mm 100mm;
+                    size: 100mm 50mm;
                     margin: 0;
                 }
                 html, body, #wrapwrap, #wrapwrap main {
@@ -41,136 +84,133 @@
                     margin: 0 !important;
                     padding: 0 !important;
                 }
-                body.o_body_html {
-                    padding: 0 !important;
+                body.o_body_html,
+                body.o_body_pdf {
                     margin: 0 !important;
+                    padding: 0 !important;
                 }
                 body.o_body_html.container,
                 body.o_body_html.container-fluid {
                     max-width: 100% !important;
+                    padding: 0 !important;
                 }
-                .o_pallet_label_sheet {
-                    width: 50mm;
-                    height: 100mm;
+                .o_pallet_sheet {
+                    width: 100mm;
+                    height: 50mm;
                     margin: 0;
                     padding: 0;
                     overflow: hidden;
                     page-break-inside: avoid;
                 }
+                .o_pallet_sheet_table {
+                    width: 100mm;
+                    height: 50mm;
+                    border-collapse: collapse;
+                    table-layout: fixed;
+                }
+                .o_pallet_sheet_cell {
+                    width: 50mm;
+                    height: 50mm;
+                    vertical-align: top;
+                    padding: 0;
+                }
                 .o_pallet_label_card {
                     width: 50mm;
-                    height: 100mm;
+                    height: 50mm;
                     box-sizing: border-box;
                     direction: ltr;
                     font-family: DejaVu Sans, sans-serif;
                     background: #fff;
                     overflow: hidden;
-                    padding: 1.8mm 1.6mm 1.4mm;
+                    padding: 1.1mm 1.1mm 0.9mm;
                 }
                 .o_pallet_label_barcode_zone {
-                    height: 24mm;
+                    height: 15.8mm;
                     text-align: center;
                     direction: ltr;
                     line-height: 1;
-                    border-bottom: 0.15mm solid #dddddd;
-                    padding: 1mm 0 1.1mm;
-                    margin-bottom: 1mm;
+                    border-bottom: 0.14mm solid #dddddd;
+                    padding: 0.9mm 0 0.7mm;
+                    margin-bottom: 0.5mm;
                 }
                 .o_pallet_label_barcode {
                     width: 44mm;
-                    height: 13mm;
+                    height: 10.8mm;
                     display: block;
                     margin: 0 auto;
                 }
                 .o_pallet_label_barcode_fallback {
                     width: 44mm;
-                    height: 13mm;
-                    border: 0.18mm solid #999;
+                    height: 10.8mm;
+                    border: 0.16mm solid #999;
                     margin: 0 auto;
                 }
                 .o_pallet_label_code_text {
-                    font-size: 8.4px;
+                    font-size: 7.9px;
                     font-weight: 700;
                     letter-spacing: 0.1px;
-                    margin-top: 1.1mm;
-                }
-
-                .o_pallet_label_meta {
-                    width: 100%;
-                    height: 72mm;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                }
-                .o_pallet_label_item {
-                    border-bottom: 0.12mm dashed #e6e6e6;
-                    padding: 0.5mm 0;
-                }
-                .o_pallet_label_item:last-child {
-                    border-bottom: none;
-                }
-                .o_pallet_label_key {
-                    direction: rtl;
-                    text-align: right;
-                    font-size: 7.5px;
-                    font-weight: 700;
-                    line-height: 1.05;
-                }
-                .o_pallet_label_value {
-                    direction: ltr;
-                    text-align: left;
-                    font-size: 8.2px;
-                    line-height: 1.14;
-                    margin-top: 0.3mm;
+                    margin-top: 0.45mm;
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
                 }
+                .o_pallet_label_meta_table {
+                    width: 100%;
+                    height: 31.5mm;
+                    border-collapse: collapse;
+                    table-layout: fixed;
+                    font-size: 7.2px;
+                    line-height: 1.05;
+                }
+                .o_pallet_label_meta_table tr {
+                    height: 5.25mm;
+                    border-bottom: 0.11mm dashed #e6e6e6;
+                }
+                .o_pallet_label_meta_table tr:last-child {
+                    border-bottom: none;
+                }
+                .o_pallet_label_key {
+                    width: 39%;
+                    direction: rtl;
+                    text-align: right;
+                    font-weight: 700;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    padding: 0 0.7mm 0 0;
+                }
+                .o_pallet_label_value {
+                    width: 61%;
+                    direction: ltr;
+                    text-align: left;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    padding: 0 0 0 0.7mm;
+                }
                 .o_pallet_label_value_product {
-                    font-size: 7.6px;
+                    font-size: 6.9px;
                 }
             </style>
 
-            <t t-foreach="docs" t-as="package">
-                <div class="o_pallet_label_sheet" t-att-style="not package_last and 'page-break-after: always;' or ''">
-                    <div class="o_pallet_label_card">
-                        <div class="o_pallet_label_barcode_zone">
-                            <img t-if="package.barcode_image"
-                                 t-att-src="package.barcode_image_src"
-                                 class="o_pallet_label_barcode" alt="Barcode"/>
-                            <div t-if="not package.barcode_image" class="o_pallet_label_barcode_fallback"/>
-                            <div class="o_pallet_label_code_text">
-                                <t t-esc="package.barcode_display or package.name"/>
-                            </div>
-                        </div>
-
-                        <div t-translation="off" class="o_pallet_label_meta">
-                            <div class="o_pallet_label_item">
-                                <div class="o_pallet_label_key">&#1585;&#1602;&#1605; &#1575;&#1604;&#1591;&#1576;&#1604;&#1610;&#1577;:</div>
-                                <div class="o_pallet_label_value"><t t-esc="package.name or '-'"/></div>
-                            </div>
-                            <div class="o_pallet_label_item">
-                                <div class="o_pallet_label_key">&#1603;&#1605;&#1610;&#1577; &#1575;&#1604;&#1591;&#1576;&#1604;&#1610;&#1577;:</div>
-                                <div class="o_pallet_label_value"><t t-esc="package.pallet_qty or package.target_qty or package.product_qty or 0.0"/></div>
-                            </div>
-                            <div class="o_pallet_label_item">
-                                <div class="o_pallet_label_key">&#1585;&#1602;&#1605; &#1571;&#1605;&#1585; &#1575;&#1604;&#1578;&#1589;&#1606;&#1610;&#1593;:</div>
-                                <div class="o_pallet_label_value"><t t-esc="package.production_id.name or '-'"/></div>
-                            </div>
-                            <div class="o_pallet_label_item">
-                                <div class="o_pallet_label_key">&#1585;&#1602;&#1605; &#1571;&#1605;&#1585; &#1575;&#1604;&#1576;&#1610;&#1593;:</div>
-                                <div class="o_pallet_label_value"><t t-esc="package.sale_order_ref or '-'"/></div>
-                            </div>
-                            <div class="o_pallet_label_item">
-                                <div class="o_pallet_label_key">&#1578;&#1575;&#1585;&#1610;&#1582; &#1571;&#1605;&#1585; &#1575;&#1604;&#1576;&#1610;&#1593;:</div>
-                                <div class="o_pallet_label_value"><t t-esc="package.sale_order_date and package.sale_order_date.strftime('%Y/%m/%d') or '-'"/></div>
-                            </div>
-                            <div class="o_pallet_label_item">
-                                <div class="o_pallet_label_key">&#1575;&#1587;&#1605; &#1575;&#1604;&#1605;&#1606;&#1578;&#1580;:</div>
-                                <div class="o_pallet_label_value o_pallet_label_value_product"><t t-esc="package.product_id.display_name or '-'"/></div>
-                            </div>
-                        </div>
-                    </div>
+            <t t-foreach="range(0, len(docs), 2)" t-as="idx">
+                <div class="o_pallet_sheet" t-att-style="(idx + 2) &lt; len(docs) and 'page-break-after: always;' or ''">
+                    <table class="o_pallet_sheet_table">
+                        <tbody>
+                            <tr>
+                                <td class="o_pallet_sheet_cell">
+                                    <t t-set="package" t-value="docs[idx]"/>
+                                    <t t-call="manufacturing_pallet_barcode.report_pallet_barcode_single_label"/>
+                                </td>
+                                <td class="o_pallet_sheet_cell">
+                                    <t t-if="idx + 1 &lt; len(docs)">
+                                        <t t-set="package" t-value="docs[idx + 1]"/>
+                                        <t t-call="manufacturing_pallet_barcode.report_pallet_barcode_single_label"/>
+                                    </t>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </t>
         </t>
