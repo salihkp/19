@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <record id="paperformat_pallet_barcode_label" model="report.paperformat">
-        <field name="name">Pallet Barcode Label 50x100 (Lengthwise)</field>
+        <field name="name">Pallet Barcode Label 100x50 (Single)</field>
         <field name="default" eval="False"/>
         <field name="format">custom</field>
-        <field name="page_width">50</field>
-        <field name="page_height">100</field>
+        <field name="page_width">100</field>
+        <field name="page_height">50</field>
         <field name="orientation">Portrait</field>
         <field name="margin_top">0</field>
         <field name="margin_bottom">0</field>
@@ -39,34 +39,32 @@
                 </div>
             </div>
 
-            <table t-translation="off" class="o_pallet_label_meta_table">
-                <tbody>
-                    <tr>
-                        <td class="o_pallet_label_value"><t t-esc="package.name or '-'"/></td>
-                        <td class="o_pallet_label_key">&#1585;&#1602;&#1605; &#1575;&#1604;&#1591;&#1576;&#1604;&#1610;&#1577;:</td>
-                    </tr>
-                    <tr>
-                        <td class="o_pallet_label_value"><t t-esc="package.pallet_qty or package.target_qty or package.product_qty or 0.0"/></td>
-                        <td class="o_pallet_label_key">&#1603;&#1605;&#1610;&#1577; &#1575;&#1604;&#1591;&#1576;&#1604;&#1610;&#1577;:</td>
-                    </tr>
-                    <tr>
-                        <td class="o_pallet_label_value"><t t-esc="package.production_id.name or '-'"/></td>
-                        <td class="o_pallet_label_key">&#1585;&#1602;&#1605; &#1571;&#1605;&#1585; &#1575;&#1604;&#1578;&#1589;&#1606;&#1610;&#1593;:</td>
-                    </tr>
-                    <tr>
-                        <td class="o_pallet_label_value"><t t-esc="package.sale_order_ref or '-'"/></td>
-                        <td class="o_pallet_label_key">&#1585;&#1602;&#1605; &#1571;&#1605;&#1585; &#1575;&#1604;&#1576;&#1610;&#1593;:</td>
-                    </tr>
-                    <tr>
-                        <td class="o_pallet_label_value"><t t-esc="package.sale_order_date and package.sale_order_date.strftime('%Y/%m/%d') or '-'"/></td>
-                        <td class="o_pallet_label_key">&#1578;&#1575;&#1585;&#1610;&#1582; &#1571;&#1605;&#1585; &#1575;&#1604;&#1576;&#1610;&#1593;:</td>
-                    </tr>
-                    <tr>
-                        <td class="o_pallet_label_value o_pallet_label_value_product"><t t-esc="package.product_id.display_name or '-'"/></td>
-                        <td class="o_pallet_label_key">&#1575;&#1587;&#1605; &#1575;&#1604;&#1605;&#1606;&#1578;&#1580;:</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div t-translation="off" class="o_pallet_label_meta">
+                <div class="o_pallet_label_row">
+                    <div class="o_pallet_label_value"><t t-esc="package.name or '-'"/></div>
+                    <div class="o_pallet_label_key">&#1585;&#1602;&#1605; &#1575;&#1604;&#1591;&#1576;&#1604;&#1610;&#1577;:</div>
+                </div>
+                <div class="o_pallet_label_row">
+                    <div class="o_pallet_label_value"><t t-esc="package.pallet_qty or package.target_qty or package.product_qty or 0.0"/></div>
+                    <div class="o_pallet_label_key">&#1603;&#1605;&#1610;&#1577; &#1575;&#1604;&#1591;&#1576;&#1604;&#1610;&#1577;:</div>
+                </div>
+                <div class="o_pallet_label_row">
+                    <div class="o_pallet_label_value"><t t-esc="package.production_id.name or '-'"/></div>
+                    <div class="o_pallet_label_key">&#1585;&#1602;&#1605; &#1571;&#1605;&#1585; &#1575;&#1604;&#1578;&#1589;&#1606;&#1610;&#1593;:</div>
+                </div>
+                <div class="o_pallet_label_row">
+                    <div class="o_pallet_label_value"><t t-esc="package.sale_order_ref or '-'"/></div>
+                    <div class="o_pallet_label_key">&#1585;&#1602;&#1605; &#1571;&#1605;&#1585; &#1575;&#1604;&#1576;&#1610;&#1593;:</div>
+                </div>
+                <div class="o_pallet_label_row">
+                    <div class="o_pallet_label_value"><t t-esc="package.sale_order_date and package.sale_order_date.strftime('%Y/%m/%d') or '-'"/></div>
+                    <div class="o_pallet_label_key">&#1578;&#1575;&#1585;&#1610;&#1582; &#1571;&#1605;&#1585; &#1575;&#1604;&#1576;&#1610;&#1593;:</div>
+                </div>
+                <div class="o_pallet_label_row">
+                    <div class="o_pallet_label_value o_pallet_label_value_product"><t t-esc="package.product_id.display_name or '-'"/></div>
+                    <div class="o_pallet_label_key">&#1575;&#1587;&#1605; &#1575;&#1604;&#1605;&#1606;&#1578;&#1580;:</div>
+                </div>
+            </div>
         </div>
     </template>
 
@@ -75,7 +73,7 @@
         <t t-call="web.report_layout">
             <style>
                 @page {
-                    size: 50mm 100mm;
+                    size: 100mm 50mm;
                     margin: 0;
                 }
                 html, body, #wrapwrap, #wrapwrap main {
@@ -95,93 +93,97 @@
                     padding: 0 !important;
                 }
                 .o_pallet_sheet {
-                    width: 50mm;
-                    height: 100mm;
+                    width: 100mm;
+                    height: 50mm;
+                    box-sizing: border-box;
                     margin: 0;
                     padding: 0;
                     overflow: hidden;
+                    display: block;
                     page-break-inside: avoid;
+                    break-inside: avoid;
                 }
                 .o_pallet_label_card {
-                    width: 50mm;
-                    height: 100mm;
+                    width: 100mm;
+                    height: 50mm;
                     box-sizing: border-box;
                     direction: ltr;
                     font-family: DejaVu Sans, sans-serif;
                     background: #fff;
                     overflow: hidden;
-                    padding: 1.2mm 1.2mm 1.0mm;
+                    padding: 1.0mm 1.3mm 0.9mm;
+                    display: flex;
+                    flex-direction: column;
                 }
                 .o_pallet_label_barcode_zone {
-                    height: 17.5mm;
+                    flex: 0 0 14.0mm;
                     text-align: center;
                     direction: ltr;
                     line-height: 1;
                     border-bottom: 0.14mm solid #dddddd;
-                    padding: 0.7mm 0 0.6mm;
-                    margin-bottom: 0.6mm;
+                    padding: 0.4mm 0 0.5mm;
+                    margin-bottom: 0.4mm;
+                    overflow: hidden;
                 }
                 .o_pallet_label_barcode {
-                    width: 44mm;
-                    height: 10.2mm;
+                    width: 63mm;
+                    height: 8.8mm;
                     display: block;
                     margin: 0 auto;
                 }
                 .o_pallet_label_barcode_fallback {
-                    width: 44mm;
-                    height: 10.2mm;
+                    width: 63mm;
+                    height: 8.8mm;
                     border: 0.16mm solid #999;
                     margin: 0 auto;
                 }
                 .o_pallet_label_code_text {
-                    font-size: 7.4px;
+                    font-size: 7.2px;
                     font-weight: 700;
                     letter-spacing: 0.1px;
-                    margin-top: 0.45mm;
+                    margin-top: 0.4mm;
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
                 }
-                .o_pallet_label_meta_table {
+                .o_pallet_label_meta {
                     width: 100%;
-                    height: auto;
-                    border-collapse: collapse;
-                    table-layout: fixed;
+                    flex: 1 1 auto;
+                    min-height: 0;
+                    display: flex;
+                    flex-direction: column;
                     direction: ltr;
-                    font-size: 7.1px;
-                    line-height: 1.18;
                 }
-                .o_pallet_label_meta_table tr {
-                    height: auto;
+                .o_pallet_label_row {
+                    flex: 1 1 0;
+                    display: flex;
+                    align-items: center;
                     border-bottom: 0.11mm dashed #e6e6e6;
+                    overflow: hidden;
                 }
-                .o_pallet_label_meta_table td {
-                    padding-top: 1.0mm;
-                    padding-bottom: 1.0mm;
-                }
-                .o_pallet_label_meta_table tr:last-child {
+                .o_pallet_label_row:last-child {
                     border-bottom: none;
                 }
                 .o_pallet_label_key {
-                    width: 43%;
+                    width: 36%;
                     direction: rtl;
                     text-align: right;
+                    font-size: 7.2px;
                     font-weight: 700;
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
                     padding: 0 0.2mm 0 0.6mm;
-                    vertical-align: top;
                 }
                 .o_pallet_label_value {
-                    width: 57%;
+                    width: 64%;
                     direction: ltr;
                     text-align: left;
+                    font-size: 7.1px;
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
-                    padding: 0 0.6mm 0 0;
-                    vertical-align: top;
+                    padding: 0 0.6mm 0 0.2mm;
                 }
                 .o_pallet_label_value_product {
                     font-size: 6.8px;
