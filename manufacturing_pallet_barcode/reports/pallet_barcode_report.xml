@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <record id="paperformat_pallet_barcode_label" model="report.paperformat">
-        <field name="name">Pallet Barcode Label 100x50 (2 Columns)</field>
+        <field name="name">Pallet Barcode Label 50x100 (Lengthwise)</field>
         <field name="default" eval="False"/>
         <field name="format">custom</field>
-        <field name="page_width">100</field>
-        <field name="page_height">50</field>
+        <field name="page_width">50</field>
+        <field name="page_height">100</field>
         <field name="orientation">Portrait</field>
         <field name="margin_top">0</field>
         <field name="margin_bottom">0</field>
@@ -75,7 +75,7 @@
         <t t-call="web.report_layout">
             <style>
                 @page {
-                    size: 100mm 50mm;
+                    size: 50mm 100mm;
                     margin: 0;
                 }
                 html, body, #wrapwrap, #wrapwrap main {
@@ -95,76 +95,64 @@
                     padding: 0 !important;
                 }
                 .o_pallet_sheet {
-                    width: 100mm;
-                    height: 50mm;
+                    width: 50mm;
+                    height: 100mm;
                     margin: 0;
                     padding: 0;
                     overflow: hidden;
                     page-break-inside: avoid;
                 }
-                .o_pallet_sheet_table {
-                    width: 100mm;
-                    height: 50mm;
-                    border-collapse: collapse;
-                    table-layout: fixed;
-                }
-                .o_pallet_sheet_cell {
-                    width: 50mm;
-                    height: 50mm;
-                    vertical-align: top;
-                    padding: 0;
-                }
                 .o_pallet_label_card {
                     width: 50mm;
-                    height: 50mm;
+                    height: 100mm;
                     box-sizing: border-box;
                     direction: ltr;
                     font-family: DejaVu Sans, sans-serif;
                     background: #fff;
                     overflow: hidden;
-                    padding: 1.1mm 1.1mm 0.9mm;
+                    padding: 1.4mm 1.2mm 1.0mm;
                 }
                 .o_pallet_label_barcode_zone {
-                    height: 15.8mm;
+                    height: 24mm;
                     text-align: center;
                     direction: ltr;
                     line-height: 1;
                     border-bottom: 0.14mm solid #dddddd;
-                    padding: 0.9mm 0 0.7mm;
-                    margin-bottom: 0.5mm;
+                    padding: 1.0mm 0 0.9mm;
+                    margin-bottom: 0.8mm;
                 }
                 .o_pallet_label_barcode {
                     width: 44mm;
-                    height: 10.8mm;
+                    height: 13.2mm;
                     display: block;
                     margin: 0 auto;
                 }
                 .o_pallet_label_barcode_fallback {
                     width: 44mm;
-                    height: 10.8mm;
+                    height: 13.2mm;
                     border: 0.16mm solid #999;
                     margin: 0 auto;
                 }
                 .o_pallet_label_code_text {
-                    font-size: 7.9px;
+                    font-size: 8.2px;
                     font-weight: 700;
                     letter-spacing: 0.1px;
-                    margin-top: 0.45mm;
+                    margin-top: 0.8mm;
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
                 }
                 .o_pallet_label_meta_table {
                     width: 100%;
-                    height: 31.5mm;
+                    height: 72mm;
                     border-collapse: collapse;
                     table-layout: fixed;
                     direction: ltr;
-                    font-size: 7.1px;
+                    font-size: 8.0px;
                     line-height: 1.05;
                 }
                 .o_pallet_label_meta_table tr {
-                    height: 5.25mm;
+                    height: 12mm;
                     border-bottom: 0.11mm dashed #e6e6e6;
                 }
                 .o_pallet_label_meta_table tr:last-child {
@@ -192,28 +180,13 @@
                     vertical-align: middle;
                 }
                 .o_pallet_label_value_product {
-                    font-size: 6.9px;
+                    font-size: 7.6px;
                 }
             </style>
 
-            <t t-foreach="range(0, len(docs), 2)" t-as="idx">
-                <div class="o_pallet_sheet" t-att-style="(idx + 2) &lt; len(docs) and 'page-break-after: always;' or ''">
-                    <table class="o_pallet_sheet_table">
-                        <tbody>
-                            <tr>
-                                <td class="o_pallet_sheet_cell">
-                                    <t t-set="package" t-value="docs[idx]"/>
-                                    <t t-call="manufacturing_pallet_barcode.report_pallet_barcode_single_label"/>
-                                </td>
-                                <td class="o_pallet_sheet_cell">
-                                    <t t-if="idx + 1 &lt; len(docs)">
-                                        <t t-set="package" t-value="docs[idx + 1]"/>
-                                        <t t-call="manufacturing_pallet_barcode.report_pallet_barcode_single_label"/>
-                                    </t>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+            <t t-foreach="docs" t-as="package">
+                <div class="o_pallet_sheet" t-att-style="not package_last and 'page-break-after: always;' or ''">
+                    <t t-call="manufacturing_pallet_barcode.report_pallet_barcode_single_label"/>
                 </div>
             </t>
         </t>
