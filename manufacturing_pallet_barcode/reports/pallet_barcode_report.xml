@@ -151,7 +151,7 @@
                             </div>
                             <div class="o_pallet_label_item">
                                 <div class="o_pallet_label_key">&#1603;&#1605;&#1610;&#1577; &#1575;&#1604;&#1591;&#1576;&#1604;&#1610;&#1577;:</div>
-                                <div class="o_pallet_label_value"><t t-esc="package.product_qty or package.target_qty or 0.0"/></div>
+                                <div class="o_pallet_label_value"><t t-esc="package.pallet_qty or package.target_qty or package.product_qty or 0.0"/></div>
                             </div>
                             <div class="o_pallet_label_item">
                                 <div class="o_pallet_label_key">&#1585;&#1602;&#1605; &#1571;&#1605;&#1585; &#1575;&#1604;&#1578;&#1589;&#1606;&#1610;&#1593;:</div>

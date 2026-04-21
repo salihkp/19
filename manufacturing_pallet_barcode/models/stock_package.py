@@ -30,6 +30,13 @@ class StockPackage(models.Model):
         compute='_compute_product_qty',
         store=True,
     )
+    pallet_qty = fields.Float(
+        string='Pallet Quantity',
+        compute='_compute_pallet_qty',
+        store=True,
+        help='Shown pallet quantity: actual packed quantity when available, '
+             'otherwise planned target quantity.',
+    )
 
     production_id = fields.Many2one(
         'mrp.production',
@@ -96,6 +103,11 @@ class StockPackage(models.Model):
     def _compute_product_qty(self):
         for pkg in self:
             pkg.product_qty = sum(pkg.quant_ids.mapped('quantity'))
+
+    @api.depends('product_qty', 'target_qty')
+    def _compute_pallet_qty(self):
+        for pkg in self:
+            pkg.pallet_qty = pkg.product_qty if pkg.product_qty > 0 else pkg.target_qty
 
     @api.depends('name', 'pallet_state')
     def _compute_barcode_display(self):
