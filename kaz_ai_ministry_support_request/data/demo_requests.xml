@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- ── Football Federation Requests (12) ─────────────────────────── -->
+
+        <record id="req_foot_salaries_approved" model="ministry.support.request">
+            <field name="name">SR/2026/00001</field>
+            <field name="federation_id" ref="kaz_ai_ministry_federation.federation_football"/>
+            <field name="support_item_id" ref="kaz_ai_ministry_support_item.item_salaries"/>
+            <field name="fiscal_year">2026</field>
+            <field name="requested_amount">180000.00</field>
+            <field name="eligible_amount">180000.00</field>
+            <field name="approved_amount">180000.00</field>
+            <field name="net_payable">180000.00</field>
+            <field name="variance_pct">5.0</field>
+            <field name="risk_level">low</field>
+            <field name="risk_score">22.0</field>
+            <field name="state">paid</field>
+            <field name="description">Annual staff salaries Q1 2026</field>
+        </record>
+
+        <record id="req_foot_coach_approved" model="ministry.support.request">
+            <field name="name">SR/2026/00002</field>
+            <field name="federation_id" ref="kaz_ai_ministry_federation.federation_football"/>
+            <field name="support_item_id" ref="kaz_ai_ministry_support_item.item_coach_appointment"/>
+            <field name="fiscal_year">2026</field>
+            <field name="requested_amount">540000.00</field>
+            <field name="eligible_amount">540000.00</field>
+            <field name="approved_amount">540000.00</field>
+            <field name="net_payable">540000.00</field>
+            <field name="variance_pct">0.0</field>
+            <field name="risk_level">low</field>
+            <field name="risk_score">18.0</field>
+            <field name="state">approved</field>
+            <field name="description">Head coach + 2 assistants annual contract</field>
+        </record>
+
+        <record id="req_foot_asian_cup" model="ministry.support.request">
+            <field name="name">SR/2026/00003</field>
+            <field name="federation_id" ref="kaz_ai_ministry_federation.federation_football"/>
+            <field name="support_item_id" ref="kaz_ai_ministry_support_item.item_asian_participation"/>
+            <field name="fiscal_year">2026</field>
+            <field name="requested_amount">350000.00</field>
+            <field name="eligible_amount">350000.00</field>
+            <field name="approved_amount">350000.00</field>
+            <field name="net_payable">350000.00</field>
+            <field name="variance_pct">8.0</field>
+            <field name="risk_level">medium</field>
+            <field name="risk_score">45.0</field>
+            <field name="state">awaiting_report</field>
+            <field name="description">AFC Cup U23 participation — Indonesia 2026</field>
+            <field name="event_name">AFC U23 Asian Cup 2026</field>
+            <field name="location">Jakarta, Indonesia</field>
+        </record>
+
+        <record id="req_foot_camp" model="ministry.support.request">
+            <field name="name">SR/2026/00004</field>
+            <field name="federation_id" ref="kaz_ai_ministry_federation.federation_football"/>
+            <field name="support_item_id" ref="kaz_ai_ministry_support_item.item_local_camp"/>
+            <field name="fiscal_year">2026</field>
+            <field name="requested_amount">50000.00</field>
+            <field name="eligible_amount">50000.00</field>
+            <field name="approved_amount">48000.00</field>
+            <field name="net_payable">48000.00</field>
+            <field name="variance_pct">2.0</field>
+            <field name="risk_level">low</field>
+            <field name="risk_score">15.0</field>
+            <field name="state">closed</field>
+            <field name="description">Pre-season training camp February 2026</field>
+        </record>
+
+        <record id="req_foot_rent" model="ministry.support.request">
+            <field name="name">SR/2026/00005</field>
+            <field name="federation_id" ref="kaz_ai_ministry_federation.federation_football"/>
+            <field name="support_item_id" ref="kaz_ai_ministry_support_item.item_rent"/>
+            <field name="fiscal_year">2026</field>
+            <field name="requested_amount">120000.00</field>
+            <field name="eligible_amount">120000.00</field>
+            <field name="approved_amount">120000.00</field>
+            <field name="net_payable">120000.00</field>
+            <field name="state">to_pay</field>
+            <field name="description">HQ office lease renewal 2026</field>
+        </record>
+
+        <record id="req_foot_referee" model="ministry.support.request">
+            <field name="name">SR/2026/00006</field>
+            <field name="federation_id" ref="kaz_ai_ministry_federation.federation_football"/>
+            <field name="support_item_id" ref="kaz_ai_ministry_support_item.item_referee_allowance"/>
+            <field name="fiscal_year">2026</field>
+            <field name="requested_amount">7500.00</field>
+            <field name="participants_count">15</field>
+            <field name="eligible_amount">5000.00</field>
+            <field name="approved_amount">5000.00</field>
+            <field name="net_payable">5000.00</field>
+            <field name="variance_pct">12.0</field>
+            <field name="risk_level">medium</field>
+            <field name="risk_score">42.0</field>
+            <field name="state">under_review</field>
+            <field name="description">Referee allowances for Q1 league matches — 15 referees</field>
+        </record>
+
+        <record id="req_foot_intl_participation" model="ministry.support.request">
+            <field name="name">SR/2026/00007</field>
+            <field name="federation_id" ref="kaz_ai_ministry_federation.federation_football"/>
+            <field name="support_item_id" ref="kaz_ai_ministry_support_item.item_international_participation"/>
+            <field name="fiscal_year">2026</field>
+            <field name="requested_amount">480000.00</field>
+            <field name="eligible_amount">480000.00</field>
+            <field name="state">submitted</field>
+            <field name="risk_level">medium</field>
+            <field name="risk_score">48.0</field>
+            <field name="description">FIFA Club World Cup preparation and travel</field>
+        </record>
+
+        <record id="req_foot_electricity" model="ministry.support.request">
+            <field name="name">SR/2026/00008</field>
+            <field name="federation_id" ref="kaz_ai_ministry_federation.federation_football"/>
+            <field name="support_item_id" ref="kaz_ai_ministry_support_item.item_electricity"/>
+            <field name="fiscal_year">2026</field>
+            <field name="requested_amount">24000.00</field>
+            <field name="eligible_amount">24000.00</field>
+            <field name="state">draft</field>
+            <field name="description">Annual electricity and utility bills</field>
+        </record>
+
+        <!-- ── Athletics Federation Requests (10) ───────────────────────── -->
+
+        <record id="req_ath_intl_worlds" model="ministry.support.request">
+            <field name="name">SR/2026/00009</field>
+            <field name="federation_id" ref="kaz_ai_ministry_federation.federation_athletics"/>
+            <field name="support_item_id" ref="kaz_ai_ministry_support_item.item_international_participation"/>
+            <field name="fiscal_year">2026</field>
+            <field name="requested_amount">500000.00</field>
+            <field name="eligible_amount">500000.00</field>
+            <field name="approved_amount">480000.00</field>
+            <field name="net_payable">470000.00</field>
+            <field name="variance_pct">35.0</field>
+            <field name="risk_level">high</field>
+            <field name="risk_score">72.0</field>
+            <field name="state">awaiting_report</field>
+            <field name="description">World Athletics Championships 2026 — Tokyo</field>
+            <field name="event_name">World Athletics Championships 2026</field>
+            <field name="location">Tokyo, Japan</field>
+        </record>
+
+        <record id="req_ath_salaries" model="ministry.support.request">
+            <field name="name">SR/2026/00010</field>
+            <field name="federation_id" ref="kaz_ai_ministry_federation.federation_athletics"/>
+            <field name="support_item_id" ref="kaz_ai_ministry_support_item.item_salaries"/>
+            <field name="fiscal_year">2026</field>
+            <field name="requested_amount">90000.00</field>
+            <field name="eligible_amount">90000.00</field>
+            <field name="approved_amount">90000.00</field>
+            <field name="net_payable">90000.00</field>
+            <field name="state">paid</field>
+            <field name="description">Secretariat staff salaries H1 2026</field>
+        </record>
+
+        <record id="req_ath_camp_morocco" model="ministry.support.request">
+            <field name="name">SR/2026/00011</field>
+            <field name="federation_id" ref="kaz_ai_ministry_federation.federation_athletics"/>
+            <field name="support_item_id" ref="kaz_ai_ministry_support_item.item_arab_camp"/>
+            <field name="fiscal_year">2026</field>
+            <field name="requested_amount">95000.00</field>
+            <field name="eligible_amount">95000.00</field>
+            <field name="approved_amount">95000.00</field>
+            <field name="net_payable">85000.00</field>
+            <field name="variance_pct">28.0</field>
+            <field name="risk_level">high</field>
+            <field name="risk_score">68.0</field>
+            <field name="state">closed</field>
+            <field name="description">High altitude training camp — Ifrane, Morocco</field>
+        </record>
+
+        <record id="req_ath_coach" model="ministry.support.request">
+            <field name="name">SR/2026/00012</field>
+            <field name="federation_id" ref="kaz_ai_ministry_federation.federation_athletics"/>
+            <field name="support_item_id" ref="kaz_ai_ministry_support_item.item_coach_appointment"/>
+            <field name="fiscal_year">2026</field>
+            <field name="requested_amount">360000.00</field>
+            <field name="eligible_amount">360000.00</field>
+            <field name="state">under_review</field>
+            <field name="variance_pct">42.0</field>
+            <field name="risk_level">high</field>
+            <field name="risk_score">70.0</field>
+            <field name="description">2 specialist sprint and jump coaches — annual</field>
+        </record>
+
+        <record id="req_ath_rejected" model="ministry.support.request">
+            <field name="name">SR/2026/00013</field>
+            <field name="federation_id" ref="kaz_ai_ministry_federation.federation_athletics"/>
+            <field name="support_item_id" ref="kaz_ai_ministry_support_item.item_olympic_participation"/>
+            <field name="fiscal_year">2026</field>
+            <field name="requested_amount">1000000.00</field>
+            <field name="eligible_amount">1000000.00</field>
+            <field name="state">rejected</field>
+            <field name="return_reason">Budget allocation exceeded for this category in FY2026.</field>
+            <field name="variance_pct">55.0</field>
+            <field name="risk_level">high</field>
+            <field name="risk_score">78.0</field>
+            <field name="description">Olympic Games Paris 2026 — rejected due to budget constraints</field>
+        </record>
+
+        <record id="req_ath_subscriptions" model="ministry.support.request">
+            <field name="name">SR/2026/00014</field>
+            <field name="federation_id" ref="kaz_ai_ministry_federation.federation_athletics"/>
+            <field name="support_item_id" ref="kaz_ai_ministry_support_item.item_subscriptions"/>
+            <field name="fiscal_year">2026</field>
+            <field name="requested_amount">15000.00</field>
+            <field name="eligible_amount">15000.00</field>
+            <field name="state">submitted</field>
+            <field name="description">World Athletics federation membership fees</field>
+        </record>
+
+        <!-- ── Chess Federation Requests (8) ────────────────────────────── -->
+
+        <record id="req_chess_salaries" model="ministry.support.request">
+            <field name="name">SR/2026/00015</field>
+            <field name="federation_id" ref="kaz_ai_ministry_federation.federation_chess"/>
+            <field name="support_item_id" ref="kaz_ai_ministry_support_item.item_salaries"/>
+            <field name="fiscal_year">2026</field>
+            <field name="requested_amount">45000.00</field>
+            <field name="eligible_amount">45000.00</field>
+            <field name="approved_amount">45000.00</field>
+            <field name="net_payable">45000.00</field>
+            <field name="state">paid</field>
+            <field name="description">Staff salaries FY2026</field>
+        </record>
+
+        <record id="req_chess_arab_championship" model="ministry.support.request">
+            <field name="name">SR/2026/00016</field>
+            <field name="federation_id" ref="kaz_ai_ministry_federation.federation_chess"/>
+            <field name="support_item_id" ref="kaz_ai_ministry_support_item.item_regional_participation"/>
+            <field name="fiscal_year">2026</field>
+            <field name="requested_amount">180000.00</field>
+            <field name="eligible_amount">180000.00</field>
+            <field name="approved_amount">175000.00</field>
+            <field name="net_payable">175000.00</field>
+            <field name="variance_pct">3.0</field>
+            <field name="risk_level">low</field>
+            <field name="risk_score">20.0</field>
+            <field name="state">closed</field>
+            <field name="description">Arab Chess Championship — Amman 2026</field>
+            <field name="event_name">Arab Chess Championship 2026</field>
+            <field name="location">Amman, Jordan</field>
+        </record>
+
+        <record id="req_chess_meetings" model="ministry.support.request">
+            <field name="name">SR/2026/00017</field>
+            <field name="federation_id" ref="kaz_ai_ministry_federation.federation_chess"/>
+            <field name="support_item_id" ref="kaz_ai_ministry_support_item.item_meetings"/>
+            <field name="fiscal_year">2026</field>
+            <field name="requested_amount">36000.00</field>
+            <field name="participants_count">12</field>
+            <field name="eligible_amount">36000.00</field>
+            <field name="approved_amount">36000.00</field>
+            <field name="net_payable">36000.00</field>
+            <field name="state">approved</field>
+            <field name="description">12 technical committee meetings FY2026</field>
+        </record>
+
+        <record id="req_chess_draft" model="ministry.support.request">
+            <field name="name">SR/2026/00018</field>
+            <field name="federation_id" ref="kaz_ai_ministry_federation.federation_chess"/>
+            <field name="support_item_id" ref="kaz_ai_ministry_support_item.item_local_participation"/>
+            <field name="fiscal_year">2026</field>
+            <field name="requested_amount">60000.00</field>
+            <field name="state">draft</field>
+            <field name="description">UAE National Chess Championship hosting support</field>
+        </record>
+
+        <record id="req_chess_subscriptions" model="ministry.support.request">
+            <field name="name">SR/2026/00019</field>
+            <field name="federation_id" ref="kaz_ai_ministry_federation.federation_chess"/>
+            <field name="support_item_id" ref="kaz_ai_ministry_support_item.item_subscriptions"/>
+            <field name="fiscal_year">2026</field>
+            <field name="requested_amount">15000.00</field>
+            <field name="eligible_amount">15000.00</field>
+            <field name="state">submitted</field>
+            <field name="description">FIDE and Arab Chess Federation membership fees</field>
+        </record>
+
+        <record id="req_chess_returned" model="ministry.support.request">
+            <field name="name">SR/2026/00020</field>
+            <field name="federation_id" ref="kaz_ai_ministry_federation.federation_chess"/>
+            <field name="support_item_id" ref="kaz_ai_ministry_support_item.item_systems"/>
+            <field name="fiscal_year">2026</field>
+            <field name="requested_amount">85000.00</field>
+            <field name="state">returned</field>
+            <field name="return_reason">Insufficient documentation — please attach vendor quotations and technical specs.</field>
+            <field name="description">Chess tournament management system upgrade</field>
+        </record>
+
+    </data>
+</odoo>

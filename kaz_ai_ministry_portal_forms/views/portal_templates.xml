@@ -1,0 +1,942 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- ── Portal Home: Add ministry section ─────────────────────────────── -->
+    <template id="portal_home_ministry" inherit_id="portal.portal_my_home" priority="20">
+        <xpath expr="//div[hasclass('o_portal_docs')]" position="before">
+            <t t-set="portal_service_category_enable" t-value="True"/>
+        </xpath>
+        <div id="portal_service_category" position="inside">
+            <t groups="kaz_ai_ministry_branding.group_ministry_portal">
+
+                <!-- Dashboard -->
+                <div class="o_portal_index_card col-md-6 order-2">
+                    <a href="/my/federation/dashboard"
+                       class="d-flex gap-3 py-3 pe-2 px-md-3 h-100 rounded text-decoration-none bg-100">
+                        <div class="d-flex align-items-center justify-content-center flex-shrink-0 rounded"
+                             style="width:44px;height:44px;min-width:44px;background:#C8102E;">
+                            <i class="fa fa-th-large fa-lg text-white"/>
+                        </div>
+                        <div>
+                            <div class="mt-0 mb-1 fs-5 fw-normal lh-1">Federation Dashboard</div>
+                            <div class="opacity-75 small">Review recent applications, reports, and support requests</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Championship Participation -->
+                <div class="o_portal_index_card col-md-6 order-2">
+                    <a href="/my/championships/participation"
+                       class="d-flex gap-3 py-3 pe-2 px-md-3 h-100 rounded text-decoration-none bg-100">
+                        <div class="d-flex align-items-center justify-content-center flex-shrink-0 rounded"
+                             style="width:44px;height:44px;min-width:44px;background:#00732F;">
+                            <i class="fa fa-trophy fa-lg text-white"/>
+                        </div>
+                        <div>
+                            <div class="mt-0 mb-1 fs-5 fw-normal lh-1">
+                                <span class="fw-bold d-none" data-placeholder_count="participation_count"/>
+                                Championship Applications
+                            </div>
+                            <div class="opacity-75 small">Submit and track participation applications</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Hosting Applications -->
+                <div class="o_portal_index_card col-md-6 order-2">
+                    <a href="/my/championships/hosting"
+                       class="d-flex gap-3 py-3 pe-2 px-md-3 h-100 rounded text-decoration-none bg-100">
+                        <div class="d-flex align-items-center justify-content-center flex-shrink-0 rounded"
+                             style="width:44px;height:44px;min-width:44px;background:#1E3A5F;">
+                            <i class="fa fa-building fa-lg text-white"/>
+                        </div>
+                        <div>
+                            <div class="mt-0 mb-1 fs-5 fw-normal lh-1">
+                                <span class="fw-bold d-none" data-placeholder_count="hosting_count"/>
+                                Hosting Applications
+                            </div>
+                            <div class="opacity-75 small">Submit and track championship hosting applications</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Post-Event Reports -->
+                <div class="o_portal_index_card col-md-6 order-2">
+                    <a href="/my/championships/post-event-report"
+                       class="d-flex gap-3 py-3 pe-2 px-md-3 h-100 rounded text-decoration-none bg-100">
+                        <div class="d-flex align-items-center justify-content-center flex-shrink-0 rounded"
+                             style="width:44px;height:44px;min-width:44px;background:#C8702A;">
+                            <i class="fa fa-bar-chart fa-lg text-white"/>
+                        </div>
+                        <div>
+                            <div class="mt-0 mb-1 fs-5 fw-normal lh-1">
+                                <span class="fw-bold d-none" data-placeholder_count="report_count"/>
+                                Post-Event Reports
+                            </div>
+                            <div class="opacity-75 small">Submit reports and close awaiting-report requests</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Downloadable Forms -->
+                <div class="o_portal_index_card col-md-6 order-2">
+                    <a href="/my/championships/downloads"
+                       class="d-flex gap-3 py-3 pe-2 px-md-3 h-100 rounded text-decoration-none bg-100">
+                        <div class="d-flex align-items-center justify-content-center flex-shrink-0 rounded"
+                             style="width:44px;height:44px;min-width:44px;background:#5B4A9E;">
+                            <i class="fa fa-download fa-lg text-white"/>
+                        </div>
+                        <div>
+                            <div class="mt-0 mb-1 fs-5 fw-normal lh-1">Downloadable Forms</div>
+                            <div class="opacity-75 small">Download official Ministry PDF form templates</div>
+                        </div>
+                    </a>
+                </div>
+
+            </t>
+        </div>
+    </template>
+
+    <!-- ── Dashboard ─────────────────────────────────────────────────────── -->
+    <template id="portal_dashboard" name="Federation Dashboard">
+        <t t-call="portal.portal_layout">
+            <t t-set="breadcrumbs_searchbar" t-value="True"/>
+
+            <t t-call="portal.portal_searchbar">
+                <t t-set="title">Federation Dashboard</t>
+            </t>
+
+            <div class="container ministry-portal-dashboard py-4">
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <h2 class="ministry-portal-title">
+                            <span t-esc="federation.name"/> — Portal Dashboard
+                        </h2>
+                    </div>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="row g-3 mb-5">
+                    <div class="col-md-3">
+                        <a href="/my/championships/participation/new" class="card ministry-portal-card h-100 text-decoration-none">
+                            <div class="card-body text-center py-4">
+                                <i class="fa fa-trophy fa-2x mb-3" style="color: #8B6F2A;"/>
+                                <h5>New Participation Application</h5>
+                                <p class="text-muted small">Submit at least 15 days before event</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="/my/championships/hosting/new" class="card ministry-portal-card h-100 text-decoration-none">
+                            <div class="card-body text-center py-4">
+                                <i class="fa fa-building fa-2x mb-3" style="color: #8B6F2A;"/>
+                                <h5>New Hosting Application</h5>
+                                <p class="text-muted small">Submit at least 30 days before event</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="/my/championships/post-event-report/new" class="card ministry-portal-card h-100 text-decoration-none">
+                            <div class="card-body text-center py-4">
+                                <i class="fa fa-file-text fa-2x mb-3" style="color: #8B6F2A;"/>
+                                <h5>Submit Post-Event Report</h5>
+                                <p class="text-muted small">Required within 15 days of event end</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="/my/championships/downloads" class="card ministry-portal-card h-100 text-decoration-none">
+                            <div class="card-body text-center py-4">
+                                <i class="fa fa-download fa-2x mb-3" style="color: #8B6F2A;"/>
+                                <h5>Download Forms</h5>
+                                <p class="text-muted small">Official Ministry PDF templates</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Recent Support Requests -->
+                <h4 class="ministry-portal-section-title">Recent Support Requests</h4>
+                <t t-if="support_requests">
+                    <div class="table-responsive">
+                        <table class="table table-sm table-hover">
+                            <thead style="background-color: #f8f5ee;">
+                                <tr>
+                                    <th>Reference</th>
+                                    <th>Item</th>
+                                    <th>Requested (AED)</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="support_requests" t-as="sr">
+                                    <tr>
+                                        <td><t t-esc="sr.name"/></td>
+                                        <td><t t-esc="sr.support_item_id.name"/></td>
+                                        <td><t t-esc="'{:,.0f}'.format(sr.requested_amount)"/></td>
+                                        <td>
+                                            <span t-attf-class="badge text-bg-{{ sr.state in ('approved','paid','closed') and 'success' or sr.state in ('rejected',) and 'danger' or 'warning' }}">
+                                                <t t-esc="dict(sr._fields['state'].selection).get(sr.state)"/>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+                <t t-else="">
+                    <p class="text-muted">No support requests found.</p>
+                </t>
+            </div>
+        </t>
+    </template>
+
+    <!-- ── Participation List ─────────────────────────────────────────────── -->
+    <template id="portal_download_forms" name="Downloadable Forms">
+        <t t-call="portal.portal_layout">
+            <t t-call="portal.portal_searchbar">
+                <t t-set="title">Downloadable Forms</t>
+            </t>
+            <div class="container py-4">
+                <div class="d-flex justify-content-between align-items-start mb-3 gap-3">
+                    <div>
+                        <h3>Downloadable Forms</h3>
+                        <p class="text-muted mb-0">Official Ministry PDF templates for federation submissions.</p>
+                    </div>
+                    <a href="/my/home" class="btn btn-outline-secondary btn-sm">Back to Portal</a>
+                </div>
+
+                <t groups="kaz_ai_ministry_branding.group_ministry_officer_technical,kaz_ai_ministry_branding.group_ministry_officer_financial,kaz_ai_ministry_branding.group_ministry_dept_head,kaz_ai_ministry_branding.group_ministry_analyst,kaz_ai_ministry_branding.group_ministry_manager">
+                    <div class="card ministry-portal-card mb-4">
+                        <div class="card-body d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+                            <div>
+                                <h5 class="mb-1">الدعم المالى للجهات الرياضية والاندية نهائي 2026</h5>
+                                <p class="text-muted mb-0">Generated from approved support requests, federations, and club master data.</p>
+                            </div>
+                            <a href="/ministry/reports/financial-support/entities-clubs.xlsx" class="btn btn-primary">
+                                <i class="fa fa-table me-1"/>
+                                Generate System Report
+                            </a>
+                        </div>
+                    </div>
+                </t>
+
+                <div class="row g-3">
+                    <t t-foreach="download_forms" t-as="download_form">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card ministry-portal-card h-100">
+                                <div class="card-body d-flex flex-column">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <span class="d-inline-flex align-items-center justify-content-center rounded-circle me-3"
+                                              style="width: 44px; height: 44px; background: #f8f5ee; color: #8B6F2A;">
+                                            <i t-attf-class="fa #{download_form.get('icon_class', 'fa-file-o')}"/>
+                                        </span>
+                                        <div>
+                                            <h5 class="mb-1" t-esc="download_form['title']"/>
+                                            <span class="badge text-bg-light" t-esc="download_form['file_label']"/>
+                                        </div>
+                                    </div>
+                                    <p class="text-muted flex-grow-1" t-esc="download_form['description']"/>
+                                    <a t-att-href="'/my/championships/downloads/%s' % download_form['key']"
+                                       class="btn btn-primary mt-auto">
+                                        <i class="fa fa-download me-1"/>
+                                        Download File
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="portal_participation_list" name="Participation Applications">
+        <t t-call="portal.portal_layout">
+            <t t-call="portal.portal_searchbar">
+                <t t-set="title">Participation Applications</t>
+            </t>
+            <div class="container py-4">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h3>Participation Applications</h3>
+                    <a href="/my/championships/participation/new" class="btn btn-primary btn-sm"
+                       style="background-color: #8B6F2A; border-color: #8B6F2A;">
+                        New Application
+                    </a>
+                </div>
+                <t t-if="records">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead style="background-color: #f8f5ee;">
+                                <tr>
+                                    <th>Reference</th>
+                                    <th>Championship</th>
+                                    <th>Level</th>
+                                    <th>Event Date</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="records" t-as="rec">
+                                    <tr>
+                                        <td><t t-esc="rec.name"/></td>
+                                        <td><t t-esc="rec.championship_name"/></td>
+                                        <td><t t-esc="dict(rec._fields['championship_level'].selection).get(rec.championship_level)"/></td>
+                                        <td><t t-esc="rec.event_date_start"/> – <t t-esc="rec.event_date_end"/></td>
+                                        <td>
+                                            <span t-attf-class="badge text-bg-{{ rec.state == 'acknowledged' and 'success' or rec.state == 'rejected' and 'danger' or 'warning' }}">
+                                                <t t-esc="dict(rec._fields['state'].selection).get(rec.state)"/>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                    </div>
+                    <t t-call="portal.pager"/>
+                </t>
+                <t t-else="">
+                    <p class="text-muted">No participation applications found. <a href="/my/championships/participation/new">Submit your first one.</a></p>
+                </t>
+            </div>
+        </t>
+    </template>
+
+    <!-- ── Participation Form ─────────────────────────────────────────────── -->
+    <template id="portal_participation_form" name="New Participation Application">
+        <t t-call="portal.portal_layout">
+            <t t-call="portal.portal_searchbar">
+                <t t-set="title">New Participation Application</t>
+            </t>
+            <div class="container py-4" style="max-width: 1100px;">
+                <h3 style="color: #8B6F2A; border-bottom: 2px solid #8B6F2A; padding-bottom: 8px;">
+                    Championship Participation Application
+                </h3>
+                <p class="text-muted small mb-4">Applications must be submitted at least <strong>15 days</strong> before the event start date.</p>
+
+                <t t-if="error">
+                    <div class="alert alert-danger" role="alert">
+                        <ul class="mb-0">
+                            <t t-foreach="error.values()" t-as="message">
+                                <li><t t-esc="message"/></li>
+                            </t>
+                        </ul>
+                    </div>
+                </t>
+
+                <form action="/my/championships/participation/submit" method="post">
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+
+                    <div class="row">
+                        <div class="col-md-8 mb-3">
+                            <label class="form-label fw-bold">Championship Name *</label>
+                            <input type="text" name="championship_name" class="form-control"
+                                t-att-value="values.get('championship_name', '')" required="required"/>
+                            <t t-if="error.get('championship_name')">
+                                <div class="text-danger small"><t t-esc="error['championship_name']"/></div>
+                            </t>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label class="form-label fw-bold">Level *</label>
+                            <select name="championship_level" class="form-select" required="required">
+                                <option value="">— Select —</option>
+                                <option value="local" t-att-selected="values.get('championship_level') == 'local'">Local</option>
+                                <option value="arab" t-att-selected="values.get('championship_level') == 'arab'">Arab</option>
+                                <option value="regional" t-att-selected="values.get('championship_level') == 'regional'">Regional</option>
+                                <option value="asian" t-att-selected="values.get('championship_level') == 'asian'">Asian</option>
+                                <option value="international" t-att-selected="values.get('championship_level') == 'international'">International</option>
+                                <option value="olympic" t-att-selected="values.get('championship_level') == 'olympic'">Olympic</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label fw-bold">Sport / Game (اللعبة)</label>
+                            <input type="text" name="sport_type" class="form-control"
+                                t-att-value="values.get('sport_type', '')"
+                                placeholder="e.g., Football, Swimming, Athletics"/>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label class="form-label fw-bold">Participation Category (فئة المشاركة)</label>
+                            <select name="participation_category" class="form-select">
+                                <option value="">— Select —</option>
+                                <option value="men" t-att-selected="values.get('participation_category') == 'men'">Men (رجال)</option>
+                                <option value="women" t-att-selected="values.get('participation_category') == 'women'">Women (سيدات)</option>
+                                <option value="youth" t-att-selected="values.get('participation_category') == 'youth'">Youth (ناشئين)</option>
+                                <option value="mixed" t-att-selected="values.get('participation_category') == 'mixed'">All / Mixed</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label class="form-label fw-bold">No. of Countries (عدد الدول)</label>
+                            <input type="number" name="countries_count" class="form-control" min="1"
+                                t-att-value="values.get('countries_count', '')"/>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <label class="form-label fw-bold">Event Start Date *</label>
+                            <input type="date" name="event_date_start" class="form-control"
+                                t-att-value="values.get('event_date_start', '')" required="required"/>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label class="form-label fw-bold">Event End Date *</label>
+                            <input type="date" name="event_date_end" class="form-control"
+                                t-att-value="values.get('event_date_end', '')" required="required"/>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label class="form-label fw-bold">Location (City, Country) *</label>
+                            <input type="text" name="location" class="form-control"
+                                t-att-value="values.get('location', '')" required="required"/>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <label class="form-label fw-bold">Number of Athletes *</label>
+                            <input type="number" name="athletes_count" class="form-control" min="1"
+                                t-att-value="values.get('athletes_count', '')" required="required"/>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label class="form-label fw-bold">Number of Officials</label>
+                            <input type="number" name="officials_count" class="form-control" min="0"
+                                t-att-value="values.get('officials_count', '0')"/>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between align-items-end mb-2 gap-3">
+                            <div>
+                                <h5 class="mb-1">Estimated Budget Breakdown</h5>
+                                <p class="text-muted small mb-0">Enter quantity and unit amount for each expected expense.</p>
+                            </div>
+                            <div class="text-end">
+                                <div class="small text-muted">Estimated Budget (AED)</div>
+                                <div class="fs-5 fw-bold" id="participation_budget_total_display">
+                                    <t t-esc="'{:,.2f}'.format(budget_total)"/>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="hidden" name="estimated_budget" id="participation_estimated_budget"
+                               t-att-value="'%.2f' % budget_total"/>
+                        <div class="table-responsive">
+                            <table class="table table-sm table-bordered align-middle" id="participation_budget_table">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th style="min-width:150px;">Budget Category</th>
+                                        <th style="min-width:220px;">Description</th>
+                                        <th style="width:120px;">Quantity</th>
+                                        <th style="width:150px;">Unit Amount (AED)</th>
+                                        <th style="width:150px;">Total (AED)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-foreach="budget_lines" t-as="budget_line">
+                                        <tr t-att-data-budget-key="budget_line['key']">
+                                            <td>
+                                                <span class="fw-semibold" t-esc="budget_line['group_label']"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="budget_line['description']"/>
+                                            </td>
+                                            <td>
+                                                <input type="number" min="0" step="0.01" class="form-control form-control-sm"
+                                                       t-att-name="'budget_quantity_%s' % budget_line['key']"
+                                                       t-att-value="budget_line['quantity_value']"
+                                                       data-budget-quantity="1"/>
+                                            </td>
+                                            <td>
+                                                <input type="number" min="0" step="0.01" class="form-control form-control-sm"
+                                                       t-att-name="'budget_unit_amount_%s' % budget_line['key']"
+                                                       t-att-value="budget_line['unit_amount_value']"
+                                                       data-budget-unit-amount="1"/>
+                                            </td>
+                                            <td class="text-end fw-semibold">
+                                                <span data-budget-line-total="1">
+                                                    <t t-esc="'{:,.2f}'.format(budget_line['total_amount'])"/>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Additional Notes</label>
+                        <textarea name="notes" class="form-control" rows="4"
+                            ><t t-esc="values.get('notes', '')"/></textarea>
+                    </div>
+
+                    <div class="d-flex gap-2 mt-4">
+                        <button type="submit" class="btn btn-primary"
+                            style="background-color: #8B6F2A; border-color: #8B6F2A;">
+                            Submit Application
+                        </button>
+                        <a href="/my/championships/participation" class="btn btn-outline-secondary">Cancel</a>
+                    </div>
+                </form>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        const table = document.getElementById('participation_budget_table');
+                        if (!table) {
+                            return;
+                        }
+                        const formatter = new Intl.NumberFormat('en-US', {
+                            minimumFractionDigits: 2,
+                            maximumFractionDigits: 2,
+                        });
+                        const totalDisplay = document.getElementById('participation_budget_total_display');
+                        const hiddenTotal = document.getElementById('participation_estimated_budget');
+                        const recalculateBudget = function () {
+                            let grandTotal = 0;
+                            table.querySelectorAll('tbody tr[data-budget-key]').forEach(function (row) {
+                                const quantity = parseFloat(row.querySelector('[data-budget-quantity]').value || '0') || 0;
+                                const unitAmount = parseFloat(row.querySelector('[data-budget-unit-amount]').value || '0') || 0;
+                                const lineTotal = quantity * unitAmount;
+                                grandTotal += lineTotal;
+                                row.querySelector('[data-budget-line-total]').textContent = formatter.format(lineTotal);
+                            });
+                            totalDisplay.textContent = formatter.format(grandTotal);
+                            hiddenTotal.value = grandTotal.toFixed(2);
+                        };
+                        table.addEventListener('input', recalculateBudget);
+                        recalculateBudget();
+                    });
+                </script>
+            </div>
+        </t>
+    </template>
+
+    <!-- ── Hosting List ───────────────────────────────────────────────────── -->
+    <template id="portal_hosting_list" name="Hosting Applications">
+        <t t-call="portal.portal_layout">
+            <t t-call="portal.portal_searchbar">
+                <t t-set="title">Hosting Applications</t>
+            </t>
+            <div class="container py-4">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h3>Hosting Applications</h3>
+                    <a href="/my/championships/hosting/new" class="btn btn-primary btn-sm"
+                       style="background-color: #8B6F2A; border-color: #8B6F2A;">
+                        New Application
+                    </a>
+                </div>
+                <t t-if="records">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead style="background-color: #f8f5ee;">
+                                <tr>
+                                    <th>Reference</th>
+                                    <th>Championship</th>
+                                    <th>Venue</th>
+                                    <th>Event Date</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="records" t-as="rec">
+                                    <tr>
+                                        <td><t t-esc="rec.name"/></td>
+                                        <td><t t-esc="rec.championship_name"/></td>
+                                        <td><t t-esc="rec.venue"/></td>
+                                        <td><t t-esc="rec.event_date_start"/></td>
+                                        <td>
+                                            <span t-attf-class="badge text-bg-{{ rec.state == 'approved' and 'success' or rec.state == 'rejected' and 'danger' or 'warning' }}">
+                                                <t t-esc="dict(rec._fields['state'].selection).get(rec.state)"/>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                    </div>
+                    <t t-call="portal.pager"/>
+                </t>
+                <t t-else="">
+                    <p class="text-muted">No hosting applications found. <a href="/my/championships/hosting/new">Submit your first one.</a></p>
+                </t>
+            </div>
+        </t>
+    </template>
+
+    <!-- ── Hosting Form ───────────────────────────────────────────────────── -->
+    <template id="portal_hosting_form" name="New Hosting Application">
+        <t t-call="portal.portal_layout">
+            <t t-call="portal.portal_searchbar">
+                <t t-set="title">New Hosting Application</t>
+            </t>
+            <div class="container py-4" style="max-width: 800px;">
+                <h3 style="color: #8B6F2A; border-bottom: 2px solid #8B6F2A; padding-bottom: 8px;">
+                    Championship Hosting Application
+                </h3>
+                <p class="text-muted small mb-4">Applications must be submitted at least <strong>30 days</strong> before the event start date.</p>
+
+                <t t-if="error">
+                    <div class="alert alert-danger" role="alert">
+                        <ul class="mb-0">
+                            <t t-foreach="error.values()" t-as="message">
+                                <li><t t-esc="message"/></li>
+                            </t>
+                        </ul>
+                    </div>
+                </t>
+
+                <form action="/my/championships/hosting/submit" method="post">
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+
+                    <div class="row">
+                        <div class="col-md-8 mb-3">
+                            <label class="form-label fw-bold">Championship Name *</label>
+                            <input type="text" name="championship_name" class="form-control"
+                                t-att-value="values.get('championship_name', '')" required="required"/>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label class="form-label fw-bold">Level *</label>
+                            <select name="championship_level" class="form-select" required="required">
+                                <option value="">— Select —</option>
+                                <option value="local" t-att-selected="values.get('championship_level') == 'local'">Local</option>
+                                <option value="arab" t-att-selected="values.get('championship_level') == 'arab'">Arab</option>
+                                <option value="regional" t-att-selected="values.get('championship_level') == 'regional'">Regional</option>
+                                <option value="asian" t-att-selected="values.get('championship_level') == 'asian'">Asian</option>
+                                <option value="international" t-att-selected="values.get('championship_level') == 'international'">International</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label fw-bold">Sport (اللعبة)</label>
+                            <input type="text" name="sport_type" class="form-control"
+                                t-att-value="values.get('sport_type', '')"
+                                placeholder="e.g., Football, Swimming"/>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label fw-bold">Organizing Body (الجهة المنظمة)</label>
+                            <input type="text" name="organizer" class="form-control"
+                                t-att-value="values.get('organizer', '')"
+                                placeholder="International federation organizing the event"/>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <label class="form-label fw-bold">Event Start Date *</label>
+                            <input type="date" name="event_date_start" class="form-control"
+                                t-att-value="values.get('event_date_start', '')" required="required"/>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label class="form-label fw-bold">Event End Date *</label>
+                            <input type="date" name="event_date_end" class="form-control"
+                                t-att-value="values.get('event_date_end', '')" required="required"/>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label class="form-label fw-bold">Venue *</label>
+                            <input type="text" name="venue" class="form-control"
+                                t-att-value="values.get('venue', '')" required="required"/>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-3 mb-3">
+                            <label class="form-label fw-bold">Expected Participants *</label>
+                            <input type="number" name="expected_participants" class="form-control" min="1"
+                                t-att-value="values.get('expected_participants', '')" required="required"/>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label class="form-label fw-bold">Expected Countries</label>
+                            <input type="number" name="expected_countries" class="form-control" min="1"
+                                t-att-value="values.get('expected_countries', '1')"/>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label class="form-label fw-bold">Venue Capacity</label>
+                            <input type="number" name="venue_capacity" class="form-control" min="0"
+                                t-att-value="values.get('venue_capacity', '0')"/>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label class="form-label fw-bold">Hosting Budget (AED) *</label>
+                            <input type="number" name="hosting_budget" class="form-control" min="0" step="0.01"
+                                t-att-value="values.get('hosting_budget', '')" required="required"/>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Participant Categories (فئات المشاركين)</label>
+                        <input type="text" name="participant_categories" class="form-control"
+                            t-att-value="values.get('participant_categories', '')"
+                            placeholder="e.g., Men / Women / Youth"/>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Funding Sources (مصادر التمويل)</label>
+                        <textarea name="funding_sources" class="form-control" rows="3"
+                            ><t t-esc="values.get('funding_sources', '')"/></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Expected Return from Hosting (العائد من الاستضافة)</label>
+                        <textarea name="expected_return" class="form-control" rows="3"
+                            ><t t-esc="values.get('expected_return', '')"/></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Additional Notes</label>
+                        <textarea name="notes" class="form-control" rows="4"
+                            ><t t-esc="values.get('notes', '')"/></textarea>
+                    </div>
+
+                    <div class="d-flex gap-2 mt-4">
+                        <button type="submit" class="btn btn-primary"
+                            style="background-color: #8B6F2A; border-color: #8B6F2A;">
+                            Submit Application
+                        </button>
+                        <a href="/my/championships/hosting" class="btn btn-outline-secondary">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </t>
+    </template>
+
+    <!-- ── Post-Event Report List ─────────────────────────────────────────── -->
+    <template id="portal_report_list" name="Post-Event Reports">
+        <t t-call="portal.portal_layout">
+            <t t-call="portal.portal_searchbar">
+                <t t-set="title">Post-Event Reports</t>
+            </t>
+            <div class="container py-4">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h3>Post-Event Reports</h3>
+                    <a href="/my/championships/post-event-report/new" class="btn btn-primary btn-sm"
+                       style="background-color: #8B6F2A; border-color: #8B6F2A;">
+                        New Report
+                    </a>
+                </div>
+                <t t-if="records">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead style="background-color: #f8f5ee;">
+                                <tr>
+                                    <th>Reference</th>
+                                    <th>Event</th>
+                                    <th>Achievement %</th>
+                                    <th>Submitted</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="records" t-as="rec">
+                                    <tr>
+                                        <td><t t-esc="rec.name"/></td>
+                                        <td><t t-esc="rec.event_name"/></td>
+                                        <td>
+                                            <span t-attf-class="{{ rec.achievement_pct >= 80 and 'text-success' or rec.achievement_pct >= 60 and 'text-warning' or 'text-danger' }} fw-bold">
+                                                <t t-esc="'{:.1f}'.format(rec.achievement_pct)"/>%
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <t t-if="rec.is_late">
+                                                <span class="badge text-bg-danger">Late</span>
+                                            </t>
+                                            <t t-else="">
+                                                <span class="badge text-bg-success">On Time</span>
+                                            </t>
+                                        </td>
+                                        <td>
+                                            <span t-attf-class="badge text-bg-{{ rec.state == 'accepted' and 'success' or rec.state == 'rejected' and 'danger' or 'warning' }}">
+                                                <t t-esc="dict(rec._fields['state'].selection).get(rec.state)"/>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                    </div>
+                    <t t-call="portal.pager"/>
+                </t>
+                <t t-else="">
+                    <p class="text-muted">No post-event reports found. <a href="/my/championships/post-event-report/new">Submit your first one.</a></p>
+                </t>
+            </div>
+        </t>
+    </template>
+
+    <!-- ── Post-Event Report Form ─────────────────────────────────────────── -->
+    <template id="portal_report_form" name="New Post-Event Report">
+        <t t-call="portal.portal_layout">
+            <t t-call="portal.portal_searchbar">
+                <t t-set="title">Post-Event Report</t>
+            </t>
+            <div class="container py-4" style="max-width: 800px;">
+                <h3 style="color: #8B6F2A; border-bottom: 2px solid #8B6F2A; padding-bottom: 8px;">
+                    Post-Event Report
+                </h3>
+                <p class="text-muted small mb-4">Reports must be submitted within <strong>15 days</strong> of the event end date.</p>
+
+                <t t-if="error">
+                    <div class="alert alert-danger" role="alert">
+                        <ul class="mb-0">
+                            <t t-foreach="error.values()" t-as="message">
+                                <li><t t-esc="message"/></li>
+                            </t>
+                        </ul>
+                    </div>
+                </t>
+
+                <form action="/my/championships/post-event-report/submit" method="post">
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+
+                    <div class="row">
+                        <div class="col-md-8 mb-3">
+                            <label class="form-label fw-bold">Event Name *</label>
+                            <input type="text" name="event_name" class="form-control"
+                                t-att-value="values.get('event_name', '')" required="required"/>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label class="form-label fw-bold">Related Support Request</label>
+                            <select name="support_request_id" class="form-select">
+                                <option value="">— None —</option>
+                                <t t-foreach="open_requests" t-as="sr">
+                                    <option t-att-value="sr.id"><t t-esc="sr.name"/> — <t t-esc="sr.support_item_id.name"/></option>
+                                </t>
+                            </select>
+                            <t t-if="error.get('support_request_id')">
+                                <div class="text-danger small"><t t-esc="error['support_request_id']"/></div>
+                            </t>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <label class="form-label fw-bold">Sport (اللعبة)</label>
+                            <input type="text" name="sport_type" class="form-control"
+                                t-att-value="values.get('sport_type', '')"
+                                placeholder="e.g., Football, Swimming"/>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label class="form-label fw-bold">Championship Level (نوع البطولة)</label>
+                            <select name="championship_level" class="form-select">
+                                <option value="">— Select —</option>
+                                <option value="local" t-att-selected="values.get('championship_level') == 'local'">Local</option>
+                                <option value="arab" t-att-selected="values.get('championship_level') == 'arab'">Arab</option>
+                                <option value="regional" t-att-selected="values.get('championship_level') == 'regional'">Regional</option>
+                                <option value="asian" t-att-selected="values.get('championship_level') == 'asian'">Asian</option>
+                                <option value="international" t-att-selected="values.get('championship_level') == 'international'">International</option>
+                                <option value="olympic" t-att-selected="values.get('championship_level') == 'olympic'">Olympic</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label class="form-label fw-bold">Event Location (مكان البطولة)</label>
+                            <input type="text" name="event_location" class="form-control"
+                                t-att-value="values.get('event_location', '')"
+                                placeholder="City, Country"/>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label fw-bold">Event Start Date *</label>
+                            <input type="date" name="event_date_start" class="form-control"
+                                t-att-value="values.get('event_date_start', '')" required="required"/>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label fw-bold">Event End Date *</label>
+                            <input type="date" name="event_date_end" class="form-control"
+                                t-att-value="values.get('event_date_end', '')" required="required"/>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-3 mb-3">
+                            <label class="form-label fw-bold">Athletes Participated *</label>
+                            <input type="number" name="athletes_participated" class="form-control" min="1"
+                                t-att-value="values.get('athletes_participated', '')" required="required"/>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label class="form-label fw-bold">Gold Medals</label>
+                            <input type="number" name="medals_gold" class="form-control" min="0"
+                                t-att-value="values.get('medals_gold', '0')"/>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label class="form-label fw-bold">Silver Medals</label>
+                            <input type="number" name="medals_silver" class="form-control" min="0"
+                                t-att-value="values.get('medals_silver', '0')"/>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label class="form-label fw-bold">Bronze Medals</label>
+                            <input type="number" name="medals_bronze" class="form-control" min="0"
+                                t-att-value="values.get('medals_bronze', '0')"/>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <label class="form-label fw-bold">Overall Ranking</label>
+                            <input type="number" name="final_rank" class="form-control" min="1"
+                                t-att-value="values.get('final_rank', '')"/>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label class="form-label fw-bold">Achievement % (0–100)</label>
+                            <input type="number" name="achievement_pct" class="form-control"
+                                min="0" max="100" step="0.1"
+                                t-att-value="values.get('achievement_pct', '')"/>
+                            <t t-if="error.get('achievement_pct')">
+                                <div class="text-danger small"><t t-esc="error['achievement_pct']"/></div>
+                            </t>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label class="form-label fw-bold">Actual Expenditure (AED)</label>
+                            <input type="number" name="actual_expenditure" class="form-control"
+                                min="0" step="0.01"
+                                t-att-value="values.get('actual_expenditure', '')"/>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">No. of Participating Countries (عدد الدول)</label>
+                        <input type="number" name="countries_count" class="form-control" min="1"
+                            t-att-value="values.get('countries_count', '')"/>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Goals Achieved (الأهداف التي تحققت)</label>
+                        <textarea name="goals_achieved" class="form-control" rows="3"
+                            placeholder="List the goals achieved from participation (one per line)"
+                            ><t t-esc="values.get('goals_achieved', '')"/></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Challenges (التحديات)</label>
+                        <textarea name="challenges" class="form-control" rows="3"
+                            placeholder="Any challenges faced (one per line)"
+                            ><t t-esc="values.get('challenges', '')"/></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Recommendations (التوصيات)</label>
+                        <textarea name="recommendations" class="form-control" rows="3"
+                            placeholder="Recommendations for future participation (one per line)"
+                            ><t t-esc="values.get('recommendations', '')"/></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Event Narrative</label>
+                        <textarea name="narrative" class="form-control" rows="5"
+                            ><t t-esc="values.get('narrative', '')"/></textarea>
+                    </div>
+
+                    <div class="d-flex gap-2 mt-4">
+                        <button type="submit" class="btn btn-primary"
+                            style="background-color: #8B6F2A; border-color: #8B6F2A;">
+                            Submit Report
+                        </button>
+                        <a href="/my/championships/post-event-report" class="btn btn-outline-secondary">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </t>
+    </template>
+
+</odoo>

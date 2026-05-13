@@ -1,0 +1,2560 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kaz_ai_ministry_portal_forms
+#
+msgid ""
+msgstr "Project-Id-Version: Odoo Server 19.0\\nReport-Msgid-Bugs-To: \\nPOT-Creation-Date: 2026-05-13 00:00+0000\\nPO-Revision-Date: 2026-05-13 00:00+0000\\nLast-Translator: Kaizen AI <support@kaizenae.com>\\nLanguage-Team: Arabic\\nLanguage: ar_001\\nMIME-Version: 1.0\\nContent-Type: text/plain; charset=UTF-8\\nContent-Transfer-Encoding: 8bit\\nPlural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\\n"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_download_forms
+msgid ""
+"<i class=\"fa fa-download me-1\"/>\n"
+"                                        Download File"
+msgstr ""
+"<i class=\"fa fa-download me-1\"/>\n"
+"                                        تحميل الملف"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_download_forms
+msgid ""
+"<i class=\"fa fa-table me-1\"/>\n"
+"                                Generate System Report"
+msgstr ""
+"<i class=\"fa fa-table me-1\"/>\n"
+"                                إنشاء تقرير من النظام"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_report_form
+msgid "<option value=\"\">— None —</option>"
+msgstr "<option value=\"\">— لا يوجد —</option>"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_hosting_form
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_participation_form
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_report_form
+msgid "<option value=\"\">— Select —</option>"
+msgstr "<option value=\"\">— اختر —</option>"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_report_list
+msgid "<span class=\"badge text-bg-danger\">Late</span>"
+msgstr "<span class=\"badge text-bg-danger\">متأخر</span>"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_report_list
+msgid "<span class=\"badge text-bg-success\">On Time</span>"
+msgstr "<span class=\"badge text-bg-success\">في الموعد</span>"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_home_ministry
+msgid ""
+"<span class=\"fw-bold d-none\" data-placeholder_count=\"hosting_count\"/>\n"
+"                                Hosting Applications"
+msgstr ""
+"<span class=\"fw-bold d-none\" data-placeholder_count=\"hosting_count\"/>\n"
+"                                طلبات الاستضافة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_home_ministry
+msgid ""
+"<span class=\"fw-bold d-none\" data-placeholder_count=\"participation_count\"/>\n"
+"                                Championship Applications"
+msgstr ""
+"<span class=\"fw-bold d-none\" data-placeholder_count=\"participation_count\"/>\n"
+"                                طلبات المشاركة في البطولات"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_home_ministry
+msgid ""
+"<span class=\"fw-bold d-none\" data-placeholder_count=\"report_count\"/>\n"
+"                                Post-Event Reports"
+msgstr ""
+"<span class=\"fw-bold d-none\" data-placeholder_count=\"report_count\"/>\n"
+"                                تقارير ما بعد الحدث"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.view_per_form
+msgid "<span class=\"o_stat_text\">Submitted Late</span>"
+msgstr "<span class=\"o_stat_text\">تم التقديم متأخراً</span>"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.ministry_form_page_header
+msgid "<span class=\"page\"/> من <span class=\"topage\"/>"
+msgstr "<span class=\"page\"/> من <span class=\"topage\"/>"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_hosting_document
+msgid ""
+"<span style=\"font-weight:bold;\">ملاحظة: </span>\n"
+"                <span style=\"color:#C8102E; font-weight:bold;\">يتم إرسال الاستمارة بجميع المتطلبات قبل موعد البطولة 30 يوم</span>"
+msgstr ""
+"<span style=\"font-weight:bold;\">ملاحظة: </span>\n"
+"                <span style=\"color:#C8102E; font-weight:bold;\">يتم إرسال الاستمارة بجميع المتطلبات قبل موعد البطولة 30 يوم</span>"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.view_per_form
+msgid "Accept Report"
+msgstr "قبول التقرير"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_portal_forms.selection__ministry_post_event_report__state__accepted
+msgid "Accepted"
+msgstr "مقبول"
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/controllers/portal.py:0
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_portal_forms.selection__ministry_championship_participation_budget_line__expense_group__accommodation_meals
+msgid "Accommodation and Meals"
+msgstr "الإقامة والإعاشة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__achievement_pct
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_report_list
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.view_per_list
+msgid "Achievement %"
+msgstr "نسبة الإنجاز %"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_report_form
+msgid "Achievement % (0–100)"
+msgstr "نسبة الإنجاز % (0-100)"
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/controllers/portal.py:0
+msgid "Achievement must be between 0 and 100."
+msgstr "يجب أن تكون نسبة الإنجاز بين 0 و100."
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/models/ministry_post_event_report.py:0
+msgid "Achievement percentage must be between 0 and 100."
+msgstr "يجب أن تكون نسبة الإنجاز بين 0 و100."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.view_participation_form
+msgid "Acknowledge"
+msgstr "استلام"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_portal_forms.selection__ministry_championship_participation__state__acknowledged
+msgid "Acknowledged"
+msgstr "تم الاستلام"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__message_needaction
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__message_needaction
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__message_needaction
+msgid "Action Needed"
+msgstr "إجراء مطلوب"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__activity_ids
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__activity_ids
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__activity_exception_decoration
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__activity_exception_decoration
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "تنسيق استثناء النشاط"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__activity_state
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__activity_state
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__activity_type_icon
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__activity_type_icon
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "أيقونة نوع النشاط"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__actual_expenditure
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_report_form
+msgid "Actual Expenditure (AED)"
+msgstr "المصروفات الفعلية (درهم)"
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/controllers/portal.py:0
+msgid "Actual disbursement report."
+msgstr "تقرير الصرف الفعلي."
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/models/ministry_post_event_report.py:0
+msgid "Actual expenditure cannot be negative."
+msgstr "لا يمكن أن تكون المصروفات الفعلية سالبة."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__athletes_participated
+msgid "Actual number of athletes who competed."
+msgstr "العدد الفعلي للرياضيين المشاركين في المنافسة."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__notes
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__notes
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_hosting_form
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_participation_form
+msgid "Additional Notes"
+msgstr "ملاحظات إضافية"
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/controllers/portal.py:0
+msgid "Administrators"
+msgstr "الإداريون"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_portal_forms.selection__ministry_championship_participation__participation_category__mixed
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_participation_form
+msgid "All / Mixed"
+msgstr "الكل / مختلط"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__notes
+msgid "Any additional information supporting the application."
+msgstr "أي معلومات إضافية تدعم الطلب."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_report_form
+msgid "Any challenges faced (one per line)"
+msgstr "أي تحديات تمت مواجهتها، سطر لكل تحد."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.view_hosting_form
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.view_participation_form
+msgid "Application Details"
+msgstr "تفاصيل الطلب"
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/models/ministry_championship_participation.py:0
+msgid "Application acknowledged by Ministry."
+msgstr "تم استلام الطلب من قبل الوزارة."
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/models/ministry_championship_participation.py:0
+msgid "Application rejected."
+msgstr "تم رفض الطلب."
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/controllers/portal.py:0
+#: code:addons/kaz_ai_ministry_portal_forms/models/ministry_championship_participation.py:0
+msgid "Applications must be submitted at least 15 days before the event start date."
+msgstr "يجب تقديم الطلبات قبل تاريخ بداية الفعالية بما لا يقل عن 15 يوماً."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__submission_deadline
+msgid "Applications must be submitted at least 15 days before the event."
+msgstr "يجب تقديم الطلبات قبل الفعالية بما لا يقل عن 15 يوماً."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_participation_form
+msgid "Applications must be submitted at least <strong>15 days</strong> before the event start date."
+msgstr "يجب تقديم الطلبات قبل تاريخ بداية الفعالية بما لا يقل عن <strong>15 يوماً</strong>."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_hosting_form
+msgid "Applications must be submitted at least <strong>30 days</strong> before the event start date."
+msgstr "يجب تقديم الطلبات قبل تاريخ بداية الفعالية بما لا يقل عن <strong>30 يوماً</strong>."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.view_hosting_form
+msgid "Approve"
+msgstr "اعتماد"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_portal_forms.selection__ministry_championship_hosting__state__approved
+msgid "Approved"
+msgstr "معتمد"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_portal_forms.selection__ministry_championship_hosting__championship_level__arab
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_portal_forms.selection__ministry_championship_participation__championship_level__arab
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_portal_forms.selection__ministry_post_event_report__championship_level__arab
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_hosting_form
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_participation_form
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_report_form
+msgid "Arab"
+msgstr "عربي"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_portal_forms.selection__ministry_championship_hosting__championship_level__asian
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_portal_forms.selection__ministry_championship_participation__championship_level__asian
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_portal_forms.selection__ministry_post_event_report__championship_level__asian
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_hosting_form
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_participation_form
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_report_form
+msgid "Asian"
+msgstr "آسيوي"
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/models/ministry_championship_participation.py:0
+msgid "At least one budget line must have an amount greater than zero."
+msgstr "يجب أن يحتوي بند واحد على الأقل من بنود الموازنة على مبلغ أكبر من صفر."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_report_form
+msgid "Athletes Participated *"
+msgstr "الرياضيون المشاركون *"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__athletes_participated
+msgid "Athletes Who Participated"
+msgstr "الرياضيون الذين شاركوا"
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/models/ministry_post_event_report.py:0
+msgid "Athletes participated must be greater than zero."
+msgstr "يجب أن يكون عدد الرياضيين المشاركين أكبر من صفر."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__message_attachment_count
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__message_attachment_count
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__attachment_ids
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.view_per_form
+msgid "Attachments"
+msgstr "المرفقات"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__name
+msgid "Auto-generated application reference."
+msgstr "مرجع الطلب يتم إنشاؤه تلقائياً."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__name
+msgid "Auto-generated hosting application reference."
+msgstr "مرجع طلب الاستضافة يتم إنشاؤه تلقائياً."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__name
+msgid "Auto-generated post-event report reference."
+msgstr "مرجع تقرير ما بعد الحدث يتم إنشاؤه تلقائياً."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_download_forms
+msgid "Back to Portal"
+msgstr "العودة إلى البوابة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__medals_bronze
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_report_form
+msgid "Bronze Medals"
+msgstr "الميداليات البرونزية"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.view_hosting_list
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.view_participation_list
+msgid "Budget (AED)"
+msgstr "الميزانية (درهم)"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_participation_form
+msgid "Budget Category"
+msgstr "فئة الموازنة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__budget_line_total
+msgid "Budget Line Total (AED)"
+msgstr "إجمالي بنود الموازنة (درهم)"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_hosting_form
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_participation_form
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_report_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__challenges
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.view_per_form
+msgid "Challenges"
+msgstr "التحديات"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_report_form
+msgid "Challenges (التحديات)"
+msgstr "التحديات"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__challenges
+msgid "Challenges faced during participation, if any."
+msgstr "التحديات التي تمت مواجهتها أثناء المشاركة، إن وجدت."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_hosting_list
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_participation_list
+msgid "Championship"
+msgstr "البطولة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.actions.report,name:kaz_ai_ministry_portal_forms.action_report_hosting
+#: model:ir.model,name:kaz_ai_ministry_portal_forms.model_ministry_championship_hosting
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_hosting_form
+msgid "Championship Hosting Application"
+msgstr "طلب استضافة بطولة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__championship_level
+msgid "Championship Level"
+msgstr "مستوى البطولة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_report_form
+msgid "Championship Level (نوع البطولة)"
+msgstr "نوع البطولة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__championship_name
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__championship_name
+msgid "Championship Name"
+msgstr "اسم البطولة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_hosting_form
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_participation_form
+msgid "Championship Name *"
+msgstr "اسم البطولة *"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.actions.report,name:kaz_ai_ministry_portal_forms.action_report_participation
+#: model:ir.model,name:kaz_ai_ministry_portal_forms.model_ministry_championship_participation
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_participation_form
+msgid "Championship Participation Application"
+msgstr "طلب المشاركة في بطولة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__location
+msgid "City and country where the event takes place."
+msgstr "المدينة والدولة التي تقام فيها الفعالية."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__event_location
+msgid "City and country where the event took place."
+msgstr "المدينة والدولة التي أقيمت فيها الفعالية."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_report_form
+msgid "City, Country"
+msgstr "المدينة، الدولة"
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/controllers/portal.py:0
+msgid "Coaches"
+msgstr "المدربون"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__officials_count
+msgid "Coaching staff, team managers, and medical personnel."
+msgstr "الجهاز الفني وإداريو الفريق والطاقم الطبي."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__company_id
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__company_id
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation_budget_line__company_id
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__create_uid
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__create_uid
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation_budget_line__create_uid
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__create_date
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__create_date
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation_budget_line__create_date
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__create_date
+msgid "Created on"
+msgstr "تاريخ الإنشاء"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__currency_id
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__currency_id
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation_budget_line__currency_id
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__submitted_on
+msgid "Date on which the federation submitted the report."
+msgstr "تاريخ تقديم الاتحاد للتقرير."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__review_date
+msgid "Date on which the report was formally reviewed."
+msgstr "تاريخ المراجعة الرسمية للتقرير."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation_budget_line__description
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_participation_form
+msgid "Description"
+msgstr "الوصف"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__narrative
+msgid "Detailed description of the event, outcomes, and lessons learned."
+msgstr "وصف تفصيلي للفعالية والنتائج والدروس المستفادة."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__budget_line_ids
+msgid "Detailed estimated participation costs by expense category."
+msgstr "تكاليف المشاركة التقديرية المفصلة حسب فئة المصروف."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__display_name
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__display_name
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation_budget_line__display_name
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_dashboard
+msgid "Download Forms"
+msgstr "تحميل النماذج"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_home_ministry
+msgid "Download official Ministry PDF form templates"
+msgstr "تحميل نماذج الوزارة الرسمية بصيغة PDF"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_download_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_home_ministry
+msgid "Downloadable Forms"
+msgstr "النماذج القابلة للتحميل"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_portal_forms.selection__ministry_championship_hosting__state__draft
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_portal_forms.selection__ministry_championship_participation__state__draft
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_portal_forms.selection__ministry_post_event_report__state__draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/controllers/portal.py:0
+msgid "Enter a quantity greater than zero for each budget line with an amount."
+msgstr "أدخل كمية أكبر من صفر لكل بند موازنة يحتوي على مبلغ."
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/controllers/portal.py:0
+msgid "Enter a valid date."
+msgstr "أدخل تاريخاً صحيحاً."
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/controllers/portal.py:0
+msgid "Enter a valid number."
+msgstr "أدخل رقماً صحيحاً."
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/controllers/portal.py:0
+msgid "Enter a valid whole number."
+msgstr "أدخل رقماً صحيحاً بدون كسور."
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/controllers/portal.py:0
+msgid "Enter at least one estimated budget line."
+msgstr "أدخل بندا واحدا على الأقل في الموازنة التقديرية."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_participation_form
+msgid "Enter quantity and unit amount for each expected expense."
+msgstr "أدخل العدد ومبلغ الوحدة لكل مصروف متوقع."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__estimated_budget
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_participation_form
+msgid "Estimated Budget (AED)"
+msgstr "الميزانية التقديرية (درهم)"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__budget_line_ids
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_participation_form
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.view_participation_form
+msgid "Estimated Budget Breakdown"
+msgstr "تفاصيل الموازنة التقديرية"
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/models/ministry_championship_participation.py:0
+msgid "Estimated budget cannot be negative."
+msgstr "لا يمكن أن تكون الميزانية التقديرية سالبة."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_report_list
+msgid "Event"
+msgstr "الفعالية"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.view_hosting_form
+msgid "Event & Capacity"
+msgstr "الفعالية والطاقة الاستيعابية"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.view_participation_form
+msgid "Event & Financials"
+msgstr "الفعالية والبيانات المالية"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_hosting_list
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_participation_list
+msgid "Event Date"
+msgstr "تاريخ الفعالية"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.view_per_form
+msgid "Event Details"
+msgstr "تفاصيل الفعالية"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__event_date_end
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__event_date_end
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__event_date_end
+msgid "Event End Date"
+msgstr "تاريخ نهاية الفعالية"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_hosting_form
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_participation_form
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_report_form
+msgid "Event End Date *"
+msgstr "تاريخ نهاية الفعالية *"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__event_location
+msgid "Event Location"
+msgstr "مكان البطولة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_report_form
+msgid "Event Location (مكان البطولة)"
+msgstr "مكان البطولة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__event_name
+msgid "Event Name"
+msgstr "اسم الفعالية"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_report_form
+msgid "Event Name *"
+msgstr "اسم الفعالية *"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__narrative
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_report_form
+msgid "Event Narrative"
+msgstr "وصف الفعالية"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__event_date_start
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__event_date_start
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__event_date_start
+msgid "Event Start Date"
+msgstr "تاريخ بداية الفعالية"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_hosting_form
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_participation_form
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_report_form
+msgid "Event Start Date *"
+msgstr "تاريخ بداية الفعالية *"
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/controllers/portal.py:0
+#: code:addons/kaz_ai_ministry_portal_forms/models/ministry_championship_hosting.py:0
+#: code:addons/kaz_ai_ministry_portal_forms/models/ministry_championship_participation.py:0
+#: code:addons/kaz_ai_ministry_portal_forms/models/ministry_post_event_report.py:0
+msgid "Event end date must be after start date."
+msgstr "يجب أن يكون تاريخ نهاية الفعالية بعد تاريخ البداية."
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/models/ministry_championship_hosting.py:0
+#: code:addons/kaz_ai_ministry_portal_forms/models/ministry_championship_participation.py:0
+msgid "Event start date is required."
+msgstr "تاريخ بداية الفعالية مطلوب."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__expected_countries
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_hosting_form
+msgid "Expected Countries"
+msgstr "الدول المتوقعة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__expected_participants
+msgid "Expected Participants"
+msgstr "المشاركون المتوقعون"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_hosting_form
+msgid "Expected Participants *"
+msgstr "المشاركون المتوقعون *"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__expected_return
+msgid "Expected Return from Hosting"
+msgstr "العائد المتوقع من الاستضافة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_hosting_form
+msgid "Expected Return from Hosting (العائد من الاستضافة)"
+msgstr "العائد المتوقع من الاستضافة"
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/models/ministry_championship_hosting.py:0
+msgid "Expected countries must be greater than zero."
+msgstr "يجب أن يكون عدد الدول المتوقعة أكبر من صفر."
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/models/ministry_championship_hosting.py:0
+msgid "Expected participants must be greater than zero."
+msgstr "يجب أن يكون عدد المشاركين المتوقعين أكبر من صفر."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.view_hosting_form
+msgid "Expected return from hosting..."
+msgstr "العائد المتوقع من الاستضافة..."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__expected_return
+msgid "Expected strategic, financial, or reputational benefits from hosting this championship."
+msgstr "الفوائد الاستراتيجية أو المالية أو السمعة المتوقعة من استضافة هذه البطولة."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation_budget_line__expense_group
+msgid "Expense Category"
+msgstr "فئة المصروف"
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/controllers/portal.py:0
+msgid "External championship form."
+msgstr "نموذج بطولة خارجية."
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/controllers/portal.py:0
+msgid "External championship hosting application form."
+msgstr "نموذج طلب استضافة بطولة خارجية."
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/controllers/portal.py:0
+msgid "External championship participation report form."
+msgstr "نموذج تقرير المشاركة في البطولات الخارجية."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__federation_id
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__federation_id
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation_budget_line__federation_id
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__federation_id
+msgid "Federation"
+msgstr "الاتحاد"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_dashboard
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_home_ministry
+msgid "Federation Dashboard"
+msgstr "لوحة تحكم الاتحاد"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__federation_id
+msgid "Federation applying to host this championship."
+msgstr "الاتحاد المتقدم لاستضافة هذه البطولة."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__federation_id
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_participation_budget_line__federation_id
+msgid "Federation submitting this participation application."
+msgstr "الاتحاد مقدم طلب المشاركة."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__federation_id
+msgid "Federation submitting this post-event report."
+msgstr "الاتحاد مقدم تقرير ما بعد الحدث."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__final_rank
+msgid "Federation's overall ranking among participating countries/teams."
+msgstr "الترتيب العام للاتحاد بين الدول أو الفرق المشاركة."
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/controllers/portal.py:0
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_portal_forms.selection__ministry_championship_participation_budget_line__expense_group__fees
+msgid "Fees"
+msgstr "الرسوم"
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/models/ministry_post_event_report.py:0
+msgid "Final rank cannot be negative."
+msgstr "لا يمكن أن يكون الترتيب النهائي سالباً."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.actions.act_url,name:kaz_ai_ministry_portal_forms.action_financial_support_entities_clubs_report
+#: model:ir.ui.menu,name:kaz_ai_ministry_portal_forms.menu_financial_support_entities_clubs_report
+msgid "Financial Support Report 2026"
+msgstr "تقرير الدعم المالي 2026"
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/controllers/portal.py:0
+msgid "Financial support spreadsheet for sports entities and clubs."
+msgstr "جدول الدعم المالي للجهات الرياضية والأندية."
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/controllers/portal.py:0
+msgid "Financial support system development project reference document."
+msgstr "مستند مرجعي لمشروع تطوير نظام الدعم المالي."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__event_date_start
+msgid "First day of the championship."
+msgstr "اليوم الأول للبطولة."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__event_date_start
+msgid "First day of the event."
+msgstr "اليوم الأول للفعالية."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__event_date_start
+msgid "First day of the hosted championship."
+msgstr "اليوم الأول للبطولة المستضافة."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__message_follower_ids
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__message_follower_ids
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__message_partner_ids
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__message_partner_ids
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__activity_type_icon
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__activity_type_icon
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "أيقونة Font Awesome مثل fa-tasks"
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/controllers/portal.py:0
+msgid "Full delegation registration fees"
+msgstr "رسوم التسجيل لكامل الوفد"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__championship_name
+msgid "Full official name of the championship or tournament."
+msgstr "الاسم الرسمي الكامل للبطولة أو المنافسة."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__championship_name
+msgid "Full official name of the hosted championship."
+msgstr "الاسم الرسمي الكامل للبطولة المستضافة."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.view_hosting_form
+msgid "Funding & Return"
+msgstr "التمويل والعائد"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__funding_sources
+msgid "Funding Sources"
+msgstr "مصادر التمويل"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_hosting_form
+msgid "Funding Sources (مصادر التمويل)"
+msgstr "مصادر التمويل"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.view_hosting_form
+msgid "Funding sources..."
+msgstr "مصادر التمويل..."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_participation_document
+msgid "GAS-IMS-OP-07/01-F01  الإصدار 1.0"
+msgstr "GAS-IMS-OP-07/01-F01  الإصدار 1.0"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_per_document
+msgid "GAS-IMS-OP-07/01-F04  الإصدار 1.0"
+msgstr "GAS-IMS-OP-07/01-F04  الإصدار 1.0"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_hosting_document
+msgid "GAS-IMS-OP-07/01-F07  الإصدار 2.0"
+msgstr "GAS-IMS-OP-07/01-F07  الإصدار 2.0"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__participant_categories
+msgid "Gender/age categories (e.g., Men / Women / Youth)."
+msgstr "فئات الجنس أو العمر مثل رجال / سيدات / ناشئين."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__participation_category
+msgid "Gender/age category of participants."
+msgstr "فئة الجنس أو العمر للمشاركين."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_download_forms
+msgid "Generated from approved support requests, federations, and club master data."
+msgstr "يتم إنشاؤه من طلبات الدعم المعتمدة وبيانات الاتحادات والأندية."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__championship_level
+msgid "Geographic or competitive level of the event."
+msgstr "المستوى الجغرافي أو التنافسي للفعالية."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__championship_level
+msgid "Geographic or competitive scope of the event to be hosted."
+msgstr "النطاق الجغرافي أو التنافسي للفعالية المراد استضافتها."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__championship_level
+msgid "Geographic or competitive scope of the event."
+msgstr "النطاق الجغرافي أو التنافسي للفعالية."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__goals_achieved
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.view_per_form
+msgid "Goals Achieved"
+msgstr "الأهداف المحققة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_report_form
+msgid "Goals Achieved (الأهداف التي تحققت)"
+msgstr "الأهداف التي تحققت"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__medals_gold
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_report_form
+msgid "Gold Medals"
+msgstr "الميداليات الذهبية"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__has_message
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__has_message
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__has_message
+msgid "Has Message"
+msgstr "لديه رسالة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.ui.menu,name:kaz_ai_ministry_portal_forms.menu_championship_hosting
+msgid "Hosting"
+msgstr "الاستضافة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.view_hosting_form
+msgid "Hosting Application"
+msgstr "طلب الاستضافة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.actions.act_window,name:kaz_ai_ministry_portal_forms.action_hosting
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_hosting_list
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.view_hosting_list
+msgid "Hosting Applications"
+msgstr "طلبات الاستضافة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__hosting_budget
+msgid "Hosting Budget (AED)"
+msgstr "ميزانية الاستضافة (درهم)"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_hosting_form
+msgid "Hosting Budget (AED) *"
+msgstr "ميزانية الاستضافة (درهم) *"
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/models/ministry_championship_hosting.py:0
+msgid "Hosting application %(name)s submitted for %(championship)s."
+msgstr "تم تقديم طلب الاستضافة %(name)s للبطولة %(championship)s."
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/models/ministry_championship_hosting.py:0
+msgid "Hosting application approved by Ministry."
+msgstr "تم اعتماد طلب الاستضافة من قبل الوزارة."
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/models/ministry_championship_hosting.py:0
+msgid "Hosting application rejected."
+msgstr "تم رفض طلب الاستضافة."
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/controllers/portal.py:0
+#: code:addons/kaz_ai_ministry_portal_forms/models/ministry_championship_hosting.py:0
+msgid "Hosting applications must be submitted at least 30 days before the event start date."
+msgstr "يجب تقديم طلبات الاستضافة قبل تاريخ بداية الفعالية بما لا يقل عن 30 يوماً."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__submission_deadline
+msgid "Hosting applications must be submitted at least 30 days before the event."
+msgstr "يجب تقديم طلبات الاستضافة قبل الفعالية بما لا يقل عن 30 يوماً."
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/models/ministry_championship_hosting.py:0
+msgid "Hosting budget cannot be negative."
+msgstr "لا يمكن أن تكون ميزانية الاستضافة سالبة."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__id
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__id
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation_budget_line__id
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__id
+msgid "ID"
+msgstr "المعرّف"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__activity_exception_icon
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__activity_exception_icon
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__activity_exception_icon
+msgid "Icon"
+msgstr "الأيقونة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__activity_exception_icon
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__activity_exception_icon
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "أيقونة للإشارة إلى نشاط استثنائي."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__message_needaction
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__message_needaction
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "إذا كان محدداً، توجد رسائل جديدة تتطلب انتباهك."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__message_has_error
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__message_has_sms_error
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__message_has_error
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__message_has_sms_error
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__message_has_error
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا كان محدداً، توجد رسائل بها خطأ في التسليم."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_portal_forms.selection__ministry_championship_hosting__championship_level__international
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_portal_forms.selection__ministry_championship_participation__championship_level__international
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_portal_forms.selection__ministry_post_event_report__championship_level__international
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_hosting_form
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_participation_form
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_report_form
+msgid "International"
+msgstr "دولي"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__organizer
+msgid "International federation or body officially organizing the event."
+msgstr "الاتحاد أو الجهة الدولية المنظمة للفعالية رسميا."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_hosting_form
+msgid "International federation organizing the event"
+msgstr "الاتحاد الدولي المنظم للفعالية"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__message_is_follower
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__message_is_follower
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_dashboard
+msgid "Item"
+msgstr "البند"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__write_uid
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__write_uid
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation_budget_line__write_uid
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__write_date
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__write_date
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation_budget_line__write_date
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__write_date
+msgid "Last Updated on"
+msgstr "تاريخ آخر تحديث"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__event_date_end
+msgid "Last day of the championship."
+msgstr "اليوم الأخير للبطولة."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__event_date_end
+msgid "Last day of the event."
+msgstr "اليوم الأخير للفعالية."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__event_date_end
+msgid "Last day of the hosted championship."
+msgstr "اليوم الأخير للبطولة المستضافة."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__championship_level
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__championship_level
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_participation_list
+msgid "Level"
+msgstr "المستوى"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_hosting_form
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_participation_form
+msgid "Level *"
+msgstr "المستوى *"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__state
+msgid "Lifecycle state of the hosting application."
+msgstr "حالة دورة حياة طلب الاستضافة."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__state
+msgid "Lifecycle state of the participation application."
+msgstr "حالة دورة حياة طلب المشاركة."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__state
+msgid "Lifecycle state of the post-event report."
+msgstr "حالة دورة حياة تقرير ما بعد الحدث."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.view_participation_form
+msgid "Linked Support Request"
+msgstr "طلب الدعم المرتبط"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_report_form
+msgid "List the goals achieved from participation (one per line)"
+msgstr "اذكر الأهداف التي تحققت من المشاركة، سطر لكل هدف."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_portal_forms.selection__ministry_championship_hosting__championship_level__local
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_portal_forms.selection__ministry_championship_participation__championship_level__local
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_portal_forms.selection__ministry_post_event_report__championship_level__local
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_hosting_form
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_participation_form
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_report_form
+msgid "Local"
+msgstr "محلي"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__location
+msgid "Location (City, Country)"
+msgstr "الموقع (المدينة، الدولة)"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_participation_form
+msgid "Location (City, Country) *"
+msgstr "الموقع (المدينة، الدولة) *"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__notes
+msgid "Logistics, special requirements, or other relevant information."
+msgstr "الخدمات اللوجستية أو المتطلبات الخاصة أو أي معلومات ذات صلة."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__venue_capacity
+msgid "Maximum spectator capacity of the venue."
+msgstr "الطاقة الاستيعابية القصوى للجمهور في الموقع."
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/models/ministry_post_event_report.py:0
+msgid "Medal counts cannot be negative."
+msgstr "لا يمكن أن تكون أعداد الميداليات سالبة."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_portal_forms.selection__ministry_championship_participation__participation_category__men
+msgid "Men"
+msgstr "رجال"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_participation_form
+msgid "Men (رجال)"
+msgstr "رجال"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__message_has_error
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__message_has_error
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسالة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__message_ids
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__message_ids
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__reviewed_by
+msgid "Ministry officer who reviewed this report."
+msgstr "موظف الوزارة الذي راجع هذا التقرير."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__my_activity_date_deadline
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__my_activity_date_deadline
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "الموعد النهائي لنشاطي"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__venue
+msgid "Name and address of the event venue."
+msgstr "اسم وعنوان موقع الفعالية."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__event_name
+msgid "Name of the championship or event this report covers."
+msgstr "اسم البطولة أو الفعالية التي يغطيها التقرير."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.view_per_form
+msgid "Narrative"
+msgstr "الوصف"
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/models/ministry_championship_hosting.py:0
+#: code:addons/kaz_ai_ministry_portal_forms/models/ministry_championship_participation.py:0
+#: code:addons/kaz_ai_ministry_portal_forms/models/ministry_post_event_report.py:0
+msgid "New"
+msgstr "جديد"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_hosting_list
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_participation_list
+msgid "New Application"
+msgstr "طلب جديد"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_dashboard
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_hosting_form
+msgid "New Hosting Application"
+msgstr "طلب استضافة جديد"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_dashboard
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_participation_form
+msgid "New Participation Application"
+msgstr "طلب مشاركة جديد"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_report_list
+msgid "New Report"
+msgstr "تقرير جديد"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__activity_calendar_event_id
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__activity_calendar_event_id
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "حدث النشاط التالي في التقويم"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__activity_date_deadline
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__activity_date_deadline
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__activity_summary
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__activity_summary
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__activity_type_id
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__activity_type_id
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_hosting_list
+msgid "No hosting applications found."
+msgstr "لا توجد طلبات استضافة."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_participation_list
+msgid "No participation applications found."
+msgstr "لا توجد طلبات مشاركة."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_report_list
+msgid "No post-event reports found."
+msgstr "لا توجد تقارير ما بعد الحدث."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_dashboard
+msgid "No support requests found."
+msgstr "لا توجد طلبات دعم."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_participation_form
+msgid "No. of Countries (عدد الدول)"
+msgstr "عدد الدول"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_report_form
+msgid "No. of Participating Countries (عدد الدول)"
+msgstr "عدد الدول المشاركة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.view_hosting_form
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.view_participation_form
+msgid "Notes"
+msgstr "ملاحظات"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__message_needaction_counter
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__message_needaction_counter
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__athletes_count
+msgid "Number of Athletes"
+msgstr "عدد الرياضيين"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_participation_form
+msgid "Number of Athletes *"
+msgstr "عدد الرياضيين *"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__countries_count
+msgid "Number of Countries"
+msgstr "عدد الدول"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__officials_count
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_participation_form
+msgid "Number of Officials"
+msgstr "عدد الإداريين"
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/models/ministry_championship_participation.py:0
+msgid "Number of athletes must be greater than zero."
+msgstr "يجب أن يكون عدد الرياضيين أكبر من صفر."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__expected_countries
+msgid "Number of countries expected to participate."
+msgstr "عدد الدول المتوقع مشاركتها."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__message_has_error_counter
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__message_has_error_counter
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الأخطاء"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__message_needaction_counter
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__message_needaction_counter
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "عدد الرسائل التي تتطلب إجراءً"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__message_has_error_counter
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__message_has_error_counter
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل التي بها خطأ في التسليم"
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/models/ministry_championship_participation.py:0
+msgid "Number of officials cannot be negative."
+msgstr "لا يمكن أن يكون عدد الإداريين سالباً."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_dashboard
+msgid "Official Ministry PDF templates"
+msgstr "نماذج الوزارة الرسمية بصيغة PDF"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_download_forms
+msgid "Official Ministry PDF templates for federation submissions."
+msgstr "نماذج الوزارة الرسمية بصيغة PDF لتقديمات الاتحادات."
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/controllers/portal.py:0
+msgid "Official Ministry document from the forms and reports package."
+msgstr "مستند رسمي من حزمة النماذج والتقارير."
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/controllers/portal.py:0
+msgid "Official Ministry logo image included with the reference package."
+msgstr "صورة شعار الوزارة الرسمية ضمن الحزمة المرجعية."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_portal_forms.selection__ministry_championship_participation__championship_level__olympic
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_portal_forms.selection__ministry_post_event_report__championship_level__olympic
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_participation_form
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_report_form
+msgid "Olympic"
+msgstr "أولمبي"
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/models/ministry_championship_hosting.py:0
+msgid "Only draft hosting applications can be submitted."
+msgstr "يمكن تقديم طلبات الاستضافة التي في حالة المسودة فقط."
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/models/ministry_post_event_report.py:0
+msgid "Only draft or rejected post-event reports can be submitted."
+msgstr "يمكن تقديم تقارير ما بعد الحدث التي في حالة المسودة أو المرفوضة فقط."
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/models/ministry_championship_participation.py:0
+msgid "Only draft participation applications can be submitted."
+msgstr "يمكن تقديم طلبات المشاركة التي في حالة المسودة فقط."
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/models/ministry_championship_hosting.py:0
+msgid "Only hosting applications under review can be approved."
+msgstr "يمكن اعتماد طلبات الاستضافة قيد المراجعة فقط."
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/models/ministry_championship_hosting.py:0
+msgid "Only submitted hosting applications can be taken under review."
+msgstr "يمكن نقل طلبات الاستضافة المقدمة فقط إلى قيد المراجعة."
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/models/ministry_championship_hosting.py:0
+msgid "Only submitted or under-review hosting applications can be rejected."
+msgstr "يمكن رفض طلبات الاستضافة المقدمة أو قيد المراجعة فقط."
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/models/ministry_championship_participation.py:0
+msgid "Only submitted participation applications can be acknowledged."
+msgstr "يمكن استلام طلبات المشاركة المقدمة فقط."
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/models/ministry_championship_participation.py:0
+msgid "Only submitted participation applications can be rejected."
+msgstr "يمكن رفض طلبات المشاركة المقدمة فقط."
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/models/ministry_post_event_report.py:0
+msgid "Only submitted post-event reports can be accepted."
+msgstr "يمكن قبول تقارير ما بعد الحدث المقدمة فقط."
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/models/ministry_post_event_report.py:0
+msgid "Only submitted post-event reports can be rejected."
+msgstr "يمكن رفض تقارير ما بعد الحدث المقدمة فقط."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__organizer
+msgid "Organizing Body"
+msgstr "الجهة المنظمة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_hosting_form
+msgid "Organizing Body (الجهة المنظمة)"
+msgstr "الجهة المنظمة"
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/controllers/portal.py:0
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_portal_forms.selection__ministry_championship_participation_budget_line__expense_group__other_expenses
+msgid "Other Expenses"
+msgstr "مصروفات أخرى"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__final_rank
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_report_form
+msgid "Overall Ranking"
+msgstr "الترتيب العام"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__achievement_pct
+msgid "Overall achievement percentage vs pre-event goals (0–100). Used by risk scorer."
+msgstr "نسبة الإنجاز الإجمالية مقارنة بأهداف ما قبل الفعالية (0-100). تستخدم في تقييم المخاطر."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__participant_categories
+msgid "Participant Categories"
+msgstr "فئات المشاركين"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_hosting_form
+msgid "Participant Categories (فئات المشاركين)"
+msgstr "فئات المشاركين"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__countries_count
+msgid "Participating Countries"
+msgstr "الدول المشاركة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.ui.menu,name:kaz_ai_ministry_portal_forms.menu_championship_participation
+msgid "Participation"
+msgstr "المشاركة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation_budget_line__participation_id
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.view_participation_form
+msgid "Participation Application"
+msgstr "طلب المشاركة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.actions.act_window,name:kaz_ai_ministry_portal_forms.action_participation
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_participation_list
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.view_participation_list
+msgid "Participation Applications"
+msgstr "طلبات المشاركة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__participation_category
+msgid "Participation Category"
+msgstr "فئة المشاركة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_participation_form
+msgid "Participation Category (فئة المشاركة)"
+msgstr "فئة المشاركة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model,name:kaz_ai_ministry_portal_forms.model_ministry_championship_participation_budget_line
+msgid "Participation Estimated Budget Line"
+msgstr "بند الموازنة التقديرية للمشاركة"
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/models/ministry_championship_participation.py:0
+msgid "Participation application %(name)s submitted for %(championship)s."
+msgstr "تم تقديم طلب المشاركة %(name)s للبطولة %(championship)s."
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/controllers/portal.py:0
+msgid "Participation application form."
+msgstr "نموذج طلب المشاركة."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.view_per_form
+msgid "Performance"
+msgstr "الأداء"
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/controllers/portal.py:0
+msgid "Players"
+msgstr "اللاعبون واللاعبات"
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/controllers/portal.py:0
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_portal_forms.selection__ministry_championship_participation_budget_line__expense_group__pocket_money
+msgid "Pocket Money"
+msgstr "مصروف الجيب"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.actions.report,name:kaz_ai_ministry_portal_forms.action_report_per
+#: model:ir.model,name:kaz_ai_ministry_portal_forms.model_ministry_post_event_report
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_report_form
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.view_per_form
+msgid "Post-Event Report"
+msgstr "تقرير ما بعد الحدث"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.actions.act_window,name:kaz_ai_ministry_portal_forms.action_per
+#: model:ir.ui.menu,name:kaz_ai_ministry_portal_forms.menu_post_event_reports
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_report_list
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.view_per_list
+msgid "Post-Event Reports"
+msgstr "تقارير ما بعد الحدث"
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/models/ministry_post_event_report.py:0
+msgid "Post-event report %(name)s submitted for %(event)s."
+msgstr "تم تقديم تقرير ما بعد الحدث %(name)s للفعالية %(event)s."
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/models/ministry_post_event_report.py:0
+msgid "Post-event report accepted by %(user)s."
+msgstr "تم قبول تقرير ما بعد الحدث بواسطة %(user)s."
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/models/ministry_post_event_report.py:0
+msgid "Post-event report rejected. Please resubmit with corrections."
+msgstr "تم رفض تقرير ما بعد الحدث. يرجى إعادة التقديم بعد التصحيح."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.view_hosting_form
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.view_participation_form
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.view_per_form
+msgid "Print"
+msgstr "طباعة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation_budget_line__quantity
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_participation_form
+msgid "Quantity"
+msgstr "العدد"
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/models/ministry_championship_participation.py:0
+msgid "Quantity cannot be negative."
+msgstr "لا يمكن أن تكون الكمية سالبة."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_dashboard
+msgid "Recent Support Requests"
+msgstr "طلبات الدعم الأخيرة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__recommendations
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.view_per_form
+msgid "Recommendations"
+msgstr "التوصيات"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_report_form
+msgid "Recommendations (التوصيات)"
+msgstr "التوصيات"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_report_form
+msgid "Recommendations for future participation (one per line)"
+msgstr "توصيات للمشاركات المستقبلية، سطر لكل توصية."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__recommendations
+msgid "Recommendations for the Ministry and federation for future participation."
+msgstr "توصيات للوزارة والاتحاد بشأن المشاركات المستقبلية."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__name
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__name
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__name
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_dashboard
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_hosting_list
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_participation_list
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_report_list
+msgid "Reference"
+msgstr "المرجع"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_portal_forms.selection__ministry_championship_hosting__championship_level__regional
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_portal_forms.selection__ministry_championship_participation__championship_level__regional
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_portal_forms.selection__ministry_post_event_report__championship_level__regional
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_hosting_form
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_participation_form
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_report_form
+msgid "Regional"
+msgstr "إقليمي"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.view_hosting_form
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.view_participation_form
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.view_per_form
+msgid "Reject"
+msgstr "رفض"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_portal_forms.selection__ministry_championship_hosting__state__rejected
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_portal_forms.selection__ministry_championship_participation__state__rejected
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_portal_forms.selection__ministry_post_event_report__state__rejected
+msgid "Rejected"
+msgstr "مرفوض"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__support_request_id
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_report_form
+msgid "Related Support Request"
+msgstr "طلب الدعم المرتبط"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__submission_deadline
+msgid "Reports must be submitted within 15 days of the event end date."
+msgstr "يجب تقديم التقارير خلال 15 يوماً من تاريخ نهاية الفعالية."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_report_form
+msgid "Reports must be submitted within <strong>15 days</strong> of the event end date."
+msgstr "يجب تقديم التقارير خلال <strong>15 يوماً</strong> من تاريخ نهاية الفعالية."
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/controllers/portal.py:0
+msgid "Request receipt method reference document."
+msgstr "مستند مرجعي لطريقة استلام الطلب."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_dashboard
+msgid "Requested (AED)"
+msgstr "المبلغ المطلوب (درهم)"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_dashboard
+msgid "Required within 15 days of event end"
+msgstr "مطلوب خلال 15 يوماً من نهاية الفعالية"
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/controllers/portal.py:0
+msgid "Reserve team expenses"
+msgstr "مصاريف فرق احتياطية"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__activity_user_id
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__activity_user_id
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.view_per_form
+msgid "Review"
+msgstr "مراجعة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__review_date
+msgid "Review Date"
+msgstr "تاريخ المراجعة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_home_ministry
+msgid "Review recent applications, reports, and support requests"
+msgstr "مراجعة أحدث الطلبات والتقارير وطلبات الدعم"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__reviewed_by
+msgid "Reviewed By"
+msgstr "تمت المراجعة بواسطة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__message_has_sms_error
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__message_has_sms_error
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل النصية"
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/controllers/portal.py:0
+msgid "Select a valid championship level."
+msgstr "اختر مستوى بطولة صحيحاً."
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/controllers/portal.py:0
+msgid "Select a valid participation category."
+msgstr "اختر فئة مشاركة صحيحة."
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/controllers/portal.py:0
+msgid "Select a valid support request."
+msgstr "اختر طلب دعم صحيحاً."
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/controllers/portal.py:0
+msgid "Select an awaiting-report support request for your federation."
+msgstr "اختر طلب دعم بانتظار التقرير خاصاً باتحادك."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation_budget_line__sequence
+msgid "Sequence"
+msgstr "التسلسل"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__medals_silver
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_report_form
+msgid "Silver Medals"
+msgstr "الميداليات الفضية"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__funding_sources
+msgid "Sources of funding covering hosting costs (ticket sales, sponsorships, Ministry grant, etc.)."
+msgstr "مصادر التمويل التي تغطي تكاليف الاستضافة مثل مبيعات التذاكر والرعايات ومنحة الوزارة."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__goals_achieved
+msgid "Specific goals that were achieved through participation."
+msgstr "الأهداف المحددة التي تحققت من خلال المشاركة."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__sport_type
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__sport_type
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__sport_type
+msgid "Sport"
+msgstr "اللعبة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_hosting_form
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_report_form
+msgid "Sport (اللعبة)"
+msgstr "اللعبة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_participation_form
+msgid "Sport / Game (اللعبة)"
+msgstr "اللعبة"
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/controllers/portal.py:0
+msgid "Sports championship participation application form."
+msgstr "نموذج طلب المشاركة في البطولات الرياضية."
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/controllers/portal.py:0
+msgid "Sportswear, two sets per person"
+msgstr "الألبسة الرياضية، بدلتان لكل شخص"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__state
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__state
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__state
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_dashboard
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_hosting_list
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_participation_list
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_report_list
+msgid "Status"
+msgstr "الحالة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__activity_state
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__activity_state
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr "الحالة حسب الأنشطة\\nمتأخر: تم تجاوز تاريخ الاستحقاق\\nاليوم: تاريخ النشاط هو اليوم\\nمخطط: أنشطة مستقبلية."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__submission_deadline
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__submission_deadline
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__submission_deadline
+msgid "Submission Deadline"
+msgstr "الموعد النهائي للتقديم"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_hosting_form
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_participation_form
+msgid "Submit Application"
+msgstr "تقديم الطلب"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_dashboard
+msgid "Submit Post-Event Report"
+msgstr "تقديم تقرير ما بعد الحدث"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_report_form
+msgid "Submit Report"
+msgstr "تقديم التقرير"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_home_ministry
+msgid "Submit and track championship hosting applications"
+msgstr "تقديم ومتابعة طلبات استضافة البطولات"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_home_ministry
+msgid "Submit and track participation applications"
+msgstr "تقديم ومتابعة طلبات المشاركة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_dashboard
+msgid "Submit at least 15 days before event"
+msgstr "التقديم قبل الفعالية بما لا يقل عن 15 يوماً"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_dashboard
+msgid "Submit at least 30 days before event"
+msgstr "التقديم قبل الفعالية بما لا يقل عن 30 يوماً"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_home_ministry
+msgid "Submit reports and close awaiting-report requests"
+msgstr "تقديم التقارير وإغلاق طلبات الدعم بانتظار التقرير"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_hosting_list
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_participation_list
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_report_list
+msgid "Submit your first one."
+msgstr "قدّم أول طلب."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_portal_forms.selection__ministry_championship_hosting__state__submitted
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_portal_forms.selection__ministry_championship_participation__state__submitted
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_portal_forms.selection__ministry_post_event_report__state__submitted
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_report_list
+msgid "Submitted"
+msgstr "مقدم"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__is_late
+msgid "Submitted Late"
+msgstr "تم التقديم متأخراً"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__submitted_on
+msgid "Submitted On"
+msgstr "تاريخ التقديم"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__support_request_id
+msgid "Support Request"
+msgstr "طلب الدعم"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__support_request_id
+msgid "Support request generated from this participation application."
+msgstr "طلب الدعم الناتج عن طلب المشاركة هذا."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__support_request_id
+msgid "Support request this report closes out."
+msgstr "طلب الدعم الذي يغلقه هذا التقرير."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__attachment_ids
+msgid "Supporting documents, photos, and official results."
+msgstr "المستندات الداعمة والصور والنتائج الرسمية."
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/controllers/portal.py:0
+msgid "System development project reference document."
+msgstr "مستند مرجعي لمشروع تطوير النظام."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.view_hosting_form
+msgid "Take Under Review"
+msgstr "إحالة للمراجعة"
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/models/ministry_championship_hosting.py:0
+#: code:addons/kaz_ai_ministry_portal_forms/models/ministry_championship_participation.py:0
+#: code:addons/kaz_ai_ministry_portal_forms/models/ministry_post_event_report.py:0
+msgid "The selected partner must be a federation."
+msgstr "يجب أن يكون الشريك المحدد اتحاداً."
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/models/ministry_post_event_report.py:0
+msgid "The support request must belong to the same federation."
+msgstr "يجب أن ينتمي طلب الدعم إلى نفس الاتحاد."
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/controllers/portal.py:0
+msgid "This field is required."
+msgstr "هذا الحقل مطلوب."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation_budget_line__total_amount
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_participation_form
+msgid "Total (AED)"
+msgstr "الإجمالي (درهم)"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__actual_expenditure
+msgid "Total actual spending on the event."
+msgstr "إجمالي الإنفاق الفعلي على الفعالية."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__hosting_budget
+msgid "Total estimated cost of hosting the championship."
+msgstr "إجمالي التكلفة التقديرية لاستضافة البطولة."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__estimated_budget
+msgid "Total estimated cost of participation."
+msgstr "إجمالي التكلفة التقديرية للمشاركة."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__athletes_count
+msgid "Total number of athletes expected to participate."
+msgstr "إجمالي عدد الرياضيين المتوقع مشاركتهم."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__expected_participants
+msgid "Total number of athletes, officials, and support staff expected."
+msgstr "إجمالي عدد الرياضيين والإداريين وطاقم الدعم المتوقع."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__countries_count
+msgid "Total number of countries participating in this championship."
+msgstr "إجمالي عدد الدول المشاركة في هذه البطولة."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__countries_count
+msgid "Total number of countries that participated."
+msgstr "إجمالي عدد الدول التي شاركت."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__budget_line_total
+msgid "Total of all detailed budget lines."
+msgstr "إجمالي جميع بنود الموازنة التفصيلية."
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/controllers/portal.py:0
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_portal_forms.selection__ministry_championship_participation_budget_line__expense_group__travel_tickets
+msgid "Travel Tickets"
+msgstr "تذاكر السفر"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__is_late
+msgid "True if the report was submitted after the 15-day deadline."
+msgstr "صحيح إذا تم تقديم التقرير بعد مهلة 15 يوماً."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__sport_type
+msgid "Type of sport covered in this report."
+msgstr "نوع الرياضة المشمولة في هذا التقرير."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__sport_type
+msgid "Type of sport for the hosted championship."
+msgstr "نوع الرياضة للبطولة المستضافة."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__sport_type
+msgid "Type of sport for this championship (e.g., Football, Swimming)."
+msgstr "نوع الرياضة لهذه البطولة مثل كرة القدم أو السباحة."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__activity_exception_decoration
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__activity_exception_decoration
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع نشاط الاستثناء في السجل."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_portal_forms.selection__ministry_championship_hosting__state__under_review
+msgid "Under Review"
+msgstr "قيد المراجعة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation_budget_line__unit_amount
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_participation_form
+msgid "Unit Amount (AED)"
+msgstr "مبلغ الوحدة (درهم)"
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/models/ministry_championship_participation.py:0
+msgid "Unit amount cannot be negative."
+msgstr "لا يمكن أن يكون مبلغ الوحدة سالبا."
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/controllers/portal.py:0
+msgid "Value must be at least %(minimum)s."
+msgstr "يجب أن تكون القيمة على الأقل %(minimum)s."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__venue
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_hosting_list
+msgid "Venue"
+msgstr "الموقع"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_hosting_form
+msgid "Venue *"
+msgstr "الموقع *"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_hosting_form
+msgid "Venue Capacity"
+msgstr "الطاقة الاستيعابية للموقع"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__venue_capacity
+msgid "Venue Capacity (Seats)"
+msgstr "الطاقة الاستيعابية للموقع (مقاعد)"
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/models/ministry_championship_hosting.py:0
+msgid "Venue capacity cannot be negative."
+msgstr "لا يمكن أن تكون الطاقة الاستيعابية للموقع سالبة."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__website_message_ids
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__website_message_ids
+#: model:ir.model.fields,field_description:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_hosting__website_message_ids
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_championship_participation__website_message_ids
+#: model:ir.model.fields,help:kaz_ai_ministry_portal_forms.field_ministry_post_event_report__website_message_ids
+msgid "Website communication history"
+msgstr "سجل مراسلات الموقع"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_portal_forms.selection__ministry_championship_participation__participation_category__women
+msgid "Women"
+msgstr "سيدات"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_participation_form
+msgid "Women (سيدات)"
+msgstr "سيدات"
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/controllers/portal.py:0
+msgid "Your portal user is not linked to a federation."
+msgstr "مستخدم البوابة غير مرتبط باتحاد."
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/controllers/portal.py:0
+msgid "Your user is not configured for federation portal access."
+msgstr "لم يتم إعداد المستخدم للوصول إلى بوابة الاتحاد."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_portal_forms.selection__ministry_championship_participation__participation_category__youth
+msgid "Youth"
+msgstr "ناشئين"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_participation_form
+msgid "Youth (ناشئين)"
+msgstr "ناشئين"
+
+#. module: kaz_ai_ministry_portal_forms
+#. odoo-python
+#: code:addons/kaz_ai_ministry_portal_forms/controllers/portal.py:0
+msgid "data"
+msgstr "بيانات"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_hosting_form
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_report_form
+msgid "e.g., Football, Swimming"
+msgstr "مثال: كرة القدم، السباحة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_participation_form
+msgid "e.g., Football, Swimming, Athletics"
+msgstr "مثال: كرة القدم، السباحة، ألعاب القوى"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_hosting_form
+msgid "e.g., Men / Women / Youth"
+msgstr "مثال: رجال / سيدات / ناشئين"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_participation_document
+msgid "إجمالي الموازنة التقديرية"
+msgstr "إجمالي الموازنة التقديرية"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_participation_document
+msgid "إجمالي عدد المشاركين"
+msgstr "إجمالي عدد المشاركين"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.ministry_form_page_header
+msgid "إدارة الدعم والتطوير الرياضي"
+msgstr "إدارة الدعم والتطوير الرياضي"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_hosting_document
+msgid "استمارة استضافة بطولة خارجية"
+msgstr "استمارة استضافة بطولة خارجية"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_participation_document
+msgid "استمارة المشاركة في البطولات الرياضية"
+msgstr "استمارة المشاركة في البطولات الرياضية"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_hosting_document
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_per_document
+msgid "اسم الاتحاد"
+msgstr "اسم الاتحاد"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_participation_document
+msgid "اسم الاتحاد الرياضي"
+msgstr "اسم الاتحاد الرياضي"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_hosting_document
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_participation_document
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_per_document
+msgid "اسم البطولة"
+msgstr "اسم البطولة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_per_document
+msgid "الأهداف التي تحققت من المشاركة"
+msgstr "الأهداف التي تحققت من المشاركة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_participation_document
+msgid "الإجمالي / درهم"
+msgstr "الإجمالي / درهم"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.ministry_form_page_header
+msgid "الإمارات العربية المتحدة"
+msgstr "الإمارات العربية المتحدة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.ministry_form_page_header
+msgid "التاريخ"
+msgstr "التاريخ"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_per_document
+msgid "التحديات (إن وجدت)"
+msgstr "التحديات (إن وجدت)"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_per_document
+msgid "التوصيات"
+msgstr "التوصيات"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_participation_document
+msgid "التوقيع والختم"
+msgstr "التوقيع والختم"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_hosting_document
+msgid "الجهة المنظمة"
+msgstr "الجهة المنظمة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_download_forms
+msgid "الدعم المالى للجهات الرياضية والاندية نهائي 2026"
+msgstr "الدعم المالى للجهات الرياضية والاندية نهائي 2026"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_participation_document
+msgid "الرأي التقنية المالية"
+msgstr "الرأي التقنية المالية"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_hosting_document
+msgid "العائد من الاستضافة"
+msgstr "العائد من الاستضافة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_participation_document
+msgid "العدد"
+msgstr "العدد"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_participation_document
+msgid "الفئة"
+msgstr "الفئة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_participation_document
+msgid "الكل / مختلط"
+msgstr "الكل / مختلط"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_participation_document
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_per_document
+msgid "اللعبة"
+msgstr "اللعبة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_hosting_document
+msgid "اللغة العربية (رجال / سيدات / ناشئين)"
+msgstr "اللغة العربية (رجال / سيدات / ناشئين)"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_participation_document
+msgid "المبلغ"
+msgstr "المبلغ"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_per_document
+msgid "المركز العام"
+msgstr "المركز العام"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_participation_document
+msgid "الموازنة التقديرية"
+msgstr "الموازنة التقديرية"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_per_document
+msgid "النتائج البيانية للاعبين / الفريق بالبطولة (مرفق)"
+msgstr "النتائج البيانية للاعبين / الفريق بالبطولة (مرفق)"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_participation_document
+msgid "الوصف"
+msgstr "الوصف"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_per_document
+msgid "برونز"
+msgstr "برونز"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_hosting_document
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_per_document
+msgid "تاريخ البطولة"
+msgstr "تاريخ البطولة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_participation_document
+msgid "تاريخ انتهاء البطولة"
+msgstr "تاريخ انتهاء البطولة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_participation_document
+msgid "تاريخ بدء البطولة"
+msgstr "تاريخ بدء البطولة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_hosting_document
+msgid "تصنيف نوع البطولة"
+msgstr "تصنيف نوع البطولة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_per_document
+msgid "تقرير من المشاركة في البطولات الخارجية"
+msgstr "تقرير من المشاركة في البطولات الخارجية"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_per_document
+msgid "ذهب"
+msgstr "ذهب"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_participation_document
+msgid "رجال"
+msgstr "رجال"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.ministry_form_page_header
+msgid "رقم الإصدار"
+msgstr "رقم الإصدار"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_participation_document
+msgid "سيدات"
+msgstr "سيدات"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.ministry_form_page_header
+msgid "صادر من"
+msgstr "صادر من"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_participation_document
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_per_document
+msgid "عدد الدول المشاركة"
+msgstr "عدد الدول المشاركة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_hosting_document
+msgid "عدد الدول المشاركة في اللعبة"
+msgstr "عدد الدول المشاركة في اللعبة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_participation_document
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_per_document
+msgid "عدد اللاعبين"
+msgstr "عدد اللاعبين"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_hosting_document
+msgid "عدد اللاعبين المتوقع"
+msgstr "عدد اللاعبين المتوقع"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_participation_document
+msgid "عدد المدربين والمسؤولين"
+msgstr "عدد المدربين والمسؤولين"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_participation_document
+msgid "فئة المشاركة"
+msgstr "فئة المشاركة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_per_document
+msgid "فضة"
+msgstr "فضة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_hosting_document
+msgid "مصادر تمويل الاستضافة"
+msgstr "مصادر تمويل الاستضافة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_participation_document
+msgid "مقدار الدعم المطلوب (درهم)"
+msgstr "مقدار الدعم المطلوب (درهم)"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_hosting_document
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_participation_document
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_per_document
+msgid "مكان البطولة"
+msgstr "مكان البطولة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_participation_document
+msgid "ملاحظات إضافية"
+msgstr "ملاحظات إضافية"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_per_document
+msgid "ملاحظة: يتم تسليم التقرير بعد انقضاء 15 يوم بعد انتهاء البطولة"
+msgstr "ملاحظة: يتم تسليم التقرير بعد انقضاء 15 يوم بعد انتهاء البطولة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_participation_document
+msgid "من الناحية التقنية"
+msgstr "من الناحية التقنية"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_participation_document
+msgid "من الناحية المالية"
+msgstr "من الناحية المالية"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_participation_document
+msgid "ناشئين"
+msgstr "ناشئين"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_per_document
+msgid "نسبة الانجازات التي تم تحقيقها"
+msgstr "نسبة الانجازات التي تم تحقيقها"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_participation_document
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_per_document
+msgid "نوع البطولة"
+msgstr "نوع البطولة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_hosting_document
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_participation_document
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_per_document
+msgid "هذه الوثيقة من الوثائق الداخلية لوزارة الرياضة. لا يجوز نسخ أو توزيع هذه الوثيقة أو الكشف عن أي معلومات واردة فيها لأي طرف ثالث دون الحصول على إذن كتابي مسبق من الوزارة."
+msgstr "هذه الوثيقة من الوثائق الداخلية لوزارة الرياضة. لا يجوز نسخ أو توزيع هذه الوثيقة أو الكشف عن أي معلومات واردة فيها لأي طرف ثالث دون الحصول على إذن كتابي مسبق من الوزارة."
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.ministry_form_page_header
+msgid "وزارة الرياضة"
+msgstr "وزارة الرياضة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.portal_dashboard
+msgid "— Portal Dashboard"
+msgstr "— لوحة تحكم البوابة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_per_document
+msgid "• يتم إرفاق جميع النتائج الرسمية للاعبين / الفريق بالبطولة"
+msgstr "• يتم إرفاق جميع النتائج الرسمية للاعبين / الفريق بالبطولة"
+
+#. module: kaz_ai_ministry_portal_forms
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_portal_forms.report_per_document
+msgid "• يتم إرفاق جميع نتائج البطولة المعتمدة"
+msgstr "• يتم إرفاق جميع نتائج البطولة المعتمدة"

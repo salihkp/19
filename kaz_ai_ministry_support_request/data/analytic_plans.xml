@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- ── Analytic Plans ─────────────────────────────────────────────── -->
+
+        <record id="analytic_plan_federation" model="account.analytic.plan">
+            <field name="name">Federation</field>
+            <field name="default_applicability">optional</field>
+        </record>
+
+        <record id="analytic_plan_category" model="account.analytic.plan">
+            <field name="name">Support Category</field>
+            <field name="default_applicability">optional</field>
+        </record>
+
+        <record id="analytic_plan_fiscal_year" model="account.analytic.plan">
+            <field name="name">Fiscal Year</field>
+            <field name="default_applicability">optional</field>
+        </record>
+
+        <record id="analytic_plan_activity_type" model="account.analytic.plan">
+            <field name="name">Activity Type</field>
+            <field name="default_applicability">optional</field>
+        </record>
+
+        <!-- ── Analytic Accounts — Federation ──────────────────────────────── -->
+
+        <record id="analytic_football" model="account.analytic.account">
+            <field name="name">UAE Football Federation</field>
+            <field name="plan_id" ref="analytic_plan_federation"/>
+            <field name="code">FED-FOOT</field>
+        </record>
+
+        <record id="analytic_athletics" model="account.analytic.account">
+            <field name="name">UAE Athletics Federation</field>
+            <field name="plan_id" ref="analytic_plan_federation"/>
+            <field name="code">FED-ATH</field>
+        </record>
+
+        <record id="analytic_chess" model="account.analytic.account">
+            <field name="name">UAE Chess Federation</field>
+            <field name="plan_id" ref="analytic_plan_federation"/>
+            <field name="code">FED-CHESS</field>
+        </record>
+
+        <!-- ── Analytic Accounts — Support Categories ──────────────────────── -->
+
+        <record id="analytic_cat_operational" model="account.analytic.account">
+            <field name="name">Operational Support</field>
+            <field name="plan_id" ref="analytic_plan_category"/>
+            <field name="code">CAT-OP</field>
+        </record>
+
+        <record id="analytic_cat_technical" model="account.analytic.account">
+            <field name="name">Technical Support</field>
+            <field name="plan_id" ref="analytic_plan_category"/>
+            <field name="code">CAT-TEC</field>
+        </record>
+
+        <record id="analytic_cat_general" model="account.analytic.account">
+            <field name="name">General Financial Support</field>
+            <field name="plan_id" ref="analytic_plan_category"/>
+            <field name="code">CAT-GEN</field>
+        </record>
+
+        <record id="analytic_cat_activity" model="account.analytic.account">
+            <field name="name">Activity Support</field>
+            <field name="plan_id" ref="analytic_plan_category"/>
+            <field name="code">CAT-ACT</field>
+        </record>
+
+        <!-- ── Analytic Accounts — Fiscal Years ────────────────────────────── -->
+
+        <record id="analytic_fy2025" model="account.analytic.account">
+            <field name="name">FY2025</field>
+            <field name="plan_id" ref="analytic_plan_fiscal_year"/>
+            <field name="code">FY-2025</field>
+        </record>
+
+        <record id="analytic_fy2026" model="account.analytic.account">
+            <field name="name">FY2026</field>
+            <field name="plan_id" ref="analytic_plan_fiscal_year"/>
+            <field name="code">FY-2026</field>
+        </record>
+
+        <!-- ── Analytic Accounts — Activity Types ──────────────────────────── -->
+
+        <record id="analytic_type_camps" model="account.analytic.account">
+            <field name="name">Camps</field>
+            <field name="plan_id" ref="analytic_plan_activity_type"/>
+            <field name="code">ACT-CAMPS</field>
+        </record>
+
+        <record id="analytic_type_meetings" model="account.analytic.account">
+            <field name="name">Meetings</field>
+            <field name="plan_id" ref="analytic_plan_activity_type"/>
+            <field name="code">ACT-MEET</field>
+        </record>
+
+        <record id="analytic_type_local" model="account.analytic.account">
+            <field name="name">Local Championships</field>
+            <field name="plan_id" ref="analytic_plan_activity_type"/>
+            <field name="code">ACT-LOCAL</field>
+        </record>
+
+        <record id="analytic_type_international" model="account.analytic.account">
+            <field name="name">International Championships</field>
+            <field name="plan_id" ref="analytic_plan_activity_type"/>
+            <field name="code">ACT-INTL</field>
+        </record>
+
+    </data>
+</odoo>

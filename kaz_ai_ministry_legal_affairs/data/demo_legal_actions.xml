@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- ── Legal Action 1: Warning — Athletics (governance violation) ─── -->
+        <record id="legal_action_athletics_warning" model="ministry.legal.action">
+            <field name="name">LEG/2026/0001</field>
+            <field name="federation_id" ref="kaz_ai_ministry_federation.federation_athletics"/>
+            <field name="inspection_id" ref="kaz_ai_ministry_inspection.inspection_athletics_surprise"/>
+            <field name="violation_id" ref="kaz_ai_ministry_inspection.violation_athletics_governance"/>
+            <field name="action_type">warning</field>
+            <field name="issue_date">2026-03-20</field>
+            <field name="decision_text">&lt;p&gt;This serves as an official &lt;strong&gt;Warning Notice&lt;/strong&gt; issued to the Athletics Federation of UAE for failure to maintain proper governance records as required under Article 14 of the Sports Federations Governance Framework.&lt;/p&gt;&lt;p&gt;The federation is required to rectify all governance documentation deficiencies within 30 days of this notice and provide evidence of compliance to the Ministry.&lt;/p&gt;&lt;p&gt;Failure to comply may result in escalated sanctions including financial deductions or suspension of support disbursements.&lt;/p&gt;</field>
+            <field name="state">issued</field>
+        </record>
+
+        <!-- ── Legal Action 2: Deduction — Athletics (missing report) ─────── -->
+        <record id="legal_action_athletics_deduction" model="ministry.legal.action">
+            <field name="name">LEG/2026/0002</field>
+            <field name="federation_id" ref="kaz_ai_ministry_federation.federation_athletics"/>
+            <field name="inspection_id" ref="kaz_ai_ministry_inspection.inspection_athletics_surprise"/>
+            <field name="violation_id" ref="kaz_ai_ministry_inspection.violation_athletics_missing_report"/>
+            <field name="action_type">deduction</field>
+            <field name="deduction_amount">10000.00</field>
+            <field name="deduction_reason">Penalty for late post-event report submission — World Athletics Championships 2026</field>
+            <field name="issue_date">2026-03-20</field>
+            <field name="effective_date">2026-04-01</field>
+            <field name="decision_text">&lt;p&gt;A &lt;strong&gt;Financial Deduction&lt;/strong&gt; of AED 10,000 is hereby imposed on the Athletics Federation of UAE in accordance with Ministry Policy on Post-Event Reporting (Section 8.3).&lt;/p&gt;&lt;p&gt;This deduction arises from the failure to submit the post-event report for the World Athletics Championships 2026 (Tokyo) within the mandatory 15-day window. The report was overdue by 22 days.&lt;/p&gt;&lt;p&gt;The deduction will be applied against the next approved support payment disbursed to the federation.&lt;/p&gt;</field>
+            <field name="state">applied</field>
+        </record>
+
+    </data>
+</odoo>

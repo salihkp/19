@@ -1,0 +1,371 @@
+// Ministry of Sports — Backend Branding
+// Primary: #8B6F2A (Ministry Gold)  Secondary: #000000  Accent: #C8102E  Success: #00732F
+
+// ── CSS Custom Properties Override ──────────────────────────────────────────
+:root {
+    --ministry-gold:    #8B6F2A;
+    --ministry-gold-lt: #A08535;
+    --ministry-black:   #000000;
+    --ministry-red:     #C8102E;
+    --ministry-green:   #00732F;
+    --ministry-white:   #FFFFFF;
+    --ministry-bg-light:#F8F5EE;
+}
+
+// ── Odoo Primary Color Override ──────────────────────────────────────────────
+.o_main_navbar {
+    background-color: #FFFFFF !important;
+    border-bottom: 3px solid var(--ministry-gold) !important;
+
+    .o_menu_brand {
+        color: var(--ministry-gold) !important;
+        font-weight: 700;
+    }
+
+    .o_nav_entry, .o_menu_sections > li > a {
+        color: #293241 !important;
+
+        &:hover, &.active {
+            color: var(--ministry-gold) !important;
+        }
+    }
+}
+
+// ── Primary Button ────────────────────────────────────────────────────────────
+.btn-primary {
+    background-color: var(--ministry-gold) !important;
+    border-color: var(--ministry-gold) !important;
+    color: var(--ministry-white) !important;
+
+    &:hover {
+        background-color: var(--ministry-gold-lt) !important;
+        border-color: var(--ministry-gold-lt) !important;
+    }
+}
+
+// ── Status Bar Active Step ────────────────────────────────────────────────────
+.o_statusbar_status .o_statusbar_status_button.disabled:last-child,
+.o_statusbar_status button.o_arrow_button.btn-primary {
+    background-color: var(--ministry-gold) !important;
+    border-color: var(--ministry-gold) !important;
+}
+
+// ── Form Sheet Header ─────────────────────────────────────────────────────────
+.o_form_view .o_form_sheet .o_form_label {
+    color: var(--ministry-black);
+}
+
+// ── Kanban View ───────────────────────────────────────────────────────────────
+.o_kanban_record.ministry_card_gold {
+    border-left: 4px solid var(--ministry-gold);
+}
+
+// ── Risk Level Badges ─────────────────────────────────────────────────────────
+.badge_risk_low {
+    background-color: var(--ministry-green) !important;
+    color: var(--ministry-white) !important;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.badge_risk_medium {
+    background-color: #F0A500 !important;
+    color: var(--ministry-white) !important;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.badge_risk_high {
+    background-color: var(--ministry-red) !important;
+    color: var(--ministry-white) !important;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+// ── Page Headers ──────────────────────────────────────────────────────────────
+.o_form_view .oe_title h1 {
+    color: var(--ministry-black);
+    border-bottom: 2px solid var(--ministry-gold);
+    padding-bottom: 6px;
+}
+
+// ── AED Currency Display ──────────────────────────────────────────────────────
+.ministry_amount_display {
+    font-weight: 700;
+    color: var(--ministry-black);
+
+    &::after {
+        content: ' AED';
+        font-size: 0.85em;
+        color: var(--ministry-gold);
+    }
+}
+
+// ── Computed Panel ────────────────────────────────────────────────────────────
+.ministry_computed_panel {
+    background: var(--ministry-bg-light);
+    border: 1px solid var(--ministry-gold);
+    border-radius: 6px;
+    padding: 16px;
+    margin-block-end: 16px;
+
+    .ministry_panel_kpi {
+        text-align: center;
+
+        .kpi_label {
+            font-size: 12px;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .kpi_value {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--ministry-gold);
+        }
+    }
+}
+
+// ── RTL Support (logical properties) ─────────────────────────────────────────
+[dir="rtl"] {
+    .o_main_navbar .o_nav_entry {
+        margin-inline-start: 0;
+        margin-inline-end: 8px;
+    }
+}
+
+// ── PDF Report Styles (for report/report_layout.xml) ──────────────────────────
+.ministry_report_header {
+    border-bottom: 4px solid var(--ministry-gold);
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+
+    .ministry_report_title_en {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--ministry-black);
+    }
+
+    .ministry_report_title_ar {
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--ministry-gold);
+        direction: rtl;
+    }
+
+    .ministry_report_subtitle {
+        font-size: 11px;
+        color: #666;
+    }
+}
+
+.ministry_header_gold_band {
+    height: 4px;
+    background: linear-gradient(90deg, var(--ministry-gold) 0%, var(--ministry-gold-lt) 100%);
+    margin-top: 8px;
+}
+
+.ministry_report_footer {
+    border-top: 2px solid var(--ministry-gold);
+    padding-top: 6px;
+    font-size: 10px;
+    color: #666;
+}
+
+.ministry_footer_gold_band {
+    height: 2px;
+    background-color: var(--ministry-gold);
+    margin-bottom: 6px;
+}
+
+// Executive shell polish
+.o_web_client {
+    background: #F7F5F0;
+}
+
+.o_main_navbar {
+    min-block-size: 48px !important;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .18);
+
+    .o_menu_brand {
+        align-items: center;
+        color: #F5EBD2 !important;
+        display: flex;
+        font-size: 16px;
+        gap: 8px;
+        max-inline-size: 280px;
+        padding-inline: 14px 18px !important;
+        white-space: nowrap;
+
+        img {
+            display: none !important;
+        }
+
+        &::before {
+            align-items: center;
+            background: var(--ministry-gold);
+            border-radius: 6px;
+            color: #fff;
+            content: "";
+            display: inline-flex;
+            font-size: 9px;
+            font-weight: 800;
+            inline-size: 28px;
+            justify-content: center;
+            block-size: 28px;
+        }
+    }
+
+    .o_menu_sections {
+        align-items: center;
+        display: flex;
+        gap: 4px;
+        overflow-x: auto;
+        scrollbar-width: thin;
+    }
+
+    .o_nav_entry,
+    .o_menu_sections > button,
+    .o_menu_sections > a,
+    .o_menu_sections .dropdown-toggle {
+        background: rgba(255, 255, 255, .06) !important;
+        border: 1px solid rgba(255, 255, 255, .12) !important;
+        border-radius: 7px !important;
+        color: #F5EBD2 !important;
+        font-size: 13px;
+        line-height: 1;
+        margin-inline: 0 !important;
+        padding: 9px 12px !important;
+        white-space: nowrap;
+    }
+
+    .o_nav_entry:hover,
+    .o_menu_sections > button:hover,
+    .o_menu_sections > a:hover,
+    .o_menu_sections .dropdown-toggle:hover,
+    .o_nav_entry.active,
+    .o_menu_sections .show > .dropdown-toggle {
+        background: var(--ministry-gold) !important;
+        color: #fff !important;
+    }
+
+    .o_menu_systray {
+        background: #FFFFFF;
+        padding-inline-end: 10px;
+    }
+}
+
+.o_action_manager,
+.o_content {
+    background: #F7F5F0;
+}
+
+.o_control_panel {
+    background: #FFFFFF;
+    border-block-end: 1px solid #E4DED1;
+}
+
+.o_form_view .o_form_sheet_bg,
+.o_list_renderer {
+    background: #F7F5F0;
+}
+
+.o_form_view .o_form_sheet {
+    border: 1px solid #E4DED1;
+    border-radius: 8px;
+    box-shadow: 0 8px 22px rgba(31, 25, 10, .04);
+}
+
+// Light Odoo shell with Ministry identity
+.o_main_navbar {
+    background: #FFFFFF !important;
+    border-block-end: 3px solid var(--ministry-gold) !important;
+    box-shadow: 0 5px 18px rgba(38, 31, 14, .10) !important;
+    color: #1D2430 !important;
+    min-block-size: 54px !important;
+
+    .o_menu_brand {
+        color: #1D2430 !important;
+        font-size: 17px;
+        font-weight: 780;
+        gap: 10px;
+        max-inline-size: 300px;
+        padding-inline: 14px 20px !important;
+
+        img {
+            display: none !important;
+        }
+
+        &::before {
+            background-color: transparent;
+            background-image: url('/kaz_ai_ministry_branding/static/src/img/ministry_of_sports_logo.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            border: 0;
+            border-radius: 0;
+            box-shadow: none;
+            content: "";
+            inline-size: 42px;
+            min-inline-size: 42px;
+            block-size: 42px;
+        }
+    }
+
+    .o_menu_sections {
+        gap: 6px;
+        padding-inline: 4px;
+    }
+
+    .o_nav_entry,
+    .o_menu_sections > button,
+    .o_menu_sections > a,
+    .o_menu_sections .dropdown-toggle {
+        background: transparent !important;
+        border: 1px solid transparent !important;
+        border-radius: 7px !important;
+        color: #293241 !important;
+        font-size: 13px;
+        font-weight: 620;
+        padding: 9px 12px !important;
+    }
+
+    .o_nav_entry:hover,
+    .o_menu_sections > button:hover,
+    .o_menu_sections > a:hover,
+    .o_menu_sections .dropdown-toggle:hover,
+    .o_nav_entry.active,
+    .o_menu_sections .show > .dropdown-toggle {
+        background: #F7F2E5 !important;
+        border-color: #E2D4A4 !important;
+        color: var(--ministry-gold) !important;
+        box-shadow: inset 0 -2px 0 var(--ministry-gold);
+    }
+
+    .o_menu_systray {
+        background: #FFFFFF !important;
+        border-inline-start: 1px solid #E7DEC8;
+        padding-inline-end: 10px;
+    }
+
+    .o_menu_systray .dropdown-toggle,
+    .o_menu_systray button,
+    .o_menu_systray a,
+    .o_menu_systray i,
+    .o_menu_systray .fa {
+        color: #1D2430 !important;
+    }
+
+    .o_menu_systray .badge,
+    .o_menu_systray .o_notification_counter {
+        background: var(--ministry-red) !important;
+        color: #FFFFFF !important;
+    }
+}

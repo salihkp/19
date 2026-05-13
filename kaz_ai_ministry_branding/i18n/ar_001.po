@@ -1,0 +1,214 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kaz_ai_ministry_branding
+#
+msgid ""
+msgstr "Project-Id-Version: Odoo Server 19.0\\nReport-Msgid-Bugs-To: \\nPOT-Creation-Date: 2026-05-13 00:00+0000\\nPO-Revision-Date: 2026-05-13 00:00+0000\\nLast-Translator: Kaizen AI <support@kaizenae.com>\\nLanguage-Team: Arabic\\nLanguage: ar_001\\nMIME-Version: 1.0\\nContent-Type: text/plain; charset=UTF-8\\nContent-Transfer-Encoding: 8bit\\nPlural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\\n"
+
+#. module: kaz_ai_ministry_branding
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_branding.ministry_login_layout
+msgid ""
+"<span class=\"ministry_login_badge_mark\"/>\n"
+"                            <span>Ministry Support Hub</span>"
+msgstr ""
+"<span class=\"ministry_login_badge_mark\"/>\n"
+"                            <span>منصة دعم الوزارة</span>"
+
+#. module: kaz_ai_ministry_branding
+#: model:ir.model.fields,help:kaz_ai_ministry_branding.field_res_config_settings__ministry_fiscal_year
+msgid "Active fiscal year used as default in annual plans and request filtering."
+msgstr "السنة المالية النشطة المستخدمة افتراضيا في الخطط السنوية وتصفية الطلبات."
+
+#. module: kaz_ai_ministry_branding
+#: model:res.groups,name:kaz_ai_ministry_branding.group_ministry_analyst
+msgid "Analyst"
+msgstr "المحلل"
+
+#. module: kaz_ai_ministry_branding
+#: model:res.groups,comment:kaz_ai_ministry_branding.group_ministry_inspector
+msgid "Conducts scheduled and surprise inspections; records violations."
+msgstr "ينفذ التفتيشات المجدولة والمفاجئة ويسجل المخالفات."
+
+#. module: kaz_ai_ministry_branding
+#: model:ir.model,name:kaz_ai_ministry_branding.model_res_config_settings
+msgid "Config Settings"
+msgstr "إعدادات التهيئة"
+
+#. module: kaz_ai_ministry_branding
+#: model:ir.model.fields,help:kaz_ai_ministry_branding.field_res_config_settings__ministry_support_email
+msgid "Contact email shown on portal pages and outgoing email templates."
+msgstr "البريد الإلكتروني للتواصل المعروض في صفحات البوابة وقوالب البريد الصادر."
+
+#. module: kaz_ai_ministry_branding
+#: model:ir.model.fields,field_description:kaz_ai_ministry_branding.field_res_config_settings__ministry_fiscal_year
+msgid "Current Fiscal Year"
+msgstr "السنة المالية الحالية"
+
+#. module: kaz_ai_ministry_branding
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_branding.ministry_report_layout
+msgid "Date:"
+msgstr "التاريخ:"
+
+#. module: kaz_ai_ministry_branding
+#: model:res.groups,name:kaz_ai_ministry_branding.group_ministry_dept_head
+msgid "Department Head"
+msgstr "رئيس القسم"
+
+#. module: kaz_ai_ministry_branding
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_branding.ministry_report_layout
+msgid "Department of Sports Support and Development"
+msgstr "إدارة الدعم والتطوير الرياضي"
+
+#. module: kaz_ai_ministry_branding
+#: model:ir.model.fields,field_description:kaz_ai_ministry_branding.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: kaz_ai_ministry_branding
+#: model:res.groups,name:kaz_ai_ministry_branding.group_ministry_portal
+msgid "Federation Portal"
+msgstr "بوابة الاتحاد"
+
+#. module: kaz_ai_ministry_branding
+#: model:res.groups,comment:kaz_ai_ministry_branding.group_ministry_portal
+msgid "Federation users accessing only the portal — strictly isolated to own federation data."
+msgstr "مستخدمو الاتحاد الذين يدخلون البوابة فقط، مع عزل صارم لبيانات اتحادهم فقط."
+
+#. module: kaz_ai_ministry_branding
+#: model:res.groups,comment:kaz_ai_ministry_branding.group_ministry_dept_head
+msgid "Final approver for high-value and international activity requests."
+msgstr "المعتمد النهائي لطلبات الأنشطة ذات القيمة العالية والأنشطة الدولية."
+
+#. module: kaz_ai_ministry_branding
+#: model:res.groups,comment:kaz_ai_ministry_branding.group_ministry_manager
+msgid "Full management access — implies all officer and specialist groups."
+msgstr "صلاحية إدارية كاملة، وتشمل كل مجموعات الضباط والمتخصصين."
+
+#. module: kaz_ai_ministry_branding
+#: model:ir.model.fields,field_description:kaz_ai_ministry_branding.field_res_config_settings__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: kaz_ai_ministry_branding
+#: model:res.groups,name:kaz_ai_ministry_branding.group_ministry_inspector
+msgid "Inspector"
+msgstr "المفتش"
+
+#. module: kaz_ai_ministry_branding
+#: model:res.groups,comment:kaz_ai_ministry_branding.group_ministry_legal_officer
+msgid "Issues legal actions, warnings, deductions, and suspension orders."
+msgstr "يصدر الإجراءات القانونية والإنذارات والخصومات وأوامر الإيقاف."
+
+#. module: kaz_ai_ministry_branding
+#: model:res.groups,name:kaz_ai_ministry_branding.group_ministry_legal_officer
+msgid "Legal Officer"
+msgstr "الموظف القانوني"
+
+#. module: kaz_ai_ministry_branding
+#: model:res.groups,name:kaz_ai_ministry_branding.group_ministry_manager
+msgid "Manager"
+msgstr "المدير"
+
+#. module: kaz_ai_ministry_branding
+#: model:ir.module.category,name:kaz_ai_ministry_branding.module_category_ministry
+#: model:res.groups.privilege,name:kaz_ai_ministry_branding.privilege_ministry_sports_support
+msgid "Ministry / Sports Support"
+msgstr "الوزارة / الدعم الرياضي"
+
+#. module: kaz_ai_ministry_branding
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_branding.ministry_login_layout
+msgid "Ministry Support Hub"
+msgstr "منصة دعم الوزارة"
+
+#. module: kaz_ai_ministry_branding
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_branding.ministry_login_layout
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_branding.ministry_report_layout
+msgid "Ministry of Sports"
+msgstr "وزارة الرياضة"
+
+#. module: kaz_ai_ministry_branding
+#: model:ir.module.category,description:kaz_ai_ministry_branding.module_category_ministry
+msgid "Ministry of Sports — Financial Support Management System"
+msgstr "وزارة الرياضة - نظام إدارة الدعم المالي"
+
+#. module: kaz_ai_ministry_branding
+#: model:res.groups,name:kaz_ai_ministry_branding.group_ministry_officer_financial
+msgid "Officer – Financial"
+msgstr "الموظف المالي"
+
+#. module: kaz_ai_ministry_branding
+#: model:res.groups,name:kaz_ai_ministry_branding.group_ministry_officer_technical
+msgid "Officer – Technical"
+msgstr "الموظف الفني"
+
+#. module: kaz_ai_ministry_branding
+#: model:ir.model.fields,help:kaz_ai_ministry_branding.field_res_config_settings__ministry_system_name_ar
+msgid "Official Arabic name of the system displayed in reports and portal."
+msgstr "الاسم العربي الرسمي للنظام المعروض في التقارير والبوابة."
+
+#. module: kaz_ai_ministry_branding
+#: model:ir.model.fields,help:kaz_ai_ministry_branding.field_res_config_settings__ministry_system_name_en
+msgid "Official English name of the system displayed in reports and portal."
+msgstr "الاسم الإنجليزي الرسمي للنظام المعروض في التقارير والبوابة."
+
+#. module: kaz_ai_ministry_branding
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_branding.ministry_report_footer
+msgid "Page: <span class=\"page\"/> / <span class=\"topage\"/>"
+msgstr "الصفحة: <span class=\"page\"/> / <span class=\"topage\"/>"
+
+#. module: kaz_ai_ministry_branding
+#: model:res.groups,comment:kaz_ai_ministry_branding.group_ministry_analyst
+msgid "Read-only access to analytics alerts, dashboards, and pivot reports."
+msgstr "صلاحية قراءة فقط لتنبيهات التحليلات ولوحات التحكم وتقارير الجداول المحورية."
+
+#. module: kaz_ai_ministry_branding
+#: model:res.groups,comment:kaz_ai_ministry_branding.group_ministry_officer_financial
+msgid "Reviews financial aspects of support requests and authorises payments."
+msgstr "يراجع الجوانب المالية لطلبات الدعم ويصرح بالمدفوعات."
+
+#. module: kaz_ai_ministry_branding
+#: model:res.groups,comment:kaz_ai_ministry_branding.group_ministry_officer_technical
+msgid "Reviews technical support requests: coach appointments, referee allowances, rewards."
+msgstr "يراجع طلبات الدعم الفني مثل تعيين المدربين وبدلات الحكام والمكافآت."
+
+#. module: kaz_ai_ministry_branding
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_branding.ministry_login_layout
+msgid "Secure Access"
+msgstr "دخول آمن"
+
+#. module: kaz_ai_ministry_branding
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_branding.ministry_login_layout
+msgid "Sports Federation Financial Support Management System"
+msgstr "نظام إدارة الدعم المالي للاتحادات الرياضية"
+
+#. module: kaz_ai_ministry_branding
+#: model:ir.model.fields,field_description:kaz_ai_ministry_branding.field_res_config_settings__ministry_support_email
+msgid "Support Email"
+msgstr "بريد الدعم"
+
+#. module: kaz_ai_ministry_branding
+#: model:ir.model.fields,field_description:kaz_ai_ministry_branding.field_res_config_settings__ministry_system_name_ar
+msgid "System Name (Arabic)"
+msgstr "اسم النظام (عربي)"
+
+#. module: kaz_ai_ministry_branding
+#: model:ir.model.fields,field_description:kaz_ai_ministry_branding.field_res_config_settings__ministry_system_name_en
+msgid "System Name (English)"
+msgstr "اسم النظام (إنجليزي)"
+
+#. module: kaz_ai_ministry_branding
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_branding.ministry_login_layout
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_branding.ministry_report_footer
+msgid "© 2026 Ministry of Sports - Department of Sports Support and Development"
+msgstr "© 2026 وزارة الرياضة - إدارة الدعم والتطوير الرياضي"
+
+#. module: kaz_ai_ministry_branding
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_branding.ministry_login_layout
+msgid "نظام إدارة الدعم المالي للاتحادات الرياضية"
+msgstr "نظام إدارة الدعم المالي للاتحادات الرياضية"
+
+#. module: kaz_ai_ministry_branding
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_branding.ministry_login_layout
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_branding.ministry_report_layout
+msgid "وزارة الرياضة"
+msgstr "وزارة الرياضة"

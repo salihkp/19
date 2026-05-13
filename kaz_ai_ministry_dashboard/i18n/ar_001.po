@@ -1,0 +1,357 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kaz_ai_ministry_dashboard
+#
+msgid ""
+msgstr "Project-Id-Version: Odoo Server 19.0\\nReport-Msgid-Bugs-To: \\nPOT-Creation-Date: 2026-05-13 00:00+0000\\nPO-Revision-Date: 2026-05-13 00:00+0000\\nLast-Translator: Kaizen AI <support@kaizenae.com>\\nLanguage-Team: Arabic\\nLanguage: ar_001\\nMIME-Version: 1.0\\nContent-Type: text/plain; charset=UTF-8\\nContent-Transfer-Encoding: 8bit\\nPlural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\\n"
+
+#. module: kaz_ai_ministry_dashboard
+#. odoo-javascript
+#: code:addons/kaz_ai_ministry_dashboard/static/src/components/kaz_ai_ministry_dashboard.xml:0
+msgid "Amount"
+msgstr "المبلغ"
+
+#. module: kaz_ai_ministry_dashboard
+#. odoo-javascript
+#: code:addons/kaz_ai_ministry_dashboard/static/src/components/kaz_ai_ministry_dashboard.xml:0
+msgid "Analytics Alerts"
+msgstr "تنبيهات التحليلات"
+
+#. module: kaz_ai_ministry_dashboard
+#. odoo-javascript
+#: code:addons/kaz_ai_ministry_dashboard/static/src/components/kaz_ai_ministry_dashboard.xml:0
+msgid "Annual Budget"
+msgstr "الميزانية السنوية"
+
+#. module: kaz_ai_ministry_dashboard
+#. odoo-javascript
+#: code:addons/kaz_ai_ministry_dashboard/static/src/components/kaz_ai_ministry_dashboard.xml:0
+msgid "Annual Budget Utilization"
+msgstr "استخدام الميزانية السنوية"
+
+#. module: kaz_ai_ministry_dashboard
+#. odoo-javascript
+#: code:addons/kaz_ai_ministry_dashboard/static/src/components/kaz_ai_ministry_dashboard.xml:0
+msgid "Approval Rate"
+msgstr "معدل الاعتماد"
+
+#. module: kaz_ai_ministry_dashboard
+#. odoo-javascript
+#: code:addons/kaz_ai_ministry_dashboard/static/src/components/kaz_ai_ministry_dashboard.xml:0
+msgid "Approved or ready to pay"
+msgstr "معتمد أو جاهز للدفع"
+
+#. module: kaz_ai_ministry_dashboard
+#. odoo-javascript
+#: code:addons/kaz_ai_ministry_dashboard/static/src/components/kaz_ai_ministry_dashboard.xml:0
+msgid "Approved spend mix"
+msgstr "توزيع الإنفاق المعتمد"
+
+#. module: kaz_ai_ministry_dashboard
+#. odoo-javascript
+#: code:addons/kaz_ai_ministry_dashboard/static/src/components/kaz_ai_ministry_dashboard.xml:0
+msgid "Approved versus decided"
+msgstr "المعتمد مقابل المحسوم"
+
+#. module: kaz_ai_ministry_dashboard
+#. odoo-javascript
+#: code:addons/kaz_ai_ministry_dashboard/static/src/components/kaz_ai_ministry_dashboard.xml:0
+msgid "Awaiting Reports"
+msgstr "بانتظار التقارير"
+
+#. module: kaz_ai_ministry_dashboard
+#. odoo-javascript
+#: code:addons/kaz_ai_ministry_dashboard/static/src/components/kaz_ai_ministry_dashboard.xml:0
+msgid "Category"
+msgstr "الفئة"
+
+#. module: kaz_ai_ministry_dashboard
+#. odoo-javascript
+#: code:addons/kaz_ai_ministry_dashboard/static/src/components/kaz_ai_ministry_dashboard.xml:0
+msgid "Current requests"
+msgstr "الطلبات الحالية"
+
+#. module: kaz_ai_ministry_dashboard
+#: model:ir.actions.client,name:kaz_ai_ministry_dashboard.action_kaz_ai_ministry_dashboard
+#: model:ir.ui.menu,name:kaz_ai_ministry_dashboard.menu_kaz_ai_ministry_dashboard
+msgid "Dashboard"
+msgstr "لوحة التحكم"
+
+#. module: kaz_ai_ministry_dashboard
+#. odoo-javascript
+#: code:addons/kaz_ai_ministry_dashboard/static/src/components/kaz_ai_ministry_dashboard.xml:0
+msgid "Dashboard scroll controls"
+msgstr "عناصر تحكم تمرير لوحة التحكم"
+
+#. module: kaz_ai_ministry_dashboard
+#. odoo-javascript
+#: code:addons/kaz_ai_ministry_dashboard/static/src/components/kaz_ai_ministry_dashboard.xml:0
+msgid "Decision Queue"
+msgstr "قائمة انتظار القرار"
+
+#. module: kaz_ai_ministry_dashboard
+#: model:ir.model.fields,field_description:kaz_ai_ministry_dashboard.field_ministry_dashboard_service__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: kaz_ai_ministry_dashboard
+#. odoo-javascript
+#: code:addons/kaz_ai_ministry_dashboard/static/src/components/kaz_ai_ministry_dashboard.xml:0
+msgid "FY"
+msgstr "السنة المالية"
+
+#. module: kaz_ai_ministry_dashboard
+#. odoo-javascript
+#: code:addons/kaz_ai_ministry_dashboard/static/src/components/kaz_ai_ministry_dashboard.xml:0
+msgid "Federation"
+msgstr "الاتحاد"
+
+#. module: kaz_ai_ministry_dashboard
+#. odoo-javascript
+#: code:addons/kaz_ai_ministry_dashboard/static/src/components/kaz_ai_ministry_dashboard.xml:0
+msgid "High"
+msgstr "عال"
+
+#. module: kaz_ai_ministry_dashboard
+#. odoo-javascript
+#: code:addons/kaz_ai_ministry_dashboard/static/src/components/kaz_ai_ministry_dashboard.xml:0
+msgid "High Risk"
+msgstr "مخاطر عالية"
+
+#. module: kaz_ai_ministry_dashboard
+#: model:ir.model.fields,field_description:kaz_ai_ministry_dashboard.field_ministry_dashboard_service__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: kaz_ai_ministry_dashboard
+#. odoo-javascript
+#: code:addons/kaz_ai_ministry_dashboard/static/src/components/kaz_ai_ministry_dashboard.xml:0
+msgid "Last 12 months"
+msgstr "آخر 12 شهرا"
+
+#. module: kaz_ai_ministry_dashboard
+#. odoo-javascript
+#: code:addons/kaz_ai_ministry_dashboard/static/src/components/kaz_ai_ministry_dashboard.xml:0
+msgid "Live lifecycle distribution"
+msgstr "توزيع دورة الحياة الحالي"
+
+#. module: kaz_ai_ministry_dashboard
+#. odoo-javascript
+#: code:addons/kaz_ai_ministry_dashboard/static/src/components/kaz_ai_ministry_dashboard.xml:0
+msgid "Low"
+msgstr "منخفض"
+
+#. module: kaz_ai_ministry_dashboard
+#. odoo-javascript
+#: code:addons/kaz_ai_ministry_dashboard/static/src/components/kaz_ai_ministry_dashboard.xml:0
+msgid "Medium"
+msgstr "متوسط"
+
+#. module: kaz_ai_ministry_dashboard
+#: model:ir.model,name:kaz_ai_ministry_dashboard.model_ministry_dashboard_service
+msgid "Ministry Dashboard Service"
+msgstr "خدمة لوحة تحكم الوزارة"
+
+#. module: kaz_ai_ministry_dashboard
+#. odoo-javascript
+#: code:addons/kaz_ai_ministry_dashboard/static/src/components/kaz_ai_ministry_dashboard.xml:0
+msgid "Ministry Support Hub"
+msgstr "منصة دعم الوزارة"
+
+#. module: kaz_ai_ministry_dashboard
+#. odoo-javascript
+#: code:addons/kaz_ai_ministry_dashboard/static/src/components/kaz_ai_ministry_dashboard.xml:0
+msgid "Ministry of Sports"
+msgstr "وزارة الرياضة"
+
+#. module: kaz_ai_ministry_dashboard
+#. odoo-javascript
+#: code:addons/kaz_ai_ministry_dashboard/static/src/components/kaz_ai_ministry_dashboard.xml:0
+msgid "Monthly Spending Trend"
+msgstr "اتجاه الإنفاق الشهري"
+
+#. module: kaz_ai_ministry_dashboard
+#. odoo-javascript
+#: code:addons/kaz_ai_ministry_dashboard/static/src/components/kaz_ai_ministry_dashboard.xml:0
+msgid "Needs management attention"
+msgstr "يتطلب اهتمام الإدارة"
+
+#. module: kaz_ai_ministry_dashboard
+#. odoo-javascript
+#: code:addons/kaz_ai_ministry_dashboard/static/src/components/kaz_ai_ministry_dashboard.xml:0
+msgid "No open analytics alerts"
+msgstr "لا توجد تنبيهات تحليلات مفتوحة"
+
+#. module: kaz_ai_ministry_dashboard
+#. odoo-javascript
+#: code:addons/kaz_ai_ministry_dashboard/static/src/components/kaz_ai_ministry_dashboard.xml:0
+msgid "No risk anomalies are currently open."
+msgstr "لا توجد حالات مخاطر غير طبيعية مفتوحة حاليا."
+
+#. module: kaz_ai_ministry_dashboard
+#. odoo-javascript
+#: code:addons/kaz_ai_ministry_dashboard/static/src/components/kaz_ai_ministry_dashboard.xml:0
+msgid "Open alerts"
+msgstr "التنبيهات المفتوحة"
+
+#. module: kaz_ai_ministry_dashboard
+#. odoo-javascript
+#: code:addons/kaz_ai_ministry_dashboard/static/src/components/kaz_ai_ministry_dashboard.xml:0
+msgid "Open federations"
+msgstr "الاتحادات المفتوحة"
+
+#. module: kaz_ai_ministry_dashboard
+#. odoo-javascript
+#: code:addons/kaz_ai_ministry_dashboard/static/src/components/kaz_ai_ministry_dashboard.xml:0
+msgid "Open queue"
+msgstr "قائمة الانتظار المفتوحة"
+
+#. module: kaz_ai_ministry_dashboard
+#. odoo-javascript
+#: code:addons/kaz_ai_ministry_dashboard/static/src/components/kaz_ai_ministry_dashboard.xml:0
+msgid "Pending Payments"
+msgstr "مدفوعات معلقة"
+
+#. module: kaz_ai_ministry_dashboard
+#. odoo-javascript
+#: code:addons/kaz_ai_ministry_dashboard/static/src/components/kaz_ai_ministry_dashboard.xml:0
+msgid "Post-event closure queue"
+msgstr "قائمة إغلاق ما بعد الحدث"
+
+#. module: kaz_ai_ministry_dashboard
+#. odoo-javascript
+#: code:addons/kaz_ai_ministry_dashboard/static/src/components/kaz_ai_ministry_dashboard.xml:0
+msgid "Reference"
+msgstr "المرجع"
+
+#. module: kaz_ai_ministry_dashboard
+#. odoo-javascript
+#: code:addons/kaz_ai_ministry_dashboard/static/src/components/kaz_ai_ministry_dashboard.xml:0
+msgid "Refresh"
+msgstr "تحديث"
+
+#. module: kaz_ai_ministry_dashboard
+#. odoo-javascript
+#: code:addons/kaz_ai_ministry_dashboard/static/src/components/kaz_ai_ministry_dashboard.xml:0
+msgid "Refreshing"
+msgstr "جار التحديث"
+
+#. module: kaz_ai_ministry_dashboard
+#. odoo-javascript
+#: code:addons/kaz_ai_ministry_dashboard/static/src/components/kaz_ai_ministry_dashboard.xml:0
+msgid "Remaining"
+msgstr "المتبقي"
+
+#. module: kaz_ai_ministry_dashboard
+#. odoo-javascript
+#: code:addons/kaz_ai_ministry_dashboard/static/src/components/kaz_ai_ministry_dashboard.xml:0
+msgid "Request Pipeline"
+msgstr "مسار الطلبات"
+
+#. module: kaz_ai_ministry_dashboard
+#. odoo-javascript
+#: code:addons/kaz_ai_ministry_dashboard/static/src/components/kaz_ai_ministry_dashboard.xml:0
+msgid "Requests"
+msgstr "الطلبات"
+
+#. module: kaz_ai_ministry_dashboard
+#. odoo-javascript
+#: code:addons/kaz_ai_ministry_dashboard/static/src/components/kaz_ai_ministry_dashboard.xml:0
+msgid "Risk"
+msgstr "المخاطر"
+
+#. module: kaz_ai_ministry_dashboard
+#. odoo-javascript
+#: code:addons/kaz_ai_ministry_dashboard/static/src/components/kaz_ai_ministry_dashboard.xml:0
+msgid "Risk Distribution"
+msgstr "توزيع المخاطر"
+
+#. module: kaz_ai_ministry_dashboard
+#. odoo-javascript
+#: code:addons/kaz_ai_ministry_dashboard/static/src/components/kaz_ai_ministry_dashboard.xml:0
+msgid "Scroll to bottom"
+msgstr "التمرير إلى الأسفل"
+
+#. module: kaz_ai_ministry_dashboard
+#. odoo-javascript
+#: code:addons/kaz_ai_ministry_dashboard/static/src/components/kaz_ai_ministry_dashboard.xml:0
+msgid "Scroll to top"
+msgstr "التمرير إلى الأعلى"
+
+#. module: kaz_ai_ministry_dashboard
+#. odoo-javascript
+#: code:addons/kaz_ai_ministry_dashboard/static/src/components/kaz_ai_ministry_dashboard.xml:0
+msgid "Sports Federation Financial Support Management System"
+msgstr "نظام إدارة الدعم المالي للاتحادات الرياضية"
+
+#. module: kaz_ai_ministry_dashboard
+#. odoo-javascript
+#: code:addons/kaz_ai_ministry_dashboard/static/src/components/kaz_ai_ministry_dashboard.xml:0
+msgid "Status"
+msgstr "الحالة"
+
+#. module: kaz_ai_ministry_dashboard
+#. odoo-javascript
+#: code:addons/kaz_ai_ministry_dashboard/static/src/components/kaz_ai_ministry_dashboard.xml:0
+msgid "Submitted and in review"
+msgstr "مقدم وقيد المراجعة"
+
+#. module: kaz_ai_ministry_dashboard
+#. odoo-javascript
+#: code:addons/kaz_ai_ministry_dashboard/static/src/components/kaz_ai_ministry_dashboard.xml:0
+msgid "Support by Category"
+msgstr "الدعم حسب الفئة"
+
+#. module: kaz_ai_ministry_dashboard
+#. odoo-javascript
+#: code:addons/kaz_ai_ministry_dashboard/static/src/components/kaz_ai_ministry_dashboard.xml:0
+msgid "Support by Federation"
+msgstr "الدعم حسب الاتحاد"
+
+#. module: kaz_ai_ministry_dashboard
+#. odoo-javascript
+#: code:addons/kaz_ai_ministry_dashboard/static/src/components/kaz_ai_ministry_dashboard.xml:0
+msgid "Total Spent"
+msgstr "إجمالي المصروف"
+
+#. module: kaz_ai_ministry_dashboard
+#. odoo-javascript
+#: code:addons/kaz_ai_ministry_dashboard/static/src/components/kaz_ai_ministry_dashboard.xml:0
+msgid "Under Review"
+msgstr "قيد المراجعة"
+
+#. module: kaz_ai_ministry_dashboard
+#. odoo-javascript
+#: code:addons/kaz_ai_ministry_dashboard/static/src/components/kaz_ai_ministry_dashboard.xml:0
+msgid "Updated"
+msgstr "محدث"
+
+#. module: kaz_ai_ministry_dashboard
+#. odoo-javascript
+#: code:addons/kaz_ai_ministry_dashboard/static/src/components/kaz_ai_ministry_dashboard.xml:0
+msgid "open"
+msgstr "مفتوحة"
+
+#. module: kaz_ai_ministry_dashboard
+#. odoo-javascript
+#: code:addons/kaz_ai_ministry_dashboard/static/src/components/kaz_ai_ministry_dashboard.xml:0
+msgid "records"
+msgstr "سجلات"
+
+#. module: kaz_ai_ministry_dashboard
+#. odoo-javascript
+#: code:addons/kaz_ai_ministry_dashboard/static/src/components/kaz_ai_ministry_dashboard.xml:0
+msgid "requests"
+msgstr "طلبات"
+
+#. module: kaz_ai_ministry_dashboard
+#. odoo-javascript
+#: code:addons/kaz_ai_ministry_dashboard/static/src/components/kaz_ai_ministry_dashboard.xml:0
+msgid "requests · Risk"
+msgstr "الطلبات · المخاطر"
+
+#. module: kaz_ai_ministry_dashboard
+#. odoo-javascript
+#: code:addons/kaz_ai_ministry_dashboard/static/src/components/kaz_ai_ministry_dashboard.xml:0
+msgid "نظام إدارة الدعم المالي للاتحادات الرياضية"
+msgstr "نظام إدارة الدعم المالي للاتحادات الرياضية"

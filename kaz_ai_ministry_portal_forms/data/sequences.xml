@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="seq_participation" model="ir.sequence">
+        <field name="name">Championship Participation</field>
+        <field name="code">ministry.championship.participation</field>
+        <field name="prefix">PAR/%(year)s/</field>
+        <field name="padding">4</field>
+        <field name="company_id" eval="False"/>
+    </record>
+
+    <record id="seq_hosting" model="ir.sequence">
+        <field name="name">Championship Hosting</field>
+        <field name="code">ministry.championship.hosting</field>
+        <field name="prefix">HST/%(year)s/</field>
+        <field name="padding">4</field>
+        <field name="company_id" eval="False"/>
+    </record>
+
+    <record id="seq_per" model="ir.sequence">
+        <field name="name">Post-Event Report</field>
+        <field name="code">ministry.post.event.report</field>
+        <field name="prefix">PER/%(year)s/</field>
+        <field name="padding">4</field>
+        <field name="company_id" eval="False"/>
+    </record>
+
+</odoo>

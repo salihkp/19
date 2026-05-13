@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- ── Participation Applications (6) ────────────────────────────── -->
+
+        <record id="par_football_world_cup" model="ministry.championship.participation">
+            <field name="name">PAR/2026/0001</field>
+            <field name="federation_id" ref="kaz_ai_ministry_federation.federation_football"/>
+            <field name="championship_name">FIFA Club World Cup 2026</field>
+            <field name="championship_level">international</field>
+            <field name="event_date_start">2026-06-14</field>
+            <field name="event_date_end">2026-07-13</field>
+            <field name="location">New York, USA</field>
+            <field name="athletes_count">23</field>
+            <field name="officials_count">8</field>
+            <field name="estimated_budget">480000.00</field>
+            <field name="state">submitted</field>
+            <field name="notes">Full squad participation in the expanded 32-team Club World Cup. Includes travel, accommodation, and training camp.</field>
+        </record>
+
+        <record id="par_football_u23" model="ministry.championship.participation">
+            <field name="name">PAR/2026/0002</field>
+            <field name="federation_id" ref="kaz_ai_ministry_federation.federation_football"/>
+            <field name="championship_name">AFC U23 Asian Cup 2026</field>
+            <field name="championship_level">asian</field>
+            <field name="event_date_start">2026-04-15</field>
+            <field name="event_date_end">2026-05-03</field>
+            <field name="location">Jakarta, Indonesia</field>
+            <field name="athletes_count">20</field>
+            <field name="officials_count">6</field>
+            <field name="estimated_budget">350000.00</field>
+            <field name="state">acknowledged</field>
+        </record>
+
+        <record id="par_athletics_worlds" model="ministry.championship.participation">
+            <field name="name">PAR/2026/0003</field>
+            <field name="federation_id" ref="kaz_ai_ministry_federation.federation_athletics"/>
+            <field name="championship_name">World Athletics Championships 2026</field>
+            <field name="championship_level">international</field>
+            <field name="event_date_start">2026-07-18</field>
+            <field name="event_date_end">2026-07-27</field>
+            <field name="location">Tokyo, Japan</field>
+            <field name="athletes_count">12</field>
+            <field name="officials_count">4</field>
+            <field name="estimated_budget">500000.00</field>
+            <field name="state">acknowledged</field>
+        </record>
+
+        <record id="par_athletics_arab" model="ministry.championship.participation">
+            <field name="name">PAR/2026/0004</field>
+            <field name="federation_id" ref="kaz_ai_ministry_federation.federation_athletics"/>
+            <field name="championship_name">Arab Athletics Championship 2026</field>
+            <field name="championship_level">arab</field>
+            <field name="event_date_start">2026-09-10</field>
+            <field name="event_date_end">2026-09-14</field>
+            <field name="location">Riyadh, Saudi Arabia</field>
+            <field name="athletes_count">18</field>
+            <field name="officials_count">5</field>
+            <field name="estimated_budget">120000.00</field>
+            <field name="state">submitted</field>
+        </record>
+
+        <record id="par_chess_worlds" model="ministry.championship.participation">
+            <field name="name">PAR/2026/0005</field>
+            <field name="federation_id" ref="kaz_ai_ministry_federation.federation_chess"/>
+            <field name="championship_name">FIDE World Chess Championship 2026</field>
+            <field name="championship_level">international</field>
+            <field name="event_date_start">2026-11-01</field>
+            <field name="event_date_end">2026-11-25</field>
+            <field name="location">Singapore</field>
+            <field name="athletes_count">3</field>
+            <field name="officials_count">2</field>
+            <field name="estimated_budget">95000.00</field>
+            <field name="state">submitted</field>
+        </record>
+
+        <record id="par_chess_arab" model="ministry.championship.participation">
+            <field name="name">PAR/2026/0006</field>
+            <field name="federation_id" ref="kaz_ai_ministry_federation.federation_chess"/>
+            <field name="championship_name">Arab Chess Championship 2026</field>
+            <field name="championship_level">arab</field>
+            <field name="event_date_start">2026-03-05</field>
+            <field name="event_date_end">2026-03-12</field>
+            <field name="location">Amman, Jordan</field>
+            <field name="athletes_count">6</field>
+            <field name="officials_count">2</field>
+            <field name="estimated_budget">180000.00</field>
+            <field name="state">acknowledged</field>
+        </record>
+
+        <!-- ── Hosting Applications (2) ──────────────────────────────────── -->
+
+        <record id="hst_chess_uae_national" model="ministry.championship.hosting">
+            <field name="name">HST/2026/0001</field>
+            <field name="federation_id" ref="kaz_ai_ministry_federation.federation_chess"/>
+            <field name="championship_name">UAE National Chess Championship 2026</field>
+            <field name="championship_level">local</field>
+            <field name="event_date_start">2026-08-10</field>
+            <field name="event_date_end">2026-08-15</field>
+            <field name="venue">Dubai Chess &amp; Culture Club, Oud Metha</field>
+            <field name="expected_participants">120</field>
+            <field name="expected_countries">1</field>
+            <field name="hosting_budget">60000.00</field>
+            <field name="venue_capacity">300</field>
+            <field name="state">under_review</field>
+        </record>
+
+        <record id="hst_athletics_gulf" model="ministry.championship.hosting">
+            <field name="name">HST/2026/0002</field>
+            <field name="federation_id" ref="kaz_ai_ministry_federation.federation_athletics"/>
+            <field name="championship_name">GCC Athletics Championship 2026</field>
+            <field name="championship_level">regional</field>
+            <field name="event_date_start">2026-10-20</field>
+            <field name="event_date_end">2026-10-24</field>
+            <field name="venue">Zabeel Stadium, Dubai</field>
+            <field name="expected_participants">350</field>
+            <field name="expected_countries">6</field>
+            <field name="hosting_budget">850000.00</field>
+            <field name="venue_capacity">10000</field>
+            <field name="state">submitted</field>
+        </record>
+
+        <!-- ── Post-Event Reports (5) ─────────────────────────────────────── -->
+
+        <record id="per_football_u23_report" model="ministry.post.event.report">
+            <field name="name">PER/2026/0001</field>
+            <field name="federation_id" ref="kaz_ai_ministry_federation.federation_football"/>
+            <field name="event_name">AFC U23 Asian Cup 2026</field>
+            <field name="event_date_start">2026-04-15</field>
+            <field name="event_date_end">2026-05-03</field>
+            <field name="athletes_participated">20</field>
+            <field name="medals_gold">0</field>
+            <field name="medals_silver">0</field>
+            <field name="medals_bronze">0</field>
+            <field name="final_rank">8</field>
+            <field name="achievement_pct">72.5</field>
+            <field name="actual_expenditure">338000.00</field>
+            <field name="support_request_id" ref="kaz_ai_ministry_support_request.req_foot_asian_cup"/>
+            <field name="submitted_on">2026-05-10</field>
+            <field name="state">submitted</field>
+            <field name="narrative">&lt;p&gt;The UAE U23 team participated in the AFC U23 Asian Cup 2026 in Jakarta, Indonesia. The team reached the quarter-finals, finishing 8th overall. Performance was consistent with regional benchmarks for our stage of development.&lt;/p&gt;</field>
+        </record>
+
+        <record id="per_athletics_worlds_report" model="ministry.post.event.report">
+            <field name="name">PER/2026/0002</field>
+            <field name="federation_id" ref="kaz_ai_ministry_federation.federation_athletics"/>
+            <field name="event_name">World Athletics Championships 2026</field>
+            <field name="event_date_start">2026-07-18</field>
+            <field name="event_date_end">2026-07-27</field>
+            <field name="athletes_participated">10</field>
+            <field name="medals_gold">0</field>
+            <field name="medals_silver">1</field>
+            <field name="medals_bronze">1</field>
+            <field name="final_rank">22</field>
+            <field name="achievement_pct">85.0</field>
+            <field name="actual_expenditure">465000.00</field>
+            <field name="support_request_id" ref="kaz_ai_ministry_support_request.req_ath_intl_worlds"/>
+            <field name="submitted_on">2026-08-20</field>
+            <field name="state">submitted</field>
+            <field name="narrative">&lt;p&gt;Outstanding performance for UAE Athletics at the World Championships. Two medals secured — a silver in the 400m hurdles and a bronze in the high jump. 10 of 12 selected athletes competed.&lt;/p&gt;</field>
+        </record>
+
+        <record id="per_chess_arab_report" model="ministry.post.event.report">
+            <field name="name">PER/2026/0003</field>
+            <field name="federation_id" ref="kaz_ai_ministry_federation.federation_chess"/>
+            <field name="event_name">Arab Chess Championship 2026</field>
+            <field name="event_date_start">2026-03-05</field>
+            <field name="event_date_end">2026-03-12</field>
+            <field name="athletes_participated">6</field>
+            <field name="medals_gold">1</field>
+            <field name="medals_silver">0</field>
+            <field name="medals_bronze">2</field>
+            <field name="final_rank">3</field>
+            <field name="achievement_pct">92.0</field>
+            <field name="actual_expenditure">168000.00</field>
+            <field name="submitted_on">2026-03-20</field>
+            <field name="state">accepted</field>
+            <field name="narrative">&lt;p&gt;Excellent result at the Arab Chess Championship. UAE placed 3rd overall with 1 gold and 2 bronze medals. All 6 athletes competed at their highest level.&lt;/p&gt;</field>
+        </record>
+
+        <record id="per_football_camp_report" model="ministry.post.event.report">
+            <field name="name">PER/2026/0004</field>
+            <field name="federation_id" ref="kaz_ai_ministry_federation.federation_football"/>
+            <field name="event_name">Pre-Season Training Camp 2026</field>
+            <field name="event_date_start">2026-02-01</field>
+            <field name="event_date_end">2026-02-14</field>
+            <field name="athletes_participated">25</field>
+            <field name="achievement_pct">88.0</field>
+            <field name="actual_expenditure">46500.00</field>
+            <field name="support_request_id" ref="kaz_ai_ministry_support_request.req_foot_camp"/>
+            <field name="submitted_on">2026-02-20</field>
+            <field name="state">accepted</field>
+            <field name="narrative">&lt;p&gt;14-day pre-season camp completed as planned. All fitness and tactical goals achieved. Expenditure within approved budget.&lt;/p&gt;</field>
+        </record>
+
+        <record id="per_athletics_morocco_report" model="ministry.post.event.report">
+            <field name="name">PER/2026/0005</field>
+            <field name="federation_id" ref="kaz_ai_ministry_federation.federation_athletics"/>
+            <field name="event_name">High Altitude Training Camp — Ifrane 2026</field>
+            <field name="event_date_start">2026-01-10</field>
+            <field name="event_date_end">2026-01-24</field>
+            <field name="athletes_participated">14</field>
+            <field name="achievement_pct">78.0</field>
+            <field name="actual_expenditure">91000.00</field>
+            <field name="support_request_id" ref="kaz_ai_ministry_support_request.req_ath_camp_morocco"/>
+            <field name="submitted_on">2026-02-02</field>
+            <field name="state">accepted</field>
+            <field name="narrative">&lt;p&gt;High altitude camp in Ifrane, Morocco. 14 athletes completed the full programme. Conditioning targets met. Minor weather disruptions on 2 days.&lt;/p&gt;</field>
+        </record>
+
+    </data>
+</odoo>

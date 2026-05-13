@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_ministry_annual_plan_list" model="ir.ui.view">
+        <field name="name">ministry.annual.plan.list</field>
+        <field name="model">ministry.annual.plan</field>
+        <field name="arch" type="xml">
+            <list string="Annual Plans" default_order="fiscal_year desc">
+                <field name="name"/>
+                <field name="federation_id"/>
+                <field name="fiscal_year"/>
+                <field name="estimated_budget" string="Estimated Budget (AED)"/>
+                <field name="total_plan_amount" string="Planned Total (AED)"/>
+                <field name="budget_analytic_id" optional="show"/>
+                <field name="budget_state" optional="show"/>
+                <field name="state" widget="badge"
+                    decoration-muted="state == 'draft'"
+                    decoration-warning="state == 'submitted'"
+                    decoration-success="state == 'approved'"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_ministry_annual_plan_form" model="ir.ui.view">
+        <field name="name">ministry.annual.plan.form</field>
+        <field name="model">ministry.annual.plan</field>
+        <field name="arch" type="xml">
+            <form string="Annual Support Plan">
+                <header>
+                    <button name="action_submit" string="Submit to Ministry" type="object"
+                        class="btn-primary"
+                        invisible="state != 'draft'"/>
+                    <button name="action_approve" string="Approve" type="object"
+                        class="btn-success"
+                        invisible="state != 'submitted'"
+                        groups="kaz_ai_ministry_branding.group_ministry_dept_head"/>
+                    <button name="action_reset_to_draft" string="Reset to Draft" type="object"
+                        invisible="state == 'draft'"/>
+                    <button name="action_sync_budget" string="Sync Odoo Budget" type="object"
+                        class="btn-secondary"
+                        invisible="state != 'approved'"
+                        groups="kaz_ai_ministry_branding.group_ministry_dept_head,kaz_ai_ministry_branding.group_ministry_officer_financial,kaz_ai_ministry_branding.group_ministry_manager"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,submitted,approved"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button class="oe_stat_button" name="action_open_budget" type="object"
+                            icon="fa-pie-chart" invisible="not budget_analytic_id">
+                            <field name="budget_line_count" widget="statinfo" string="Budget Lines"/>
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <h1><field name="name"/></h1>
+                    </div>
+                    <group>
+                        <group string="Plan Details">
+                            <field name="federation_id"/>
+                            <field name="fiscal_year"/>
+                            <field name="estimated_budget"/>
+                            <field name="total_plan_amount" readonly="1"/>
+                        </group>
+                        <group string="Dates">
+                            <field name="submission_date" readonly="1"/>
+                            <field name="approval_date" readonly="1"/>
+                            <field name="budget_analytic_id" readonly="1"/>
+                            <field name="budget_state" readonly="1"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Planned Activities" name="activities">
+                            <field name="plan_line_ids" context="{'default_plan_id': id}">
+                                <list editable="bottom">
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="support_item_id"/>
+                                    <field name="description"/>
+                                    <field name="quantity"/>
+                                    <field name="estimated_amount"/>
+                                    <field name="target_kpi"/>
+                                    <field name="category" optional="show"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="KPIs" name="kpis">
+                            <field name="kpi_line_ids" context="{'default_plan_id': id}">
+                                <list editable="bottom">
+                                    <field name="name"/>
+                                    <field name="target_value"/>
+                                    <field name="unit"/>
+                                    <field name="achieved_value"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_ministry_annual_plan_search" model="ir.ui.view">
+        <field name="name">ministry.annual.plan.search</field>
+        <field name="model">ministry.annual.plan</field>
+        <field name="arch" type="xml">
+            <search string="Annual Plans">
+                <field name="name"/>
+                <field name="federation_id"/>
+                <field name="fiscal_year"/>
+                <filter name="draft" string="Draft" domain="[('state','=','draft')]"/>
+                <filter name="submitted" string="Submitted" domain="[('state','=','submitted')]"/>
+                <filter name="approved" string="Approved" domain="[('state','=','approved')]"/>
+                <group>
+                    <filter name="grp_federation" string="Federation" context="{'group_by': 'federation_id'}"/>
+                    <filter name="grp_year" string="Fiscal Year" context="{'group_by': 'fiscal_year'}"/>
+                    <filter name="grp_state" string="Status" context="{'group_by': 'state'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_ministry_annual_plan" model="ir.actions.act_window">
+        <field name="name">Annual Plans</field>
+        <field name="res_model">ministry.annual.plan</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="view_ministry_annual_plan_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">No annual plans yet</p>
+            <p>Federations submit annual plans before requesting support funds.</p>
+        </field>
+    </record>
+
+</odoo>

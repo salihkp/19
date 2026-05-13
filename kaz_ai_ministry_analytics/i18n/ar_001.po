@@ -1,0 +1,233 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kaz_ai_ministry_analytics
+#
+msgid ""
+msgstr "Project-Id-Version: Odoo Server 19.0\\nReport-Msgid-Bugs-To: \\nPOT-Creation-Date: 2026-05-13 00:00+0000\\nPO-Revision-Date: 2026-05-13 00:00+0000\\nLast-Translator: Kaizen AI <support@kaizenae.com>\\nLanguage-Team: Arabic\\nLanguage: ar_001\\nMIME-Version: 1.0\\nContent-Type: text/plain; charset=UTF-8\\nContent-Transfer-Encoding: 8bit\\nPlural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\\n"
+
+#. module: kaz_ai_ministry_analytics
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_analytics.selection__ministry_analytics_alert__alert_type__abnormal_increase
+msgid "Abnormal Budget Increase"
+msgstr "زيادة غير طبيعية في الميزانية"
+
+#. module: kaz_ai_ministry_analytics
+#. odoo-python
+#: code:addons/kaz_ai_ministry_analytics/models/ministry_analytics_service.py:0
+msgid "Abnormal budget increase: %(fed)s (+%(pct)s%%)"
+msgstr "زيادة غير طبيعية في ميزانية %(fed)s (+%(pct)s%%)"
+
+#. module: kaz_ai_ministry_analytics
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_analytics.view_ministry_analytics_alert_form
+msgid "Acknowledge"
+msgstr "تأكيد الاطلاع"
+
+#. module: kaz_ai_ministry_analytics
+#: model:ir.model.fields,field_description:kaz_ai_ministry_analytics.field_ministry_analytics_alert__is_acknowledged
+msgid "Acknowledged"
+msgstr "تم تأكيد الاطلاع"
+
+#. module: kaz_ai_ministry_analytics
+#: model:ir.model.fields,field_description:kaz_ai_ministry_analytics.field_ministry_analytics_alert__acknowledged_by
+msgid "Acknowledged By"
+msgstr "تم تأكيد الاطلاع بواسطة"
+
+#. module: kaz_ai_ministry_analytics
+#: model:ir.model.fields,help:kaz_ai_ministry_analytics.field_ministry_analytics_alert__detail
+msgid "Additional context and data points supporting the alert."
+msgstr "سياق إضافي ونقاط بيانات تدعم التنبيه."
+
+#. module: kaz_ai_ministry_analytics
+#: model:ir.model.fields,field_description:kaz_ai_ministry_analytics.field_ministry_analytics_alert__name
+msgid "Alert"
+msgstr "تنبيه"
+
+#. module: kaz_ai_ministry_analytics
+#: model:ir.model.fields,field_description:kaz_ai_ministry_analytics.field_ministry_analytics_alert__alert_type
+msgid "Alert Type"
+msgstr "نوع التنبيه"
+
+#. module: kaz_ai_ministry_analytics
+#: model:ir.ui.menu,name:kaz_ai_ministry_analytics.menu_ministry_analytics_alerts
+msgid "Alerts"
+msgstr "التنبيهات"
+
+#. module: kaz_ai_ministry_analytics
+#: model:ir.ui.menu,name:kaz_ai_ministry_analytics.menu_ministry_analytics
+msgid "Analytics"
+msgstr "التحليلات"
+
+#. module: kaz_ai_ministry_analytics
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_analytics.view_ministry_analytics_alert_form
+msgid "Analytics Alert"
+msgstr "تنبيه التحليلات"
+
+#. module: kaz_ai_ministry_analytics
+#: model:ir.actions.act_window,name:kaz_ai_ministry_analytics.action_ministry_analytics_alert
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_analytics.view_ministry_analytics_alert_list
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_analytics.view_ministry_analytics_alert_search
+msgid "Analytics Alerts"
+msgstr "تنبيهات التحليلات"
+
+#. module: kaz_ai_ministry_analytics
+#. odoo-python
+#: code:addons/kaz_ai_ministry_analytics/models/ministry_analytics_service.py:0
+msgid "Annual budget: %(budget)s AED. Approved to date: %(approved)s AED. Remaining: %(rem)s AED."
+msgstr "الميزانية السنوية: %(budget)s درهم. المعتمد حتى الآن: %(approved)s درهم. المتبقي: %(rem)s درهم."
+
+#. module: kaz_ai_ministry_analytics
+#: model:ir.model.fields,help:kaz_ai_ministry_analytics.field_ministry_analytics_alert__alert_type
+msgid "Category of the analytics alert."
+msgstr "فئة تنبيه التحليلات."
+
+#. module: kaz_ai_ministry_analytics
+#: model:ir.model.fields,field_description:kaz_ai_ministry_analytics.field_ministry_analytics_alert__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: kaz_ai_ministry_analytics
+#: model:ir.model.fields,field_description:kaz_ai_ministry_analytics.field_ministry_analytics_alert__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: kaz_ai_ministry_analytics
+#: model:ir.model.fields,field_description:kaz_ai_ministry_analytics.field_ministry_analytics_alert__create_date
+msgid "Created on"
+msgstr "تاريخ الإنشاء"
+
+#. module: kaz_ai_ministry_analytics
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_analytics.selection__ministry_analytics_alert__severity__critical
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_analytics.view_ministry_analytics_alert_search
+msgid "Critical"
+msgstr "حرج"
+
+#. module: kaz_ai_ministry_analytics
+#. odoo-python
+#: code:addons/kaz_ai_ministry_analytics/models/ministry_analytics_service.py:0
+msgid "Current year approved: %(curr)s AED. Prior year: %(prior)s AED. Variance: %(pct)s%%."
+msgstr "المعتمد للسنة الحالية: %(curr)s درهم. السنة السابقة: %(prior)s درهم. التغير: %(pct)s%%."
+
+#. module: kaz_ai_ministry_analytics
+#: model:ir.model.fields,field_description:kaz_ai_ministry_analytics.field_ministry_analytics_alert__detail
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_analytics.view_ministry_analytics_alert_form
+msgid "Detail"
+msgstr "التفاصيل"
+
+#. module: kaz_ai_ministry_analytics
+#: model:ir.model.fields,field_description:kaz_ai_ministry_analytics.field_ministry_analytics_alert__display_name
+#: model:ir.model.fields,field_description:kaz_ai_ministry_analytics.field_ministry_analytics_service__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: kaz_ai_ministry_analytics
+#: model:ir.model.fields,field_description:kaz_ai_ministry_analytics.field_ministry_analytics_alert__federation_id
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_analytics.view_ministry_analytics_alert_search
+msgid "Federation"
+msgstr "الاتحاد"
+
+#. module: kaz_ai_ministry_analytics
+#: model:ir.model.fields,help:kaz_ai_ministry_analytics.field_ministry_analytics_alert__federation_id
+msgid "Federation affected by this alert, if specific."
+msgstr "الاتحاد المتأثر بهذا التنبيه إن وجد."
+
+#. module: kaz_ai_ministry_analytics
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_analytics.selection__ministry_analytics_alert__alert_type__forecast_overrun
+msgid "Forecast Overrun"
+msgstr "تجاوز متوقع"
+
+#. module: kaz_ai_ministry_analytics
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_analytics.selection__ministry_analytics_alert__alert_type__high_burn_rate
+msgid "High Budget Burn Rate"
+msgstr "ارتفاع معدل استهلاك الميزانية"
+
+#. module: kaz_ai_ministry_analytics
+#. odoo-python
+#: code:addons/kaz_ai_ministry_analytics/models/ministry_analytics_service.py:0
+msgid "High budget burn rate: %(pct)s%%"
+msgstr "ارتفاع معدل استهلاك الميزانية: %(pct)s%%"
+
+#. module: kaz_ai_ministry_analytics
+#: model:ir.model.fields,field_description:kaz_ai_ministry_analytics.field_ministry_analytics_alert__id
+#: model:ir.model.fields,field_description:kaz_ai_ministry_analytics.field_ministry_analytics_service__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: kaz_ai_ministry_analytics
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_analytics.selection__ministry_analytics_alert__severity__info
+msgid "Information"
+msgstr "معلومة"
+
+#. module: kaz_ai_ministry_analytics
+#: model:ir.model.fields,field_description:kaz_ai_ministry_analytics.field_ministry_analytics_alert__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: kaz_ai_ministry_analytics
+#: model:ir.model.fields,field_description:kaz_ai_ministry_analytics.field_ministry_analytics_alert__write_date
+msgid "Last Updated on"
+msgstr "تاريخ آخر تحديث"
+
+#. module: kaz_ai_ministry_analytics
+#: model:ir.model.fields,help:kaz_ai_ministry_analytics.field_ministry_analytics_alert__is_acknowledged
+msgid "Mark as acknowledged once reviewed by an analyst."
+msgstr "يتم وضع علامة تأكيد الاطلاع بعد مراجعة المحلل."
+
+#. module: kaz_ai_ministry_analytics
+#: model:ir.model,name:kaz_ai_ministry_analytics.model_ministry_analytics_alert
+msgid "Ministry Analytics Alert"
+msgstr "تنبيه تحليلات الوزارة"
+
+#. module: kaz_ai_ministry_analytics
+#: model:ir.model,name:kaz_ai_ministry_analytics.model_ministry_analytics_service
+msgid "Ministry Analytics Service"
+msgstr "خدمة تحليلات الوزارة"
+
+#. module: kaz_ai_ministry_analytics
+#: model:ir.actions.server,name:kaz_ai_ministry_analytics.ir_cron_ministry_nightly_analytics_ir_actions_server
+msgid "Ministry: Nightly Analytics"
+msgstr "الوزارة: التحليلات الليلية"
+
+#. module: kaz_ai_ministry_analytics
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_analytics.selection__ministry_analytics_alert__alert_type__missing_report
+msgid "Missing Post-Event Reports"
+msgstr "تقارير ما بعد الحدث المفقودة"
+
+#. module: kaz_ai_ministry_analytics
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_analytics.view_ministry_analytics_alert_search
+msgid "Open"
+msgstr "مفتوح"
+
+#. module: kaz_ai_ministry_analytics
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_analytics.selection__ministry_analytics_alert__alert_type__risk_threshold
+msgid "Risk Threshold Breach"
+msgstr "تجاوز حد المخاطر"
+
+#. module: kaz_ai_ministry_analytics
+#: model:ir.model.fields,field_description:kaz_ai_ministry_analytics.field_ministry_analytics_alert__severity
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_analytics.view_ministry_analytics_alert_search
+msgid "Severity"
+msgstr "درجة الخطورة"
+
+#. module: kaz_ai_ministry_analytics
+#: model:ir.model.fields,help:kaz_ai_ministry_analytics.field_ministry_analytics_alert__name
+msgid "Short description of the detected anomaly or alert condition."
+msgstr "وصف مختصر للحالة غير الطبيعية أو شرط التنبيه المكتشف."
+
+#. module: kaz_ai_ministry_analytics
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_analytics.view_ministry_analytics_alert_search
+msgid "Type"
+msgstr "النوع"
+
+#. module: kaz_ai_ministry_analytics
+#: model:ir.model.fields,help:kaz_ai_ministry_analytics.field_ministry_analytics_alert__severity
+msgid "Urgency level of this alert."
+msgstr "مستوى إلحاح هذا التنبيه."
+
+#. module: kaz_ai_ministry_analytics
+#: model:ir.model.fields,help:kaz_ai_ministry_analytics.field_ministry_analytics_alert__acknowledged_by
+msgid "User who acknowledged this alert."
+msgstr "المستخدم الذي أكد الاطلاع على هذا التنبيه."
+
+#. module: kaz_ai_ministry_analytics
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_analytics.selection__ministry_analytics_alert__severity__warning
+msgid "Warning"
+msgstr "تحذير"

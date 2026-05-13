@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Championship forms under grouped backend section -->
+    <menuitem id="menu_championship_participation"
+        name="Participation"
+        parent="kaz_ai_ministry_federation.menu_ministry_championships"
+        action="action_participation"
+        sequence="10"
+        groups="kaz_ai_ministry_branding.group_ministry_officer_technical,kaz_ai_ministry_branding.group_ministry_manager"/>
+
+    <menuitem id="menu_championship_hosting"
+        name="Hosting"
+        parent="kaz_ai_ministry_federation.menu_ministry_championships"
+        action="action_hosting"
+        sequence="20"
+        groups="kaz_ai_ministry_branding.group_ministry_officer_technical,kaz_ai_ministry_branding.group_ministry_manager"/>
+
+    <menuitem id="menu_post_event_reports"
+        name="Post-Event Reports"
+        parent="kaz_ai_ministry_federation.menu_ministry_championships"
+        action="action_per"
+        sequence="30"
+        groups="kaz_ai_ministry_branding.group_ministry_officer_technical,kaz_ai_ministry_branding.group_ministry_manager"/>
+
+    <record id="action_financial_support_entities_clubs_report" model="ir.actions.act_url">
+        <field name="name">Financial Support Report 2026</field>
+        <field name="url">/ministry/reports/financial-support/entities-clubs.xlsx</field>
+        <field name="target">self</field>
+    </record>
+
+    <menuitem id="menu_financial_support_entities_clubs_report"
+        name="Financial Support Report 2026"
+        parent="kaz_ai_ministry_federation.menu_ministry_monitoring"
+        action="action_financial_support_entities_clubs_report"
+        sequence="50"
+        groups="kaz_ai_ministry_branding.group_ministry_officer_technical,kaz_ai_ministry_branding.group_ministry_officer_financial,kaz_ai_ministry_branding.group_ministry_dept_head,kaz_ai_ministry_branding.group_ministry_analyst,kaz_ai_ministry_branding.group_ministry_manager"/>
+
+</odoo>

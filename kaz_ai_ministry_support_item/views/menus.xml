@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Support Item Catalog under Configuration -->
+    <menuitem id="menu_ministry_support_items"
+        name="Support Items"
+        parent="kaz_ai_ministry_federation.menu_ministry_config"
+        action="action_ministry_support_item"
+        sequence="20"
+        groups="kaz_ai_ministry_branding.group_ministry_manager"/>
+
+</odoo>

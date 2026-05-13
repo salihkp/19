@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- ── Participation Backend Views ───────────────────────────────────── -->
+    <record id="view_participation_list" model="ir.ui.view">
+        <field name="name">ministry.championship.participation.list</field>
+        <field name="model">ministry.championship.participation</field>
+        <field name="arch" type="xml">
+            <list string="Participation Applications" default_order="create_date desc">
+                <field name="name"/>
+                <field name="federation_id"/>
+                <field name="championship_name"/>
+                <field name="championship_level" widget="badge"/>
+                <field name="event_date_start"/>
+                <field name="athletes_count"/>
+                <field name="estimated_budget" string="Budget (AED)"/>
+                <field name="state" widget="badge"
+                    decoration-muted="state == 'draft'"
+                    decoration-warning="state == 'submitted'"
+                    decoration-success="state == 'acknowledged'"
+                    decoration-danger="state == 'rejected'"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_participation_form" model="ir.ui.view">
+        <field name="name">ministry.championship.participation.form</field>
+        <field name="model">ministry.championship.participation</field>
+        <field name="arch" type="xml">
+            <form string="Participation Application">
+                <header>
+                    <button name="action_print_participation" string="Print" type="object"
+                        class="btn-secondary" icon="fa-print"/>
+                    <button name="action_acknowledge" string="Acknowledge" type="object"
+                        class="btn-success"
+                        invisible="state != 'submitted'"
+                        groups="kaz_ai_ministry_branding.group_ministry_officer_technical,kaz_ai_ministry_branding.group_ministry_manager"/>
+                    <button name="action_reject" string="Reject" type="object"
+                        class="btn-danger"
+                        invisible="state != 'submitted'"
+                        groups="kaz_ai_ministry_branding.group_ministry_dept_head,kaz_ai_ministry_branding.group_ministry_manager"/>
+                    <field name="state" widget="statusbar"
+                        statusbar_visible="draft,submitted,acknowledged"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1><field name="name" readonly="1"/></h1>
+                    </div>
+                    <group>
+                        <group string="Application Details">
+                            <field name="federation_id" readonly="1"/>
+                            <field name="championship_name" readonly="1"/>
+                            <field name="championship_level" readonly="1"/>
+                            <field name="sport_type" readonly="1"/>
+                            <field name="participation_category" readonly="1"/>
+                            <field name="location" readonly="1"/>
+                            <field name="countries_count" readonly="1"/>
+                        </group>
+                        <group string="Event &amp; Financials">
+                            <field name="event_date_start" readonly="1"/>
+                            <field name="event_date_end" readonly="1"/>
+                            <field name="submission_deadline" readonly="1"/>
+                            <field name="athletes_count" readonly="1"/>
+                            <field name="officials_count" readonly="1"/>
+                            <field name="estimated_budget" readonly="1"/>
+                            <field name="budget_line_total" readonly="1"/>
+                        </group>
+                    </group>
+                    <group string="Estimated Budget Breakdown">
+                        <field name="budget_line_ids" nolabel="1" readonly="1">
+                            <list>
+                                <field name="sequence" widget="handle"/>
+                                <field name="expense_group"/>
+                                <field name="description"/>
+                                <field name="quantity"/>
+                                <field name="unit_amount"/>
+                                <field name="total_amount"/>
+                            </list>
+                        </field>
+                    </group>
+                    <group string="Notes">
+                        <field name="notes" nolabel="1" readonly="1"/>
+                    </group>
+                    <group string="Linked Support Request">
+                        <field name="support_request_id"/>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_participation" model="ir.actions.act_window">
+        <field name="name">Participation Applications</field>
+        <field name="res_model">ministry.championship.participation</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- ── Hosting Backend Views ─────────────────────────────────────────── -->
+    <record id="view_hosting_list" model="ir.ui.view">
+        <field name="name">ministry.championship.hosting.list</field>
+        <field name="model">ministry.championship.hosting</field>
+        <field name="arch" type="xml">
+            <list string="Hosting Applications" default_order="create_date desc">
+                <field name="name"/>
+                <field name="federation_id"/>
+                <field name="championship_name"/>
+                <field name="championship_level" widget="badge"/>
+                <field name="event_date_start"/>
+                <field name="expected_participants"/>
+                <field name="hosting_budget" string="Budget (AED)"/>
+                <field name="state" widget="badge"
+                    decoration-muted="state == 'draft'"
+                    decoration-info="state == 'submitted'"
+                    decoration-warning="state == 'under_review'"
+                    decoration-success="state == 'approved'"
+                    decoration-danger="state == 'rejected'"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_hosting_form" model="ir.ui.view">
+        <field name="name">ministry.championship.hosting.form</field>
+        <field name="model">ministry.championship.hosting</field>
+        <field name="arch" type="xml">
+            <form string="Hosting Application">
+                <header>
+                    <button name="action_print_hosting" string="Print" type="object"
+                        class="btn-secondary" icon="fa-print"/>
+                    <button name="action_review" string="Take Under Review" type="object"
+                        class="btn-primary"
+                        invisible="state != 'submitted'"
+                        groups="kaz_ai_ministry_branding.group_ministry_officer_technical,kaz_ai_ministry_branding.group_ministry_manager"/>
+                    <button name="action_approve" string="Approve" type="object"
+                        class="btn-success"
+                        invisible="state != 'under_review'"
+                        groups="kaz_ai_ministry_branding.group_ministry_dept_head,kaz_ai_ministry_branding.group_ministry_manager"/>
+                    <button name="action_reject" string="Reject" type="object"
+                        class="btn-danger"
+                        invisible="state not in ('submitted', 'under_review')"
+                        groups="kaz_ai_ministry_branding.group_ministry_dept_head,kaz_ai_ministry_branding.group_ministry_manager"/>
+                    <field name="state" widget="statusbar"
+                        statusbar_visible="draft,submitted,under_review,approved"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1><field name="name" readonly="1"/></h1>
+                    </div>
+                    <group>
+                        <group string="Application Details">
+                            <field name="federation_id" readonly="1"/>
+                            <field name="championship_name" readonly="1"/>
+                            <field name="championship_level" readonly="1"/>
+                            <field name="sport_type" readonly="1"/>
+                            <field name="organizer" readonly="1"/>
+                            <field name="participant_categories" readonly="1"/>
+                            <field name="venue" readonly="1"/>
+                        </group>
+                        <group string="Event &amp; Capacity">
+                            <field name="event_date_start" readonly="1"/>
+                            <field name="event_date_end" readonly="1"/>
+                            <field name="submission_deadline" readonly="1"/>
+                            <field name="expected_participants" readonly="1"/>
+                            <field name="expected_countries" readonly="1"/>
+                            <field name="venue_capacity" readonly="1"/>
+                            <field name="hosting_budget" readonly="1"/>
+                        </group>
+                    </group>
+                    <group string="Funding &amp; Return">
+                        <field name="funding_sources" nolabel="1" readonly="1" placeholder="Funding sources..."/>
+                        <field name="expected_return" nolabel="1" readonly="1" placeholder="Expected return from hosting..."/>
+                    </group>
+                    <group string="Notes">
+                        <field name="notes" nolabel="1" readonly="1"/>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_hosting" model="ir.actions.act_window">
+        <field name="name">Hosting Applications</field>
+        <field name="res_model">ministry.championship.hosting</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- ── Post-Event Report Backend Views ───────────────────────────────── -->
+    <record id="view_per_list" model="ir.ui.view">
+        <field name="name">ministry.post.event.report.list</field>
+        <field name="model">ministry.post.event.report</field>
+        <field name="arch" type="xml">
+            <list string="Post-Event Reports" default_order="create_date desc">
+                <field name="name"/>
+                <field name="federation_id"/>
+                <field name="event_name"/>
+                <field name="event_date_end"/>
+                <field name="submitted_on"/>
+                <field name="achievement_pct" string="Achievement %"/>
+                <field name="is_late" widget="boolean"/>
+                <field name="state" widget="badge"
+                    decoration-muted="state == 'draft'"
+                    decoration-warning="state == 'submitted'"
+                    decoration-success="state == 'accepted'"
+                    decoration-danger="state == 'rejected'"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_per_form" model="ir.ui.view">
+        <field name="name">ministry.post.event.report.form</field>
+        <field name="model">ministry.post.event.report</field>
+        <field name="arch" type="xml">
+            <form string="Post-Event Report">
+                <header>
+                    <button name="action_print_per" string="Print" type="object"
+                        class="btn-secondary" icon="fa-print"/>
+                    <button name="action_accept" string="Accept Report" type="object"
+                        class="btn-success"
+                        invisible="state != 'submitted'"
+                        groups="kaz_ai_ministry_branding.group_ministry_officer_technical,kaz_ai_ministry_branding.group_ministry_manager"/>
+                    <button name="action_reject" string="Reject" type="object"
+                        class="btn-danger"
+                        invisible="state != 'submitted'"
+                        groups="kaz_ai_ministry_branding.group_ministry_officer_technical,kaz_ai_ministry_branding.group_ministry_manager"/>
+                    <field name="state" widget="statusbar"
+                        statusbar_visible="draft,submitted,accepted"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button class="oe_stat_button" icon="fa-flag" invisible="not is_late">
+                            <div class="o_stat_info text-danger">
+                                <span class="o_stat_text">Submitted Late</span>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <h1><field name="name" readonly="1"/></h1>
+                    </div>
+                    <group>
+                        <field name="is_late" invisible="1"/>
+                        <group string="Event Details">
+                            <field name="federation_id" readonly="1"/>
+                            <field name="event_name" readonly="1"/>
+                            <field name="sport_type" readonly="1"/>
+                            <field name="championship_level" readonly="1"/>
+                            <field name="event_location" readonly="1"/>
+                            <field name="countries_count" readonly="1"/>
+                            <field name="event_date_start" readonly="1"/>
+                            <field name="event_date_end" readonly="1"/>
+                            <field name="submission_deadline" readonly="1"/>
+                            <field name="submitted_on" readonly="1"/>
+                            <field name="support_request_id" readonly="1"/>
+                        </group>
+                        <group string="Performance">
+                            <field name="athletes_participated" readonly="1"/>
+                            <field name="medals_gold" readonly="1"/>
+                            <field name="medals_silver" readonly="1"/>
+                            <field name="medals_bronze" readonly="1"/>
+                            <field name="final_rank" readonly="1"/>
+                            <field name="achievement_pct" readonly="1"/>
+                            <field name="actual_expenditure" readonly="1"/>
+                        </group>
+                    </group>
+                    <group string="Goals Achieved">
+                        <field name="goals_achieved" nolabel="1" readonly="1"/>
+                    </group>
+                    <group string="Challenges">
+                        <field name="challenges" nolabel="1" readonly="1"/>
+                    </group>
+                    <group string="Recommendations">
+                        <field name="recommendations" nolabel="1" readonly="1"/>
+                    </group>
+                    <group string="Review">
+                        <field name="reviewed_by" readonly="1"/>
+                        <field name="review_date" readonly="1"/>
+                    </group>
+                    <group string="Narrative">
+                        <field name="narrative" nolabel="1" readonly="1"/>
+                    </group>
+                    <group string="Attachments">
+                        <field name="attachment_ids" widget="many2many_binary" nolabel="1" readonly="1"/>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_per" model="ir.actions.act_window">
+        <field name="name">Post-Event Reports</field>
+        <field name="res_model">ministry.post.event.report</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+</odoo>

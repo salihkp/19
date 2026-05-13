@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- Ministry Internal Users -->
+
+        <!-- Technical Officer -->
+        <record id="user_tech_officer" model="res.users">
+            <field name="name">Technical Officer</field>
+            <field name="login">tech.officer@ministry.gov</field>
+            <field name="email">tech.officer@ministry.gov</field>
+            <field name="lang">ar_001</field>
+            <field name="group_ids" eval="[
+                (4, ref('base.group_user')),
+                (4, ref('kaz_ai_ministry_branding.group_ministry_officer_technical')),
+            ]"/>
+        </record>
+        <record id="user_tech_officer" model="res.users">
+            <field name="password">admin</field>
+        </record>
+
+        <!-- Financial Officer -->
+        <record id="user_finance_officer" model="res.users">
+            <field name="name">Financial Officer</field>
+            <field name="login">finance.officer@ministry.gov</field>
+            <field name="email">finance.officer@ministry.gov</field>
+            <field name="lang">ar_001</field>
+            <field name="group_ids" eval="[
+                (4, ref('base.group_user')),
+                (4, ref('kaz_ai_ministry_branding.group_ministry_officer_financial')),
+            ]"/>
+        </record>
+        <record id="user_finance_officer" model="res.users">
+            <field name="password">admin</field>
+        </record>
+
+        <!-- Department Head -->
+        <record id="user_dept_head" model="res.users">
+            <field name="name">Department Head</field>
+            <field name="login">dept.head@ministry.gov</field>
+            <field name="email">dept.head@ministry.gov</field>
+            <field name="lang">ar_001</field>
+            <field name="group_ids" eval="[
+                (4, ref('base.group_user')),
+                (4, ref('kaz_ai_ministry_branding.group_ministry_dept_head')),
+            ]"/>
+        </record>
+        <record id="user_dept_head" model="res.users">
+            <field name="password">admin</field>
+        </record>
+
+        <!-- Inspector -->
+        <record id="user_inspector" model="res.users">
+            <field name="name">Field Inspector</field>
+            <field name="login">inspector@ministry.gov</field>
+            <field name="email">inspector@ministry.gov</field>
+            <field name="lang">ar_001</field>
+            <field name="group_ids" eval="[
+                (4, ref('base.group_user')),
+                (4, ref('kaz_ai_ministry_branding.group_ministry_inspector')),
+            ]"/>
+        </record>
+        <record id="user_inspector" model="res.users">
+            <field name="password">admin</field>
+        </record>
+
+        <!-- Legal Officer -->
+        <record id="user_legal" model="res.users">
+            <field name="name">Legal Officer</field>
+            <field name="login">legal@ministry.gov</field>
+            <field name="email">legal@ministry.gov</field>
+            <field name="lang">ar_001</field>
+            <field name="group_ids" eval="[
+                (4, ref('base.group_user')),
+                (4, ref('kaz_ai_ministry_branding.group_ministry_legal_officer')),
+            ]"/>
+        </record>
+        <record id="user_legal" model="res.users">
+            <field name="password">admin</field>
+        </record>
+
+        <!-- Analyst -->
+        <record id="user_analyst" model="res.users">
+            <field name="name">Data Analyst</field>
+            <field name="login">analyst@ministry.gov</field>
+            <field name="email">analyst@ministry.gov</field>
+            <field name="lang">ar_001</field>
+            <field name="group_ids" eval="[
+                (4, ref('base.group_user')),
+                (4, ref('kaz_ai_ministry_branding.group_ministry_analyst')),
+            ]"/>
+        </record>
+        <record id="user_analyst" model="res.users">
+            <field name="password">admin</field>
+        </record>
+
+    </data>
+</odoo>

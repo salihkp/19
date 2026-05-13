@@ -1,0 +1,15 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="128" height="128" rx="16" fill="#8B6F2A"/>
+  <!-- Building wall -->
+  <rect x="22" y="58" width="84" height="50" rx="4" fill="white" opacity="0.85"/>
+  <!-- Roof -->
+  <path d="M16 62 L64 22 L112 62 Z" fill="white" opacity="0.65"/>
+  <!-- Left window -->
+  <rect x="34" y="70" width="20" height="18" rx="3" fill="#8B6F2A"/>
+  <!-- Right window -->
+  <rect x="74" y="70" width="20" height="18" rx="3" fill="#8B6F2A"/>
+  <!-- Door -->
+  <rect x="52" y="82" width="24" height="26" rx="3" fill="#8B6F2A"/>
+  <!-- Door knob -->
+  <circle cx="72" cy="96" r="2.5" fill="white" opacity="0.7"/>
+</svg>

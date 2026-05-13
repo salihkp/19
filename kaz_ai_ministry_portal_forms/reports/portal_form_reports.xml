@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data>
+
+<!-- ══════════════════════════════════════════════════════════════
+     SHARED: Ministry form page header sub-template
+     ══════════════════════════════════════════════════════════════ -->
+<template id="ministry_form_page_header">
+    <!-- t-set vars: form_title_ar, form_ref, form_version, form_date_issued -->
+    <table style="width:100%; border-collapse:collapse; margin-bottom:0; font-family:'NotoSansArabic','Noto Sans Arabic','DejaVu Sans',sans-serif;">
+        <tr>
+            <!-- Right: Logo + Ministry name (RTL first = rightmost) -->
+            <td style="width:40%; text-align:right; vertical-align:middle; padding:4px 0;">
+                <img src="/kaz_ai_ministry_branding/static/src/img/ministry_of_sports_logo.png"
+                     style="height:65px; width:auto;" alt=""/>
+                <div style="font-size:9pt; font-weight:bold; color:#333;">الإمارات العربية المتحدة</div>
+                <div style="font-size:9pt; color:#333;">وزارة الرياضة</div>
+            </td>
+            <!-- Left: Department name -->
+            <td style="width:60%; text-align:left; vertical-align:middle; padding:4px 0;">
+                <div style="font-size:9pt; color:#555;">إدارة الدعم والتطوير الرياضي</div>
+            </td>
+        </tr>
+    </table>
+    <!-- Red title band -->
+    <div style="background-color:#C8102E; color:#fff; text-align:center; padding:7px 10px;
+                font-size:13pt; font-weight:bold; margin:4px 0 0 0;">
+        <t t-esc="form_title_ar"/>
+    </div>
+    <!-- Metadata row -->
+    <table style="width:100%; border-collapse:collapse; font-size:8pt; margin-top:0; border-top:none;">
+        <tr>
+            <td style="border:1px solid #999; padding:3px 6px; width:12%; background:#f5f5f5; text-align:right; font-weight:bold;">صادر من</td>
+            <td style="border:1px solid #999; padding:3px 6px; width:22%; text-align:right;">إدارة الدعم والتطوير الرياضي</td>
+            <td style="border:1px solid #999; padding:3px 6px; width:10%; background:#f5f5f5; text-align:right; font-weight:bold;">التاريخ</td>
+            <td style="border:1px solid #999; padding:3px 6px; width:16%; text-align:right;"><t t-esc="form_date_issued"/></td>
+            <td style="border:1px solid #999; padding:3px 6px; width:18%; background:#f5f5f5; text-align:right; font-weight:bold;">رقم الإصدار</td>
+            <td style="border:1px solid #999; padding:3px 6px; width:12%; text-align:right;"><t t-esc="form_ref"/></td>
+            <td style="border:1px solid #999; padding:3px 6px; width:10%; text-align:right;">
+                <span class="page"/> من <span class="topage"/>
+            </td>
+        </tr>
+    </table>
+</template>
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     REPORT 1: Championship Participation Application
+     استمارة المشاركة في البطولات الرياضية
+     ══════════════════════════════════════════════════════════════ -->
+<template id="report_participation_document">
+    <t t-foreach="docs" t-as="doc">
+        <div class="page o_ministry_report" style="direction:rtl; font-family:'NotoSansArabic','Noto Sans Arabic','DejaVu Sans',sans-serif; font-size:10pt; color:#222;">
+
+            <!-- Header -->
+            <t t-set="form_title_ar">استمارة المشاركة في البطولات الرياضية</t>
+            <t t-set="form_ref">GAS-IMS-OP-07/01-F01  الإصدار 1.0</t>
+            <t t-set="form_date_issued" t-value="doc.create_date.strftime('%d/%m/%Y') if doc.create_date else ''"/>
+            <t t-call="kaz_ai_ministry_portal_forms.ministry_form_page_header"/>
+
+            <!-- Body table -->
+            <table style="width:100%; border-collapse:collapse; font-size:10pt; margin-top:6px;">
+
+                <!-- Row 1: Federation name (full width) -->
+                <tr style="height:28px;">
+                    <td style="width:22%; border:1px solid #bbb; background:#f0f0f0; padding:4px 8px; font-weight:bold; text-align:right;">اسم الاتحاد الرياضي</td>
+                    <td style="width:78%; border:1px solid #bbb; padding:4px 8px; text-align:right;">
+                        <t t-esc="doc.federation_id.name or ''"/>
+                    </td>
+                </tr>
+
+                <!-- Row 2: Championship name | Championship level -->
+                <tr style="height:28px;">
+                    <td style="width:22%; border:1px solid #bbb; background:#f0f0f0; padding:4px 8px; font-weight:bold; text-align:right;">اسم البطولة</td>
+                    <td style="width:28%; border:1px solid #bbb; padding:4px 8px; text-align:right;">
+                        <t t-esc="doc.championship_name or ''"/>
+                    </td>
+                    <td style="width:22%; border:1px solid #bbb; background:#f0f0f0; padding:4px 8px; font-weight:bold; text-align:right;">نوع البطولة</td>
+                    <td style="width:28%; border:1px solid #bbb; padding:4px 8px; text-align:right;">
+                        <t t-esc="dict(doc._fields['championship_level'].selection).get(doc.championship_level, '') if doc.championship_level else ''"/>
+                    </td>
+                </tr>
+
+                <!-- Row 3: Sport | Participation category -->
+                <tr style="height:28px;">
+                    <td style="border:1px solid #bbb; background:#f0f0f0; padding:4px 8px; font-weight:bold; text-align:right;">اللعبة</td>
+                    <td style="border:1px solid #bbb; padding:4px 8px; text-align:right;">
+                        <t t-esc="doc.sport_type or ''"/>
+                    </td>
+                    <td style="border:1px solid #bbb; background:#f0f0f0; padding:4px 8px; font-weight:bold; text-align:right;">فئة المشاركة</td>
+                    <td style="border:1px solid #bbb; padding:4px 8px; text-align:right;">
+                        <t t-if="doc.participation_category == 'men'">رجال</t>
+                        <t t-elif="doc.participation_category == 'women'">سيدات</t>
+                        <t t-elif="doc.participation_category == 'youth'">ناشئين</t>
+                        <t t-elif="doc.participation_category == 'mixed'">الكل / مختلط</t>
+                    </td>
+                </tr>
+
+                <!-- Row 4: Start date | End date -->
+                <tr style="height:28px;">
+                    <td style="border:1px solid #bbb; background:#f0f0f0; padding:4px 8px; font-weight:bold; text-align:right;">تاريخ بدء البطولة</td>
+                    <td style="border:1px solid #bbb; padding:4px 8px; text-align:right;">
+                        <t t-esc="doc.event_date_start.strftime('%d/%m/%Y') if doc.event_date_start else ''"/>
+                    </td>
+                    <td style="border:1px solid #bbb; background:#f0f0f0; padding:4px 8px; font-weight:bold; text-align:right;">تاريخ انتهاء البطولة</td>
+                    <td style="border:1px solid #bbb; padding:4px 8px; text-align:right;">
+                        <t t-esc="doc.event_date_end.strftime('%d/%m/%Y') if doc.event_date_end else ''"/>
+                    </td>
+                </tr>
+
+                <!-- Row 5: Location | Countries -->
+                <tr style="height:28px;">
+                    <td style="border:1px solid #bbb; background:#f0f0f0; padding:4px 8px; font-weight:bold; text-align:right;">مكان البطولة</td>
+                    <td style="border:1px solid #bbb; padding:4px 8px; text-align:right;">
+                        <t t-esc="doc.location or ''"/>
+                    </td>
+                    <td style="border:1px solid #bbb; background:#f0f0f0; padding:4px 8px; font-weight:bold; text-align:right;">عدد الدول المشاركة</td>
+                    <td style="border:1px solid #bbb; padding:4px 8px; text-align:right;">
+                        <t t-esc="doc.countries_count or ''"/>
+                    </td>
+                </tr>
+
+                <!-- Row 6: Athletes | Officials -->
+                <tr style="height:28px;">
+                    <td style="border:1px solid #bbb; background:#f0f0f0; padding:4px 8px; font-weight:bold; text-align:right;">عدد اللاعبين</td>
+                    <td style="border:1px solid #bbb; padding:4px 8px; text-align:right;">
+                        <t t-esc="doc.athletes_count"/>
+                    </td>
+                    <td style="border:1px solid #bbb; background:#f0f0f0; padding:4px 8px; font-weight:bold; text-align:right;">عدد المدربين والمسؤولين</td>
+                    <td style="border:1px solid #bbb; padding:4px 8px; text-align:right;">
+                        <t t-esc="doc.officials_count"/>
+                    </td>
+                </tr>
+
+                <!-- Row 7: Total participants | Budget -->
+                <tr style="height:28px;">
+                    <td style="border:1px solid #bbb; background:#f0f0f0; padding:4px 8px; font-weight:bold; text-align:right;">إجمالي عدد المشاركين</td>
+                    <td style="border:1px solid #bbb; padding:4px 8px; text-align:right;">
+                        <t t-esc="doc.athletes_count + doc.officials_count"/>
+                    </td>
+                    <td style="border:1px solid #bbb; background:#f0f0f0; padding:4px 8px; font-weight:bold; text-align:right;">مقدار الدعم المطلوب (درهم)</td>
+                    <td style="border:1px solid #bbb; padding:4px 8px; text-align:right;">
+                        <t t-esc="'{:,.2f}'.format(doc.estimated_budget) if doc.estimated_budget else '0.00'"/>
+                    </td>
+                </tr>
+
+                <!-- Row 8: Notes (full width, taller) -->
+                <tr style="height:50px;">
+                    <td style="border:1px solid #bbb; background:#f0f0f0; padding:4px 8px; font-weight:bold; text-align:right; vertical-align:top;">ملاحظات إضافية</td>
+                    <td colspan="3" style="border:1px solid #bbb; padding:4px 8px; text-align:right; vertical-align:top;">
+                        <t t-esc="doc.notes or ''"/>
+                    </td>
+                </tr>
+
+            </table>
+
+            <!-- Estimated budget breakdown -->
+            <div style="background-color:#C8102E; color:#fff; padding:5px 8px; font-weight:bold; margin-top:10px; font-size:10pt;">
+                الموازنة التقديرية
+            </div>
+            <table style="width:100%; border-collapse:collapse; margin-top:0; font-size:8.5pt;">
+                <thead>
+                    <tr style="height:24px;">
+                        <th style="width:18%; border:1px solid #777; background:#f0f0f0; padding:4px; text-align:center;">الفئة</th>
+                        <th style="width:34%; border:1px solid #777; background:#f0f0f0; padding:4px; text-align:center;">الوصف</th>
+                        <th style="width:12%; border:1px solid #777; background:#f0f0f0; padding:4px; text-align:center;">العدد</th>
+                        <th style="width:18%; border:1px solid #777; background:#f0f0f0; padding:4px; text-align:center;">المبلغ</th>
+                        <th style="width:18%; border:1px solid #777; background:#f0f0f0; padding:4px; text-align:center;">الإجمالي / درهم</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <t t-if="doc.budget_line_ids">
+                        <t t-foreach="doc.budget_line_ids.sorted('sequence')" t-as="line">
+                            <tr style="height:23px;">
+                                <td style="border:1px solid #777; padding:4px; text-align:right;">
+                                    <t t-esc="dict(line._fields['expense_group'].selection).get(line.expense_group, '')"/>
+                                </td>
+                                <td style="border:1px solid #777; padding:4px; text-align:right;">
+                                    <t t-esc="line.description or ''"/>
+                                </td>
+                                <td style="border:1px solid #777; padding:4px; text-align:center;">
+                                    <t t-esc="'{:,.2f}'.format(line.quantity).rstrip('0').rstrip('.')"/>
+                                </td>
+                                <td style="border:1px solid #777; padding:4px; text-align:left;">
+                                    <t t-esc="'{:,.2f}'.format(line.unit_amount) if line.unit_amount else '0.00'"/>
+                                </td>
+                                <td style="border:1px solid #777; padding:4px; text-align:left;">
+                                    <t t-esc="'{:,.2f}'.format(line.total_amount) if line.total_amount else '0.00'"/>
+                                </td>
+                            </tr>
+                        </t>
+                    </t>
+                    <t t-else="">
+                        <tr style="height:23px;">
+                            <td colspan="4" style="border:1px solid #777; padding:4px; text-align:right;">إجمالي الموازنة التقديرية</td>
+                            <td style="border:1px solid #777; padding:4px; text-align:left;">
+                                <t t-esc="'{:,.2f}'.format(doc.estimated_budget) if doc.estimated_budget else '0.00'"/>
+                            </td>
+                        </tr>
+                    </t>
+                    <tr style="height:26px;">
+                        <td colspan="4" style="border:1px solid #777; background:#d9d9d9; padding:5px; text-align:center; font-weight:bold;">إجمالي الموازنة التقديرية</td>
+                        <td style="border:1px solid #777; background:#d9d9d9; padding:5px; text-align:left; font-weight:bold;">
+                            <t t-esc="'{:,.2f}'.format(doc.budget_line_total or doc.estimated_budget or 0.0)"/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Financial review section -->
+            <div style="background-color:#C8102E; color:#fff; padding:5px 8px; font-weight:bold; margin-top:10px; font-size:10pt;">
+                من الناحية المالية
+            </div>
+            <table style="width:100%; border-collapse:collapse; margin-top:0;">
+                <tr style="height:55px;">
+                    <td style="border:1px solid #bbb; padding:4px 8px; text-align:right; vertical-align:top;"> </td>
+                </tr>
+            </table>
+
+            <!-- Technical review section -->
+            <div style="background-color:#C8102E; color:#fff; padding:5px 8px; font-weight:bold; margin-top:8px; font-size:10pt;">
+                من الناحية التقنية
+            </div>
+            <table style="width:100%; border-collapse:collapse; margin-top:0;">
+                <tr style="height:55px;">
+                    <td style="border:1px solid #bbb; padding:4px 8px; text-align:right; vertical-align:top;"> </td>
+                </tr>
+            </table>
+
+            <!-- Decision / approval boxes -->
+            <table style="width:100%; border-collapse:collapse; margin-top:10px; font-size:10pt;">
+                <tr style="height:70px;">
+                    <td style="width:33%; border:1px solid #bbb; background:#f0f0f0; padding:4px 8px; font-weight:bold; text-align:right; vertical-align:top;">الرأي التقنية المالية</td>
+                    <td style="width:33%; border:1px solid #bbb; padding:4px 8px; text-align:right; vertical-align:top;"> </td>
+                    <td style="width:34%; border:1px solid #bbb; background:#f0f0f0; padding:4px 8px; font-weight:bold; text-align:right; vertical-align:top;">التوقيع والختم</td>
+                </tr>
+            </table>
+
+            <!-- Confidentiality footer note -->
+            <div style="font-size:8pt; color:#555; margin-top:14px; text-align:right; border-top:1px solid #ddd; padding-top:6px;">
+                هذه الوثيقة من الوثائق الداخلية لوزارة الرياضة. لا يجوز نسخ أو توزيع هذه الوثيقة أو الكشف عن أي معلومات واردة فيها لأي طرف ثالث دون الحصول على إذن كتابي مسبق من الوزارة.
+            </div>
+
+        </div>
+    </t>
+</template>
+
+<template id="report_participation">
+    <t t-call="web.html_container">
+        <t t-foreach="docs" t-as="doc">
+            <t t-call="kaz_ai_ministry_portal_forms.report_participation_document"/>
+        </t>
+    </t>
+</template>
+
+<record id="action_report_participation" model="ir.actions.report">
+    <field name="name">Championship Participation Application</field>
+    <field name="model">ministry.championship.participation</field>
+    <field name="report_type">qweb-pdf</field>
+    <field name="report_name">kaz_ai_ministry_portal_forms.report_participation</field>
+    <field name="report_file">kaz_ai_ministry_portal_forms.report_participation</field>
+    <field name="binding_model_id" ref="model_ministry_championship_participation"/>
+    <field name="binding_type">report</field>
+    <field name="paperformat_id" ref="base.paperformat_euro"/>
+</record>
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     REPORT 2: Post-Event Report
+     تقرير من المشاركة في البطولات الخارجية
+     ══════════════════════════════════════════════════════════════ -->
+<template id="report_per_document">
+    <t t-foreach="docs" t-as="doc">
+        <div class="page o_ministry_report" style="direction:rtl; font-family:'NotoSansArabic','Noto Sans Arabic','DejaVu Sans',sans-serif; font-size:10pt; color:#222;">
+
+            <!-- Header -->
+            <t t-set="form_title_ar">تقرير من المشاركة في البطولات الخارجية</t>
+            <t t-set="form_ref">GAS-IMS-OP-07/01-F04  الإصدار 1.0</t>
+            <t t-set="form_date_issued" t-value="doc.submitted_on.strftime('%d/%m/%Y') if doc.submitted_on else (doc.create_date.strftime('%d/%m/%Y') if doc.create_date else '')"/>
+            <t t-call="kaz_ai_ministry_portal_forms.ministry_form_page_header"/>
+
+            <!-- Event info table -->
+            <table style="width:100%; border-collapse:collapse; font-size:10pt; margin-top:6px;">
+                <tr style="height:28px;">
+                    <td style="width:22%; border:1px solid #bbb; background:#f0f0f0; padding:4px 8px; font-weight:bold; text-align:right;">اسم الاتحاد</td>
+                    <td style="width:28%; border:1px solid #bbb; padding:4px 8px; text-align:right;">
+                        <t t-esc="doc.federation_id.name or ''"/>
+                    </td>
+                    <td style="width:22%; border:1px solid #bbb; background:#f0f0f0; padding:4px 8px; font-weight:bold; text-align:right;">اللعبة</td>
+                    <td style="width:28%; border:1px solid #bbb; padding:4px 8px; text-align:right;">
+                        <t t-esc="doc.sport_type or ''"/>
+                    </td>
+                </tr>
+                <tr style="height:28px;">
+                    <td style="border:1px solid #bbb; background:#f0f0f0; padding:4px 8px; font-weight:bold; text-align:right;">اسم البطولة</td>
+                    <td style="border:1px solid #bbb; padding:4px 8px; text-align:right;">
+                        <t t-esc="doc.event_name or ''"/>
+                    </td>
+                    <td style="border:1px solid #bbb; background:#f0f0f0; padding:4px 8px; font-weight:bold; text-align:right;">تاريخ البطولة</td>
+                    <td style="border:1px solid #bbb; padding:4px 8px; text-align:right;">
+                        <t t-esc="doc.event_date_start.strftime('%d/%m/%Y') if doc.event_date_start else ''"/>
+                        <t t-if="doc.event_date_end"> — <t t-esc="doc.event_date_end.strftime('%d/%m/%Y')"/></t>
+                    </td>
+                </tr>
+                <tr style="height:28px;">
+                    <td style="border:1px solid #bbb; background:#f0f0f0; padding:4px 8px; font-weight:bold; text-align:right;">مكان البطولة</td>
+                    <td style="border:1px solid #bbb; padding:4px 8px; text-align:right;">
+                        <t t-esc="doc.event_location or ''"/>
+                    </td>
+                    <td style="border:1px solid #bbb; background:#f0f0f0; padding:4px 8px; font-weight:bold; text-align:right;">عدد الدول المشاركة</td>
+                    <td style="border:1px solid #bbb; padding:4px 8px; text-align:right;">
+                        <t t-esc="doc.countries_count or ''"/>
+                    </td>
+                </tr>
+                <tr style="height:28px;">
+                    <td style="border:1px solid #bbb; background:#f0f0f0; padding:4px 8px; font-weight:bold; text-align:right;">نوع البطولة</td>
+                    <td style="border:1px solid #bbb; padding:4px 8px; text-align:right;">
+                        <t t-esc="dict(doc._fields['championship_level'].selection).get(doc.championship_level, '') if doc.championship_level else ''"/>
+                    </td>
+                    <td style="border:1px solid #bbb; background:#f0f0f0; padding:4px 8px; font-weight:bold; text-align:right;">عدد اللاعبين</td>
+                    <td style="border:1px solid #bbb; padding:4px 8px; text-align:right;">
+                        <t t-esc="doc.athletes_participated"/>
+                    </td>
+                </tr>
+            </table>
+
+            <!-- Section: Results -->
+            <div style="background-color:#C8102E; color:#fff; padding:5px 8px; font-weight:bold; margin-top:10px; font-size:10pt;">
+                النتائج البيانية للاعبين / الفريق بالبطولة (مرفق)
+            </div>
+            <table style="width:100%; border-collapse:collapse; margin-top:0; font-size:10pt;">
+                <tr style="height:26px;">
+                    <td style="width:25%; border:1px solid #bbb; background:#f0f0f0; padding:4px 8px; font-weight:bold; text-align:center;">ذهب</td>
+                    <td style="width:25%; border:1px solid #bbb; background:#f0f0f0; padding:4px 8px; font-weight:bold; text-align:center;">فضة</td>
+                    <td style="width:25%; border:1px solid #bbb; background:#f0f0f0; padding:4px 8px; font-weight:bold; text-align:center;">برونز</td>
+                    <td style="width:25%; border:1px solid #bbb; background:#f0f0f0; padding:4px 8px; font-weight:bold; text-align:center;">المركز العام</td>
+                </tr>
+                <tr style="height:26px;">
+                    <td style="border:1px solid #bbb; padding:4px 8px; text-align:center;"><t t-esc="doc.medals_gold"/></td>
+                    <td style="border:1px solid #bbb; padding:4px 8px; text-align:center;"><t t-esc="doc.medals_silver"/></td>
+                    <td style="border:1px solid #bbb; padding:4px 8px; text-align:center;"><t t-esc="doc.medals_bronze"/></td>
+                    <td style="border:1px solid #bbb; padding:4px 8px; text-align:center;"><t t-esc="doc.final_rank or ''"/></td>
+                </tr>
+                <tr style="height:24px;"><td colspan="4" style="border:1px solid #bbb; padding:4px 8px;">............................................................................................................................................................................</td></tr>
+                <tr style="height:24px;"><td colspan="4" style="border:1px solid #bbb; padding:4px 8px;">............................................................................................................................................................................</td></tr>
+            </table>
+
+            <!-- Section: Goals achieved -->
+            <div style="background-color:#C8102E; color:#fff; padding:5px 8px; font-weight:bold; margin-top:10px; font-size:10pt;">
+                الأهداف التي تحققت من المشاركة
+            </div>
+            <table style="width:100%; border-collapse:collapse; margin-top:0; font-size:10pt;">
+                <t t-set="goals_lines" t-value="(doc.goals_achieved or '').split('\n') if doc.goals_achieved else []"/>
+                <t t-foreach="[1,2,3]" t-as="i">
+                    <tr style="height:26px;">
+                        <td style="border:1px solid #bbb; padding:4px 8px; text-align:right;">
+                            <span style="font-weight:bold; margin-left:8px;"><t t-esc="i"/>.</span>
+                            <t t-if="goals_lines and len(goals_lines) >= i">
+                                <t t-esc="goals_lines[i-1]"/>
+                            </t>
+                            <t t-else="">............................................................................................................</t>
+                        </td>
+                    </tr>
+                </t>
+            </table>
+
+            <!-- Section: Achievement % -->
+            <div style="background-color:#C8102E; color:#fff; padding:5px 8px; font-weight:bold; margin-top:10px; font-size:10pt;">
+                نسبة الانجازات التي تم تحقيقها
+            </div>
+            <table style="width:100%; border-collapse:collapse; margin-top:0; font-size:10pt;">
+                <tr style="height:30px;">
+                    <td style="border:1px solid #bbb; padding:4px 8px; text-align:right;">
+                        <t t-esc="'{:.1f}%'.format(doc.achievement_pct) if doc.achievement_pct else '............................................................................................................'"/>
+                    </td>
+                </tr>
+            </table>
+
+            <!-- Section: Challenges -->
+            <div style="background-color:#C8102E; color:#fff; padding:5px 8px; font-weight:bold; margin-top:10px; font-size:10pt;">
+                التحديات (إن وجدت)
+            </div>
+            <table style="width:100%; border-collapse:collapse; margin-top:0; font-size:10pt;">
+                <t t-set="challenge_lines" t-value="(doc.challenges or '').split('\n') if doc.challenges else []"/>
+                <t t-foreach="[1,2]" t-as="i">
+                    <tr style="height:26px;">
+                        <td style="border:1px solid #bbb; padding:4px 8px; text-align:right;">
+                            <span style="font-weight:bold; margin-left:8px;"><t t-esc="i"/>.</span>
+                            <t t-if="challenge_lines and len(challenge_lines) >= i">
+                                <t t-esc="challenge_lines[i-1]"/>
+                            </t>
+                            <t t-else="">............................................................................................................</t>
+                        </td>
+                    </tr>
+                </t>
+            </table>
+
+            <!-- Section: Recommendations -->
+            <div style="background-color:#C8102E; color:#fff; padding:5px 8px; font-weight:bold; margin-top:10px; font-size:10pt;">
+                التوصيات
+            </div>
+            <table style="width:100%; border-collapse:collapse; margin-top:0; font-size:10pt;">
+                <t t-set="rec_lines" t-value="(doc.recommendations or '').split('\n') if doc.recommendations else []"/>
+                <t t-foreach="[1,2]" t-as="i">
+                    <tr style="height:26px;">
+                        <td style="border:1px solid #bbb; padding:4px 8px; text-align:right;">
+                            <span style="font-weight:bold; margin-left:8px;"><t t-esc="i"/>.</span>
+                            <t t-if="rec_lines and len(rec_lines) >= i">
+                                <t t-esc="rec_lines[i-1]"/>
+                            </t>
+                            <t t-else="">............................................................................................................</t>
+                        </td>
+                    </tr>
+                </t>
+            </table>
+
+            <!-- Footer notes -->
+            <div style="margin-top:14px; font-size:9pt; text-align:right;">
+                <div style="margin-bottom:4px;">&#x2022; يتم إرفاق جميع النتائج الرسمية للاعبين / الفريق بالبطولة</div>
+                <div style="margin-bottom:4px;">&#x2022; يتم إرفاق جميع نتائج البطولة المعتمدة</div>
+                <div style="color:#C8102E; font-weight:bold;">
+                    ملاحظة: يتم تسليم التقرير بعد انقضاء 15 يوم بعد انتهاء البطولة
+                </div>
+            </div>
+
+            <!-- Confidentiality note -->
+            <div style="font-size:8pt; color:#555; margin-top:10px; text-align:right; border-top:1px solid #ddd; padding-top:6px;">
+                هذه الوثيقة من الوثائق الداخلية لوزارة الرياضة. لا يجوز نسخ أو توزيع هذه الوثيقة أو الكشف عن أي معلومات واردة فيها لأي طرف ثالث دون الحصول على إذن كتابي مسبق من الوزارة.
+            </div>
+
+        </div>
+    </t>
+</template>
+
+<template id="report_per">
+    <t t-call="web.html_container">
+        <t t-foreach="docs" t-as="doc">
+            <t t-call="kaz_ai_ministry_portal_forms.report_per_document"/>
+        </t>
+    </t>
+</template>
+
+<record id="action_report_per" model="ir.actions.report">
+    <field name="name">Post-Event Report</field>
+    <field name="model">ministry.post.event.report</field>
+    <field name="report_type">qweb-pdf</field>
+    <field name="report_name">kaz_ai_ministry_portal_forms.report_per</field>
+    <field name="report_file">kaz_ai_ministry_portal_forms.report_per</field>
+    <field name="binding_model_id" ref="model_ministry_post_event_report"/>
+    <field name="binding_type">report</field>
+    <field name="paperformat_id" ref="base.paperformat_euro"/>
+</record>
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     REPORT 3: Championship Hosting Application
+     استمارة استضافة بطولة خارجية
+     ══════════════════════════════════════════════════════════════ -->
+<template id="report_hosting_document">
+    <t t-foreach="docs" t-as="doc">
+        <div class="page o_ministry_report" style="direction:rtl; font-family:'NotoSansArabic','Noto Sans Arabic','DejaVu Sans',sans-serif; font-size:10pt; color:#222;">
+
+            <!-- Header -->
+            <t t-set="form_title_ar">استمارة استضافة بطولة خارجية</t>
+            <t t-set="form_ref">GAS-IMS-OP-07/01-F07  الإصدار 2.0</t>
+            <t t-set="form_date_issued" t-value="doc.create_date.strftime('%d/%m/%Y') if doc.create_date else ''"/>
+            <t t-call="kaz_ai_ministry_portal_forms.ministry_form_page_header"/>
+
+            <!-- Body table -->
+            <table style="width:100%; border-collapse:collapse; font-size:10pt; margin-top:6px;">
+
+                <!-- Row 1: Federation | Event date -->
+                <tr style="height:28px;">
+                    <td style="width:22%; border:1px solid #bbb; background:#f0f0f0; padding:4px 8px; font-weight:bold; text-align:right;">اسم الاتحاد</td>
+                    <td style="width:28%; border:1px solid #bbb; padding:4px 8px; text-align:right;">
+                        <t t-esc="doc.federation_id.name or ''"/>
+                    </td>
+                    <td style="width:22%; border:1px solid #bbb; background:#f0f0f0; padding:4px 8px; font-weight:bold; text-align:right;">تاريخ البطولة</td>
+                    <td style="width:28%; border:1px solid #bbb; padding:4px 8px; text-align:right;">
+                        <t t-esc="doc.event_date_start.strftime('%d/%m/%Y') if doc.event_date_start else ''"/>
+                        <t t-if="doc.event_date_end"> — <t t-esc="doc.event_date_end.strftime('%d/%m/%Y')"/></t>
+                    </td>
+                </tr>
+
+                <!-- Row 2: Championship name | Venue -->
+                <tr style="height:28px;">
+                    <td style="border:1px solid #bbb; background:#f0f0f0; padding:4px 8px; font-weight:bold; text-align:right;">اسم البطولة</td>
+                    <td style="border:1px solid #bbb; padding:4px 8px; text-align:right;">
+                        <t t-esc="doc.championship_name or ''"/>
+                    </td>
+                    <td style="border:1px solid #bbb; background:#f0f0f0; padding:4px 8px; font-weight:bold; text-align:right;">مكان البطولة</td>
+                    <td style="border:1px solid #bbb; padding:4px 8px; text-align:right;">
+                        <t t-esc="doc.venue or ''"/>
+                    </td>
+                </tr>
+
+                <!-- Row 3: Organizing body | Expected countries -->
+                <tr style="height:28px;">
+                    <td style="border:1px solid #bbb; background:#f0f0f0; padding:4px 8px; font-weight:bold; text-align:right;">الجهة المنظمة</td>
+                    <td style="border:1px solid #bbb; padding:4px 8px; text-align:right;">
+                        <t t-esc="doc.organizer or ''"/>
+                    </td>
+                    <td style="border:1px solid #bbb; background:#f0f0f0; padding:4px 8px; font-weight:bold; text-align:right;">عدد الدول المشاركة في اللعبة</td>
+                    <td style="border:1px solid #bbb; padding:4px 8px; text-align:right;">
+                        <t t-esc="doc.expected_countries or ''"/>
+                    </td>
+                </tr>
+
+                <!-- Row 4: Championship level (type) | Participant categories -->
+                <tr style="height:28px;">
+                    <td style="border:1px solid #bbb; background:#f0f0f0; padding:4px 8px; font-weight:bold; text-align:right;">تصنيف نوع البطولة</td>
+                    <td style="border:1px solid #bbb; padding:4px 8px; text-align:right;">
+                        <t t-esc="dict(doc._fields['championship_level'].selection).get(doc.championship_level, '') if doc.championship_level else ''"/>
+                    </td>
+                    <td style="border:1px solid #bbb; background:#f0f0f0; padding:4px 8px; font-weight:bold; text-align:right;">اللغة العربية (رجال / سيدات / ناشئين)</td>
+                    <td style="border:1px solid #bbb; padding:4px 8px; text-align:right;">
+                        <t t-esc="doc.participant_categories or ''"/>
+                    </td>
+                </tr>
+
+                <!-- Row 5: Expected participants | Funding sources -->
+                <tr style="height:28px;">
+                    <td style="border:1px solid #bbb; background:#f0f0f0; padding:4px 8px; font-weight:bold; text-align:right;">عدد اللاعبين المتوقع</td>
+                    <td style="border:1px solid #bbb; padding:4px 8px; text-align:right;">
+                        <t t-esc="doc.expected_participants"/>
+                    </td>
+                    <td style="border:1px solid #bbb; background:#f0f0f0; padding:4px 8px; font-weight:bold; text-align:right;">مصادر تمويل الاستضافة</td>
+                    <td style="border:1px solid #bbb; padding:4px 8px; text-align:right;">
+                        <t t-esc="doc.funding_sources or ''"/>
+                    </td>
+                </tr>
+
+                <!-- Row 6: Expected return (highlighted in red, full width) -->
+                <tr style="height:50px;">
+                    <td style="border:1px solid #bbb; background:#C8102E; padding:4px 8px; font-weight:bold; text-align:right; color:#fff; vertical-align:top;">العائد من الاستضافة</td>
+                    <td colspan="3" style="border:1px solid #bbb; padding:4px 8px; text-align:right; vertical-align:top;">
+                        <t t-esc="doc.expected_return or ''"/>
+                    </td>
+                </tr>
+
+            </table>
+
+            <!-- Footer deadline note -->
+            <div style="margin-top:14px; font-size:9pt; text-align:right;">
+                <span style="font-weight:bold;">ملاحظة: </span>
+                <span style="color:#C8102E; font-weight:bold;">يتم إرسال الاستمارة بجميع المتطلبات قبل موعد البطولة 30 يوم</span>
+            </div>
+
+            <!-- Confidentiality note -->
+            <div style="font-size:8pt; color:#555; margin-top:10px; text-align:right; border-top:1px solid #ddd; padding-top:6px;">
+                هذه الوثيقة من الوثائق الداخلية لوزارة الرياضة. لا يجوز نسخ أو توزيع هذه الوثيقة أو الكشف عن أي معلومات واردة فيها لأي طرف ثالث دون الحصول على إذن كتابي مسبق من الوزارة.
+            </div>
+
+        </div>
+    </t>
+</template>
+
+<template id="report_hosting">
+    <t t-call="web.html_container">
+        <t t-foreach="docs" t-as="doc">
+            <t t-call="kaz_ai_ministry_portal_forms.report_hosting_document"/>
+        </t>
+    </t>
+</template>
+
+<record id="action_report_hosting" model="ir.actions.report">
+    <field name="name">Championship Hosting Application</field>
+    <field name="model">ministry.championship.hosting</field>
+    <field name="report_type">qweb-pdf</field>
+    <field name="report_name">kaz_ai_ministry_portal_forms.report_hosting</field>
+    <field name="report_file">kaz_ai_ministry_portal_forms.report_hosting</field>
+    <field name="binding_model_id" ref="model_ministry_championship_hosting"/>
+    <field name="binding_type">report</field>
+    <field name="paperformat_id" ref="base.paperformat_euro"/>
+</record>
+
+</data>
+</odoo>

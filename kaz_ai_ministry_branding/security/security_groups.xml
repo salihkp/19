@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- Module Category -->
+        <record id="module_category_ministry" model="ir.module.category">
+            <field name="name">Ministry / Sports Support</field>
+            <field name="description">Ministry of Sports — Financial Support Management System</field>
+            <field name="sequence">10</field>
+        </record>
+
+        <record id="privilege_ministry_sports_support" model="res.groups.privilege">
+            <field name="name">Ministry / Sports Support</field>
+            <field name="category_id" ref="module_category_ministry"/>
+            <field name="sequence">10</field>
+        </record>
+
+        <!-- Portal Group (Federation Users) -->
+        <record id="group_ministry_portal" model="res.groups">
+            <field name="name">Federation Portal</field>
+            <field name="privilege_id" ref="privilege_ministry_sports_support"/>
+            <field name="comment">Federation users accessing only the portal — strictly isolated to own federation data.</field>
+        </record>
+
+        <!-- Technical Officer -->
+        <record id="group_ministry_officer_technical" model="res.groups">
+            <field name="name">Officer – Technical</field>
+            <field name="privilege_id" ref="privilege_ministry_sports_support"/>
+            <field name="comment">Reviews technical support requests: coach appointments, referee allowances, rewards.</field>
+        </record>
+
+        <!-- Financial Officer -->
+        <record id="group_ministry_officer_financial" model="res.groups">
+            <field name="name">Officer – Financial</field>
+            <field name="privilege_id" ref="privilege_ministry_sports_support"/>
+            <field name="comment">Reviews financial aspects of support requests and authorises payments.</field>
+        </record>
+
+        <!-- Department Head -->
+        <record id="group_ministry_dept_head" model="res.groups">
+            <field name="name">Department Head</field>
+            <field name="privilege_id" ref="privilege_ministry_sports_support"/>
+            <field name="comment">Final approver for high-value and international activity requests.</field>
+        </record>
+
+        <!-- Inspector -->
+        <record id="group_ministry_inspector" model="res.groups">
+            <field name="name">Inspector</field>
+            <field name="privilege_id" ref="privilege_ministry_sports_support"/>
+            <field name="comment">Conducts scheduled and surprise inspections; records violations.</field>
+        </record>
+
+        <!-- Legal Officer -->
+        <record id="group_ministry_legal_officer" model="res.groups">
+            <field name="name">Legal Officer</field>
+            <field name="privilege_id" ref="privilege_ministry_sports_support"/>
+            <field name="comment">Issues legal actions, warnings, deductions, and suspension orders.</field>
+        </record>
+
+        <!-- Analyst -->
+        <record id="group_ministry_analyst" model="res.groups">
+            <field name="name">Analyst</field>
+            <field name="privilege_id" ref="privilege_ministry_sports_support"/>
+            <field name="comment">Read-only access to analytics alerts, dashboards, and pivot reports.</field>
+        </record>
+
+        <!-- Manager (inherits all officer groups) -->
+        <record id="group_ministry_manager" model="res.groups">
+            <field name="name">Manager</field>
+            <field name="privilege_id" ref="privilege_ministry_sports_support"/>
+            <field name="implied_ids" eval="[
+                (4, ref('group_ministry_officer_technical')),
+                (4, ref('group_ministry_officer_financial')),
+                (4, ref('group_ministry_dept_head')),
+                (4, ref('group_ministry_inspector')),
+                (4, ref('group_ministry_legal_officer')),
+                (4, ref('group_ministry_analyst')),
+            ]"/>
+            <field name="comment">Full management access — implies all officer and specialist groups.</field>
+            <field name="user_ids" eval="[(4, ref('base.user_admin'))]"/>
+        </record>
+
+    </data>
+</odoo>

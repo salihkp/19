@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- ── OPERATIONAL SUPPORT ──────────────────────────────────────────── -->
+
+        <record id="item_salaries" model="ministry.support.item">
+            <field name="name">Staff Salaries</field>
+            <field name="code">OP-SAL-01</field>
+            <field name="category">operational</field>
+            <field name="group_id" ref="kaz_ai_ministry_support_item.grp_salaries"/>
+            <field name="item_type">fixed</field>
+            <field name="calc_method">fixed_amount</field>
+            <field name="fixed_amount">15000.00</field>
+            <field name="max_limit">180000.00</field>
+            <field name="sequence">10</field>
+        </record>
+
+        <record id="item_end_of_service" model="ministry.support.item">
+            <field name="name">End of Service Benefits</field>
+            <field name="code">OP-EOS-01</field>
+            <field name="category">operational</field>
+            <field name="group_id" ref="kaz_ai_ministry_support_item.grp_salaries"/>
+            <field name="item_type">variable</field>
+            <field name="calc_method">by_request</field>
+            <field name="max_limit">50000.00</field>
+            <field name="sequence">20</field>
+        </record>
+
+        <record id="item_board_transport" model="ministry.support.item">
+            <field name="name">Board Member Transport Allowance</field>
+            <field name="code">OP-TRA-01</field>
+            <field name="category">operational</field>
+            <field name="group_id" ref="kaz_ai_ministry_support_item.grp_salaries"/>
+            <field name="item_type">variable</field>
+            <field name="calc_method">by_count</field>
+            <field name="unit_amount">3000.00</field>
+            <field name="max_limit">60000.00</field>
+            <field name="sequence">30</field>
+        </record>
+
+        <record id="item_rent" model="ministry.support.item">
+            <field name="name">Office Rent</field>
+            <field name="code">OP-RENT-01</field>
+            <field name="category">operational</field>
+            <field name="group_id" ref="kaz_ai_ministry_support_item.grp_facilities"/>
+            <field name="item_type">fixed</field>
+            <field name="calc_method">fixed_amount</field>
+            <field name="fixed_amount">120000.00</field>
+            <field name="max_limit">200000.00</field>
+            <field name="sequence">40</field>
+        </record>
+
+        <record id="item_electricity" model="ministry.support.item">
+            <field name="name">Electricity &amp; Utilities</field>
+            <field name="code">OP-ELEC-01</field>
+            <field name="category">operational</field>
+            <field name="group_id" ref="kaz_ai_ministry_support_item.grp_facilities"/>
+            <field name="item_type">fixed</field>
+            <field name="calc_method">fixed_amount</field>
+            <field name="fixed_amount">24000.00</field>
+            <field name="max_limit">36000.00</field>
+            <field name="sequence">50</field>
+        </record>
+
+        <record id="item_security_cleaning" model="ministry.support.item">
+            <field name="name">Security &amp; Cleaning</field>
+            <field name="code">OP-SEC-01</field>
+            <field name="category">operational</field>
+            <field name="group_id" ref="kaz_ai_ministry_support_item.grp_facilities"/>
+            <field name="item_type">fixed</field>
+            <field name="calc_method">fixed_amount</field>
+            <field name="fixed_amount">36000.00</field>
+            <field name="max_limit">60000.00</field>
+            <field name="sequence">60</field>
+        </record>
+
+        <record id="item_communications" model="ministry.support.item">
+            <field name="name">Communications (Phone/Internet)</field>
+            <field name="code">OP-COM-01</field>
+            <field name="category">operational</field>
+            <field name="group_id" ref="kaz_ai_ministry_support_item.grp_op_other"/>
+            <field name="item_type">fixed</field>
+            <field name="calc_method">fixed_amount</field>
+            <field name="fixed_amount">6000.00</field>
+            <field name="max_limit">12000.00</field>
+            <field name="sequence">70</field>
+        </record>
+
+        <!-- ── TECHNICAL SUPPORT ───────────────────────────────────────────── -->
+
+        <record id="item_coach_appointment" model="ministry.support.item">
+            <field name="name">Coach Appointment</field>
+            <field name="code">TEC-COACH-01</field>
+            <field name="category">technical</field>
+            <field name="group_id" ref="kaz_ai_ministry_support_item.grp_coaching"/>
+            <field name="item_type">fixed</field>
+            <field name="calc_method">fixed_amount</field>
+            <field name="fixed_amount">180000.00</field>
+            <field name="max_limit">360000.00</field>
+            <field name="eligibility_python">result = federation.federation_status == 'active'</field>
+            <field name="sequence">10</field>
+        </record>
+
+        <record id="item_referee_allowance" model="ministry.support.item">
+            <field name="name">Referee Allowance</field>
+            <field name="code">TEC-REF-01</field>
+            <field name="category">technical</field>
+            <field name="group_id" ref="kaz_ai_ministry_support_item.grp_coaching"/>
+            <field name="item_type">variable</field>
+            <field name="calc_method">by_count</field>
+            <field name="unit_amount">500.00</field>
+            <field name="max_limit">25000.00</field>
+            <field name="sequence">20</field>
+        </record>
+
+        <record id="item_games_support" model="ministry.support.item">
+            <field name="name">Support for Games &amp; Tournaments</field>
+            <field name="code">TEC-GAME-01</field>
+            <field name="category">technical</field>
+            <field name="group_id" ref="kaz_ai_ministry_support_item.grp_games"/>
+            <field name="item_type">variable</field>
+            <field name="calc_method">by_request</field>
+            <field name="max_limit">50000.00</field>
+            <field name="sequence">30</field>
+        </record>
+
+        <record id="item_athlete_rewards" model="ministry.support.item">
+            <field name="name">Athlete Rewards</field>
+            <field name="code">TEC-REW-01</field>
+            <field name="category">technical</field>
+            <field name="group_id" ref="kaz_ai_ministry_support_item.grp_games"/>
+            <field name="item_type">variable</field>
+            <field name="calc_method">by_count</field>
+            <field name="unit_amount">5000.00</field>
+            <field name="max_limit">100000.00</field>
+            <field name="sequence">40</field>
+        </record>
+
+        <!-- ── GENERAL FINANCIAL SUPPORT ──────────────────────────────────── -->
+
+        <record id="item_general_purchases" model="ministry.support.item">
+            <field name="name">General Purchases</field>
+            <field name="code">GEN-PUR-01</field>
+            <field name="category">general</field>
+            <field name="group_id" ref="kaz_ai_ministry_support_item.grp_procurement"/>
+            <field name="item_type">variable</field>
+            <field name="calc_method">by_request</field>
+            <field name="max_limit">30000.00</field>
+            <field name="sequence">10</field>
+        </record>
+
+        <record id="item_subscriptions" model="ministry.support.item">
+            <field name="name">Subscriptions &amp; Memberships</field>
+            <field name="code">GEN-SUB-01</field>
+            <field name="category">general</field>
+            <field name="group_id" ref="kaz_ai_ministry_support_item.grp_procurement"/>
+            <field name="item_type">fixed</field>
+            <field name="calc_method">fixed_amount</field>
+            <field name="fixed_amount">15000.00</field>
+            <field name="max_limit">30000.00</field>
+            <field name="sequence">20</field>
+        </record>
+
+        <record id="item_international_offices" model="ministry.support.item">
+            <field name="name">International Office Support</field>
+            <field name="code">GEN-INT-01</field>
+            <field name="category">general</field>
+            <field name="group_id" ref="kaz_ai_ministry_support_item.grp_procurement"/>
+            <field name="item_type">fixed</field>
+            <field name="calc_method">fixed_amount</field>
+            <field name="fixed_amount">200000.00</field>
+            <field name="max_limit">400000.00</field>
+            <field name="eligibility_python">result = federation.registered_players_count &gt;= 500</field>
+            <field name="sequence">30</field>
+        </record>
+
+        <record id="item_systems" model="ministry.support.item">
+            <field name="name">IT Systems &amp; Software</field>
+            <field name="code">GEN-SYS-01</field>
+            <field name="category">general</field>
+            <field name="group_id" ref="kaz_ai_ministry_support_item.grp_gen_other"/>
+            <field name="item_type">variable</field>
+            <field name="calc_method">by_request</field>
+            <field name="max_limit">100000.00</field>
+            <field name="sequence">40</field>
+        </record>
+
+        <record id="item_stationery" model="ministry.support.item">
+            <field name="name">Stationery &amp; Office Supplies</field>
+            <field name="code">GEN-STA-01</field>
+            <field name="category">general</field>
+            <field name="group_id" ref="kaz_ai_ministry_support_item.grp_gen_other"/>
+            <field name="item_type">fixed</field>
+            <field name="calc_method">fixed_amount</field>
+            <field name="fixed_amount">5000.00</field>
+            <field name="max_limit">10000.00</field>
+            <field name="sequence">50</field>
+        </record>
+
+        <record id="item_hospitality" model="ministry.support.item">
+            <field name="name">Hospitality &amp; Events</field>
+            <field name="code">GEN-HOS-01</field>
+            <field name="category">general</field>
+            <field name="group_id" ref="kaz_ai_ministry_support_item.grp_gen_other"/>
+            <field name="item_type">variable</field>
+            <field name="calc_method">by_request</field>
+            <field name="max_limit">20000.00</field>
+            <field name="sequence">60</field>
+        </record>
+
+        <record id="item_fees" model="ministry.support.item">
+            <field name="name">Registration &amp; Affiliation Fees</field>
+            <field name="code">GEN-FEE-01</field>
+            <field name="category">general</field>
+            <field name="group_id" ref="kaz_ai_ministry_support_item.grp_procurement"/>
+            <field name="item_type">variable</field>
+            <field name="calc_method">by_request</field>
+            <field name="max_limit">50000.00</field>
+            <field name="sequence">70</field>
+        </record>
+
+        <!-- ── ACTIVITY SUPPORT ────────────────────────────────────────────── -->
+
+        <record id="item_local_camp" model="ministry.support.item">
+            <field name="name">Local Training Camp</field>
+            <field name="code">ACT-CAMP-LOCAL</field>
+            <field name="category">activity</field>
+            <field name="group_id" ref="kaz_ai_ministry_support_item.grp_camps"/>
+            <field name="item_type">variable</field>
+            <field name="calc_method">by_request</field>
+            <field name="max_limit">50000.00</field>
+            <field name="sequence">10</field>
+        </record>
+
+        <record id="item_meetings" model="ministry.support.item">
+            <field name="name">Technical &amp; Board Meetings</field>
+            <field name="code">ACT-MEET-01</field>
+            <field name="category">activity</field>
+            <field name="group_id" ref="kaz_ai_ministry_support_item.grp_camps"/>
+            <field name="item_type">variable</field>
+            <field name="calc_method">by_count</field>
+            <field name="unit_amount">3000.00</field>
+            <field name="max_limit">36000.00</field>
+            <field name="sequence">20</field>
+        </record>
+
+        <record id="item_local_participation" model="ministry.support.item">
+            <field name="name">Local Championship Participation</field>
+            <field name="code">ACT-PART-LOCAL</field>
+            <field name="category">activity</field>
+            <field name="group_id" ref="kaz_ai_ministry_support_item.grp_participations"/>
+            <field name="item_type">variable</field>
+            <field name="calc_method">by_request</field>
+            <field name="max_limit">80000.00</field>
+            <field name="sequence">30</field>
+        </record>
+
+        <record id="item_arab_participation" model="ministry.support.item">
+            <field name="name">Arab Championship Participation</field>
+            <field name="code">ACT-PART-ARAB</field>
+            <field name="category">activity</field>
+            <field name="group_id" ref="kaz_ai_ministry_support_item.grp_participations"/>
+            <field name="item_type">variable</field>
+            <field name="calc_method">by_request</field>
+            <field name="max_limit">150000.00</field>
+            <field name="sequence">40</field>
+        </record>
+
+        <record id="item_regional_participation" model="ministry.support.item">
+            <field name="name">Regional Championship Participation</field>
+            <field name="code">ACT-PART-REG</field>
+            <field name="category">activity</field>
+            <field name="group_id" ref="kaz_ai_ministry_support_item.grp_participations"/>
+            <field name="item_type">variable</field>
+            <field name="calc_method">by_request</field>
+            <field name="max_limit">200000.00</field>
+            <field name="sequence">50</field>
+        </record>
+
+        <record id="item_asian_participation" model="ministry.support.item">
+            <field name="name">Asian Championship Participation</field>
+            <field name="code">ACT-PART-ASIAN</field>
+            <field name="category">activity</field>
+            <field name="group_id" ref="kaz_ai_ministry_support_item.grp_participations"/>
+            <field name="item_type">variable</field>
+            <field name="calc_method">by_request</field>
+            <field name="max_limit">350000.00</field>
+            <field name="sequence">60</field>
+        </record>
+
+        <record id="item_international_participation" model="ministry.support.item">
+            <field name="name">International Championship Participation</field>
+            <field name="code">ACT-PART-INTL</field>
+            <field name="category">activity</field>
+            <field name="group_id" ref="kaz_ai_ministry_support_item.grp_participations"/>
+            <field name="item_type">variable</field>
+            <field name="calc_method">by_request</field>
+            <field name="max_limit">500000.00</field>
+            <field name="sequence">70</field>
+        </record>
+
+        <record id="item_olympic_participation" model="ministry.support.item">
+            <field name="name">Olympic Games Participation</field>
+            <field name="code">ACT-PART-OLY</field>
+            <field name="category">activity</field>
+            <field name="group_id" ref="kaz_ai_ministry_support_item.grp_participations"/>
+            <field name="item_type">variable</field>
+            <field name="calc_method">by_request</field>
+            <field name="max_limit">1000000.00</field>
+            <field name="eligibility_python">result = federation.olympic_classification == 'olympic'</field>
+            <field name="sequence">80</field>
+        </record>
+
+        <record id="item_arab_camp" model="ministry.support.item">
+            <field name="name">Overseas Training Camp (Arab)</field>
+            <field name="code">ACT-CAMP-ARAB</field>
+            <field name="category">activity</field>
+            <field name="group_id" ref="kaz_ai_ministry_support_item.grp_camps"/>
+            <field name="item_type">variable</field>
+            <field name="calc_method">by_request</field>
+            <field name="max_limit">100000.00</field>
+            <field name="sequence">15</field>
+        </record>
+
+    </data>
+</odoo>

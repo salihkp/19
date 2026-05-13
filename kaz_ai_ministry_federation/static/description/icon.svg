@@ -1,0 +1,15 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="6" y="6" width="116" height="116" rx="24" fill="#FFFFFF"/>
+  <rect x="6" y="6" width="116" height="116" rx="24" stroke="#D9C37D" stroke-width="4"/>
+  <path d="M64 16C74 18 82 25 86 35C94 35 101 39 106 46C96 45 88 48 82 55C77 50 71 47 64 47C57 47 51 50 46 55C40 48 32 45 22 46C27 39 34 35 42 35C46 25 54 18 64 16Z" fill="#B89542"/>
+  <path d="M40 42C31 45 23 51 16 62C31 58 43 60 52 69C49 59 45 50 40 42Z" fill="#8B6F2A"/>
+  <path d="M88 42C97 45 105 51 112 62C97 58 85 60 76 69C79 59 83 50 88 42Z" fill="#8B6F2A"/>
+  <circle cx="64" cy="64" r="24" fill="#FFFFFF" stroke="#222222" stroke-width="3"/>
+  <path d="M43 48H55V80H43V48Z" fill="#C8102E"/>
+  <path d="M55 48H84V58H55V48Z" fill="#00732F"/>
+  <path d="M55 58H84V69H55V58Z" fill="#FFFFFF"/>
+  <path d="M55 69H84V80H55V69Z" fill="#111111"/>
+  <path d="M48 89H80L88 101C73 109 55 109 40 101L48 89Z" fill="#C8102E"/>
+  <path d="M55 88C58 94 61 98 64 101C67 98 70 94 73 88" stroke="#8B6F2A" stroke-width="4" stroke-linecap="round"/>
+  <text x="64" y="100" text-anchor="middle" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="9" font-weight="800">MINISTRY</text>
+</svg>

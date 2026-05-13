@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- ── List View ──────────────────────────────────────────────────────── -->
+    <record id="view_violation_list" model="ir.ui.view">
+        <field name="name">ministry.violation.list</field>
+        <field name="model">ministry.violation</field>
+        <field name="arch" type="xml">
+            <list string="Violations" default_order="inspection_id desc">
+                <field name="name"/>
+                <field name="federation_id"/>
+                <field name="inspection_id"/>
+                <field name="violation_type"/>
+                <field name="severity" widget="badge"
+                    decoration-muted="severity == 'minor'"
+                    decoration-warning="severity == 'moderate'"
+                    decoration-danger="severity in ('major', 'critical')"/>
+                <field name="legal_action_count" string="Legal Actions"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- ── Form View ──────────────────────────────────────────────────────── -->
+    <record id="view_violation_form" model="ir.ui.view">
+        <field name="name">ministry.violation.form</field>
+        <field name="model">ministry.violation</field>
+        <field name="arch" type="xml">
+            <form string="Violation">
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <!-- Stat button injected by kaz_ai_ministry_legal_affairs when installed -->
+                    </div>
+
+                    <div class="oe_title">
+                        <h1><field name="name" readonly="1"/></h1>
+                    </div>
+
+                    <group>
+                        <group string="Violation Details">
+                            <field name="inspection_id"/>
+                            <field name="federation_id" readonly="1"/>
+                            <field name="violation_type"/>
+                            <field name="severity"/>
+                        </group>
+                    </group>
+
+                    <group string="Description">
+                        <field name="description" nolabel="1"/>
+                    </group>
+
+                    <group string="Evidence">
+                        <field name="evidence_attachment_ids" widget="many2many_binary" nolabel="1"/>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <!-- ── Window Action ─────────────────────────────────────────────────── -->
+    <record id="action_ministry_violation" model="ir.actions.act_window">
+        <field name="name">Violations</field>
+        <field name="res_model">ministry.violation</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">No violations recorded</p>
+            <p>Violations are recorded during field inspections and may trigger legal actions.</p>
+        </field>
+    </record>
+
+</odoo>

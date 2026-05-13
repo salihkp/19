@@ -1,0 +1,28 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kaz_ai_ministry_risk_scoring
+#
+msgid ""
+msgstr "Project-Id-Version: Odoo Server 19.0\\nReport-Msgid-Bugs-To: \\nPOT-Creation-Date: 2026-05-13 00:00+0000\\nPO-Revision-Date: 2026-05-13 00:00+0000\\nLast-Translator: Kaizen AI <support@kaizenae.com>\\nLanguage-Team: Arabic\\nLanguage: ar_001\\nMIME-Version: 1.0\\nContent-Type: text/plain; charset=UTF-8\\nContent-Transfer-Encoding: 8bit\\nPlural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\\n"
+
+#. module: kaz_ai_ministry_risk_scoring
+#: model:ir.model,name:kaz_ai_ministry_risk_scoring.model_res_partner
+msgid "Contact"
+msgstr "جهة الاتصال"
+
+#. module: kaz_ai_ministry_risk_scoring
+#: model:ir.model.fields,field_description:kaz_ai_ministry_risk_scoring.field_ministry_risk_scorer__display_name
+#: model:ir.model.fields,field_description:kaz_ai_ministry_risk_scoring.field_res_partner__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: kaz_ai_ministry_risk_scoring
+#: model:ir.model.fields,field_description:kaz_ai_ministry_risk_scoring.field_ministry_risk_scorer__id
+#: model:ir.model.fields,field_description:kaz_ai_ministry_risk_scoring.field_res_partner__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: kaz_ai_ministry_risk_scoring
+#: model:ir.model,name:kaz_ai_ministry_risk_scoring.model_ministry_risk_scorer
+msgid "Ministry Risk Scoring Engine"
+msgstr "محرك تقييم المخاطر في الوزارة"

@@ -1,0 +1,13 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="128" height="128" rx="16" fill="#8B6F2A"/>
+  <!-- Bar 1 (short) -->
+  <rect x="22" y="78" width="22" height="30" rx="4" fill="white" opacity="0.65"/>
+  <!-- Bar 2 (medium) -->
+  <rect x="53" y="52" width="22" height="56" rx="4" fill="white" opacity="0.8"/>
+  <!-- Bar 3 (tall) -->
+  <rect x="84" y="28" width="22" height="80" rx="4" fill="white" opacity="0.95"/>
+  <!-- Upward trend line -->
+  <path d="M30 76 L62 50 L95 26" stroke="#C8102E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Trend dot -->
+  <circle cx="95" cy="26" r="6" fill="#C8102E"/>
+</svg>

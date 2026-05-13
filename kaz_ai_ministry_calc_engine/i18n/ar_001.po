@@ -1,0 +1,33 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kaz_ai_ministry_calc_engine
+#
+msgid ""
+msgstr "Project-Id-Version: Odoo Server 19.0\\nReport-Msgid-Bugs-To: \\nPOT-Creation-Date: 2026-05-13 00:00+0000\\nPO-Revision-Date: 2026-05-13 00:00+0000\\nLast-Translator: Kaizen AI <support@kaizenae.com>\\nLanguage-Team: Arabic\\nLanguage: ar_001\\nMIME-Version: 1.0\\nContent-Type: text/plain; charset=UTF-8\\nContent-Transfer-Encoding: 8bit\\nPlural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\\n"
+
+#. module: kaz_ai_ministry_calc_engine
+#. odoo-python
+#: code:addons/kaz_ai_ministry_calc_engine/models/ministry_calc_engine.py:0
+msgid "Deduction of %(amount)s AED applied from legal action %(ref)s. Remaining payable: %(remaining)s AED."
+msgstr "تم تطبيق خصم قدره %(amount)s درهم من الإجراء القانوني %(ref)s. المتبقي المستحق للدفع: %(remaining)s درهم."
+
+#. module: kaz_ai_ministry_calc_engine
+#: model:ir.model.fields,field_description:kaz_ai_ministry_calc_engine.field_ministry_calc_engine__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: kaz_ai_ministry_calc_engine
+#. odoo-python
+#: code:addons/kaz_ai_ministry_calc_engine/models/ministry_calc_engine.py:0
+msgid "Eligible amount capped at %(limit)s AED (max limit for %(item)s). Original calculated: %(orig)s AED."
+msgstr "تم تحديد المبلغ المؤهل بسقف %(limit)s درهم (الحد الأقصى لـ %(item)s). المبلغ المحسوب الأصلي: %(orig)s درهم."
+
+#. module: kaz_ai_ministry_calc_engine
+#: model:ir.model.fields,field_description:kaz_ai_ministry_calc_engine.field_ministry_calc_engine__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: kaz_ai_ministry_calc_engine
+#: model:ir.model,name:kaz_ai_ministry_calc_engine.model_ministry_calc_engine
+msgid "Ministry Calculation Engine"
+msgstr "محرك احتساب الوزارة"

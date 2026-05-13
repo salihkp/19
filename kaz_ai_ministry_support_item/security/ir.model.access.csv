@@ -1,0 +1,10 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_support_group_manager,ministry.support.group manager,model_ministry_support_group,kaz_ai_ministry_branding.group_ministry_manager,1,1,1,1
+access_support_group_officer,ministry.support.group officer,model_ministry_support_group,base.group_user,1,0,0,0
+access_support_group_portal,ministry.support.group portal,model_ministry_support_group,kaz_ai_ministry_branding.group_ministry_portal,1,0,0,0
+access_attachment_type_manager,ministry.attachment.type manager,model_ministry_attachment_type,kaz_ai_ministry_branding.group_ministry_manager,1,1,1,1
+access_attachment_type_officer,ministry.attachment.type officer,model_ministry_attachment_type,base.group_user,1,0,0,0
+access_attachment_type_portal,ministry.attachment.type portal,model_ministry_attachment_type,kaz_ai_ministry_branding.group_ministry_portal,1,0,0,0
+access_support_item_manager,ministry.support.item manager,model_ministry_support_item,kaz_ai_ministry_branding.group_ministry_manager,1,1,1,1
+access_support_item_officer,ministry.support.item officer,model_ministry_support_item,base.group_user,1,0,0,0
+access_support_item_portal,ministry.support.item portal,model_ministry_support_item,kaz_ai_ministry_branding.group_ministry_portal,1,0,0,0

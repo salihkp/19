@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Company isolation — inspections -->
+    <record id="rule_inspection_company" model="ir.rule">
+        <field name="name">Inspection: company isolation</field>
+        <field name="model_id" ref="model_ministry_inspection"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+
+    <!-- Company isolation — violations -->
+    <record id="rule_violation_company" model="ir.rule">
+        <field name="name">Violation: company isolation</field>
+        <field name="model_id" ref="model_ministry_violation"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+
+    <!-- Inspectors can only read inspections they are assigned to (non-managers) -->
+    <record id="rule_inspection_inspector_own" model="ir.rule">
+        <field name="name">Inspection: inspector sees own assignments</field>
+        <field name="model_id" ref="model_ministry_inspection"/>
+        <field name="domain_force">[('inspector_ids', 'in', [user.id])]</field>
+        <field name="groups" eval="[(4, ref('kaz_ai_ministry_branding.group_ministry_inspector'))]"/>
+        <field name="perm_read">1</field>
+        <field name="perm_write">1</field>
+        <field name="perm_create">1</field>
+        <field name="perm_unlink">0</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- ── List View ──────────────────────────────────────────────────────── -->
+    <record id="view_support_request_list" model="ir.ui.view">
+        <field name="name">ministry.support.request.list</field>
+        <field name="model">ministry.support.request</field>
+        <field name="arch" type="xml">
+            <list string="Support Requests" default_order="create_date desc">
+                <field name="name"/>
+                <field name="federation_id"/>
+                <field name="support_item_id" optional="show"/>
+                <field name="category" widget="badge"
+                    decoration-info="category == 'operational'"
+                    decoration-warning="category == 'technical'"
+                    decoration-success="category == 'activity'"
+                    decoration-primary="category == 'general'"/>
+                <field name="fiscal_year"/>
+                <field name="requested_amount" string="Requested (AED)" optional="show"/>
+                <field name="eligible_amount" string="Eligible (AED)" optional="show"/>
+                <field name="approved_amount" string="Approved (AED)" optional="show"/>
+                <field name="variance_pct" string="YoY %" optional="show"/>
+                <field name="decision_recommendation" widget="badge" optional="show"
+                    decoration-success="decision_recommendation == 'approve'"
+                    decoration-info="decision_recommendation == 'approve_eligible'"
+                    decoration-warning="decision_recommendation in ('review', 'return')"
+                    decoration-danger="decision_recommendation == 'reject'"/>
+                <field name="decision_attention_level" widget="badge" optional="show"
+                    decoration-success="decision_attention_level == 'low'"
+                    decoration-warning="decision_attention_level in ('medium', 'high')"
+                    decoration-danger="decision_attention_level == 'blocked'"/>
+                <field name="risk_level" widget="badge"
+                    decoration-success="risk_level == 'low'"
+                    decoration-warning="risk_level == 'medium'"
+                    decoration-danger="risk_level == 'high'"/>
+                <field name="state" widget="badge"
+                    decoration-muted="state == 'draft'"
+                    decoration-info="state in ('submitted','under_review')"
+                    decoration-warning="state in ('returned','to_pay','awaiting_report')"
+                    decoration-success="state in ('approved','paid','closed')"
+                    decoration-danger="state == 'rejected'"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- ── Kanban View ────────────────────────────────────────────────────── -->
+    <record id="view_support_request_kanban" model="ir.ui.view">
+        <field name="name">ministry.support.request.kanban</field>
+        <field name="model">ministry.support.request</field>
+        <field name="arch" type="xml">
+            <kanban default_group_by="state" class="o_kanban_small_column">
+                <field name="name"/>
+                <field name="federation_id"/>
+                <field name="support_item_id"/>
+                <field name="requested_amount"/>
+                <field name="eligible_amount"/>
+                <field name="approved_amount"/>
+                <field name="risk_level"/>
+                <field name="risk_score"/>
+                <field name="state"/>
+                <field name="category"/>
+                <field name="decision_recommendation"/>
+                <field name="decision_attention_level"/>
+                <templates>
+                    <t t-name="card">
+                        <div class="o_kanban_record_top">
+                            <span class="fw-bold"><field name="name"/></span>
+                            <span t-attf-class="badge_risk_{{ record.risk_level.raw_value }} float-end">
+                                <field name="risk_level"/>
+                            </span>
+                        </div>
+                        <div class="o_kanban_record_body">
+                            <div><b>Federation:</b> <field name="federation_id"/></div>
+                            <div><b>Item:</b> <field name="support_item_id"/></div>
+                            <div class="mt-1">
+                                <b>Requested:</b>
+                                <span class="text-primary fw-bold">
+                                    <field name="requested_amount" widget="monetary"/> AED
+                                </span>
+                            </div>
+                            <t t-if="record.eligible_amount.value > 0">
+                                <div>
+                                    <b>Eligible:</b>
+                                    <field name="eligible_amount" widget="monetary"/> AED
+                                </div>
+                            </t>
+                            <div class="mt-1">
+                                <b>Decision:</b> <field name="decision_recommendation"/>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <!-- ── Form View ──────────────────────────────────────────────────────── -->
+    <record id="view_support_request_form" model="ir.ui.view">
+        <field name="name">ministry.support.request.form</field>
+        <field name="model">ministry.support.request</field>
+        <field name="arch" type="xml">
+            <form string="Support Request">
+                <header>
+                    <button name="action_submit" string="Submit" type="object"
+                        class="btn-primary"
+                        invisible="state != 'draft'"/>
+                    <button name="action_review" string="Take Under Review" type="object"
+                        class="btn-primary"
+                        invisible="state not in ('submitted', 'returned')"
+                        groups="kaz_ai_ministry_branding.group_ministry_officer_technical,kaz_ai_ministry_branding.group_ministry_officer_financial"/>
+                    <button name="action_approve" string="Approve" type="object"
+                        class="btn-success"
+                        invisible="state != 'under_review'"
+                        groups="kaz_ai_ministry_branding.group_ministry_dept_head,kaz_ai_ministry_branding.group_ministry_manager"/>
+                    <button name="action_register_payment" string="Register Payment" type="object"
+                        class="btn-primary"
+                        invisible="state not in ('approved', 'to_pay')"/>
+                    <button name="action_mark_awaiting_report" string="Mark Awaiting Report" type="object"
+                        invisible="state != 'paid' or category != 'activity'"
+                        groups="kaz_ai_ministry_branding.group_ministry_officer_technical"/>
+                    <button name="action_close" string="Close Request" type="object"
+                        class="btn-success"
+                        invisible="state not in ('paid', 'awaiting_report')"/>
+                    <button name="action_return" string="Return to Federation" type="object"
+                        invisible="state not in ('submitted', 'under_review')"
+                        groups="kaz_ai_ministry_branding.group_ministry_officer_technical,kaz_ai_ministry_branding.group_ministry_officer_financial"/>
+                    <button name="action_reject" string="Reject" type="object"
+                        class="btn-danger"
+                        invisible="state not in ('submitted', 'under_review', 'returned')"
+                        groups="kaz_ai_ministry_branding.group_ministry_dept_head"/>
+                    <button name="action_reset_to_draft" string="Reset to Draft" type="object"
+                        invisible="state != 'returned'"/>
+                    <button name="action_recalculate_decision" string="Recalculate Decision" type="object"
+                        invisible="state in ('rejected', 'paid', 'closed')"/>
+                    <button name="action_set_approved_to_eligible" string="Use Eligible Amount" type="object"
+                        class="btn-secondary"
+                        invisible="state not in ('draft', 'submitted', 'under_review', 'returned')"/>
+                    <field name="state" widget="statusbar"
+                        statusbar_visible="draft,submitted,under_review,approved,to_pay,paid,closed"/>
+                </header>
+                <sheet>
+                    <!-- Smart Buttons -->
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_open_vendor_bill" type="object"
+                            class="oe_stat_button" icon="fa-money"
+                            invisible="not vendor_bill_id">
+                            <div class="o_stat_info">
+                                <span class="o_stat_text">Vendor Bill</span>
+                            </div>
+                        </button>
+                        <button class="oe_stat_button" icon="fa-paperclip" type="object"
+                            name="action_get_attachment_view">
+                            <field name="attachment_count" widget="statinfo" string="Documents"/>
+                        </button>
+                    </div>
+
+                    <!-- Decision Cockpit -->
+                    <group string="Decision Cockpit">
+                        <group>
+                            <field name="decision_recommendation" widget="badge"
+                                decoration-success="decision_recommendation == 'approve'"
+                                decoration-info="decision_recommendation == 'approve_eligible'"
+                                decoration-warning="decision_recommendation in ('review', 'return')"
+                                decoration-danger="decision_recommendation == 'reject'"/>
+                            <field name="decision_attention_level" widget="badge"
+                                decoration-success="decision_attention_level == 'low'"
+                                decoration-warning="decision_attention_level in ('medium', 'high')"
+                                decoration-danger="decision_attention_level == 'blocked'"/>
+                            <field name="federation_status" widget="badge"
+                                decoration-success="federation_status == 'active'"
+                                decoration-danger="federation_status == 'suspended'"/>
+                            <field name="decision_blocked" readonly="1"/>
+                        </group>
+                        <group>
+                            <field name="requested_over_eligible" readonly="1"/>
+                            <field name="requested_over_eligible_pct" readonly="1"/>
+                            <field name="support_item_calc_method" readonly="1"/>
+                            <field name="support_item_max_limit" readonly="1"/>
+                        </group>
+                        <field name="decision_summary" nolabel="1" readonly="1"/>
+                    </group>
+
+                    <!-- Computed Panel -->
+                    <div class="ministry_computed_panel row g-0 mb-3">
+                        <div class="col-3 ministry_panel_kpi border-end py-2 px-3">
+                            <div class="kpi_label">Requested</div>
+                            <div class="kpi_value">
+                                <field name="requested_amount" widget="monetary" nolabel="1"/> AED
+                            </div>
+                        </div>
+                        <div class="col-3 ministry_panel_kpi border-end py-2 px-3">
+                            <div class="kpi_label">Eligible</div>
+                            <div class="kpi_value text-success">
+                                <field name="eligible_amount" widget="monetary" nolabel="1"/> AED
+                            </div>
+                        </div>
+                        <div class="col-3 ministry_panel_kpi border-end py-2 px-3">
+                            <div class="kpi_label">Approved</div>
+                            <div class="kpi_value" style="color: var(--ministry-gold)">
+                                <field name="approved_amount" widget="monetary" nolabel="1"/> AED
+                            </div>
+                        </div>
+                        <div class="col-3 ministry_panel_kpi py-2 px-3">
+                            <div class="kpi_label">YoY Variance</div>
+                            <div class="kpi_value">
+                                <field name="variance_pct" nolabel="1"/>%
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="oe_title">
+                        <h1><field name="name" readonly="1"/></h1>
+                    </div>
+
+                    <group>
+                        <field name="vendor_bill_id" invisible="1"/>
+                        <group string="Request Details">
+                            <field name="federation_id"/>
+                            <field name="support_item_id"/>
+                            <field name="category" readonly="1"/>
+                            <field name="fiscal_year"/>
+                        </group>
+                        <group string="Amounts &amp; Risk">
+                            <field name="requested_amount"/>
+                            <field name="participants_count"/>
+                            <field name="eligible_amount" readonly="1"/>
+                            <field name="approved_amount"/>
+                            <field name="net_payable" readonly="1"/>
+                            <field name="risk_level" widget="badge"
+                                decoration-success="risk_level == 'low'"
+                                decoration-warning="risk_level == 'medium'"
+                                decoration-danger="risk_level == 'high'"/>
+                            <field name="risk_score"/>
+                            <field name="variance_pct"/>
+                        </group>
+                    </group>
+
+                    <group string="Activity Details">
+                        <group>
+                            <field name="event_name"/>
+                            <field name="event_date_start"/>
+                            <field name="event_date_end"/>
+                            <field name="location"/>
+                        </group>
+                        <group>
+                            <field name="reviewed_by" readonly="1"/>
+                            <field name="review_date" readonly="1"/>
+                            <field name="approved_by" readonly="1"/>
+                            <field name="approval_date" readonly="1"/>
+                        </group>
+                    </group>
+
+                    <group string="Description">
+                        <field name="description" nolabel="1"/>
+                    </group>
+
+                    <group string="Return / Rejection">
+                        <field name="return_reason" nolabel="1"/>
+                    </group>
+
+                    <group string="Attachments">
+                        <field name="attachment_ids" widget="many2many_binary" nolabel="1"/>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <!-- ── Graph View ─────────────────────────────────────────────────────── -->
+    <record id="view_support_request_graph" model="ir.ui.view">
+        <field name="name">ministry.support.request.graph</field>
+        <field name="model">ministry.support.request</field>
+        <field name="arch" type="xml">
+            <graph string="Support Requests" type="bar">
+                <field name="federation_id" type="row"/>
+                <field name="approved_amount" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
+    <!-- ── Pivot View ─────────────────────────────────────────────────────── -->
+    <record id="view_support_request_pivot" model="ir.ui.view">
+        <field name="name">ministry.support.request.pivot</field>
+        <field name="model">ministry.support.request</field>
+        <field name="arch" type="xml">
+            <pivot string="Support Analysis">
+                <field name="federation_id" type="row"/>
+                <field name="category" type="col"/>
+                <field name="approved_amount" type="measure"/>
+                <field name="eligible_amount" type="measure"/>
+                <field name="requested_amount" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+
+    <!-- ── Search View ────────────────────────────────────────────────────── -->
+    <record id="view_support_request_search" model="ir.ui.view">
+        <field name="name">ministry.support.request.search</field>
+        <field name="model">ministry.support.request</field>
+        <field name="arch" type="xml">
+            <search string="Support Requests">
+                <field name="name" string="Reference"/>
+                <field name="federation_id"/>
+                <field name="support_item_id"/>
+                <field name="fiscal_year"/>
+                <separator/>
+                <filter name="to_review" string="To Review"
+                    domain="[('state', '=', 'submitted')]"/>
+                <filter name="under_review" string="Under Review"
+                    domain="[('state', '=', 'under_review')]"/>
+                <filter name="to_approve" string="To Approve"
+                    domain="[('state', '=', 'under_review')]"/>
+                <filter name="to_pay" string="To Pay"
+                    domain="[('state', '=', 'to_pay')]"/>
+                <filter name="awaiting_report" string="Awaiting Reports"
+                    domain="[('state', '=', 'awaiting_report')]"/>
+                <filter name="high_risk" string="High Risk"
+                    domain="[('risk_level', '=', 'high')]"/>
+                <filter name="decision_review" string="Decision Review Needed"
+                    domain="[('decision_recommendation', 'in', ['review', 'return', 'reject'])]"/>
+                <filter name="approve_eligible" string="Approve Eligible Only"
+                    domain="[('decision_recommendation', '=', 'approve_eligible')]"/>
+                <separator/>
+                <filter name="operational" string="Operational"
+                    domain="[('category', '=', 'operational')]"/>
+                <filter name="technical" string="Technical"
+                    domain="[('category', '=', 'technical')]"/>
+                <filter name="general" string="General Financial"
+                    domain="[('category', '=', 'general')]"/>
+                <filter name="activity" string="Activity"
+                    domain="[('category', '=', 'activity')]"/>
+                <group>
+                    <filter name="grp_federation" string="Federation" context="{'group_by': 'federation_id'}"/>
+                    <filter name="grp_category" string="Category" context="{'group_by': 'category'}"/>
+                    <filter name="grp_state" string="Status" context="{'group_by': 'state'}"/>
+                    <filter name="grp_year" string="Fiscal Year" context="{'group_by': 'fiscal_year'}"/>
+                    <filter name="grp_risk" string="Risk Level" context="{'group_by': 'risk_level'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- ── Window Action ──────────────────────────────────────────────────── -->
+    <record id="action_ministry_support_request" model="ir.actions.act_window">
+        <field name="name">Support Requests</field>
+        <field name="res_model">ministry.support.request</field>
+        <field name="view_mode">kanban,list,form,graph,pivot</field>
+        <field name="view_ids" eval="[
+            (5, 0, 0),
+            (0, 0, {'view_mode': 'kanban', 'view_id': ref('view_support_request_kanban')}),
+            (0, 0, {'view_mode': 'list',   'view_id': ref('view_support_request_list')}),
+            (0, 0, {'view_mode': 'form',   'view_id': ref('view_support_request_form')}),
+            (0, 0, {'view_mode': 'graph',  'view_id': ref('view_support_request_graph')}),
+            (0, 0, {'view_mode': 'pivot',  'view_id': ref('view_support_request_pivot')}),
+        ]"/>
+        <field name="search_view_id" ref="view_support_request_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">No support requests yet</p>
+            <p>Federations submit requests through the portal or Ministry staff create them here.</p>
+        </field>
+    </record>
+
+    <!-- Pending Deductions Action -->
+    <record id="action_ministry_pending_deductions" model="ir.actions.act_window">
+        <field name="name">Pending Deductions</field>
+        <field name="res_model">ministry.pending.deduction</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[('state', '=', 'pending')]</field>
+    </record>
+
+</odoo>

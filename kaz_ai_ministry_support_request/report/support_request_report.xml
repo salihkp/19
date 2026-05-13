@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_report_support_request" model="ir.actions.report">
+        <field name="name">Support Request</field>
+        <field name="model">ministry.support.request</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kaz_ai_ministry_support_request.report_support_request_document</field>
+        <field name="report_file">kaz_ai_ministry_support_request.report_support_request_document</field>
+        <field name="binding_model_id" ref="kaz_ai_ministry_support_request.model_ministry_support_request"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <template id="report_support_request_document">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <div class="row mb-4">
+                            <div class="col-8">
+                                <h2 style="color: #8B6F2A; border-bottom: 2px solid #8B6F2A; padding-bottom: 6px;">
+                                    Support Request — <t t-esc="doc.name"/>
+                                </h2>
+                            </div>
+                            <div class="col-4 text-end">
+                                <span t-attf-class="badge text-bg-{{ doc.state == 'approved' and 'success' or doc.state == 'rejected' and 'danger' or 'warning' }}">
+                                    <t t-esc="dict(doc._fields['state'].selection).get(doc.state)"/>
+                                </span>
+                            </div>
+                        </div>
+
+                        <table class="table table-sm table-bordered">
+                            <tr>
+                                <th class="w-25" style="background-color: #f8f5ee;">Federation</th>
+                                <td><t t-esc="doc.federation_id.name"/></td>
+                                <th style="background-color: #f8f5ee;">Fiscal Year</th>
+                                <td><t t-esc="doc.fiscal_year"/></td>
+                            </tr>
+                            <tr>
+                                <th style="background-color: #f8f5ee;">Support Item</th>
+                                <td><t t-esc="doc.support_item_id.name"/></td>
+                                <th style="background-color: #f8f5ee;">Category</th>
+                                <td><t t-esc="{'operational': 'Operational', 'technical': 'Technical', 'general': 'General', 'activity': 'Activity'}.get(doc.category, doc.category or '')"/></td>
+                            </tr>
+                            <tr>
+                                <th style="background-color: #f8f5ee;">Requested (AED)</th>
+                                <td><t t-esc="'{:,.2f}'.format(doc.requested_amount)"/></td>
+                                <th style="background-color: #f8f5ee;">Eligible (AED)</th>
+                                <td><t t-esc="'{:,.2f}'.format(doc.eligible_amount)"/></td>
+                            </tr>
+                            <tr>
+                                <th style="background-color: #f8f5ee;">Approved (AED)</th>
+                                <td class="fw-bold" style="color: #8B6F2A;">
+                                    <t t-esc="'{:,.2f}'.format(doc.approved_amount)"/>
+                                </td>
+                                <th style="background-color: #f8f5ee;">Net Payable (AED)</th>
+                                <td><t t-esc="'{:,.2f}'.format(doc.net_payable)"/></td>
+                            </tr>
+                            <tr t-if="doc.event_name">
+                                <th style="background-color: #f8f5ee;">Event</th>
+                                <td><t t-esc="doc.event_name"/></td>
+                                <th style="background-color: #f8f5ee;">Location</th>
+                                <td><t t-esc="doc.location or ''"/></td>
+                            </tr>
+                        </table>
+
+                        <t t-if="doc.description">
+                            <h4 style="color: #8B6F2A; margin-top: 16px;">Description</h4>
+                            <p><t t-esc="doc.description"/></p>
+                        </t>
+
+                        <t t-if="doc.approved_by">
+                            <div class="row mt-4">
+                                <div class="col-6">
+                                    <p><b>Approved By:</b> <t t-esc="doc.approved_by.name"/></p>
+                                    <p><b>Approval Date:</b>
+                                        <t t-esc="doc.approval_date.strftime('%d/%m/%Y') if doc.approval_date else ''"/>
+                                    </p>
+                                </div>
+                                <div class="col-6 text-end">
+                                    <div style="border-top: 1px solid #8B6F2A; margin-top: 40px; padding-top: 4px; color: #8B6F2A; font-size: 11px;">
+                                        Authorised Signature
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>

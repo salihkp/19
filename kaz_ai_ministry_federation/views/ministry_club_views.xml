@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_ministry_club_list" model="ir.ui.view">
+        <field name="name">ministry.club.list</field>
+        <field name="model">ministry.club</field>
+        <field name="arch" type="xml">
+            <list string="Clubs">
+                <field name="name"/>
+                <field name="federation_id"/>
+                <field name="city"/>
+                <field name="active" column_invisible="True"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_ministry_club_form" model="ir.ui.view">
+        <field name="name">ministry.club.form</field>
+        <field name="model">ministry.club</field>
+        <field name="arch" type="xml">
+            <form string="Club">
+                <sheet>
+                    <div class="oe_title">
+                        <h1><field name="name"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="federation_id"/>
+                            <field name="city"/>
+                        </group>
+                        <group>
+                            <field name="active"/>
+                        </group>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_ministry_club" model="ir.actions.act_window">
+        <field name="name">Clubs</field>
+        <field name="res_model">ministry.club</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">No clubs registered yet</p>
+            <p>Register affiliated clubs under each federation.</p>
+        </field>
+    </record>
+
+</odoo>

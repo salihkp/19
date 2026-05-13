@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- Operational Groups -->
+        <record id="grp_salaries" model="ministry.support.group">
+            <field name="name">Salaries &amp; End of Service</field>
+            <field name="category">operational</field>
+            <field name="sequence">10</field>
+        </record>
+        <record id="grp_facilities" model="ministry.support.group">
+            <field name="name">Facilities &amp; Utilities</field>
+            <field name="category">operational</field>
+            <field name="sequence">20</field>
+        </record>
+        <record id="grp_op_other" model="ministry.support.group">
+            <field name="name">Other Operational</field>
+            <field name="category">operational</field>
+            <field name="sequence">30</field>
+        </record>
+
+        <!-- Technical Groups -->
+        <record id="grp_coaching" model="ministry.support.group">
+            <field name="name">Coaching &amp; Officials</field>
+            <field name="category">technical</field>
+            <field name="sequence">10</field>
+        </record>
+        <record id="grp_games" model="ministry.support.group">
+            <field name="name">Games &amp; Clubs Support</field>
+            <field name="category">technical</field>
+            <field name="sequence">20</field>
+        </record>
+
+        <!-- General Financial Groups -->
+        <record id="grp_procurement" model="ministry.support.group">
+            <field name="name">Procurement &amp; Memberships</field>
+            <field name="category">general</field>
+            <field name="sequence">10</field>
+        </record>
+        <record id="grp_gen_other" model="ministry.support.group">
+            <field name="name">General Operations</field>
+            <field name="category">general</field>
+            <field name="sequence">20</field>
+        </record>
+
+        <!-- Activity Groups -->
+        <record id="grp_camps" model="ministry.support.group">
+            <field name="name">Camps &amp; Training</field>
+            <field name="category">activity</field>
+            <field name="sequence">10</field>
+        </record>
+        <record id="grp_participations" model="ministry.support.group">
+            <field name="name">Championship Participations</field>
+            <field name="category">activity</field>
+            <field name="sequence">20</field>
+        </record>
+
+    </data>
+</odoo>

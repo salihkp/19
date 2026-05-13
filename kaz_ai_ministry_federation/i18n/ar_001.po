@@ -1,0 +1,652 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kaz_ai_ministry_federation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Language: ar_001\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_ministry_club__message_needaction
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_ministry_sport__message_needaction
+msgid "Action Needed"
+msgstr "إجراء مطلوب"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_ministry_club__active
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_federation.selection__res_partner__federation_status__active
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_federation.view_ministry_federation_search
+msgid "Active"
+msgstr "نشط"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_ministry_club__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_ministry_club__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "تنسيق استثناء النشاط"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_ministry_club__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_ministry_club__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "أيقونة نوع النشاط"
+
+#. module: kaz_ai_ministry_federation
+#: model_terms:ir.actions.act_window,help:kaz_ai_ministry_federation.action_ministry_federation
+msgid "Add sports federations to begin managing their financial support."
+msgstr "أضف الاتحادات الرياضية لبدء إدارة دعمها المالي."
+
+#. module: kaz_ai_ministry_federation
+#: model_terms:ir.actions.act_window,help:kaz_ai_ministry_federation.action_ministry_sport
+msgid "Add the sports that federations in this system govern."
+msgstr "أضف الرياضات التي تديرها الاتحادات في النظام."
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model,name:kaz_ai_ministry_federation.model_ministry_club
+msgid "Affiliated Club"
+msgstr "النادي المنتسب"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_res_partner__affiliated_clubs_ids
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_res_users__affiliated_clubs_ids
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_federation.view_ministry_federation_form
+msgid "Affiliated Clubs"
+msgstr "الأندية المنتسبة"
+
+#. module: kaz_ai_ministry_federation
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_federation.view_ministry_federation_form
+msgid "Approved This Year (AED)"
+msgstr "المعتمد هذا العام (درهم)"
+
+#. module: kaz_ai_ministry_federation
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_federation.view_ministry_federation_form
+msgid "Approved YTD"
+msgstr "المعتمد منذ بداية العام"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_res_partner__approved_ytd_amount
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_res_users__approved_ytd_amount
+msgid "Approved YTD (AED)"
+msgstr "المعتمد منذ بداية العام (درهم)"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_ministry_club__message_attachment_count
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_ministry_sport__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.ui.menu,name:kaz_ai_ministry_federation.menu_ministry_championships
+msgid "Championships"
+msgstr "البطولات"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_ministry_club__city
+msgid "City"
+msgstr "المدينة"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,help:kaz_ai_ministry_federation.field_ministry_club__city
+msgid "City where the club is based."
+msgstr "المدينة التي يقع فيها النادي."
+
+#. module: kaz_ai_ministry_federation
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_federation.view_ministry_federation_form
+msgid "Classification"
+msgstr "التصنيف"
+
+#. module: kaz_ai_ministry_federation
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_federation.view_ministry_club_form
+msgid "Club"
+msgstr "النادي"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_ministry_club__name
+msgid "Club Name"
+msgstr "اسم النادي"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.actions.act_window,name:kaz_ai_ministry_federation.action_ministry_club
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_res_partner__affiliated_clubs_count
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_res_users__affiliated_clubs_count
+#: model:ir.ui.menu,name:kaz_ai_ministry_federation.menu_ministry_club_list
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_federation.view_ministry_club_list
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_federation.view_ministry_federation_form
+msgid "Clubs"
+msgstr "الأندية"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_ministry_sport__code
+msgid "Code"
+msgstr "الرمز"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_ministry_club__company_id
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_ministry_sport__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.ui.menu,name:kaz_ai_ministry_federation.menu_ministry_config
+msgid "Configuration"
+msgstr "الإعدادات"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model,name:kaz_ai_ministry_federation.model_res_partner
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_federation.view_ministry_federation_form
+msgid "Contact"
+msgstr "جهة الاتصال"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_ministry_club__create_uid
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_ministry_sport__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_ministry_club__create_date
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_ministry_sport__create_date
+msgid "Created on"
+msgstr "تاريخ الإنشاء"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_ministry_club__display_name
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_ministry_sport__display_name
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_res_partner__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_ministry_club__federation_id
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_federation.view_ministry_federation_form
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_federation.view_ministry_federation_search
+msgid "Federation"
+msgstr "الاتحاد"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_res_partner__federation_status
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_res_users__federation_status
+msgid "Federation Status"
+msgstr "حالة الاتحاد"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.actions.act_window,name:kaz_ai_ministry_federation.action_ministry_federation
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_ministry_sport__federation_count
+#: model:ir.ui.menu,name:kaz_ai_ministry_federation.menu_ministry_federation_list
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_federation.view_ministry_federation_list
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_federation.view_ministry_federation_search
+msgid "Federations"
+msgstr "الاتحادات"
+
+#. module: kaz_ai_ministry_federation
+#. odoo-python
+#: code:addons/kaz_ai_ministry_federation/models/res_partner.py:0
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_res_partner__female_players_count
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_res_users__female_players_count
+msgid "Female Players"
+msgstr "اللاعبات"
+
+#. module: kaz_ai_ministry_federation
+#. odoo-python
+#: code:addons/kaz_ai_ministry_federation/models/res_partner.py:0
+msgid "Female players cannot exceed total registered players."
+msgstr "لا يمكن أن يتجاوز عدد اللاعبات إجمالي اللاعبين المسجلين."
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_ministry_club__message_follower_ids
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_ministry_sport__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_ministry_club__message_partner_ids
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_ministry_sport__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,help:kaz_ai_ministry_federation.field_ministry_club__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "أيقونة Font Awesome مثل fa-tasks"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,help:kaz_ai_ministry_federation.field_ministry_club__name
+msgid "Full official name of the affiliated club."
+msgstr "الاسم الرسمي الكامل للنادي المنتسب."
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_ministry_club__has_message
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_ministry_sport__has_message
+msgid "Has Message"
+msgstr "لديه رسالة"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_federation.selection__res_partner__risk_level__high
+msgid "High"
+msgstr "مرتفع"
+
+#. module: kaz_ai_ministry_federation
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_federation.view_ministry_federation_search
+msgid "High Risk"
+msgstr "مخاطر مرتفعة"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_ministry_club__id
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_ministry_sport__id
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_res_partner__id
+msgid "ID"
+msgstr "المعرّف"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_ministry_club__activity_exception_icon
+msgid "Icon"
+msgstr "الأيقونة"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,help:kaz_ai_ministry_federation.field_ministry_club__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "أيقونة للإشارة إلى نشاط استثنائي."
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,help:kaz_ai_ministry_federation.field_ministry_club__message_needaction
+#: model:ir.model.fields,help:kaz_ai_ministry_federation.field_ministry_sport__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "إذا كان محدداً، توجد رسائل جديدة تتطلب انتباهك."
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,help:kaz_ai_ministry_federation.field_ministry_club__message_has_error
+#: model:ir.model.fields,help:kaz_ai_ministry_federation.field_ministry_club__message_has_sms_error
+#: model:ir.model.fields,help:kaz_ai_ministry_federation.field_ministry_sport__message_has_error
+#: model:ir.model.fields,help:kaz_ai_ministry_federation.field_ministry_sport__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا كان محدداً، توجد رسائل بها خطأ في التسليم."
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_federation.selection__res_partner__sport_type__individual
+msgid "Individual"
+msgstr "فردية"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_res_partner__inspection_count
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_res_users__inspection_count
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_federation.view_ministry_federation_form
+msgid "Inspections"
+msgstr "التفتيشات"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_res_partner__is_federation
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_res_users__is_federation
+msgid "Is Federation"
+msgstr "اتحاد رياضي"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_ministry_club__message_is_follower
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_ministry_sport__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: kaz_ai_ministry_federation
+#. odoo-python
+#: code:addons/kaz_ai_ministry_federation/models/res_partner.py:0
+msgid "Junior Players"
+msgstr "اللاعبون الناشئون"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_res_partner__junior_players_count
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_res_users__junior_players_count
+msgid "Junior Players (U18)"
+msgstr "اللاعبون الناشئون (أقل من 18)"
+
+#. module: kaz_ai_ministry_federation
+#. odoo-python
+#: code:addons/kaz_ai_ministry_federation/models/res_partner.py:0
+msgid "Junior players cannot exceed total registered players."
+msgstr "لا يمكن أن يتجاوز عدد اللاعبين الناشئين إجمالي اللاعبين المسجلين."
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_ministry_club__write_uid
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_ministry_sport__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_ministry_club__write_date
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_ministry_sport__write_date
+msgid "Last Updated on"
+msgstr "تاريخ آخر تحديث"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_federation.selection__res_partner__risk_level__low
+msgid "Low"
+msgstr "منخفض"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_res_partner__male_players_count
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_res_users__male_players_count
+msgid "Male Players"
+msgstr "اللاعبون الذكور"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.ui.menu,name:kaz_ai_ministry_federation.menu_ministry_federations
+msgid "Master Data"
+msgstr "البيانات الرئيسية"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_federation.selection__res_partner__risk_level__medium
+msgid "Medium"
+msgstr "متوسط"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_ministry_club__message_has_error
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_ministry_sport__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسالة"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_ministry_club__message_ids
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_ministry_sport__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.ui.menu,name:kaz_ai_ministry_federation.menu_ministry_root
+msgid "Ministry Support Hub"
+msgstr "منصة دعم الوزارة"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.ui.menu,name:kaz_ai_ministry_federation.menu_ministry_monitoring
+msgid "Monitoring"
+msgstr "المتابعة"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_ministry_club__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "الموعد النهائي لنشاطي"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_ministry_club__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "حدث النشاط التالي في التقويم"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_ministry_club__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_ministry_club__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_ministry_club__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: kaz_ai_ministry_federation
+#: model_terms:ir.actions.act_window,help:kaz_ai_ministry_federation.action_ministry_club
+msgid "No clubs registered yet"
+msgstr "لا توجد أندية مسجلة بعد"
+
+#. module: kaz_ai_ministry_federation
+#: model_terms:ir.actions.act_window,help:kaz_ai_ministry_federation.action_ministry_federation
+msgid "No federations registered yet"
+msgstr "لا توجد اتحادات مسجلة بعد"
+
+#. module: kaz_ai_ministry_federation
+#: model_terms:ir.actions.act_window,help:kaz_ai_ministry_federation.action_ministry_sport
+msgid "No sports defined yet"
+msgstr "لا توجد رياضات معرفة بعد"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_federation.selection__res_partner__olympic_classification__non_olympic
+msgid "Non-Olympic"
+msgstr "غير أولمبي"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_ministry_club__message_needaction_counter
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_ministry_sport__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_ministry_club__message_has_error_counter
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_ministry_sport__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الأخطاء"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,help:kaz_ai_ministry_federation.field_ministry_club__message_needaction_counter
+#: model:ir.model.fields,help:kaz_ai_ministry_federation.field_ministry_sport__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "عدد الرسائل التي تتطلب إجراءً"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,help:kaz_ai_ministry_federation.field_ministry_club__message_has_error_counter
+#: model:ir.model.fields,help:kaz_ai_ministry_federation.field_ministry_sport__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل التي بها خطأ في التسليم"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_federation.selection__res_partner__olympic_classification__olympic
+msgid "Olympic"
+msgstr "أولمبي"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_res_partner__olympic_classification
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_res_users__olympic_classification
+msgid "Olympic Classification"
+msgstr "التصنيف الأولمبي"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_ministry_sport__is_olympic
+msgid "Olympic Sport"
+msgstr "رياضة أولمبية"
+
+#. module: kaz_ai_ministry_federation
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_federation.view_ministry_federation_search
+msgid "Olympic Sports"
+msgstr "الرياضات الأولمبية"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.ui.menu,name:kaz_ai_ministry_federation.menu_ministry_operations
+msgid "Operations"
+msgstr "العمليات"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.ui.menu,name:kaz_ai_ministry_federation.menu_ministry_planning
+msgid "Planning"
+msgstr "التخطيط"
+
+#. module: kaz_ai_ministry_federation
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_federation.view_ministry_federation_form
+msgid "Player Statistics"
+msgstr "إحصاءات اللاعبين"
+
+#. module: kaz_ai_ministry_federation
+#. odoo-python
+#: code:addons/kaz_ai_ministry_federation/models/res_partner.py:0
+msgid "Player statistics cannot contain negative values: %(fields)s."
+msgstr "لا يمكن أن تحتوي إحصاءات اللاعبين على قيم سالبة: %(fields)s."
+
+#. module: kaz_ai_ministry_federation
+#: model_terms:ir.actions.act_window,help:kaz_ai_ministry_federation.action_ministry_club
+msgid "Register affiliated clubs under each federation."
+msgstr "سجل الأندية المنتسبة تحت كل اتحاد."
+
+#. module: kaz_ai_ministry_federation
+#. odoo-python
+#: code:addons/kaz_ai_ministry_federation/models/res_partner.py:0
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_res_partner__registered_players_count
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_res_users__registered_players_count
+msgid "Registered Players"
+msgstr "اللاعبون المسجلون"
+
+#. module: kaz_ai_ministry_federation
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_federation.view_ministry_federation_form
+msgid "Requests"
+msgstr "الطلبات"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_ministry_club__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_res_partner__risk_level
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_res_users__risk_level
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_federation.view_ministry_federation_search
+msgid "Risk Level"
+msgstr "مستوى المخاطر"
+
+#. module: kaz_ai_ministry_federation
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_federation.view_ministry_federation_form
+msgid "Risk Profile"
+msgstr "ملف المخاطر"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_res_partner__risk_score
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_res_users__risk_score
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_federation.view_ministry_federation_list
+msgid "Risk Score"
+msgstr "درجة المخاطر"
+
+#. module: kaz_ai_ministry_federation
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_federation.view_ministry_federation_kanban
+msgid "Risk:"
+msgstr "المخاطر:"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_ministry_club__message_has_sms_error
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_ministry_sport__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل النصية"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_res_partner__senior_players_count
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_res_users__senior_players_count
+msgid "Senior Players"
+msgstr "اللاعبون الكبار"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model,name:kaz_ai_ministry_federation.model_ministry_sport
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_res_partner__sport_id
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_res_users__sport_id
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_federation.view_ministry_federation_search
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_federation.view_ministry_sport_form
+msgid "Sport"
+msgstr "الرياضة"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_ministry_sport__name
+msgid "Sport Name"
+msgstr "اسم الرياضة"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_res_partner__sport_type
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_res_users__sport_type
+msgid "Sport Type"
+msgstr "نوع الرياضة"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.actions.act_window,name:kaz_ai_ministry_federation.action_ministry_sport
+#: model:ir.ui.menu,name:kaz_ai_ministry_federation.menu_ministry_sport_list
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_federation.view_ministry_sport_list
+msgid "Sports"
+msgstr "الرياضات"
+
+#. module: kaz_ai_ministry_federation
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_federation.view_ministry_federation_search
+msgid "Status"
+msgstr "الحالة"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,help:kaz_ai_ministry_federation.field_ministry_club__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr "الحالة حسب الأنشطة\nمتأخر: تم تجاوز تاريخ الاستحقاق\nاليوم: تاريخ النشاط هو اليوم\nمخطط: أنشطة مستقبلية."
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_res_partner__support_request_count
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_res_users__support_request_count
+msgid "Support Requests"
+msgstr "طلبات الدعم"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_federation.selection__res_partner__federation_status__suspended
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_federation.view_ministry_federation_search
+msgid "Suspended"
+msgstr "موقوف"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_res_partner__suspension_reason
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_res_users__suspension_reason
+msgid "Suspension Reason"
+msgstr "سبب الإيقاف"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_federation.selection__res_partner__sport_type__team
+msgid "Team"
+msgstr "جماعية"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,help:kaz_ai_ministry_federation.field_ministry_club__federation_id
+msgid "The parent federation this club is affiliated with."
+msgstr "الاتحاد التابع له هذا النادي."
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,help:kaz_ai_ministry_federation.field_res_partner__sport_id
+#: model:ir.model.fields,help:kaz_ai_ministry_federation.field_res_users__sport_id
+msgid "The sport this federation governs."
+msgstr "الرياضة التي يديرها هذا الاتحاد."
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,help:kaz_ai_ministry_federation.field_res_partner__approved_ytd_amount
+#: model:ir.model.fields,help:kaz_ai_ministry_federation.field_res_users__approved_ytd_amount
+msgid "Total approved support amount for the current fiscal year."
+msgstr "إجمالي مبلغ الدعم المعتمد للسنة المالية الحالية."
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,help:kaz_ai_ministry_federation.field_res_partner__affiliated_clubs_count
+#: model:ir.model.fields,help:kaz_ai_ministry_federation.field_res_users__affiliated_clubs_count
+msgid "Total number of affiliated clubs."
+msgstr "إجمالي عدد الأندية المنتسبة."
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,help:kaz_ai_ministry_federation.field_res_partner__registered_players_count
+#: model:ir.model.fields,help:kaz_ai_ministry_federation.field_res_users__registered_players_count
+msgid "Total number of registered players under this federation."
+msgstr "إجمالي عدد اللاعبين المسجلين لدى هذا الاتحاد."
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,help:kaz_ai_ministry_federation.field_res_partner__support_request_count
+#: model:ir.model.fields,help:kaz_ai_ministry_federation.field_res_users__support_request_count
+msgid "Total support requests submitted by this federation."
+msgstr "إجمالي طلبات الدعم المقدمة من هذا الاتحاد."
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_ministry_club__website_message_ids
+#: model:ir.model.fields,field_description:kaz_ai_ministry_federation.field_ministry_sport__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: kaz_ai_ministry_federation
+#: model:ir.model.fields,help:kaz_ai_ministry_federation.field_ministry_club__website_message_ids
+#: model:ir.model.fields,help:kaz_ai_ministry_federation.field_ministry_sport__website_message_ids
+msgid "Website communication history"
+msgstr "سجل مراسلات الموقع"

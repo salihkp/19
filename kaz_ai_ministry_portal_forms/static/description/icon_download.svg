@@ -1,0 +1,15 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="128" height="128" rx="16" fill="#8B6F2A"/>
+  <!-- Document body -->
+  <rect x="30" y="18" width="58" height="72" rx="6" fill="white" opacity="0.9"/>
+  <!-- Folded corner -->
+  <path d="M72 18 L88 34 L72 34 Z" fill="#8B6F2A" opacity="0.4"/>
+  <path d="M72 18 L88 34 L72 34" stroke="white" stroke-width="1.5" fill="none"/>
+  <!-- Document lines -->
+  <path d="M42 50 L68 50" stroke="#8B6F2A" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+  <path d="M42 60 L76 60" stroke="#8B6F2A" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+  <!-- Download arrow -->
+  <circle cx="90" cy="94" r="22" fill="#C8102E"/>
+  <path d="M90 82 L90 100" stroke="white" stroke-width="4" stroke-linecap="round"/>
+  <path d="M80 96 L90 106 L100 96" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>

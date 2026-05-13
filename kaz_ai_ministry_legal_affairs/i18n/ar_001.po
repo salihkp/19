@@ -1,0 +1,640 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kaz_ai_ministry_legal_affairs
+#
+msgid ""
+msgstr "Project-Id-Version: Odoo Server 19.0\\nReport-Msgid-Bugs-To: \\nPOT-Creation-Date: 2026-05-13 00:00+0000\\nPO-Revision-Date: 2026-05-13 00:00+0000\\nLast-Translator: Kaizen AI <support@kaizenae.com>\\nLanguage-Team: Arabic\\nLanguage: ar_001\\nMIME-Version: 1.0\\nContent-Type: text/plain; charset=UTF-8\\nContent-Transfer-Encoding: 8bit\\nPlural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\\n"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_legal_affairs.view_legal_action_form
+msgid "<span class=\"o_stat_text\">Pending Deduction</span>"
+msgstr "<span class=\"o_stat_text\">خصم معلق</span>"
+
+#. module: kaz_ai_ministry_legal_affairs
+#. odoo-python
+#: code:addons/kaz_ai_ministry_legal_affairs/models/ministry_legal_action.py:0
+msgid "A financial deduction action must have a positive deduction amount."
+msgstr "يجب أن يكون لإجراء الخصم المالي مبلغ خصم موجب."
+
+#. module: kaz_ai_ministry_legal_affairs
+#. odoo-python
+#: code:addons/kaz_ai_ministry_legal_affairs/models/ministry_legal_action.py:0
+msgid "A pending deduction of %(amount)s AED has been queued."
+msgstr "تمت إضافة خصم معلق بقيمة %(amount)s درهم إلى قائمة الانتظار."
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_legal_affairs.view_legal_action_form
+msgid "Action Details"
+msgstr "تفاصيل الإجراء"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,field_description:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__message_needaction
+msgid "Action Needed"
+msgstr "إجراء مطلوب"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,field_description:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__action_type
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_legal_affairs.view_legal_action_search
+msgid "Action Type"
+msgstr "نوع الإجراء"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,field_description:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,field_description:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "تنسيق استثناء النشاط"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,field_description:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,field_description:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "أيقونة نوع النشاط"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,help:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__deduction_amount
+msgid "Amount to be deducted from future support payments. Required when action type is Deduction."
+msgstr "المبلغ المطلوب خصمه من دفعات الدعم المستقبلية. مطلوب عندما يكون نوع الإجراء خصما."
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_legal_affairs.selection__ministry_legal_action__state__applied
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_legal_affairs.view_legal_action_search
+msgid "Applied"
+msgstr "مطبق"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_legal_affairs.view_legal_action_form
+msgid "Apply"
+msgstr "تطبيق"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,field_description:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_legal_affairs.view_legal_action_form
+msgid "Close"
+msgstr "إغلاق"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_legal_affairs.selection__ministry_legal_action__state__closed
+msgid "Closed"
+msgstr "مغلق"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,field_description:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,help:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__company_id
+msgid "Company context for this legal action."
+msgstr "سياق الشركة لهذا الإجراء القانوني."
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,field_description:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,field_description:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__create_date
+msgid "Created on"
+msgstr "تاريخ الإنشاء"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,field_description:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,help:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__currency_id
+msgid "Currency for the deduction amount."
+msgstr "عملة مبلغ الخصم."
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,help:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__effective_date
+msgid "Date from which the action takes effect (e.g., suspension start date)."
+msgstr "التاريخ الذي يسري منه الإجراء، مثل تاريخ بدء الإيقاف."
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,help:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__issue_date
+msgid "Date on which this action was officially issued."
+msgstr "التاريخ الذي صدر فيه هذا الإجراء رسميا."
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,field_description:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__decision_text
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_legal_affairs.view_legal_action_form
+msgid "Decision Text"
+msgstr "نص القرار"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_legal_affairs.view_legal_action_list
+msgid "Deduction (AED)"
+msgstr "الخصم (درهم)"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,field_description:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__deduction_amount
+msgid "Deduction Amount (AED)"
+msgstr "مبلغ الخصم (درهم)"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,field_description:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__deduction_reason
+msgid "Deduction Reason"
+msgstr "سبب الخصم"
+
+#. module: kaz_ai_ministry_legal_affairs
+#. odoo-python
+#: code:addons/kaz_ai_ministry_legal_affairs/models/ministry_legal_action.py:0
+msgid "Deduction per legal action %(name)s"
+msgstr "خصم بموجب الإجراء القانوني %(name)s"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_legal_affairs.view_legal_action_search
+msgid "Deductions"
+msgstr "الخصومات"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,field_description:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__display_name
+#: model:ir.model.fields,field_description:kaz_ai_ministry_legal_affairs.field_ministry_pending_deduction__display_name
+#: model:ir.model.fields,field_description:kaz_ai_ministry_legal_affairs.field_ministry_violation__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_legal_affairs.selection__ministry_legal_action__state__draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,field_description:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__effective_date
+msgid "Effective Date"
+msgstr "تاريخ السريان"
+
+#. module: kaz_ai_ministry_legal_affairs
+#. odoo-python
+#: code:addons/kaz_ai_ministry_legal_affairs/models/ministry_legal_action.py:0
+msgid "Effective date: %(date)s."
+msgstr "تاريخ السريان: %(date)s."
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,field_description:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__federation_id
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_legal_affairs.view_legal_action_search
+msgid "Federation"
+msgstr "الاتحاد"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model,name:kaz_ai_ministry_legal_affairs.model_ministry_legal_action
+msgid "Federation Legal Action"
+msgstr "إجراء قانوني للاتحاد"
+
+#. module: kaz_ai_ministry_legal_affairs
+#. odoo-python
+#: code:addons/kaz_ai_ministry_legal_affairs/models/ministry_legal_action.py:0
+msgid "Federation suspended by legal action %(action)s."
+msgstr "تم إيقاف الاتحاد بموجب الإجراء القانوني %(action)s."
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_legal_affairs.selection__ministry_legal_action__action_type__deduction
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_legal_affairs.view_legal_action_form
+msgid "Financial Deduction"
+msgstr "خصم مالي"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,field_description:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,field_description:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,help:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "أيقونة Font Awesome مثل fa-tasks"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,help:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__decision_text
+msgid "Full text of the legal decision, warning notice, or suspension order."
+msgstr "النص الكامل للقرار القانوني أو إشعار الإنذار أو أمر الإيقاف."
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,field_description:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__has_message
+msgid "Has Message"
+msgstr "توجد رسالة"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,field_description:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__id
+#: model:ir.model.fields,field_description:kaz_ai_ministry_legal_affairs.field_ministry_pending_deduction__id
+#: model:ir.model.fields,field_description:kaz_ai_ministry_legal_affairs.field_ministry_violation__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,field_description:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__activity_exception_icon
+msgid "Icon"
+msgstr "الأيقونة"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,help:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "أيقونة للإشارة إلى نشاط استثنائي."
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,help:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "عند التحديد، توجد رسائل جديدة تتطلب انتباهك."
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,help:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__message_has_error
+#: model:ir.model.fields,help:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "عند التحديد، توجد رسائل بها خطأ في التسليم."
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model,name:kaz_ai_ministry_legal_affairs.model_ministry_violation
+msgid "Inspection Violation"
+msgstr "مخالفة التفتيش"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,help:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__inspection_id
+msgid "Inspection that triggered this legal action, if applicable."
+msgstr "التفتيش الذي أدى إلى هذا الإجراء القانوني إن وجد."
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,field_description:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_legal_affairs.view_legal_action_form
+msgid "Issue"
+msgstr "إصدار"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,field_description:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__issue_date
+msgid "Issue Date"
+msgstr "تاريخ الإصدار"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_legal_affairs.selection__ministry_legal_action__state__issued
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_legal_affairs.view_legal_action_search
+msgid "Issued"
+msgstr "صادر"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,field_description:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__issued_by
+msgid "Issued By"
+msgstr "صادر بواسطة"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,field_description:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,field_description:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__write_date
+msgid "Last Updated on"
+msgstr "تاريخ آخر تحديث"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,field_description:kaz_ai_ministry_legal_affairs.field_ministry_pending_deduction__legal_action_id
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_legal_affairs.view_legal_action_form
+msgid "Legal Action"
+msgstr "إجراء قانوني"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,field_description:kaz_ai_ministry_legal_affairs.field_ministry_violation__legal_action_count
+msgid "Legal Action Count"
+msgstr "عدد الإجراءات القانونية"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.actions.act_window,name:kaz_ai_ministry_legal_affairs.action_ministry_legal_action
+#: model:ir.model.fields,field_description:kaz_ai_ministry_legal_affairs.field_ministry_violation__legal_action_ids
+#: model:ir.ui.menu,name:kaz_ai_ministry_legal_affairs.menu_ministry_legal_actions
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_legal_affairs.view_legal_action_list
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_legal_affairs.view_legal_action_search
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_legal_affairs.view_violation_form_legal_ext
+msgid "Legal Actions"
+msgstr "الإجراءات القانونية"
+
+#. module: kaz_ai_ministry_legal_affairs
+#. odoo-python
+#: code:addons/kaz_ai_ministry_legal_affairs/models/ministry_violation_ext.py:0
+msgid "Legal Actions — %s"
+msgstr "الإجراءات القانونية - %s"
+
+#. module: kaz_ai_ministry_legal_affairs
+#. odoo-python
+#: code:addons/kaz_ai_ministry_legal_affairs/models/ministry_legal_action.py:0
+msgid "Legal action %(name)s applied a suspension."
+msgstr "طبق الإجراء القانوني %(name)s إيقافا."
+
+#. module: kaz_ai_ministry_legal_affairs
+#. odoo-python
+#: code:addons/kaz_ai_ministry_legal_affairs/models/ministry_legal_action.py:0
+msgid "Legal action %(name)s applied. %(extra)s"
+msgstr "تم تطبيق الإجراء القانوني %(name)s. %(extra)s"
+
+#. module: kaz_ai_ministry_legal_affairs
+#. odoo-python
+#: code:addons/kaz_ai_ministry_legal_affairs/models/ministry_legal_action.py:0
+msgid "Legal action %(name)s closed."
+msgstr "تم إغلاق الإجراء القانوني %(name)s."
+
+#. module: kaz_ai_ministry_legal_affairs
+#. odoo-python
+#: code:addons/kaz_ai_ministry_legal_affairs/models/ministry_legal_action.py:0
+msgid "Legal action %(name)s issued against %(fed)s. Type: %(type)s."
+msgstr "صدر الإجراء القانوني %(name)s بحق %(fed)s. النوع: %(type)s."
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model_terms:ir.actions.act_window,help:kaz_ai_ministry_legal_affairs.action_ministry_legal_action
+msgid "Legal actions are issued against federations following inspection violations or compliance failures."
+msgstr "تصدر الإجراءات القانونية بحق الاتحادات بعد مخالفات التفتيش أو حالات عدم الامتثال."
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,help:kaz_ai_ministry_legal_affairs.field_ministry_violation__legal_action_ids
+msgid "Legal actions initiated as a result of this violation."
+msgstr "الإجراءات القانونية التي بدأت نتيجة لهذه المخالفة."
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,help:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__state
+msgid "Lifecycle state of the legal action."
+msgstr "حالة دورة حياة الإجراء القانوني."
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,field_description:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسالة"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,field_description:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,help:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__issued_by
+msgid "Ministry officer who issued this action."
+msgstr "موظف الوزارة الذي أصدر هذا الإجراء."
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_legal_affairs.view_legal_action_search
+msgid "Month"
+msgstr "الشهر"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,field_description:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "الموعد النهائي لنشاطي"
+
+#. module: kaz_ai_ministry_legal_affairs
+#. odoo-python
+#: code:addons/kaz_ai_ministry_legal_affairs/models/ministry_legal_action.py:0
+msgid "New"
+msgstr "جديد"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,field_description:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "حدث التقويم للنشاط التالي"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,field_description:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,field_description:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,field_description:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model_terms:ir.actions.act_window,help:kaz_ai_ministry_legal_affairs.action_ministry_legal_action
+msgid "No legal actions recorded"
+msgstr "لا توجد إجراءات قانونية مسجلة"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,field_description:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,field_description:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الأخطاء"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,help:kaz_ai_ministry_legal_affairs.field_ministry_violation__legal_action_count
+msgid "Number of legal actions linked to this violation."
+msgstr "عدد الإجراءات القانونية المرتبطة بهذه المخالفة."
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,help:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,help:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل التي بها خطأ تسليم"
+
+#. module: kaz_ai_ministry_legal_affairs
+#. odoo-python
+#: code:addons/kaz_ai_ministry_legal_affairs/models/ministry_legal_action.py:0
+msgid "Only draft actions can be issued."
+msgstr "لا يمكن إصدار إلا الإجراءات في حالة المسودة."
+
+#. module: kaz_ai_ministry_legal_affairs
+#. odoo-python
+#: code:addons/kaz_ai_ministry_legal_affairs/models/ministry_legal_action.py:0
+msgid "Only issued actions can be applied."
+msgstr "لا يمكن تطبيق إلا الإجراءات الصادرة."
+
+#. module: kaz_ai_ministry_legal_affairs
+#. odoo-python
+#: code:addons/kaz_ai_ministry_legal_affairs/models/ministry_legal_action.py:0
+msgid "Only issued actions can be reset to draft."
+msgstr "لا يمكن إعادة إلا الإجراءات الصادرة إلى مسودة."
+
+#. module: kaz_ai_ministry_legal_affairs
+#. odoo-python
+#: code:addons/kaz_ai_ministry_legal_affairs/models/ministry_legal_action.py:0
+msgid "Only issued or applied actions can be closed."
+msgstr "لا يمكن إغلاق إلا الإجراءات الصادرة أو المطبقة."
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_legal_affairs.view_legal_action_search
+msgid "Open"
+msgstr "مفتوح"
+
+#. module: kaz_ai_ministry_legal_affairs
+#. odoo-python
+#: code:addons/kaz_ai_ministry_legal_affairs/models/ministry_legal_action.py:0
+#: model:ir.model,name:kaz_ai_ministry_legal_affairs.model_ministry_pending_deduction
+#: model:ir.model.fields,field_description:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__pending_deduction_id
+msgid "Pending Deduction"
+msgstr "خصم معلق"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,help:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__pending_deduction_id
+msgid "Pending deduction record created when this action is applied."
+msgstr "سجل الخصم المعلق الذي ينشأ عند تطبيق هذا الإجراء."
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,field_description:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__name
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_legal_affairs.view_legal_action_search
+msgid "Reference"
+msgstr "المرجع"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,field_description:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__inspection_id
+msgid "Related Inspection"
+msgstr "التفتيش المرتبط"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_legal_affairs.view_legal_action_form
+msgid "Related Records"
+msgstr "السجلات المرتبطة"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,field_description:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__violation_id
+msgid "Related Violation"
+msgstr "المخالفة المرتبطة"
+
+#. module: kaz_ai_ministry_legal_affairs
+#. odoo-python
+#: code:addons/kaz_ai_ministry_legal_affairs/models/ministry_legal_action.py:0
+msgid "Related violation: %(violation)s."
+msgstr "المخالفة المرتبطة: %(violation)s."
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_legal_affairs.view_legal_action_form
+msgid "Reset to Draft"
+msgstr "إرجاع إلى مسودة"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,field_description:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,field_description:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل النصية"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,help:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__deduction_reason
+msgid "Short reason for the financial deduction, recorded on the pending deduction."
+msgstr "سبب مختصر للخصم المالي يسجل في الخصم المعلق."
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,help:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__violation_id
+msgid "Specific violation that prompted this action."
+msgstr "المخالفة المحددة التي أدت إلى هذا الإجراء."
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,field_description:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__state
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_legal_affairs.view_legal_action_search
+msgid "Status"
+msgstr "الحالة"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,help:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"الحالة بناء على الأنشطة\n"
+"متأخر: تجاوز تاريخ الاستحقاق\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"مخطط: أنشطة مستقبلية."
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_legal_affairs.selection__ministry_legal_action__action_type__suspension
+msgid "Suspension"
+msgstr "إيقاف"
+
+#. module: kaz_ai_ministry_legal_affairs
+#. odoo-python
+#: code:addons/kaz_ai_ministry_legal_affairs/models/ministry_legal_action.py:0
+msgid "Suspension lifted after closing legal action %(action)s."
+msgstr "تم رفع الإيقاف بعد إغلاق الإجراء القانوني %(action)s."
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_legal_affairs.view_legal_action_search
+msgid "Suspensions"
+msgstr "الإيقافات"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,help:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__federation_id
+msgid "The federation against which this action is issued."
+msgstr "الاتحاد الذي صدر بحقه هذا الإجراء."
+
+#. module: kaz_ai_ministry_legal_affairs
+#. odoo-python
+#: code:addons/kaz_ai_ministry_legal_affairs/models/ministry_legal_action.py:0
+msgid "The federation has been marked as Suspended."
+msgstr "تم وضع علامة موقوف على الاتحاد."
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,help:kaz_ai_ministry_legal_affairs.field_ministry_pending_deduction__legal_action_id
+msgid "The legal action that created this deduction."
+msgstr "الإجراء القانوني الذي أنشأ هذا الخصم."
+
+#. module: kaz_ai_ministry_legal_affairs
+#. odoo-python
+#: code:addons/kaz_ai_ministry_legal_affairs/models/ministry_legal_action.py:0
+msgid "The warning has been recorded."
+msgstr "تم تسجيل الإنذار."
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,help:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__action_type
+msgid "Type of legal or administrative action being taken."
+msgstr "نوع الإجراء القانوني أو الإداري المتخذ."
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,help:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع النشاط الاستثنائي في السجل."
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,help:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__name
+msgid "Unique legal action reference, auto-generated on creation."
+msgstr "مرجع إجراء قانوني فريد يتم إنشاؤه تلقائيا عند الإنشاء."
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_legal_affairs.selection__ministry_legal_action__action_type__warning
+msgid "Warning Letter"
+msgstr "خطاب إنذار"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_legal_affairs.view_legal_action_search
+msgid "Warnings"
+msgstr "الإنذارات"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,field_description:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: kaz_ai_ministry_legal_affairs
+#: model:ir.model.fields,help:kaz_ai_ministry_legal_affairs.field_ministry_legal_action__website_message_ids
+msgid "Website communication history"
+msgstr "سجل التواصل عبر الموقع"

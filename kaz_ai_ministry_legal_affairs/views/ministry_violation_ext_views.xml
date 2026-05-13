@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Inject legal action stat button into the violation form view -->
+    <record id="view_violation_form_legal_ext" model="ir.ui.view">
+        <field name="name">ministry.violation.form.legal.ext</field>
+        <field name="model">ministry.violation</field>
+        <field name="inherit_id" ref="kaz_ai_ministry_inspection.view_violation_form"/>
+        <field name="arch" type="xml">
+            <div name="button_box" position="inside">
+                <button name="action_open_legal_actions" type="object"
+                    class="oe_stat_button" icon="fa-gavel">
+                    <field name="legal_action_count" widget="statinfo" string="Legal Actions"/>
+                </button>
+            </div>
+        </field>
+    </record>
+
+
+</odoo>

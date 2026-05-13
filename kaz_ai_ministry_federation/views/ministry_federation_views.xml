@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Federation List View -->
+    <record id="view_ministry_federation_list" model="ir.ui.view">
+        <field name="name">ministry.federation.list</field>
+        <field name="model">res.partner</field>
+        <field name="arch" type="xml">
+            <list string="Federations" default_order="name">
+                <field name="name"/>
+                <field name="sport_id"/>
+                <field name="sport_type"/>
+                <field name="olympic_classification"/>
+                <field name="federation_status"
+                    decoration-success="federation_status == 'active'"
+                    decoration-danger="federation_status == 'suspended'"
+                    widget="badge"/>
+                <field name="risk_level"
+                    decoration-success="risk_level == 'low'"
+                    decoration-warning="risk_level == 'medium'"
+                    decoration-danger="risk_level == 'high'"
+                    widget="badge"/>
+                <field name="risk_score" string="Risk Score"/>
+                <field name="registered_players_count"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Federation Kanban View -->
+    <record id="view_ministry_federation_kanban" model="ir.ui.view">
+        <field name="name">ministry.federation.kanban</field>
+        <field name="model">res.partner</field>
+        <field name="arch" type="xml">
+            <kanban default_group_by="risk_level" class="o_kanban_small_column">
+                <field name="name"/>
+                <field name="sport_id"/>
+                <field name="federation_status"/>
+                <field name="risk_level"/>
+                <field name="risk_score"/>
+                <field name="registered_players_count"/>
+                <field name="support_request_count"/>
+                <templates>
+                    <t t-name="card">
+                        <div t-attf-class="ministry_card_{{ record.risk_level.raw_value }}">
+                            <div class="o_kanban_record_top">
+                                <strong><field name="name"/></strong>
+                                <span t-attf-class="badge_risk_{{ record.risk_level.raw_value }} float-end">
+                                    <field name="risk_level"/>
+                                </span>
+                            </div>
+                            <div class="o_kanban_record_body">
+                                <div><b>Sport:</b> <field name="sport_id"/></div>
+                                <div><b>Players:</b> <field name="registered_players_count"/></div>
+                                <div><b>Requests:</b> <field name="support_request_count"/></div>
+                            </div>
+                            <div class="o_kanban_record_bottom">
+                                <span t-attf-class="badge text-bg-{{ record.federation_status.raw_value == 'active' and 'success' or 'danger' }}">
+                                    <field name="federation_status"/>
+                                </span>
+                                <span class="float-end text-muted">Risk: <field name="risk_score"/>%</span>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <!-- Federation Form View -->
+    <record id="view_ministry_federation_form" model="ir.ui.view">
+        <field name="name">ministry.federation.form</field>
+        <field name="model">res.partner</field>
+        <field name="arch" type="xml">
+            <form string="Federation">
+                <header>
+                    <field name="federation_status" widget="statusbar"
+                        statusbar_visible="active,suspended"/>
+                </header>
+                <sheet>
+                    <!-- Smart Buttons -->
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_open_support_requests"
+                            type="object"
+                            class="oe_stat_button"
+                            icon="fa-file-text-o">
+                            <field name="support_request_count" widget="statinfo" string="Requests"/>
+                        </button>
+                        <button name="action_open_inspections"
+                            type="object"
+                            class="oe_stat_button"
+                            icon="fa-search">
+                            <field name="inspection_count" widget="statinfo" string="Inspections"/>
+                        </button>
+                        <button name="action_open_clubs"
+                            type="object"
+                            class="oe_stat_button"
+                            icon="fa-users">
+                            <field name="affiliated_clubs_count" widget="statinfo" string="Clubs"/>
+                        </button>
+                    </div>
+
+                    <div class="oe_title">
+                        <h1><field name="name"/></h1>
+                    </div>
+
+                    <group>
+                        <group string="Classification">
+                            <field name="is_federation"/>
+                            <field name="sport_id"/>
+                            <field name="sport_type"/>
+                            <field name="olympic_classification"/>
+                        </group>
+                        <group string="Risk Profile">
+                            <field name="risk_score"/>
+                            <field name="risk_level" widget="badge"
+                                decoration-success="risk_level == 'low'"
+                                decoration-warning="risk_level == 'medium'"
+                                decoration-danger="risk_level == 'high'"/>
+                            <field name="federation_status"/>
+                            <field name="suspension_reason"/>
+                        </group>
+                    </group>
+
+                    <group string="Player Statistics">
+                        <group>
+                            <field name="registered_players_count"/>
+                            <field name="male_players_count" readonly="1"/>
+                            <field name="female_players_count"/>
+                        </group>
+                        <group>
+                            <field name="junior_players_count"/>
+                            <field name="senior_players_count" readonly="1"/>
+                        </group>
+                    </group>
+
+                    <group string="Contact">
+                        <group>
+                            <field name="email"/>
+                            <field name="phone"/>
+                        </group>
+                        <group>
+                            <field name="city"/>
+                            <field name="country_id"/>
+                        </group>
+                    </group>
+
+                    <notebook>
+                        <page string="Affiliated Clubs" name="clubs">
+                            <field name="affiliated_clubs_ids" context="{'default_federation_id': id}">
+                                <list editable="bottom">
+                                    <field name="name"/>
+                                    <field name="city"/>
+                                    <field name="active"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Approved YTD" name="ytd">
+                            <group>
+                                <field name="approved_ytd_amount" string="Approved This Year (AED)"
+                                    widget="monetary"
+                                    options="{'currency_field': 'currency_id'}"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <!-- Federation Search View -->
+    <record id="view_ministry_federation_search" model="ir.ui.view">
+        <field name="name">ministry.federation.search</field>
+        <field name="model">res.partner</field>
+        <field name="arch" type="xml">
+            <search string="Federations">
+                <field name="name" string="Federation"/>
+                <field name="sport_id"/>
+                <separator/>
+                <filter name="active_federations" string="Active"
+                    domain="[('federation_status', '=', 'active')]"/>
+                <filter name="suspended_federations" string="Suspended"
+                    domain="[('federation_status', '=', 'suspended')]"/>
+                <separator/>
+                <filter name="olympic" string="Olympic Sports"
+                    domain="[('olympic_classification', '=', 'olympic')]"/>
+                <filter name="high_risk" string="High Risk"
+                    domain="[('risk_level', '=', 'high')]"/>
+                <group>
+                    <filter name="group_sport" string="Sport" context="{'group_by': 'sport_id'}"/>
+                    <filter name="group_risk" string="Risk Level" context="{'group_by': 'risk_level'}"/>
+                    <filter name="group_status" string="Status" context="{'group_by': 'federation_status'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Federation Window Action -->
+    <record id="action_ministry_federation" model="ir.actions.act_window">
+        <field name="name">Federations</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">kanban,list,form</field>
+        <field name="domain">[('is_federation', '=', True)]</field>
+        <field name="context">{'default_is_federation': True}</field>
+        <field name="view_ids" eval="[
+            (5, 0, 0),
+            (0, 0, {'view_mode': 'kanban', 'view_id': ref('view_ministry_federation_kanban')}),
+            (0, 0, {'view_mode': 'list',   'view_id': ref('view_ministry_federation_list')}),
+            (0, 0, {'view_mode': 'form',   'view_id': ref('view_ministry_federation_form')}),
+        ]"/>
+        <field name="search_view_id" ref="view_ministry_federation_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">No federations registered yet</p>
+            <p>Add sports federations to begin managing their financial support.</p>
+        </field>
+    </record>
+
+    <!-- Smart button actions (pass-through — resolved in support_request module) -->
+</odoo>

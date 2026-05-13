@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Ministry PDF report layout overrides the standard Odoo external layout. -->
+        <template id="ministry_report_layout">
+            <div class="header ministry_report_header">
+                <div class="row ministry_header_row">
+                    <div class="col-3 ministry_logo_col">
+                        <img src="/kaz_ai_ministry_branding/static/src/img/ministry_of_sports_logo.png" alt="Ministry of Sports" style="height:72px;width:auto;"/>
+                    </div>
+                    <div class="col-6 text-center ministry_title_col">
+                        <div class="ministry_report_title_en">Ministry of Sports</div>
+                        <div class="ministry_report_title_ar">وزارة الرياضة</div>
+                        <div class="ministry_report_subtitle">Department of Sports Support and Development</div>
+                    </div>
+                    <div class="col-3 text-end ministry_meta_col">
+                        <div class="ministry_report_date">
+                            Date: <t t-esc="datetime.datetime.now().strftime('%d/%m/%Y')"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="ministry_header_gold_band"/>
+            </div>
+        </template>
+
+        <!-- Ministry Report Footer -->
+        <template id="ministry_report_footer">
+            <div class="footer ministry_report_footer">
+                <div class="ministry_footer_gold_band"/>
+                <div class="row">
+                    <div class="col-8 ministry_footer_text">
+                        © 2026 Ministry of Sports - Department of Sports Support and Development
+                    </div>
+                    <div class="col-4 text-end ministry_footer_page">
+                        Page: <span class="page"/> / <span class="topage"/>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <!-- Override standard external layout to use Ministry branding -->
+        <template id="ministry_external_layout" inherit_id="web.external_layout_standard" priority="100">
+            <xpath expr="//div[contains(@t-attf-class, 'header')]" position="replace">
+                <t t-call="kaz_ai_ministry_branding.ministry_report_layout"/>
+            </xpath>
+            <xpath expr="//div[contains(@t-attf-class, 'footer')]" position="replace">
+                <t t-call="kaz_ai_ministry_branding.ministry_report_footer"/>
+            </xpath>
+        </template>
+
+    </data>
+</odoo>

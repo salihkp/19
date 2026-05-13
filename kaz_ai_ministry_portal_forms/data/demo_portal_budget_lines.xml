@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="par_football_world_cup_budget_fees" model="ministry.championship.participation.budget.line">
+            <field name="participation_id" ref="par_football_world_cup"/>
+            <field name="sequence">10</field>
+            <field name="expense_group">fees</field>
+            <field name="description">رسوم التسجيل لكامل الوفد</field>
+            <field name="quantity">1</field>
+            <field name="unit_amount">20000.00</field>
+        </record>
+        <record id="par_football_world_cup_budget_tickets" model="ministry.championship.participation.budget.line">
+            <field name="participation_id" ref="par_football_world_cup"/>
+            <field name="sequence">20</field>
+            <field name="expense_group">travel_tickets</field>
+            <field name="description">تذاكر السفر للاعبين والإداريين</field>
+            <field name="quantity">31</field>
+            <field name="unit_amount">3500.00</field>
+        </record>
+        <record id="par_football_world_cup_budget_accommodation" model="ministry.championship.participation.budget.line">
+            <field name="participation_id" ref="par_football_world_cup"/>
+            <field name="sequence">30</field>
+            <field name="expense_group">accommodation_meals</field>
+            <field name="description">الإقامة والإعاشة للوفد</field>
+            <field name="quantity">31</field>
+            <field name="unit_amount">7000.00</field>
+        </record>
+        <record id="par_football_world_cup_budget_pocket" model="ministry.championship.participation.budget.line">
+            <field name="participation_id" ref="par_football_world_cup"/>
+            <field name="sequence">40</field>
+            <field name="expense_group">pocket_money</field>
+            <field name="description">مصروف الجيب للوفد</field>
+            <field name="quantity">31</field>
+            <field name="unit_amount">2500.00</field>
+        </record>
+        <record id="par_football_world_cup_budget_other" model="ministry.championship.participation.budget.line">
+            <field name="participation_id" ref="par_football_world_cup"/>
+            <field name="sequence">50</field>
+            <field name="expense_group">other_expenses</field>
+            <field name="description">ألبسة ومصاريف احتياطية</field>
+            <field name="quantity">1</field>
+            <field name="unit_amount">57000.00</field>
+        </record>
+
+        <record id="par_football_u23_budget_fees" model="ministry.championship.participation.budget.line">
+            <field name="participation_id" ref="par_football_u23"/>
+            <field name="sequence">10</field>
+            <field name="expense_group">fees</field>
+            <field name="description">رسوم التسجيل لكامل الوفد</field>
+            <field name="quantity">1</field>
+            <field name="unit_amount">15000.00</field>
+        </record>
+        <record id="par_football_u23_budget_tickets" model="ministry.championship.participation.budget.line">
+            <field name="participation_id" ref="par_football_u23"/>
+            <field name="sequence">20</field>
+            <field name="expense_group">travel_tickets</field>
+            <field name="description">تذاكر السفر للوفد</field>
+            <field name="quantity">26</field>
+            <field name="unit_amount">3200.00</field>
+        </record>
+        <record id="par_football_u23_budget_accommodation" model="ministry.championship.participation.budget.line">
+            <field name="participation_id" ref="par_football_u23"/>
+            <field name="sequence">30</field>
+            <field name="expense_group">accommodation_meals</field>
+            <field name="description">الإقامة والإعاشة</field>
+            <field name="quantity">26</field>
+            <field name="unit_amount">6500.00</field>
+        </record>
+        <record id="par_football_u23_budget_pocket" model="ministry.championship.participation.budget.line">
+            <field name="participation_id" ref="par_football_u23"/>
+            <field name="sequence">40</field>
+            <field name="expense_group">pocket_money</field>
+            <field name="description">مصروف الجيب</field>
+            <field name="quantity">26</field>
+            <field name="unit_amount">2000.00</field>
+        </record>
+        <record id="par_football_u23_budget_other" model="ministry.championship.participation.budget.line">
+            <field name="participation_id" ref="par_football_u23"/>
+            <field name="sequence">50</field>
+            <field name="expense_group">other_expenses</field>
+            <field name="description">مصاريف أخرى واحتياطية</field>
+            <field name="quantity">1</field>
+            <field name="unit_amount">30800.00</field>
+        </record>
+
+        <record id="par_athletics_worlds_budget_fees" model="ministry.championship.participation.budget.line">
+            <field name="participation_id" ref="par_athletics_worlds"/>
+            <field name="sequence">10</field>
+            <field name="expense_group">fees</field>
+            <field name="description">رسوم التسجيل لكامل الوفد</field>
+            <field name="quantity">1</field>
+            <field name="unit_amount">25000.00</field>
+        </record>
+        <record id="par_athletics_worlds_budget_tickets" model="ministry.championship.participation.budget.line">
+            <field name="participation_id" ref="par_athletics_worlds"/>
+            <field name="sequence">20</field>
+            <field name="expense_group">travel_tickets</field>
+            <field name="description">تذاكر السفر للوفد</field>
+            <field name="quantity">16</field>
+            <field name="unit_amount">4500.00</field>
+        </record>
+        <record id="par_athletics_worlds_budget_accommodation" model="ministry.championship.participation.budget.line">
+            <field name="participation_id" ref="par_athletics_worlds"/>
+            <field name="sequence">30</field>
+            <field name="expense_group">accommodation_meals</field>
+            <field name="description">الإقامة والإعاشة</field>
+            <field name="quantity">16</field>
+            <field name="unit_amount">15000.00</field>
+        </record>
+        <record id="par_athletics_worlds_budget_pocket" model="ministry.championship.participation.budget.line">
+            <field name="participation_id" ref="par_athletics_worlds"/>
+            <field name="sequence">40</field>
+            <field name="expense_group">pocket_money</field>
+            <field name="description">مصروف الجيب</field>
+            <field name="quantity">16</field>
+            <field name="unit_amount">4000.00</field>
+        </record>
+        <record id="par_athletics_worlds_budget_other" model="ministry.championship.participation.budget.line">
+            <field name="participation_id" ref="par_athletics_worlds"/>
+            <field name="sequence">50</field>
+            <field name="expense_group">other_expenses</field>
+            <field name="description">ألبسة ومصاريف طبية واحتياطية</field>
+            <field name="quantity">1</field>
+            <field name="unit_amount">99000.00</field>
+        </record>
+
+        <record id="par_athletics_arab_budget_fees" model="ministry.championship.participation.budget.line">
+            <field name="participation_id" ref="par_athletics_arab"/>
+            <field name="sequence">10</field>
+            <field name="expense_group">fees</field>
+            <field name="description">رسوم التسجيل لكامل الوفد</field>
+            <field name="quantity">1</field>
+            <field name="unit_amount">10000.00</field>
+        </record>
+        <record id="par_athletics_arab_budget_tickets" model="ministry.championship.participation.budget.line">
+            <field name="participation_id" ref="par_athletics_arab"/>
+            <field name="sequence">20</field>
+            <field name="expense_group">travel_tickets</field>
+            <field name="description">تذاكر السفر للوفد</field>
+            <field name="quantity">23</field>
+            <field name="unit_amount">1800.00</field>
+        </record>
+        <record id="par_athletics_arab_budget_accommodation" model="ministry.championship.participation.budget.line">
+            <field name="participation_id" ref="par_athletics_arab"/>
+            <field name="sequence">30</field>
+            <field name="expense_group">accommodation_meals</field>
+            <field name="description">الإقامة والإعاشة</field>
+            <field name="quantity">23</field>
+            <field name="unit_amount">1800.00</field>
+        </record>
+        <record id="par_athletics_arab_budget_pocket" model="ministry.championship.participation.budget.line">
+            <field name="participation_id" ref="par_athletics_arab"/>
+            <field name="sequence">40</field>
+            <field name="expense_group">pocket_money</field>
+            <field name="description">مصروف الجيب</field>
+            <field name="quantity">23</field>
+            <field name="unit_amount">800.00</field>
+        </record>
+        <record id="par_athletics_arab_budget_other" model="ministry.championship.participation.budget.line">
+            <field name="participation_id" ref="par_athletics_arab"/>
+            <field name="sequence">50</field>
+            <field name="expense_group">other_expenses</field>
+            <field name="description">مصاريف أخرى</field>
+            <field name="quantity">1</field>
+            <field name="unit_amount">8800.00</field>
+        </record>
+
+        <record id="par_chess_worlds_budget_fees" model="ministry.championship.participation.budget.line">
+            <field name="participation_id" ref="par_chess_worlds"/>
+            <field name="sequence">10</field>
+            <field name="expense_group">fees</field>
+            <field name="description">رسوم التسجيل لكامل الوفد</field>
+            <field name="quantity">1</field>
+            <field name="unit_amount">10000.00</field>
+        </record>
+        <record id="par_chess_worlds_budget_tickets" model="ministry.championship.participation.budget.line">
+            <field name="participation_id" ref="par_chess_worlds"/>
+            <field name="sequence">20</field>
+            <field name="expense_group">travel_tickets</field>
+            <field name="description">تذاكر السفر للوفد</field>
+            <field name="quantity">5</field>
+            <field name="unit_amount">4500.00</field>
+        </record>
+        <record id="par_chess_worlds_budget_accommodation" model="ministry.championship.participation.budget.line">
+            <field name="participation_id" ref="par_chess_worlds"/>
+            <field name="sequence">30</field>
+            <field name="expense_group">accommodation_meals</field>
+            <field name="description">الإقامة والإعاشة</field>
+            <field name="quantity">5</field>
+            <field name="unit_amount">6500.00</field>
+        </record>
+        <record id="par_chess_worlds_budget_pocket" model="ministry.championship.participation.budget.line">
+            <field name="participation_id" ref="par_chess_worlds"/>
+            <field name="sequence">40</field>
+            <field name="expense_group">pocket_money</field>
+            <field name="description">مصروف الجيب</field>
+            <field name="quantity">5</field>
+            <field name="unit_amount">2500.00</field>
+        </record>
+        <record id="par_chess_worlds_budget_other" model="ministry.championship.participation.budget.line">
+            <field name="participation_id" ref="par_chess_worlds"/>
+            <field name="sequence">50</field>
+            <field name="expense_group">other_expenses</field>
+            <field name="description">مصاريف أخرى</field>
+            <field name="quantity">1</field>
+            <field name="unit_amount">17500.00</field>
+        </record>
+
+        <record id="par_chess_arab_budget_fees" model="ministry.championship.participation.budget.line">
+            <field name="participation_id" ref="par_chess_arab"/>
+            <field name="sequence">10</field>
+            <field name="expense_group">fees</field>
+            <field name="description">رسوم التسجيل لكامل الوفد</field>
+            <field name="quantity">1</field>
+            <field name="unit_amount">12000.00</field>
+        </record>
+        <record id="par_chess_arab_budget_tickets" model="ministry.championship.participation.budget.line">
+            <field name="participation_id" ref="par_chess_arab"/>
+            <field name="sequence">20</field>
+            <field name="expense_group">travel_tickets</field>
+            <field name="description">تذاكر السفر للوفد</field>
+            <field name="quantity">8</field>
+            <field name="unit_amount">2500.00</field>
+        </record>
+        <record id="par_chess_arab_budget_accommodation" model="ministry.championship.participation.budget.line">
+            <field name="participation_id" ref="par_chess_arab"/>
+            <field name="sequence">30</field>
+            <field name="expense_group">accommodation_meals</field>
+            <field name="description">الإقامة والإعاشة</field>
+            <field name="quantity">8</field>
+            <field name="unit_amount">9000.00</field>
+        </record>
+        <record id="par_chess_arab_budget_pocket" model="ministry.championship.participation.budget.line">
+            <field name="participation_id" ref="par_chess_arab"/>
+            <field name="sequence">40</field>
+            <field name="expense_group">pocket_money</field>
+            <field name="description">مصروف الجيب</field>
+            <field name="quantity">8</field>
+            <field name="unit_amount">3500.00</field>
+        </record>
+        <record id="par_chess_arab_budget_other" model="ministry.championship.participation.budget.line">
+            <field name="participation_id" ref="par_chess_arab"/>
+            <field name="sequence">50</field>
+            <field name="expense_group">other_expenses</field>
+            <field name="description">ألبسة ومصاريف احتياطية</field>
+            <field name="quantity">1</field>
+            <field name="unit_amount">48000.00</field>
+        </record>
+
+    </data>
+</odoo>

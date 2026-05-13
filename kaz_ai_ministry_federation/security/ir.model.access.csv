@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_ministry_sport_manager,ministry.sport manager,model_ministry_sport,kaz_ai_ministry_branding.group_ministry_manager,1,1,1,1
+access_ministry_sport_officer,ministry.sport officer,model_ministry_sport,kaz_ai_ministry_branding.group_ministry_officer_technical,1,0,0,0
+access_ministry_sport_portal,ministry.sport portal,model_ministry_sport,kaz_ai_ministry_branding.group_ministry_portal,1,0,0,0
+access_ministry_club_manager,ministry.club manager,model_ministry_club,kaz_ai_ministry_branding.group_ministry_manager,1,1,1,1
+access_ministry_club_officer,ministry.club officer,model_ministry_club,kaz_ai_ministry_branding.group_ministry_officer_technical,1,0,0,0
+access_ministry_club_portal,ministry.club portal,model_ministry_club,kaz_ai_ministry_branding.group_ministry_portal,1,0,0,0

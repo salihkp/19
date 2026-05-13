@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Support Item List View -->
+    <record id="view_ministry_support_item_list" model="ir.ui.view">
+        <field name="name">ministry.support.item.list</field>
+        <field name="model">ministry.support.item</field>
+        <field name="arch" type="xml">
+            <list string="Support Items" default_order="category,sequence,name">
+                <field name="code" optional="show"/>
+                <field name="name"/>
+                <field name="category" widget="badge"
+                    decoration-info="category == 'operational'"
+                    decoration-success="category == 'activity'"
+                    decoration-warning="category == 'technical'"
+                    decoration-primary="category == 'general'"/>
+                <field name="group_id" optional="show"/>
+                <field name="calc_method"/>
+                <field name="has_eligibility_rule" widget="boolean_toggle" optional="show"/>
+                <field name="required_attachment_count" optional="show"/>
+                <field name="fixed_amount" optional="show" string="Fixed (AED)"/>
+                <field name="unit_amount" optional="show" string="Unit (AED)"/>
+                <field name="max_limit" optional="show" string="Max Limit (AED)"/>
+                <field name="active" column_invisible="True"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Support Item Kanban (grouped by category) -->
+    <record id="view_ministry_support_item_kanban" model="ir.ui.view">
+        <field name="name">ministry.support.item.kanban</field>
+        <field name="model">ministry.support.item</field>
+        <field name="arch" type="xml">
+            <kanban default_group_by="category" class="o_kanban_small_column">
+                <field name="name"/>
+                <field name="code"/>
+                <field name="calc_method"/>
+                <field name="fixed_amount"/>
+                <field name="unit_amount"/>
+                <field name="max_limit"/>
+                <field name="has_eligibility_rule"/>
+                <field name="required_attachment_count"/>
+                <field name="calculation_summary"/>
+                <templates>
+                    <t t-name="card">
+                        <div class="o_kanban_record_top">
+                            <strong><field name="name"/></strong>
+                        </div>
+                        <div class="o_kanban_record_body">
+                            <div><b>Code:</b> <field name="code"/></div>
+                            <div><b>Method:</b> <field name="calc_method"/></div>
+                            <t t-if="record.calc_method.raw_value == 'fixed_amount'">
+                                <div><b>Amount:</b> <field name="fixed_amount"/> AED</div>
+                            </t>
+                            <t t-if="record.calc_method.raw_value == 'by_count'">
+                                <div><b>Per Unit:</b> <field name="unit_amount"/> AED</div>
+                            </t>
+                            <t t-if="record.max_limit.value > 0">
+                                <div class="text-muted"><b>Max:</b> <field name="max_limit"/> AED</div>
+                            </t>
+                            <div class="text-muted mt-1">
+                                <b>Docs:</b> <field name="required_attachment_count"/>
+                                <span> | </span>
+                                <b>Rule:</b> <field name="has_eligibility_rule"/>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <!-- Support Item Form View -->
+    <record id="view_ministry_support_item_form" model="ir.ui.view">
+        <field name="name">ministry.support.item.form</field>
+        <field name="model">ministry.support.item</field>
+        <field name="arch" type="xml">
+            <form string="Support Item">
+                <sheet>
+                    <div class="oe_title">
+                        <h1><field name="name"/></h1>
+                    </div>
+                    <group string="Decision Setup Summary">
+                        <group>
+                            <field name="calculation_summary" nolabel="1" readonly="1"/>
+                        </group>
+                        <group>
+                            <field name="eligibility_rule_summary" nolabel="1" readonly="1"/>
+                            <field name="has_eligibility_rule" readonly="1"/>
+                            <field name="required_attachment_count" readonly="1"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group string="Classification">
+                            <field name="code"/>
+                            <field name="category"/>
+                            <field name="group_id" domain="[('category', '=', category)]"/>
+                            <field name="item_type"/>
+                            <field name="active"/>
+                        </group>
+                        <group string="Calculation">
+                            <field name="calc_method"/>
+                            <field name="fixed_amount" invisible="calc_method != 'fixed_amount'"/>
+                            <field name="unit_amount" invisible="calc_method != 'by_count'"/>
+                            <field name="max_limit"/>
+                        </group>
+                    </group>
+                    <group string="Accounting">
+                        <field name="analytic_account_id"/>
+                    </group>
+                    <group string="Required Attachments">
+                        <field name="required_attachment_types_ids" widget="many2many_tags"/>
+                    </group>
+                    <group string="Eligibility Rule">
+                        <field name="eligibility_python" widget="code"
+                            />
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <!-- Search View -->
+    <record id="view_ministry_support_item_search" model="ir.ui.view">
+        <field name="name">ministry.support.item.search</field>
+        <field name="model">ministry.support.item</field>
+        <field name="arch" type="xml">
+            <search string="Support Items">
+                <field name="name"/>
+                <field name="code"/>
+                <separator/>
+                <filter name="operational" string="Operational" domain="[('category','=','operational')]"/>
+                <filter name="technical" string="Technical" domain="[('category','=','technical')]"/>
+                <filter name="general" string="General Financial" domain="[('category','=','general')]"/>
+                <filter name="activity" string="Activity" domain="[('category','=','activity')]"/>
+                <separator/>
+                <filter name="fixed_method" string="Fixed Amount" domain="[('calc_method','=','fixed_amount')]"/>
+                <filter name="by_count" string="Per Count" domain="[('calc_method','=','by_count')]"/>
+                <filter name="by_request" string="Per Request" domain="[('calc_method','=','by_request')]"/>
+                <filter name="with_rule" string="Has Eligibility Rule" domain="[('has_eligibility_rule','=',True)]"/>
+                <filter name="needs_documents" string="Needs Documents" domain="[('required_attachment_count','>',0)]"/>
+                <group>
+                    <filter name="group_category" string="Category" context="{'group_by': 'category'}"/>
+                    <filter name="group_group" string="Group" context="{'group_by': 'group_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Window Action -->
+    <record id="action_ministry_support_item" model="ir.actions.act_window">
+        <field name="name">Support Items</field>
+        <field name="res_model">ministry.support.item</field>
+        <field name="view_mode">kanban,list,form</field>
+        <field name="view_ids" eval="[
+            (5, 0, 0),
+            (0, 0, {'view_mode': 'kanban', 'view_id': ref('view_ministry_support_item_kanban')}),
+            (0, 0, {'view_mode': 'list',   'view_id': ref('view_ministry_support_item_list')}),
+            (0, 0, {'view_mode': 'form',   'view_id': ref('view_ministry_support_item_form')}),
+        ]"/>
+        <field name="search_view_id" ref="view_ministry_support_item_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">No support items defined</p>
+            <p>Add support items to the catalog before processing federation requests.</p>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem
+        id="menu_kaz_ai_ministry_dashboard"
+        name="Dashboard"
+        parent="kaz_ai_ministry_federation.menu_ministry_root"
+        action="action_kaz_ai_ministry_dashboard"
+        sequence="1"/>
+</odoo>

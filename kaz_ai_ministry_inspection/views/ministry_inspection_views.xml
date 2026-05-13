@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- ── List View ──────────────────────────────────────────────────────── -->
+    <record id="view_inspection_list" model="ir.ui.view">
+        <field name="name">ministry.inspection.list</field>
+        <field name="model">ministry.inspection</field>
+        <field name="arch" type="xml">
+            <list string="Inspections" default_order="visit_date desc">
+                <field name="name"/>
+                <field name="federation_id"/>
+                <field name="visit_date"/>
+                <field name="visit_type" widget="badge"
+                    decoration-info="visit_type == 'scheduled'"
+                    decoration-warning="visit_type == 'surprise'"
+                    decoration-primary="visit_type == 'follow_up'"/>
+                <field name="violation_count" string="Violations"/>
+                <field name="performance_evaluation" widget="badge"
+                    decoration-success="performance_evaluation == 'excellent'"
+                    decoration-info="performance_evaluation == 'good'"
+                    decoration-warning="performance_evaluation == 'acceptable'"
+                    decoration-danger="performance_evaluation == 'poor'"
+                    optional="show"/>
+                <field name="state" widget="badge"
+                    decoration-muted="state == 'draft'"
+                    decoration-warning="state == 'in_progress'"
+                    decoration-success="state == 'done'"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- ── Form View ──────────────────────────────────────────────────────── -->
+    <record id="view_inspection_form" model="ir.ui.view">
+        <field name="name">ministry.inspection.form</field>
+        <field name="model">ministry.inspection</field>
+        <field name="arch" type="xml">
+            <form string="Inspection">
+                <header>
+                    <button name="action_start" string="Start Inspection" type="object"
+                        class="btn-primary"
+                        invisible="state != 'draft'"/>
+                    <button name="action_done" string="Mark Done" type="object"
+                        class="btn-success"
+                        invisible="state != 'in_progress'"/>
+                    <button name="action_reset_draft" string="Reset to Draft" type="object"
+                        invisible="state == 'draft'"/>
+                    <field name="state" widget="statusbar"
+                        statusbar_visible="draft,in_progress,done"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_open_violations" type="object"
+                            class="oe_stat_button" icon="fa-exclamation-triangle">
+                            <field name="violation_count" widget="statinfo" string="Violations"/>
+                        </button>
+                    </div>
+
+                    <div class="oe_title">
+                        <h1><field name="name" readonly="1"/></h1>
+                    </div>
+
+                    <group>
+                        <group string="Inspection Details">
+                            <field name="federation_id"/>
+                            <field name="visit_date"/>
+                            <field name="visit_type"/>
+                            <field name="inspector_ids" widget="many2many_tags"/>
+                        </group>
+                        <group string="Outcome">
+                            <field name="performance_evaluation"/>
+                        </group>
+                    </group>
+
+                    <notebook>
+                        <page string="Notes">
+                            <field name="notes"/>
+                        </page>
+                        <page string="Violations">
+                            <field name="violation_ids" mode="list">
+                                <list editable="bottom">
+                                    <field name="name" readonly="1"/>
+                                    <field name="violation_type"/>
+                                    <field name="severity" widget="badge"
+                                        decoration-warning="severity == 'minor'"
+                                        decoration-danger="severity in ('major','critical')"/>
+                                    <field name="description"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Photos">
+                            <field name="photo_ids" widget="many2many_binary"/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <!-- ── Calendar View ─────────────────────────────────────────────────── -->
+    <record id="view_inspection_calendar" model="ir.ui.view">
+        <field name="name">ministry.inspection.calendar</field>
+        <field name="model">ministry.inspection</field>
+        <field name="arch" type="xml">
+            <calendar string="Inspection Schedule" date_start="visit_date"
+                color="visit_type" mode="month" quick_create="false">
+                <field name="name"/>
+                <field name="federation_id"/>
+                <field name="visit_type"/>
+                <field name="state"/>
+            </calendar>
+        </field>
+    </record>
+
+    <!-- ── Search View ───────────────────────────────────────────────────── -->
+    <record id="view_inspection_search" model="ir.ui.view">
+        <field name="name">ministry.inspection.search</field>
+        <field name="model">ministry.inspection</field>
+        <field name="arch" type="xml">
+            <search string="Inspections">
+                <field name="name" string="Reference"/>
+                <field name="federation_id"/>
+                <separator/>
+                <filter name="scheduled" string="Scheduled" domain="[('visit_type','=','scheduled')]"/>
+                <filter name="surprise" string="Surprise" domain="[('visit_type','=','surprise')]"/>
+                <filter name="follow_up" string="Follow-Up" domain="[('visit_type','=','follow_up')]"/>
+                <separator/>
+                <filter name="in_progress" string="In Progress" domain="[('state','=','in_progress')]"/>
+                <filter name="done" string="Done" domain="[('state','=','done')]"/>
+                <group>
+                    <filter name="grp_federation" string="Federation" context="{'group_by': 'federation_id'}"/>
+                    <filter name="grp_type" string="Visit Type" context="{'group_by': 'visit_type'}"/>
+                    <filter name="grp_state" string="Status" context="{'group_by': 'state'}"/>
+                    <filter name="grp_month" string="Month" context="{'group_by': 'visit_date:month'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- ── Window Action ─────────────────────────────────────────────────── -->
+    <record id="action_ministry_inspection" model="ir.actions.act_window">
+        <field name="name">Inspections</field>
+        <field name="res_model">ministry.inspection</field>
+        <field name="view_mode">list,calendar,form</field>
+        <field name="search_view_id" ref="view_inspection_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">No inspections recorded yet</p>
+            <p>Schedule field inspections to monitor federation compliance and performance.</p>
+        </field>
+    </record>
+
+</odoo>

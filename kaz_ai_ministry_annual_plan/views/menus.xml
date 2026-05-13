@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_ministry_annual_plans"
+        name="Annual Plans"
+        parent="kaz_ai_ministry_federation.menu_ministry_planning"
+        action="action_ministry_annual_plan"
+        sequence="10"/>
+</odoo>

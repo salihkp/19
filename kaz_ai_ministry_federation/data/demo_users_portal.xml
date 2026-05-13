@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- Football Federation Portal Users -->
+        <record id="partner_football_fed_1" model="res.partner">
+            <field name="name">Football Federation Admin</field>
+            <field name="email">football.fed@portal.ae</field>
+            <field name="parent_id" ref="kaz_ai_ministry_federation.federation_football"/>
+            <field name="type">contact</field>
+        </record>
+
+        <record id="user_football_fed_1" model="res.users">
+            <field name="name">Football Federation Admin</field>
+            <field name="login">football.fed@portal.ae</field>
+            <field name="email">football.fed@portal.ae</field>
+            <field name="partner_id" ref="partner_football_fed_1"/>
+            <field name="lang">ar_001</field>
+            <field name="group_ids" eval="[
+                (4, ref('base.group_portal')),
+                (4, ref('kaz_ai_ministry_branding.group_ministry_portal')),
+            ]"/>
+        </record>
+        <record id="user_football_fed_1" model="res.users">
+            <field name="password">admin</field>
+        </record>
+
+        <record id="partner_football_fed_2" model="res.partner">
+            <field name="name">Football Federation Finance</field>
+            <field name="email">football.fed2@portal.ae</field>
+            <field name="parent_id" ref="kaz_ai_ministry_federation.federation_football"/>
+            <field name="type">contact</field>
+        </record>
+
+        <record id="user_football_fed_2" model="res.users">
+            <field name="name">Football Federation Finance</field>
+            <field name="login">football.fed2@portal.ae</field>
+            <field name="email">football.fed2@portal.ae</field>
+            <field name="partner_id" ref="partner_football_fed_2"/>
+            <field name="lang">ar_001</field>
+            <field name="group_ids" eval="[
+                (4, ref('base.group_portal')),
+                (4, ref('kaz_ai_ministry_branding.group_ministry_portal')),
+            ]"/>
+        </record>
+        <record id="user_football_fed_2" model="res.users">
+            <field name="password">admin</field>
+        </record>
+
+        <!-- Athletics Federation Portal Users -->
+        <record id="partner_athletics_fed_1" model="res.partner">
+            <field name="name">Athletics Federation Admin</field>
+            <field name="email">athletics.fed@portal.ae</field>
+            <field name="parent_id" ref="kaz_ai_ministry_federation.federation_athletics"/>
+            <field name="type">contact</field>
+        </record>
+
+        <record id="user_athletics_fed_1" model="res.users">
+            <field name="name">Athletics Federation Admin</field>
+            <field name="login">athletics.fed@portal.ae</field>
+            <field name="email">athletics.fed@portal.ae</field>
+            <field name="partner_id" ref="partner_athletics_fed_1"/>
+            <field name="lang">ar_001</field>
+            <field name="group_ids" eval="[
+                (4, ref('base.group_portal')),
+                (4, ref('kaz_ai_ministry_branding.group_ministry_portal')),
+            ]"/>
+        </record>
+        <record id="user_athletics_fed_1" model="res.users">
+            <field name="password">admin</field>
+        </record>
+
+        <record id="partner_athletics_fed_2" model="res.partner">
+            <field name="name">Athletics Federation Secretary</field>
+            <field name="email">athletics.fed2@portal.ae</field>
+            <field name="parent_id" ref="kaz_ai_ministry_federation.federation_athletics"/>
+            <field name="type">contact</field>
+        </record>
+
+        <record id="user_athletics_fed_2" model="res.users">
+            <field name="name">Athletics Federation Secretary</field>
+            <field name="login">athletics.fed2@portal.ae</field>
+            <field name="email">athletics.fed2@portal.ae</field>
+            <field name="partner_id" ref="partner_athletics_fed_2"/>
+            <field name="lang">ar_001</field>
+            <field name="group_ids" eval="[
+                (4, ref('base.group_portal')),
+                (4, ref('kaz_ai_ministry_branding.group_ministry_portal')),
+            ]"/>
+        </record>
+        <record id="user_athletics_fed_2" model="res.users">
+            <field name="password">admin</field>
+        </record>
+
+        <!-- Chess Federation Portal Users -->
+        <record id="partner_chess_fed_1" model="res.partner">
+            <field name="name">Chess Federation Admin</field>
+            <field name="email">chess.fed@portal.ae</field>
+            <field name="parent_id" ref="kaz_ai_ministry_federation.federation_chess"/>
+            <field name="type">contact</field>
+        </record>
+
+        <record id="user_chess_fed_1" model="res.users">
+            <field name="name">Chess Federation Admin</field>
+            <field name="login">chess.fed@portal.ae</field>
+            <field name="email">chess.fed@portal.ae</field>
+            <field name="partner_id" ref="partner_chess_fed_1"/>
+            <field name="lang">ar_001</field>
+            <field name="group_ids" eval="[
+                (4, ref('base.group_portal')),
+                (4, ref('kaz_ai_ministry_branding.group_ministry_portal')),
+            ]"/>
+        </record>
+        <record id="user_chess_fed_1" model="res.users">
+            <field name="password">admin</field>
+        </record>
+
+        <record id="partner_chess_fed_2" model="res.partner">
+            <field name="name">Chess Federation Finance</field>
+            <field name="email">chess.fed2@portal.ae</field>
+            <field name="parent_id" ref="kaz_ai_ministry_federation.federation_chess"/>
+            <field name="type">contact</field>
+        </record>
+
+        <record id="user_chess_fed_2" model="res.users">
+            <field name="name">Chess Federation Finance</field>
+            <field name="login">chess.fed2@portal.ae</field>
+            <field name="email">chess.fed2@portal.ae</field>
+            <field name="partner_id" ref="partner_chess_fed_2"/>
+            <field name="lang">ar_001</field>
+            <field name="group_ids" eval="[
+                (4, ref('base.group_portal')),
+                (4, ref('kaz_ai_ministry_branding.group_ministry_portal')),
+            ]"/>
+        </record>
+        <record id="user_chess_fed_2" model="res.users">
+            <field name="password">admin</field>
+        </record>
+
+    </data>
+</odoo>

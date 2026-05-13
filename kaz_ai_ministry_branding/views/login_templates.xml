@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Override web login layout to inject Ministry branding -->
+        <template id="ministry_login_layout" inherit_id="web.login_layout" priority="100">
+            <xpath expr="//div[hasclass('text-center') and hasclass('pb-3') and hasclass('border-bottom') and hasclass('mb-4')]" position="replace">
+                <div class="text-center pb-3 border-bottom mb-4">
+                <div class="ministry_login_card_header">
+                    <img src="/kaz_ai_ministry_branding/static/src/img/ministry_login_wordmark.png" alt="Ministry of Sports" class="ministry_login_card_logo"/>
+                    <div class="ministry_login_card_title">Secure Access</div>
+                    <div class="ministry_login_card_subtitle">Ministry Support Hub</div>
+                </div>
+                </div>
+            </xpath>
+            <xpath expr="//div[contains(@t-attf-class, 'o_database_list')]" position="before">
+                <div class="o_login_aside ministry_login_aside">
+                    <div class="ministry_login_branding">
+                        <div class="ministry_login_badge">
+                            <span class="ministry_login_badge_mark"></span>
+                            <span>Ministry Support Hub</span>
+                        </div>
+                        <div class="ministry_logo_container">
+                            <img src="/kaz_ai_ministry_branding/static/src/img/ministry_login_wordmark.png" alt="Ministry of Sports" class="ministry_logo_image"/>
+                        </div>
+                        <div class="ministry_login_title">
+                            <p class="ministry_name_en">Ministry of Sports</p>
+                            <p class="ministry_name_ar">وزارة الرياضة</p>
+                            <h1 class="ministry_system_name_en">Sports Federation Financial Support Management System</h1>
+                            <h2 class="ministry_system_name_ar">نظام إدارة الدعم المالي للاتحادات الرياضية</h2>
+                        </div>
+                        <div class="ministry_login_stripe" aria-hidden="true">
+                            <span class="stripe_red"></span>
+                            <span class="stripe_green"></span>
+                            <span class="stripe_gold"></span>
+                        </div>
+                        <p class="ministry_login_footer">© 2026 Ministry of Sports - Department of Sports Support and Development</p>
+                    </div>
+                </div>
+            </xpath>
+        </template>
+
+    </data>
+</odoo>

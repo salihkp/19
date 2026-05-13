@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_ministry_analytics"
+        name="Analytics"
+        parent="kaz_ai_ministry_federation.menu_ministry_root"
+        sequence="50"
+        groups="kaz_ai_ministry_branding.group_ministry_analyst,kaz_ai_ministry_branding.group_ministry_manager"/>
+
+    <menuitem id="menu_ministry_analytics_alerts"
+        name="Alerts"
+        parent="menu_ministry_analytics"
+        action="action_ministry_analytics_alert"
+        sequence="10"/>
+</odoo>

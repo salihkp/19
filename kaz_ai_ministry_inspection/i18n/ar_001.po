@@ -1,0 +1,693 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kaz_ai_ministry_inspection
+#
+msgid ""
+msgstr "Project-Id-Version: Odoo Server 19.0\\nReport-Msgid-Bugs-To: \\nPOT-Creation-Date: 2026-05-13 00:00+0000\\nPO-Revision-Date: 2026-05-13 00:00+0000\\nLast-Translator: Kaizen AI <support@kaizenae.com>\\nLanguage-Team: Arabic\\nLanguage: ar_001\\nMIME-Version: 1.0\\nContent-Type: text/plain; charset=UTF-8\\nContent-Transfer-Encoding: 8bit\\nPlural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\\n"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_inspection.selection__ministry_inspection__performance_evaluation__acceptable
+msgid "Acceptable"
+msgstr "مقبول"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_inspection__message_needaction
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_violation__message_needaction
+msgid "Action Needed"
+msgstr "إجراء مطلوب"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_inspection__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_inspection__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "تنسيق استثناء النشاط"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_inspection__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_inspection__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "أيقونة نوع النشاط"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_inspection.selection__ministry_violation__violation_type__athlete_welfare
+msgid "Athlete Welfare Breach"
+msgstr "مخالفة رعاية الرياضيين"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_inspection__message_attachment_count
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_violation__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,help:kaz_ai_ministry_inspection.field_ministry_violation__violation_type
+msgid "Category of the violation identified."
+msgstr "فئة المخالفة المحددة."
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_inspection__company_id
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_violation__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,help:kaz_ai_ministry_inspection.field_ministry_violation__company_id
+msgid "Company context inherited from the parent inspection."
+msgstr "سياق الشركة الموروث من التفتيش الأصلي."
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,help:kaz_ai_ministry_inspection.field_ministry_inspection__company_id
+msgid "Company this inspection belongs to."
+msgstr "الشركة التي ينتمي إليها هذا التفتيش."
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_inspection__create_uid
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_violation__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_inspection__create_date
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_violation__create_date
+msgid "Created on"
+msgstr "تاريخ الإنشاء"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_inspection.selection__ministry_violation__severity__critical
+msgid "Critical"
+msgstr "حرج"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,help:kaz_ai_ministry_inspection.field_ministry_inspection__state
+msgid "Current lifecycle state of the inspection."
+msgstr "حالة دورة حياة التفتيش الحالية."
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_violation__description
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_inspection.view_violation_form
+msgid "Description"
+msgstr "الوصف"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,help:kaz_ai_ministry_inspection.field_ministry_violation__description
+msgid "Detailed description of the violation and its context."
+msgstr "وصف تفصيلي للمخالفة وسياقها."
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,help:kaz_ai_ministry_inspection.field_ministry_inspection__notes
+msgid "Detailed findings and observations during the inspection."
+msgstr "النتائج والملاحظات التفصيلية أثناء التفتيش."
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_inspection__display_name
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_violation__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_inspection.selection__ministry_inspection__state__done
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_inspection.view_inspection_search
+msgid "Done"
+msgstr "منجز"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_inspection.selection__ministry_inspection__state__draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_violation__evidence_attachment_ids
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_inspection.view_violation_form
+msgid "Evidence"
+msgstr "الأدلة"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_inspection.selection__ministry_inspection__performance_evaluation__excellent
+msgid "Excellent"
+msgstr "ممتاز"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_inspection.selection__ministry_violation__violation_type__facilities
+msgid "Facilities Non-Compliance"
+msgstr "عدم امتثال المنشآت"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_inspection__federation_id
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_violation__federation_id
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_inspection.view_inspection_search
+msgid "Federation"
+msgstr "الاتحاد"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model,name:kaz_ai_ministry_inspection.model_ministry_inspection
+msgid "Federation Field Inspection"
+msgstr "تفتيش ميداني للاتحاد"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,help:kaz_ai_ministry_inspection.field_ministry_violation__federation_id
+msgid "Federation associated with the parent inspection."
+msgstr "الاتحاد المرتبط بالتفتيش الأصلي."
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_inspection.selection__ministry_violation__violation_type__financial_misuse
+msgid "Financial Misuse"
+msgstr "إساءة استخدام مالية"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_inspection.selection__ministry_inspection__visit_type__follow_up
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_inspection.view_inspection_search
+msgid "Follow-Up"
+msgstr "متابعة"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_inspection__message_follower_ids
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_violation__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_inspection__message_partner_ids
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_violation__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,help:kaz_ai_ministry_inspection.field_ministry_inspection__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "أيقونة Font Awesome مثل fa-tasks"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_inspection.selection__ministry_inspection__performance_evaluation__good
+msgid "Good"
+msgstr "جيد"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_inspection.selection__ministry_violation__violation_type__governance
+msgid "Governance Failure"
+msgstr "خلل في الحوكمة"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_inspection__has_message
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_violation__has_message
+msgid "Has Message"
+msgstr "توجد رسالة"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_inspection__id
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_violation__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_inspection__activity_exception_icon
+msgid "Icon"
+msgstr "الأيقونة"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,help:kaz_ai_ministry_inspection.field_ministry_inspection__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "أيقونة للإشارة إلى نشاط استثنائي."
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,help:kaz_ai_ministry_inspection.field_ministry_inspection__message_needaction
+#: model:ir.model.fields,help:kaz_ai_ministry_inspection.field_ministry_violation__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "عند التحديد، توجد رسائل جديدة تتطلب انتباهك."
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,help:kaz_ai_ministry_inspection.field_ministry_inspection__message_has_error
+#: model:ir.model.fields,help:kaz_ai_ministry_inspection.field_ministry_inspection__message_has_sms_error
+#: model:ir.model.fields,help:kaz_ai_ministry_inspection.field_ministry_violation__message_has_error
+#: model:ir.model.fields,help:kaz_ai_ministry_inspection.field_ministry_violation__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "عند التحديد، توجد رسائل بها خطأ في التسليم."
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_inspection.selection__ministry_inspection__state__in_progress
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_inspection.view_inspection_search
+msgid "In Progress"
+msgstr "قيد التنفيذ"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_violation__inspection_id
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_inspection.view_inspection_form
+msgid "Inspection"
+msgstr "تفتيش"
+
+#. module: kaz_ai_ministry_inspection
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_inspection.view_inspection_form
+msgid "Inspection Details"
+msgstr "تفاصيل التفتيش"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_inspection__notes
+msgid "Inspection Notes"
+msgstr "ملاحظات التفتيش"
+
+#. module: kaz_ai_ministry_inspection
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_inspection.view_inspection_calendar
+msgid "Inspection Schedule"
+msgstr "جدول التفتيش"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model,name:kaz_ai_ministry_inspection.model_ministry_violation
+msgid "Inspection Violation"
+msgstr "مخالفة التفتيش"
+
+#. module: kaz_ai_ministry_inspection
+#. odoo-python
+#: code:addons/kaz_ai_ministry_inspection/models/ministry_inspection.py:0
+msgid "Inspection completed. Performance: %(eval)s. Violations recorded: %(count)s."
+msgstr "اكتمل التفتيش. الأداء: %(eval)s. المخالفات المسجلة: %(count)s."
+
+#. module: kaz_ai_ministry_inspection
+#. odoo-python
+#: code:addons/kaz_ai_ministry_inspection/models/ministry_inspection.py:0
+msgid "Inspection reset to draft."
+msgstr "تمت إعادة التفتيش إلى مسودة."
+
+#. module: kaz_ai_ministry_inspection
+#. odoo-python
+#: code:addons/kaz_ai_ministry_inspection/models/ministry_inspection.py:0
+msgid "Inspection started."
+msgstr "بدأ التفتيش."
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.actions.act_window,name:kaz_ai_ministry_inspection.action_ministry_inspection
+#: model:ir.ui.menu,name:kaz_ai_ministry_inspection.menu_ministry_inspections
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_inspection.view_inspection_list
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_inspection.view_inspection_search
+msgid "Inspections"
+msgstr "التفتيشات"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_inspection__inspector_ids
+msgid "Inspectors"
+msgstr "المفتشون"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_inspection__message_is_follower
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_violation__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_inspection__write_uid
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_violation__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_inspection__write_date
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_violation__write_date
+msgid "Last Updated on"
+msgstr "تاريخ آخر تحديث"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_violation__legal_action_count
+msgid "Legal Action Count"
+msgstr "عدد الإجراءات القانونية"
+
+#. module: kaz_ai_ministry_inspection
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_inspection.view_violation_list
+msgid "Legal Actions"
+msgstr "الإجراءات القانونية"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_inspection.selection__ministry_violation__severity__major
+msgid "Major"
+msgstr "كبيرة"
+
+#. module: kaz_ai_ministry_inspection
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_inspection.view_inspection_form
+msgid "Mark Done"
+msgstr "تحديد كمنجز"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_inspection__message_has_error
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_violation__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسالة"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_inspection__message_ids
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_violation__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,help:kaz_ai_ministry_inspection.field_ministry_inspection__inspector_ids
+msgid "Ministry staff assigned to conduct this inspection."
+msgstr "موظفو الوزارة المكلفون بتنفيذ هذا التفتيش."
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_inspection.selection__ministry_violation__severity__minor
+msgid "Minor"
+msgstr "بسيطة"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_inspection.selection__ministry_violation__violation_type__missing_report
+msgid "Missing Post-Event Report"
+msgstr "تقرير ما بعد الحدث مفقود"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_inspection.selection__ministry_violation__severity__moderate
+msgid "Moderate"
+msgstr "متوسطة"
+
+#. module: kaz_ai_ministry_inspection
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_inspection.view_inspection_search
+msgid "Month"
+msgstr "الشهر"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_inspection__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "الموعد النهائي لنشاطي"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,help:kaz_ai_ministry_inspection.field_ministry_inspection__visit_type
+msgid "Nature of the inspection visit."
+msgstr "طبيعة زيارة التفتيش."
+
+#. module: kaz_ai_ministry_inspection
+#. odoo-python
+#: code:addons/kaz_ai_ministry_inspection/models/ministry_inspection.py:0
+#: code:addons/kaz_ai_ministry_inspection/models/ministry_violation.py:0
+msgid "New"
+msgstr "جديد"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_inspection__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "حدث التقويم للنشاط التالي"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_inspection__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_inspection__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_inspection__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: kaz_ai_ministry_inspection
+#: model_terms:ir.actions.act_window,help:kaz_ai_ministry_inspection.action_ministry_inspection
+msgid "No inspections recorded yet"
+msgstr "لا توجد تفتيشات مسجلة بعد"
+
+#. module: kaz_ai_ministry_inspection
+#: model_terms:ir.actions.act_window,help:kaz_ai_ministry_inspection.action_ministry_violation
+msgid "No violations recorded"
+msgstr "لا توجد مخالفات مسجلة"
+
+#. module: kaz_ai_ministry_inspection
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_inspection.view_inspection_form
+msgid "Notes"
+msgstr "الملاحظات"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_inspection__message_needaction_counter
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_violation__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_inspection__message_has_error_counter
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_violation__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الأخطاء"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,help:kaz_ai_ministry_inspection.field_ministry_violation__legal_action_count
+msgid "Number of legal actions linked to this violation."
+msgstr "عدد الإجراءات القانونية المرتبطة بهذه المخالفة."
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,help:kaz_ai_ministry_inspection.field_ministry_inspection__message_needaction_counter
+#: model:ir.model.fields,help:kaz_ai_ministry_inspection.field_ministry_violation__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,help:kaz_ai_ministry_inspection.field_ministry_inspection__message_has_error_counter
+#: model:ir.model.fields,help:kaz_ai_ministry_inspection.field_ministry_violation__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل التي بها خطأ تسليم"
+
+#. module: kaz_ai_ministry_inspection
+#. odoo-python
+#: code:addons/kaz_ai_ministry_inspection/models/ministry_inspection.py:0
+msgid "Only draft inspections can be started."
+msgstr "لا يمكن بدء إلا التفتيشات في حالة المسودة."
+
+#. module: kaz_ai_ministry_inspection
+#. odoo-python
+#: code:addons/kaz_ai_ministry_inspection/models/ministry_inspection.py:0
+msgid "Only in-progress inspections can be marked done."
+msgstr "لا يمكن تحديد كمنجز إلا التفتيشات قيد التنفيذ."
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_inspection.selection__ministry_violation__violation_type__other
+msgid "Other"
+msgstr "أخرى"
+
+#. module: kaz_ai_ministry_inspection
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_inspection.view_inspection_form
+msgid "Outcome"
+msgstr "النتيجة"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,help:kaz_ai_ministry_inspection.field_ministry_inspection__performance_evaluation
+msgid "Overall assessment of the federation's performance and compliance."
+msgstr "التقييم العام لأداء الاتحاد وامتثاله."
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_inspection__performance_evaluation
+msgid "Performance Evaluation"
+msgstr "تقييم الأداء"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,help:kaz_ai_ministry_inspection.field_ministry_inspection__photo_ids
+msgid "Photographic evidence captured during the inspection."
+msgstr "الأدلة المصورة التي تم التقاطها أثناء التفتيش."
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_inspection__photo_ids
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_inspection.view_inspection_form
+msgid "Photos"
+msgstr "الصور"
+
+#. module: kaz_ai_ministry_inspection
+#. odoo-python
+#: code:addons/kaz_ai_ministry_inspection/models/ministry_inspection.py:0
+msgid "Please set a performance evaluation before closing the inspection."
+msgstr "يرجى تحديد تقييم الأداء قبل إغلاق التفتيش."
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_inspection.selection__ministry_inspection__performance_evaluation__poor
+msgid "Poor"
+msgstr "ضعيف"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_inspection__name
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_violation__name
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_inspection.view_inspection_search
+msgid "Reference"
+msgstr "المرجع"
+
+#. module: kaz_ai_ministry_inspection
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_inspection.view_inspection_form
+msgid "Reset to Draft"
+msgstr "إرجاع إلى مسودة"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_inspection__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_inspection__message_has_sms_error
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_violation__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل النصية"
+
+#. module: kaz_ai_ministry_inspection
+#: model_terms:ir.actions.act_window,help:kaz_ai_ministry_inspection.action_ministry_inspection
+msgid "Schedule field inspections to monitor federation compliance and performance."
+msgstr "جدولة التفتيشات الميدانية لمراقبة امتثال الاتحاد وأدائه."
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_inspection.selection__ministry_inspection__visit_type__scheduled
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_inspection.view_inspection_search
+msgid "Scheduled"
+msgstr "مجدول"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,help:kaz_ai_ministry_inspection.field_ministry_inspection__visit_date
+msgid "Scheduled or actual date of the inspection visit."
+msgstr "التاريخ المجدول أو الفعلي لزيارة التفتيش."
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_violation__severity
+msgid "Severity"
+msgstr "درجة الخطورة"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,help:kaz_ai_ministry_inspection.field_ministry_violation__severity
+msgid "Severity level determines the urgency of follow-up action required."
+msgstr "تحدد درجة الخطورة مدى إلحاح إجراء المتابعة المطلوب."
+
+#. module: kaz_ai_ministry_inspection
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_inspection.view_inspection_form
+msgid "Start Inspection"
+msgstr "بدء التفتيش"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_inspection__state
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_inspection.view_inspection_search
+msgid "Status"
+msgstr "الحالة"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,help:kaz_ai_ministry_inspection.field_ministry_inspection__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"الحالة بناء على الأنشطة\n"
+"متأخر: تجاوز تاريخ الاستحقاق\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"مخطط: أنشطة مستقبلية."
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,help:kaz_ai_ministry_inspection.field_ministry_violation__evidence_attachment_ids
+msgid "Supporting documents, images, or files evidencing the violation."
+msgstr "المستندات أو الصور أو الملفات الداعمة لإثبات المخالفة."
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_inspection.selection__ministry_inspection__visit_type__surprise
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_inspection.view_inspection_search
+msgid "Surprise"
+msgstr "مفاجئ"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,help:kaz_ai_ministry_inspection.field_ministry_inspection__federation_id
+msgid "The federation being inspected."
+msgstr "الاتحاد محل التفتيش."
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,help:kaz_ai_ministry_inspection.field_ministry_violation__inspection_id
+msgid "The inspection during which this violation was identified."
+msgstr "التفتيش الذي تم خلاله تحديد هذه المخالفة."
+
+#. module: kaz_ai_ministry_inspection
+#. odoo-python
+#: code:addons/kaz_ai_ministry_inspection/models/ministry_inspection.py:0
+msgid "This inspection is already in draft."
+msgstr "هذا التفتيش في حالة المسودة بالفعل."
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,help:kaz_ai_ministry_inspection.field_ministry_inspection__violation_count
+msgid "Total number of violations recorded for this inspection."
+msgstr "إجمالي عدد المخالفات المسجلة لهذا التفتيش."
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,help:kaz_ai_ministry_inspection.field_ministry_inspection__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع النشاط الاستثنائي في السجل."
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,help:kaz_ai_ministry_inspection.field_ministry_inspection__name
+msgid "Unique inspection reference, auto-generated on creation."
+msgstr "مرجع تفتيش فريد يتم إنشاؤه تلقائيا عند الإنشاء."
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,help:kaz_ai_ministry_inspection.field_ministry_violation__name
+msgid "Unique violation reference, auto-generated on creation."
+msgstr "مرجع مخالفة فريد يتم إنشاؤه تلقائيا عند الإنشاء."
+
+#. module: kaz_ai_ministry_inspection
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_inspection.view_violation_form
+msgid "Violation"
+msgstr "مخالفة"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_inspection__violation_count
+msgid "Violation Count"
+msgstr "عدد المخالفات"
+
+#. module: kaz_ai_ministry_inspection
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_inspection.view_violation_form
+msgid "Violation Details"
+msgstr "تفاصيل المخالفة"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_violation__violation_type
+msgid "Violation Type"
+msgstr "نوع المخالفة"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.actions.act_window,name:kaz_ai_ministry_inspection.action_ministry_violation
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_inspection__violation_ids
+#: model:ir.ui.menu,name:kaz_ai_ministry_inspection.menu_ministry_violations
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_inspection.view_inspection_form
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_inspection.view_inspection_list
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_inspection.view_violation_list
+msgid "Violations"
+msgstr "المخالفات"
+
+#. module: kaz_ai_ministry_inspection
+#: model_terms:ir.actions.act_window,help:kaz_ai_ministry_inspection.action_ministry_violation
+msgid "Violations are recorded during field inspections and may trigger legal actions."
+msgstr "تسجل المخالفات أثناء التفتيشات الميدانية وقد تؤدي إلى إجراءات قانونية."
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,help:kaz_ai_ministry_inspection.field_ministry_inspection__violation_ids
+msgid "Violations identified during this inspection."
+msgstr "المخالفات المحددة أثناء هذا التفتيش."
+
+#. module: kaz_ai_ministry_inspection
+#. odoo-python
+#: code:addons/kaz_ai_ministry_inspection/models/ministry_inspection.py:0
+msgid "Violations — %s"
+msgstr "المخالفات - %s"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_inspection__visit_date
+msgid "Visit Date"
+msgstr "تاريخ الزيارة"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_inspection__visit_type
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_inspection.view_inspection_search
+msgid "Visit Type"
+msgstr "نوع الزيارة"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_inspection__website_message_ids
+#: model:ir.model.fields,field_description:kaz_ai_ministry_inspection.field_ministry_violation__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: kaz_ai_ministry_inspection
+#: model:ir.model.fields,help:kaz_ai_ministry_inspection.field_ministry_inspection__website_message_ids
+#: model:ir.model.fields,help:kaz_ai_ministry_inspection.field_ministry_violation__website_message_ids
+msgid "Website communication history"
+msgstr "سجل التواصل عبر الموقع"

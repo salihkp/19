@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- Portal: federation users see only their own federation's requests -->
+        <record id="rule_support_request_portal" model="ir.rule">
+            <field name="name">Support Request: Portal Federation Isolation</field>
+            <field name="model_id" ref="kaz_ai_ministry_support_request.model_ministry_support_request"/>
+            <field name="domain_force">[('federation_id', '=', user.partner_id.id)]</field>
+            <field name="groups" eval="[(4, ref('kaz_ai_ministry_branding.group_ministry_portal'))]"/>
+        </record>
+
+        <!-- Company isolation -->
+        <record id="rule_support_request_company" model="ir.rule">
+            <field name="name">Support Request: Company Isolation</field>
+            <field name="model_id" ref="kaz_ai_ministry_support_request.model_ministry_support_request"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+            <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <!-- Pending deduction company isolation -->
+        <record id="rule_pending_deduction_company" model="ir.rule">
+            <field name="name">Pending Deduction: Company Isolation</field>
+            <field name="model_id" ref="kaz_ai_ministry_support_request.model_ministry_pending_deduction"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+            <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+    </data>
+</odoo>

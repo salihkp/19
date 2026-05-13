@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Root Application Menu -->
+    <menuitem id="menu_ministry_root"
+        name="Ministry Support Hub"
+        sequence="10"
+        web_icon="kaz_ai_ministry_federation,static/description/icon.png"/>
+
+    <menuitem id="menu_ministry_operations"
+        name="Operations"
+        parent="menu_ministry_root"
+        sequence="10"/>
+
+    <menuitem id="menu_ministry_planning"
+        name="Planning"
+        parent="menu_ministry_root"
+        sequence="20"/>
+
+    <menuitem id="menu_ministry_championships"
+        name="Championships"
+        parent="menu_ministry_root"
+        sequence="30"/>
+
+    <menuitem id="menu_ministry_monitoring"
+        name="Monitoring"
+        parent="menu_ministry_root"
+        sequence="40"/>
+
+    <!-- Configuration -->
+    <menuitem id="menu_ministry_config"
+        name="Configuration"
+        parent="menu_ministry_root"
+        sequence="80"
+        groups="kaz_ai_ministry_branding.group_ministry_manager"/>
+
+    <!-- Master Data -->
+    <menuitem id="menu_ministry_federations"
+        name="Master Data"
+        parent="menu_ministry_config"
+        sequence="10"/>
+
+    <menuitem id="menu_ministry_federation_list"
+        name="Federations"
+        parent="menu_ministry_federations"
+        action="action_ministry_federation"
+        sequence="10"/>
+
+    <menuitem id="menu_ministry_sport_list"
+        name="Sports"
+        parent="menu_ministry_federations"
+        action="action_ministry_sport"
+        sequence="20"/>
+
+    <menuitem id="menu_ministry_club_list"
+        name="Clubs"
+        parent="menu_ministry_federations"
+        action="action_ministry_club"
+        sequence="30"/>
+
+</odoo>

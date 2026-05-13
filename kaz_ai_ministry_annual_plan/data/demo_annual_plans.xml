@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- ── Football Federation FY2026 Plan ─────────────────────────────── -->
+        <record id="plan_football_2026" model="ministry.annual.plan">
+            <field name="name">FY2026-FOOTBALL</field>
+            <field name="fiscal_year">2026</field>
+            <field name="federation_id" ref="kaz_ai_ministry_federation.federation_football"/>
+            <field name="estimated_budget">8500000.00</field>
+            <field name="state">approved</field>
+        </record>
+
+        <record id="plan_football_2026_line1" model="ministry.annual.plan.line">
+            <field name="plan_id" ref="plan_football_2026"/>
+            <field name="support_item_id" ref="kaz_ai_ministry_support_item.item_salaries"/>
+            <field name="description">Annual staff salaries for 12 months</field>
+            <field name="quantity">12</field>
+            <field name="estimated_amount">180000.00</field>
+            <field name="target_kpi">Maintain full staff complement</field>
+        </record>
+        <record id="plan_football_2026_line2" model="ministry.annual.plan.line">
+            <field name="plan_id" ref="plan_football_2026"/>
+            <field name="support_item_id" ref="kaz_ai_ministry_support_item.item_coach_appointment"/>
+            <field name="description">Head coach + 2 assistant coaches</field>
+            <field name="quantity">3</field>
+            <field name="estimated_amount">540000.00</field>
+            <field name="target_kpi">Qualify for GCC championship</field>
+        </record>
+        <record id="plan_football_2026_line3" model="ministry.annual.plan.line">
+            <field name="plan_id" ref="plan_football_2026"/>
+            <field name="support_item_id" ref="kaz_ai_ministry_support_item.item_asian_participation"/>
+            <field name="description">AFC Cup participation for U23 team</field>
+            <field name="quantity">1</field>
+            <field name="estimated_amount">350000.00</field>
+            <field name="target_kpi">Advance to quarterfinals</field>
+        </record>
+        <record id="plan_football_2026_line4" model="ministry.annual.plan.line">
+            <field name="plan_id" ref="plan_football_2026"/>
+            <field name="support_item_id" ref="kaz_ai_ministry_support_item.item_local_camp"/>
+            <field name="description">Pre-season training camp — 4 weeks</field>
+            <field name="quantity">1</field>
+            <field name="estimated_amount">50000.00</field>
+            <field name="target_kpi">Pre-season fitness standards met</field>
+        </record>
+        <record id="plan_football_2026_line5" model="ministry.annual.plan.line">
+            <field name="plan_id" ref="plan_football_2026"/>
+            <field name="support_item_id" ref="kaz_ai_ministry_support_item.item_rent"/>
+            <field name="description">Headquarters office lease</field>
+            <field name="quantity">1</field>
+            <field name="estimated_amount">120000.00</field>
+            <field name="target_kpi">Maintain HQ operations</field>
+        </record>
+
+        <record id="plan_football_2026_kpi1" model="ministry.annual.plan.kpi">
+            <field name="plan_id" ref="plan_football_2026"/>
+            <field name="name">League Titles</field>
+            <field name="target_value">1</field>
+            <field name="unit">titles</field>
+        </record>
+        <record id="plan_football_2026_kpi2" model="ministry.annual.plan.kpi">
+            <field name="plan_id" ref="plan_football_2026"/>
+            <field name="name">Registered Players Growth</field>
+            <field name="target_value">10</field>
+            <field name="unit">%</field>
+        </record>
+        <record id="plan_football_2026_kpi3" model="ministry.annual.plan.kpi">
+            <field name="plan_id" ref="plan_football_2026"/>
+            <field name="name">Youth Academy Graduates</field>
+            <field name="target_value">25</field>
+            <field name="unit">players</field>
+        </record>
+
+        <!-- ── Athletics Federation FY2026 Plan ────────────────────────────── -->
+        <record id="plan_athletics_2026" model="ministry.annual.plan">
+            <field name="name">FY2026-ATHLETICS</field>
+            <field name="fiscal_year">2026</field>
+            <field name="federation_id" ref="kaz_ai_ministry_federation.federation_athletics"/>
+            <field name="estimated_budget">4200000.00</field>
+            <field name="state">submitted</field>
+        </record>
+
+        <record id="plan_athletics_2026_line1" model="ministry.annual.plan.line">
+            <field name="plan_id" ref="plan_athletics_2026"/>
+            <field name="support_item_id" ref="kaz_ai_ministry_support_item.item_salaries"/>
+            <field name="description">Secretariat salaries for 12 months</field>
+            <field name="quantity">12</field>
+            <field name="estimated_amount">90000.00</field>
+            <field name="target_kpi">Staff retention 100%</field>
+        </record>
+        <record id="plan_athletics_2026_line2" model="ministry.annual.plan.line">
+            <field name="plan_id" ref="plan_athletics_2026"/>
+            <field name="support_item_id" ref="kaz_ai_ministry_support_item.item_international_participation"/>
+            <field name="description">World Athletics Championships participation</field>
+            <field name="quantity">1</field>
+            <field name="estimated_amount">480000.00</field>
+            <field name="target_kpi">Top 20 finish in at least 2 events</field>
+        </record>
+        <record id="plan_athletics_2026_line3" model="ministry.annual.plan.line">
+            <field name="plan_id" ref="plan_athletics_2026"/>
+            <field name="support_item_id" ref="kaz_ai_ministry_support_item.item_arab_camp"/>
+            <field name="description">High altitude training camp — Morocco</field>
+            <field name="quantity">1</field>
+            <field name="estimated_amount">95000.00</field>
+            <field name="target_kpi">Personal bests for 80% of athletes</field>
+        </record>
+
+        <record id="plan_athletics_2026_kpi1" model="ministry.annual.plan.kpi">
+            <field name="plan_id" ref="plan_athletics_2026"/>
+            <field name="name">International Medals</field>
+            <field name="target_value">3</field>
+            <field name="unit">medals</field>
+        </record>
+        <record id="plan_athletics_2026_kpi2" model="ministry.annual.plan.kpi">
+            <field name="plan_id" ref="plan_athletics_2026"/>
+            <field name="name">National Records Broken</field>
+            <field name="target_value">5</field>
+            <field name="unit">records</field>
+        </record>
+
+        <!-- ── Chess Federation FY2026 Plan ──────────────────────────────── -->
+        <record id="plan_chess_2026" model="ministry.annual.plan">
+            <field name="name">FY2026-CHESS</field>
+            <field name="fiscal_year">2026</field>
+            <field name="federation_id" ref="kaz_ai_ministry_federation.federation_chess"/>
+            <field name="estimated_budget">1800000.00</field>
+            <field name="state">approved</field>
+        </record>
+
+        <record id="plan_chess_2026_line1" model="ministry.annual.plan.line">
+            <field name="plan_id" ref="plan_chess_2026"/>
+            <field name="support_item_id" ref="kaz_ai_ministry_support_item.item_salaries"/>
+            <field name="description">Secretariat staff salaries</field>
+            <field name="quantity">12</field>
+            <field name="estimated_amount">45000.00</field>
+            <field name="target_kpi">Maintain operations</field>
+        </record>
+        <record id="plan_chess_2026_line2" model="ministry.annual.plan.line">
+            <field name="plan_id" ref="plan_chess_2026"/>
+            <field name="support_item_id" ref="kaz_ai_ministry_support_item.item_regional_participation"/>
+            <field name="description">Arab Chess Championship participation</field>
+            <field name="quantity">1</field>
+            <field name="estimated_amount">180000.00</field>
+            <field name="target_kpi">Top 5 finish</field>
+        </record>
+        <record id="plan_chess_2026_line3" model="ministry.annual.plan.line">
+            <field name="plan_id" ref="plan_chess_2026"/>
+            <field name="support_item_id" ref="kaz_ai_ministry_support_item.item_meetings"/>
+            <field name="description">Technical committee meetings — 12 sessions</field>
+            <field name="quantity">12</field>
+            <field name="estimated_amount">36000.00</field>
+            <field name="target_kpi">All quarterly reviews conducted</field>
+        </record>
+
+        <record id="plan_chess_2026_kpi1" model="ministry.annual.plan.kpi">
+            <field name="plan_id" ref="plan_chess_2026"/>
+            <field name="name">Rated Players</field>
+            <field name="target_value">150</field>
+            <field name="unit">players</field>
+        </record>
+
+    </data>
+</odoo>

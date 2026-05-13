@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_legal_action_manager,ministry.legal.action.manager,model_ministry_legal_action,kaz_ai_ministry_branding.group_ministry_manager,1,1,1,1
+access_legal_action_legal_officer,ministry.legal.action.legal_officer,model_ministry_legal_action,kaz_ai_ministry_branding.group_ministry_legal_officer,1,1,1,0
+access_legal_action_dept_head,ministry.legal.action.dept_head,model_ministry_legal_action,kaz_ai_ministry_branding.group_ministry_dept_head,1,1,0,0
+access_legal_action_analyst,ministry.legal.action.analyst,model_ministry_legal_action,kaz_ai_ministry_branding.group_ministry_analyst,1,0,0,0
+access_legal_action_officer,ministry.legal.action.officer,model_ministry_legal_action,kaz_ai_ministry_branding.group_ministry_officer_technical,1,0,0,0

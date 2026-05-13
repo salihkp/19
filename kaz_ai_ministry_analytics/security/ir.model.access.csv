@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_analytics_alert_manager,ministry.analytics.alert manager,model_ministry_analytics_alert,kaz_ai_ministry_branding.group_ministry_manager,1,1,1,1
+access_analytics_alert_analyst,ministry.analytics.alert analyst,model_ministry_analytics_alert,kaz_ai_ministry_branding.group_ministry_analyst,1,1,1,0
+access_analytics_alert_dept_head,ministry.analytics.alert dept_head,model_ministry_analytics_alert,kaz_ai_ministry_branding.group_ministry_dept_head,1,1,0,0

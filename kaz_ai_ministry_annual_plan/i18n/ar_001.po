@@ -1,0 +1,569 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kaz_ai_ministry_annual_plan
+#
+msgid ""
+msgstr "Project-Id-Version: Odoo Server 19.0\\nReport-Msgid-Bugs-To: \\nPOT-Creation-Date: 2026-05-13 00:00+0000\\nPO-Revision-Date: 2026-05-13 00:00+0000\\nLast-Translator: Kaizen AI <support@kaizenae.com>\\nLanguage-Team: Arabic\\nLanguage: ar_001\\nMIME-Version: 1.0\\nContent-Type: text/plain; charset=UTF-8\\nContent-Transfer-Encoding: 8bit\\nPlural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\\n"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan_kpi__achieved_value
+msgid "Achieved Value"
+msgstr "القيمة المحققة"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__message_needaction
+msgid "Action Needed"
+msgstr "إجراء مطلوب"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan_line__description
+msgid "Activity Description"
+msgstr "وصف النشاط"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "تنسيق استثناء النشاط"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "أيقونة نوع النشاط"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,help:kaz_ai_ministry_annual_plan.field_ministry_annual_plan_kpi__achieved_value
+msgid "Actual value achieved — filled in post-event reports."
+msgstr "القيمة الفعلية المحققة، وتعبأ في تقارير ما بعد الحدث."
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model,name:kaz_ai_ministry_annual_plan.model_ministry_annual_plan_line
+msgid "Annual Plan Activity Line"
+msgstr "بند نشاط الخطة السنوية"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model,name:kaz_ai_ministry_annual_plan.model_ministry_annual_plan_kpi
+msgid "Annual Plan KPI"
+msgstr "مؤشر أداء الخطة السنوية"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.actions.act_window,name:kaz_ai_ministry_annual_plan.action_ministry_annual_plan
+#: model:ir.ui.menu,name:kaz_ai_ministry_annual_plan.menu_ministry_annual_plans
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_annual_plan.view_ministry_annual_plan_list
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_annual_plan.view_ministry_annual_plan_search
+msgid "Annual Plans"
+msgstr "الخطط السنوية"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model,name:kaz_ai_ministry_annual_plan.model_ministry_annual_plan
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_annual_plan.view_ministry_annual_plan_form
+msgid "Annual Support Plan"
+msgstr "خطة الدعم السنوية"
+
+#. module: kaz_ai_ministry_annual_plan
+#. odoo-python
+#: code:addons/kaz_ai_ministry_annual_plan/models/ministry_annual_plan.py:0
+msgid "Annual plan approved on %(date)s and linked to Odoo Budget %(budget)s."
+msgstr "تم اعتماد الخطة السنوية بتاريخ %(date)s وربطها بميزانية أودو %(budget)s."
+
+#. module: kaz_ai_ministry_annual_plan
+#. odoo-python
+#: code:addons/kaz_ai_ministry_annual_plan/models/ministry_annual_plan.py:0
+msgid "Annual plan submitted for Ministry review on %(date)s."
+msgstr "تم تقديم الخطة السنوية لمراجعة الوزارة بتاريخ %(date)s."
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__approval_date
+msgid "Approval Date"
+msgstr "تاريخ الاعتماد"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_annual_plan.view_ministry_annual_plan_form
+msgid "Approve"
+msgstr "اعتماد"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_annual_plan.selection__ministry_annual_plan__state__approved
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_annual_plan.view_ministry_annual_plan_search
+msgid "Approved"
+msgstr "معتمد"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__budget_line_count
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_annual_plan.view_ministry_annual_plan_form
+msgid "Budget Lines"
+msgstr "بنود الميزانية"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__budget_state
+msgid "Budget Status"
+msgstr "حالة الميزانية"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan_line__category
+msgid "Category"
+msgstr "الفئة"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__company_id
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan_kpi__company_id
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan_line__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__create_uid
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan_kpi__create_uid
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan_line__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__create_date
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan_kpi__create_date
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan_line__create_date
+msgid "Created on"
+msgstr "تاريخ الإنشاء"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_annual_plan.view_ministry_annual_plan_form
+msgid "Dates"
+msgstr "التواريخ"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__display_name
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan_kpi__display_name
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan_line__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_annual_plan.selection__ministry_annual_plan__state__draft
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_annual_plan.view_ministry_annual_plan_search
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,help:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__state
+msgid "Draft: being prepared. Submitted: sent to Ministry. Approved: endorsed by Ministry."
+msgstr "مسودة: قيد الإعداد. مقدم: أرسل إلى الوزارة. معتمد: اعتمدته الوزارة."
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,help:kaz_ai_ministry_annual_plan.field_ministry_annual_plan_line__estimated_amount
+msgid "Estimated AED cost for this activity."
+msgstr "التكلفة التقديرية لهذا النشاط بالدرهم."
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan_line__estimated_amount
+msgid "Estimated Amount (AED)"
+msgstr "المبلغ التقديري (درهم)"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__estimated_budget
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_annual_plan.view_ministry_annual_plan_list
+msgid "Estimated Budget (AED)"
+msgstr "الميزانية التقديرية (درهم)"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,help:kaz_ai_ministry_annual_plan.field_ministry_annual_plan_line__target_kpi
+msgid "Expected performance outcome for this activity (e.g., \"Win 2 medals\")."
+msgstr "نتيجة الأداء المتوقعة لهذا النشاط، مثل \"الفوز بميداليتين\"."
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__federation_id
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_annual_plan.view_ministry_annual_plan_search
+msgid "Federation"
+msgstr "الاتحاد"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model_terms:ir.actions.act_window,help:kaz_ai_ministry_annual_plan.action_ministry_annual_plan
+msgid "Federations submit annual plans before requesting support funds."
+msgstr "تقدم الاتحادات الخطط السنوية قبل طلب أموال الدعم."
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__fiscal_year
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_annual_plan.view_ministry_annual_plan_search
+msgid "Fiscal Year"
+msgstr "السنة المالية"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,help:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "أيقونة Font Awesome مثل fa-tasks"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__has_message
+msgid "Has Message"
+msgstr "توجد رسالة"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,help:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__name
+msgid "Human-readable reference for this plan (e.g., FY2026-FOOTBALL)."
+msgstr "مرجع واضح لهذه الخطة، مثل FY2026-FOOTBALL."
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__id
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan_kpi__id
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan_line__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__activity_exception_icon
+msgid "Icon"
+msgstr "الأيقونة"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,help:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "أيقونة للإشارة إلى نشاط استثنائي."
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,help:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "عند التحديد، توجد رسائل جديدة تتطلب انتباهك."
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,help:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__message_has_error
+#: model:ir.model.fields,help:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "عند التحديد، توجد رسائل بها خطأ في التسليم."
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,help:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__plan_line_ids
+msgid "Individual activity lines — each maps to a support item."
+msgstr "بنود الأنشطة الفردية، ويرتبط كل بند بعنصر دعم."
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan_kpi__name
+msgid "KPI Name"
+msgstr "اسم مؤشر الأداء"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_annual_plan.view_ministry_annual_plan_form
+msgid "KPIs"
+msgstr "مؤشرات الأداء"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__kpi_line_ids
+msgid "Key Performance Indicators"
+msgstr "مؤشرات الأداء الرئيسية"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__write_uid
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan_kpi__write_uid
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan_line__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__write_date
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan_kpi__write_date
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan_line__write_date
+msgid "Last Updated on"
+msgstr "تاريخ آخر تحديث"
+
+#. module: kaz_ai_ministry_annual_plan
+#. odoo-python
+#: code:addons/kaz_ai_ministry_annual_plan/models/ministry_annual_plan.py:0
+msgid "Linked Odoo Budget %(budget)s is already %(state)s. Existing budget lines were kept unchanged."
+msgstr "ميزانية أودو المرتبطة %(budget)s حالتها بالفعل %(state)s. تم الإبقاء على بنود الميزانية الحالية دون تغيير."
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,help:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__budget_analytic_id
+msgid "Linked Odoo Budget created from the approved annual plan."
+msgstr "ميزانية أودو المرتبطة التي أنشئت من الخطة السنوية المعتمدة."
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسالة"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: kaz_ai_ministry_annual_plan
+#. odoo-python
+#: code:addons/kaz_ai_ministry_annual_plan/models/ministry_annual_plan.py:0
+msgid "Ministry Support Budget %(year)s - %(federation)s"
+msgstr "ميزانية دعم الوزارة %(year)s - %(federation)s"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "الموعد النهائي لنشاطي"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,help:kaz_ai_ministry_annual_plan.field_ministry_annual_plan_kpi__name
+msgid "Name of the performance indicator (e.g., \"Gold Medals\", \"Player Registrations\")."
+msgstr "اسم مؤشر الأداء، مثل \"الميداليات الذهبية\" أو \"تسجيل اللاعبين\"."
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "حدث التقويم للنشاط التالي"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model_terms:ir.actions.act_window,help:kaz_ai_ministry_annual_plan.action_ministry_annual_plan
+msgid "No annual plans yet"
+msgstr "لا توجد خطط سنوية بعد"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الأخطاء"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,help:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,help:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل التي بها خطأ تسليم"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,help:kaz_ai_ministry_annual_plan.field_ministry_annual_plan_line__quantity
+msgid "Number of units, events, or occurrences planned."
+msgstr "عدد الوحدات أو الفعاليات أو الحالات المخطط لها."
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,help:kaz_ai_ministry_annual_plan.field_ministry_annual_plan_kpi__target_value
+msgid "Numeric target for this KPI."
+msgstr "الهدف الرقمي لهذا المؤشر."
+
+#. module: kaz_ai_ministry_annual_plan
+#. odoo-python
+#: code:addons/kaz_ai_ministry_annual_plan/models/ministry_annual_plan.py:0
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__budget_analytic_id
+msgid "Odoo Budget"
+msgstr "ميزانية أودو"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,help:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__kpi_line_ids
+msgid "Performance targets the federation commits to achieve this year."
+msgstr "أهداف الأداء التي يلتزم الاتحاد بتحقيقها هذا العام."
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan_kpi__plan_id
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan_line__plan_id
+msgid "Plan"
+msgstr "الخطة"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_annual_plan.view_ministry_annual_plan_form
+msgid "Plan Details"
+msgstr "تفاصيل الخطة"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__name
+msgid "Plan Reference"
+msgstr "مرجع الخطة"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__plan_line_ids
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_annual_plan.view_ministry_annual_plan_form
+msgid "Planned Activities"
+msgstr "الأنشطة المخطط لها"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_annual_plan.view_ministry_annual_plan_list
+msgid "Planned Total (AED)"
+msgstr "الإجمالي المخطط (درهم)"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan_line__quantity
+msgid "Quantity / Count"
+msgstr "الكمية / العدد"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_annual_plan.view_ministry_annual_plan_form
+msgid "Reset to Draft"
+msgstr "إرجاع إلى مسودة"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل النصية"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan_line__sequence
+msgid "Sequence"
+msgstr "التسلسل"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,help:kaz_ai_ministry_annual_plan.field_ministry_annual_plan_line__description
+msgid "Specific details about this planned activity."
+msgstr "تفاصيل محددة عن هذا النشاط المخطط."
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__state
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_annual_plan.view_ministry_annual_plan_search
+msgid "Status"
+msgstr "الحالة"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,help:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"الحالة بناء على الأنشطة\n"
+"متأخر: تجاوز تاريخ الاستحقاق\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"مخطط: أنشطة مستقبلية."
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__submission_date
+msgid "Submission Date"
+msgstr "تاريخ التقديم"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_annual_plan.view_ministry_annual_plan_form
+msgid "Submit to Ministry"
+msgstr "تقديم إلى الوزارة"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_annual_plan.selection__ministry_annual_plan__state__submitted
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_annual_plan.view_ministry_annual_plan_search
+msgid "Submitted"
+msgstr "مقدم"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,help:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__total_plan_amount
+msgid "Sum of all activity line estimated amounts."
+msgstr "مجموع المبالغ التقديرية لكل بنود الأنشطة."
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan_line__support_item_id
+msgid "Support Item"
+msgstr "عنصر الدعم"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_annual_plan.view_ministry_annual_plan_form
+msgid "Sync Odoo Budget"
+msgstr "مزامنة ميزانية أودو"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan_line__target_kpi
+msgid "Target KPI"
+msgstr "مؤشر الأداء المستهدف"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan_kpi__target_value
+msgid "Target Value"
+msgstr "القيمة المستهدفة"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,help:kaz_ai_ministry_annual_plan.field_ministry_annual_plan_line__category
+msgid "The broad support category this item falls under."
+msgstr "فئة الدعم العامة التي يندرج تحتها هذا العنصر."
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,help:kaz_ai_ministry_annual_plan.field_ministry_annual_plan_line__support_item_id
+msgid "The catalog item this activity line refers to."
+msgstr "عنصر الكتالوج المشار إليه في بند النشاط هذا."
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,help:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__federation_id
+msgid "The federation this plan belongs to."
+msgstr "الاتحاد الذي تنتمي إليه هذه الخطة."
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,help:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__fiscal_year
+msgid "The fiscal year this plan covers (e.g., 2026)."
+msgstr "السنة المالية التي تغطيها هذه الخطة، مثل 2026."
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__total_plan_amount
+msgid "Total Planned (AED)"
+msgstr "إجمالي المخطط (درهم)"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,help:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__estimated_budget
+msgid "Total estimated budget for all planned activities this year."
+msgstr "إجمالي الميزانية التقديرية لكل الأنشطة المخطط لها هذا العام."
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,help:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع النشاط الاستثنائي في السجل."
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan_kpi__unit
+msgid "Unit"
+msgstr "الوحدة"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,help:kaz_ai_ministry_annual_plan.field_ministry_annual_plan_kpi__unit
+msgid "Unit of measurement (e.g., medals, players, tournaments)."
+msgstr "وحدة القياس، مثل الميداليات أو اللاعبين أو البطولات."
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,field_description:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: kaz_ai_ministry_annual_plan
+#: model:ir.model.fields,help:kaz_ai_ministry_annual_plan.field_ministry_annual_plan__website_message_ids
+msgid "Website communication history"
+msgstr "سجل التواصل عبر الموقع"

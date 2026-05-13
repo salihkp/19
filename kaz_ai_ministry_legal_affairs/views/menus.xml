@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Legal workflow under Monitoring -->
+    <menuitem id="menu_ministry_legal_actions"
+        name="Legal Actions"
+        parent="kaz_ai_ministry_federation.menu_ministry_monitoring"
+        action="action_ministry_legal_action"
+        sequence="30"
+        groups="kaz_ai_ministry_branding.group_ministry_legal_officer,kaz_ai_ministry_branding.group_ministry_manager,kaz_ai_ministry_branding.group_ministry_dept_head"/>
+
+</odoo>

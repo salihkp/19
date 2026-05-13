@@ -1,0 +1,421 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kaz_ai_ministry_support_item
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Language: ar_001\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. module: kaz_ai_ministry_support_item
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_support_item.view_ministry_support_item_kanban
+msgid "AED"
+msgstr "درهم"
+
+#. module: kaz_ai_ministry_support_item
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_support_item.view_ministry_support_item_form
+msgid "Accounting"
+msgstr "المحاسبة"
+
+#. module: kaz_ai_ministry_support_item
+#: model:ir.model.fields,field_description:kaz_ai_ministry_support_item.field_ministry_support_item__message_needaction
+msgid "Action Needed"
+msgstr "إجراء مطلوب"
+
+#. module: kaz_ai_ministry_support_item
+#: model:ir.model.fields,field_description:kaz_ai_ministry_support_item.field_ministry_support_item__active
+msgid "Active"
+msgstr "نشط"
+
+#. module: kaz_ai_ministry_support_item
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_support_item.view_ministry_support_item_search
+msgid "Activity"
+msgstr "النشاط"
+
+#. module: kaz_ai_ministry_support_item
+#: model_terms:ir.actions.act_window,help:kaz_ai_ministry_support_item.action_ministry_support_item
+msgid ""
+"Add support items to the catalog before processing federation requests."
+msgstr "أضف بنود الدعم إلى الدليل قبل معالجة طلبات الاتحادات."
+
+#. module: kaz_ai_ministry_support_item
+#: model:ir.model.fields,field_description:kaz_ai_ministry_support_item.field_ministry_support_item__analytic_account_id
+msgid "Analytic Account"
+msgstr "الحساب التحليلي"
+
+#. module: kaz_ai_ministry_support_item
+#: model:ir.model.fields,field_description:kaz_ai_ministry_support_item.field_ministry_support_item__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: kaz_ai_ministry_support_item
+#: model:ir.model.fields,field_description:kaz_ai_ministry_support_item.field_ministry_attachment_type__name
+msgid "Attachment Type"
+msgstr "نوع المرفق"
+
+#. module: kaz_ai_ministry_support_item
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_support_item.view_ministry_support_item_form
+msgid "Calculation"
+msgstr "الاحتساب"
+
+#. module: kaz_ai_ministry_support_item
+#: model:ir.model.fields,field_description:kaz_ai_ministry_support_item.field_ministry_support_item__calc_method
+msgid "Calculation Method"
+msgstr "طريقة الاحتساب"
+
+#. module: kaz_ai_ministry_support_item
+#: model:ir.model.fields,field_description:kaz_ai_ministry_support_item.field_ministry_support_item__calculation_summary
+msgid "Calculation Summary"
+msgstr "ملخص الاحتساب"
+
+#. module: kaz_ai_ministry_support_item
+#: model:ir.model.fields,field_description:kaz_ai_ministry_support_item.field_ministry_support_group__category
+#: model:ir.model.fields,field_description:kaz_ai_ministry_support_item.field_ministry_support_item__category
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_support_item.view_ministry_support_item_search
+msgid "Category"
+msgstr "الفئة"
+
+#. module: kaz_ai_ministry_support_item
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_support_item.view_ministry_support_item_form
+msgid "Classification"
+msgstr "التصنيف"
+
+#. module: kaz_ai_ministry_support_item
+#: model:ir.model.fields,field_description:kaz_ai_ministry_support_item.field_ministry_attachment_type__code
+#: model:ir.model.fields,field_description:kaz_ai_ministry_support_item.field_ministry_support_item__code
+msgid "Code"
+msgstr "الرمز"
+
+#. module: kaz_ai_ministry_support_item
+#: model:ir.model.fields,field_description:kaz_ai_ministry_support_item.field_ministry_attachment_type__company_id
+#: model:ir.model.fields,field_description:kaz_ai_ministry_support_item.field_ministry_support_group__company_id
+#: model:ir.model.fields,field_description:kaz_ai_ministry_support_item.field_ministry_support_item__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: kaz_ai_ministry_support_item
+#: model:ir.model.fields,field_description:kaz_ai_ministry_support_item.field_ministry_attachment_type__create_uid
+#: model:ir.model.fields,field_description:kaz_ai_ministry_support_item.field_ministry_support_group__create_uid
+#: model:ir.model.fields,field_description:kaz_ai_ministry_support_item.field_ministry_support_item__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: kaz_ai_ministry_support_item
+#: model:ir.model.fields,field_description:kaz_ai_ministry_support_item.field_ministry_attachment_type__create_date
+#: model:ir.model.fields,field_description:kaz_ai_ministry_support_item.field_ministry_support_group__create_date
+#: model:ir.model.fields,field_description:kaz_ai_ministry_support_item.field_ministry_support_item__create_date
+msgid "Created on"
+msgstr "تاريخ الإنشاء"
+
+#. module: kaz_ai_ministry_support_item
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_support_item.view_ministry_support_item_form
+msgid "Decision Setup Summary"
+msgstr "ملخص إعداد القرار"
+
+#. module: kaz_ai_ministry_support_item
+#: model:ir.model.fields,field_description:kaz_ai_ministry_support_item.field_ministry_attachment_type__display_name
+#: model:ir.model.fields,field_description:kaz_ai_ministry_support_item.field_ministry_support_group__display_name
+#: model:ir.model.fields,field_description:kaz_ai_ministry_support_item.field_ministry_support_item__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: kaz_ai_ministry_support_item
+#: model:ir.model.fields,field_description:kaz_ai_ministry_support_item.field_ministry_support_item__eligibility_python
+msgid "Eligibility Expression"
+msgstr "تعبير الأهلية"
+
+#. module: kaz_ai_ministry_support_item
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_support_item.view_ministry_support_item_form
+msgid "Eligibility Rule"
+msgstr "قاعدة الأهلية"
+
+#. module: kaz_ai_ministry_support_item
+#: model:ir.model.fields,field_description:kaz_ai_ministry_support_item.field_ministry_support_item__eligibility_rule_summary
+msgid "Eligibility Rule Summary"
+msgstr "ملخص قاعدة الأهلية"
+
+#. module: kaz_ai_ministry_support_item
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_support_item.selection__ministry_support_item__item_type__fixed
+msgid "Fixed"
+msgstr "ثابت"
+
+#. module: kaz_ai_ministry_support_item
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_support_item.view_ministry_support_item_list
+msgid "Fixed (AED)"
+msgstr "ثابت (درهم)"
+
+#. module: kaz_ai_ministry_support_item
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_support_item.selection__ministry_support_item__calc_method__fixed_amount
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_support_item.view_ministry_support_item_search
+msgid "Fixed Amount"
+msgstr "مبلغ ثابت"
+
+#. module: kaz_ai_ministry_support_item
+#: model:ir.model.fields,field_description:kaz_ai_ministry_support_item.field_ministry_support_item__fixed_amount
+msgid "Fixed Amount (AED)"
+msgstr "المبلغ الثابت (درهم)"
+
+#. module: kaz_ai_ministry_support_item
+#: model:ir.model.fields,field_description:kaz_ai_ministry_support_item.field_ministry_support_item__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: kaz_ai_ministry_support_item
+#: model:ir.model.fields,field_description:kaz_ai_ministry_support_item.field_ministry_support_item__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: kaz_ai_ministry_support_item
+#: model:ir.model.fields,field_description:kaz_ai_ministry_support_item.field_ministry_support_item__group_id
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_support_item.view_ministry_support_item_search
+msgid "Group"
+msgstr "المجموعة"
+
+#. module: kaz_ai_ministry_support_item
+#: model:ir.model.fields,field_description:kaz_ai_ministry_support_item.field_ministry_support_group__name
+msgid "Group Name"
+msgstr "اسم المجموعة"
+
+#. module: kaz_ai_ministry_support_item
+#: model:ir.model.fields,field_description:kaz_ai_ministry_support_item.field_ministry_support_item__has_eligibility_rule
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_support_item.view_ministry_support_item_search
+msgid "Has Eligibility Rule"
+msgstr "توجد قاعدة أهلية"
+
+#. module: kaz_ai_ministry_support_item
+#: model:ir.model.fields,field_description:kaz_ai_ministry_support_item.field_ministry_support_item__has_message
+msgid "Has Message"
+msgstr "لديه رسالة"
+
+#. module: kaz_ai_ministry_support_item
+#: model:ir.model.fields,help:kaz_ai_ministry_support_item.field_ministry_support_item__calc_method
+msgid ""
+"How the eligible amount is calculated:\n"
+"- Fixed Amount: uses the fixed_amount field directly\n"
+"- Per Unit / Count: unit_amount × participants_count\n"
+"- Per Request: uses the amount the federation requests (subject to max_limit)"
+msgstr "طريقة احتساب المبلغ المستحق:\n- مبلغ ثابت: يستخدم حقل المبلغ الثابت مباشرة\n- حسب العدد: مبلغ الوحدة × العدد\n- حسب الطلب: يستخدم المبلغ المطلوب من الاتحاد مع مراعاة الحد الأقصى"
+
+#. module: kaz_ai_ministry_support_item
+#: model:ir.model.fields,field_description:kaz_ai_ministry_support_item.field_ministry_attachment_type__id
+#: model:ir.model.fields,field_description:kaz_ai_ministry_support_item.field_ministry_support_group__id
+#: model:ir.model.fields,field_description:kaz_ai_ministry_support_item.field_ministry_support_item__id
+msgid "ID"
+msgstr "المعرّف"
+
+#. module: kaz_ai_ministry_support_item
+#: model:ir.model.fields,help:kaz_ai_ministry_support_item.field_ministry_support_item__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "إذا كان محدداً، توجد رسائل جديدة تتطلب انتباهك."
+
+#. module: kaz_ai_ministry_support_item
+#: model:ir.model.fields,help:kaz_ai_ministry_support_item.field_ministry_support_item__message_has_error
+#: model:ir.model.fields,help:kaz_ai_ministry_support_item.field_ministry_support_item__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا كان محدداً، توجد رسائل بها خطأ في التسليم."
+
+#. module: kaz_ai_ministry_support_item
+#: model:ir.model.fields,field_description:kaz_ai_ministry_support_item.field_ministry_support_item__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: kaz_ai_ministry_support_item
+#: model:ir.model.fields,field_description:kaz_ai_ministry_support_item.field_ministry_support_item__name
+msgid "Item Name"
+msgstr "اسم البند"
+
+#. module: kaz_ai_ministry_support_item
+#: model:ir.model.fields,field_description:kaz_ai_ministry_support_item.field_ministry_support_item__item_type
+msgid "Item Type"
+msgstr "نوع البند"
+
+#. module: kaz_ai_ministry_support_item
+#: model:ir.model.fields,field_description:kaz_ai_ministry_support_item.field_ministry_attachment_type__write_uid
+#: model:ir.model.fields,field_description:kaz_ai_ministry_support_item.field_ministry_support_group__write_uid
+#: model:ir.model.fields,field_description:kaz_ai_ministry_support_item.field_ministry_support_item__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: kaz_ai_ministry_support_item
+#: model:ir.model.fields,field_description:kaz_ai_ministry_support_item.field_ministry_attachment_type__write_date
+#: model:ir.model.fields,field_description:kaz_ai_ministry_support_item.field_ministry_support_group__write_date
+#: model:ir.model.fields,field_description:kaz_ai_ministry_support_item.field_ministry_support_item__write_date
+msgid "Last Updated on"
+msgstr "تاريخ آخر تحديث"
+
+#. module: kaz_ai_ministry_support_item
+#: model:ir.model.fields,field_description:kaz_ai_ministry_support_item.field_ministry_attachment_type__is_mandatory
+msgid "Mandatory"
+msgstr "إلزامي"
+
+#. module: kaz_ai_ministry_support_item
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_support_item.view_ministry_support_item_list
+msgid "Max Limit (AED)"
+msgstr "الحد الأقصى (درهم)"
+
+#. module: kaz_ai_ministry_support_item
+#: model:ir.model.fields,field_description:kaz_ai_ministry_support_item.field_ministry_support_item__max_limit
+msgid "Maximum Limit (AED)"
+msgstr "الحد الأقصى (درهم)"
+
+#. module: kaz_ai_ministry_support_item
+#. odoo-python
+#: code:addons/kaz_ai_ministry_support_item/models/ministry_support_item.py:0
+msgid "Maximum limit cannot be negative."
+msgstr "لا يمكن أن يكون الحد الأقصى سالباً."
+
+#. module: kaz_ai_ministry_support_item
+#: model:ir.model.fields,field_description:kaz_ai_ministry_support_item.field_ministry_support_item__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسالة"
+
+#. module: kaz_ai_ministry_support_item
+#: model:ir.model.fields,field_description:kaz_ai_ministry_support_item.field_ministry_support_item__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: kaz_ai_ministry_support_item
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_support_item.view_ministry_support_item_search
+msgid "Needs Documents"
+msgstr "يتطلب مستندات"
+
+#. module: kaz_ai_ministry_support_item
+#: model_terms:ir.actions.act_window,help:kaz_ai_ministry_support_item.action_ministry_support_item
+msgid "No support items defined"
+msgstr "لا توجد بنود دعم معرفة"
+
+#. module: kaz_ai_ministry_support_item
+#: model:ir.model.fields,field_description:kaz_ai_ministry_support_item.field_ministry_support_item__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: kaz_ai_ministry_support_item
+#: model:ir.model.fields,field_description:kaz_ai_ministry_support_item.field_ministry_support_item__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الأخطاء"
+
+#. module: kaz_ai_ministry_support_item
+#: model:ir.model.fields,help:kaz_ai_ministry_support_item.field_ministry_support_item__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "عدد الرسائل التي تتطلب إجراءً"
+
+#. module: kaz_ai_ministry_support_item
+#: model:ir.model.fields,help:kaz_ai_ministry_support_item.field_ministry_support_item__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل التي بها خطأ في التسليم"
+
+#. module: kaz_ai_ministry_support_item
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_support_item.view_ministry_support_item_search
+msgid "Operational"
+msgstr "تشغيلي"
+
+#. module: kaz_ai_ministry_support_item
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_support_item.selection__ministry_support_group__category__operational
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_support_item.selection__ministry_support_item__category__operational
+msgid "Operational Support"
+msgstr "الدعم التشغيلي"
+
+#. module: kaz_ai_ministry_support_item
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_support_item.view_ministry_support_item_search
+msgid "Per Count"
+msgstr "حسب العدد"
+
+#. module: kaz_ai_ministry_support_item
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_support_item.view_ministry_support_item_search
+msgid "Per Request"
+msgstr "حسب الطلب"
+
+#. module: kaz_ai_ministry_support_item
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_support_item.selection__ministry_support_item__calc_method__by_request
+msgid "Per Request (Requested Amount)"
+msgstr "حسب الطلب (المبلغ المطلوب)"
+
+#. module: kaz_ai_ministry_support_item
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_support_item.selection__ministry_support_item__calc_method__by_count
+msgid "Per Unit / Count"
+msgstr "حسب الوحدة / العدد"
+
+#. module: kaz_ai_ministry_support_item
+#: model:ir.model,name:kaz_ai_ministry_support_item.model_ministry_attachment_type
+msgid "Required Attachment Type"
+msgstr "نوع المرفق المطلوب"
+
+#. module: kaz_ai_ministry_support_item
+#: model:ir.model.fields,field_description:kaz_ai_ministry_support_item.field_ministry_support_item__required_attachment_types_ids
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_support_item.view_ministry_support_item_form
+msgid "Required Attachments"
+msgstr "المرفقات المطلوبة"
+
+#. module: kaz_ai_ministry_support_item
+#: model:ir.model.fields,field_description:kaz_ai_ministry_support_item.field_ministry_support_item__required_attachment_count
+msgid "Required Documents"
+msgstr "المستندات المطلوبة"
+
+#. module: kaz_ai_ministry_support_item
+#: model:ir.model.fields,field_description:kaz_ai_ministry_support_item.field_ministry_support_item__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل النصية"
+
+#. module: kaz_ai_ministry_support_item
+#: model:ir.model.fields,field_description:kaz_ai_ministry_support_item.field_ministry_support_group__sequence
+#: model:ir.model.fields,field_description:kaz_ai_ministry_support_item.field_ministry_support_item__sequence
+msgid "Sequence"
+msgstr "التسلسل"
+
+#. module: kaz_ai_ministry_support_item
+#: model:ir.model,name:kaz_ai_ministry_support_item.model_ministry_support_group
+msgid "Support Group"
+msgstr "مجموعة الدعم"
+
+#. module: kaz_ai_ministry_support_item
+#: model:ir.model,name:kaz_ai_ministry_support_item.model_ministry_support_item
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_support_item.view_ministry_support_item_form
+msgid "Support Item"
+msgstr "بند الدعم"
+
+#. module: kaz_ai_ministry_support_item
+#: model:ir.actions.act_window,name:kaz_ai_ministry_support_item.action_ministry_support_item
+#: model:ir.ui.menu,name:kaz_ai_ministry_support_item.menu_ministry_support_items
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_support_item.view_ministry_support_item_list
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_support_item.view_ministry_support_item_search
+msgid "Support Items"
+msgstr "بنود الدعم"
+
+#. module: kaz_ai_ministry_support_item
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_support_item.view_ministry_support_item_search
+msgid "Technical"
+msgstr "فني"
+
+#. module: kaz_ai_ministry_support_item
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_support_item.selection__ministry_support_group__category__technical
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_support_item.selection__ministry_support_item__category__technical
+msgid "Technical Support"
+msgstr "الدعم الفني"
+
+#. module: kaz_ai_ministry_support_item
+#: model_terms:ir.ui.view,arch_db:kaz_ai_ministry_support_item.view_ministry_support_item_list
+msgid "Unit (AED)"
+msgstr "الوحدة (درهم)"
+
+#. module: kaz_ai_ministry_support_item
+#: model:ir.model.fields,field_description:kaz_ai_ministry_support_item.field_ministry_support_item__unit_amount
+msgid "Unit Amount (AED)"
+msgstr "مبلغ الوحدة (درهم)"
+
+#. module: kaz_ai_ministry_support_item
+#: model:ir.model.fields.selection,name:kaz_ai_ministry_support_item.selection__ministry_support_item__item_type__variable
+msgid "Variable"
+msgstr "متغير"
+
+#. module: kaz_ai_ministry_support_item
+#: model:ir.model.fields,field_description:kaz_ai_ministry_support_item.field_ministry_support_item__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: kaz_ai_ministry_support_item
+#: model:ir.model.fields,help:kaz_ai_ministry_support_item.field_ministry_support_item__website_message_ids
+msgid "Website communication history"
+msgstr "سجل مراسلات الموقع"

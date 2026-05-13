@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="sport_football" model="ministry.sport">
+            <field name="name">Football</field>
+            <field name="code">FOOT</field>
+            <field name="is_olympic">True</field>
+        </record>
+        <record id="sport_basketball" model="ministry.sport">
+            <field name="name">Basketball</field>
+            <field name="code">BASK</field>
+            <field name="is_olympic">True</field>
+        </record>
+        <record id="sport_athletics" model="ministry.sport">
+            <field name="name">Athletics</field>
+            <field name="code">ATH</field>
+            <field name="is_olympic">True</field>
+        </record>
+        <record id="sport_tennis" model="ministry.sport">
+            <field name="name">Tennis</field>
+            <field name="code">TEN</field>
+            <field name="is_olympic">True</field>
+        </record>
+        <record id="sport_swimming" model="ministry.sport">
+            <field name="name">Swimming</field>
+            <field name="code">SWIM</field>
+            <field name="is_olympic">True</field>
+        </record>
+        <record id="sport_boxing" model="ministry.sport">
+            <field name="name">Boxing</field>
+            <field name="code">BOX</field>
+            <field name="is_olympic">True</field>
+        </record>
+        <record id="sport_wrestling" model="ministry.sport">
+            <field name="name">Wrestling</field>
+            <field name="code">WRES</field>
+            <field name="is_olympic">True</field>
+        </record>
+        <record id="sport_taekwondo" model="ministry.sport">
+            <field name="name">Taekwondo</field>
+            <field name="code">TKD</field>
+            <field name="is_olympic">True</field>
+        </record>
+        <record id="sport_judo" model="ministry.sport">
+            <field name="name">Judo</field>
+            <field name="code">JUDO</field>
+            <field name="is_olympic">True</field>
+        </record>
+        <record id="sport_table_tennis" model="ministry.sport">
+            <field name="name">Table Tennis</field>
+            <field name="code">TT</field>
+            <field name="is_olympic">True</field>
+        </record>
+        <record id="sport_chess" model="ministry.sport">
+            <field name="name">Chess</field>
+            <field name="code">CHESS</field>
+            <field name="is_olympic">False</field>
+        </record>
+        <record id="sport_shooting" model="ministry.sport">
+            <field name="name">Shooting</field>
+            <field name="code">SHOOT</field>
+            <field name="is_olympic">True</field>
+        </record>
+
+    </data>
+</odoo>

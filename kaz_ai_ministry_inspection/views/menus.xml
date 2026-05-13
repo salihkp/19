@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Monitoring and compliance -->
+    <menuitem id="menu_ministry_inspections"
+        name="Inspections"
+        parent="kaz_ai_ministry_federation.menu_ministry_monitoring"
+        action="action_ministry_inspection"
+        sequence="10"
+        groups="kaz_ai_ministry_branding.group_ministry_inspector,kaz_ai_ministry_branding.group_ministry_manager,kaz_ai_ministry_branding.group_ministry_officer_technical"/>
+
+    <menuitem id="menu_ministry_violations"
+        name="Violations"
+        parent="kaz_ai_ministry_federation.menu_ministry_monitoring"
+        action="action_ministry_violation"
+        sequence="20"
+        groups="kaz_ai_ministry_branding.group_ministry_inspector,kaz_ai_ministry_branding.group_ministry_manager,kaz_ai_ministry_branding.group_ministry_legal_officer"/>
+
+</odoo>

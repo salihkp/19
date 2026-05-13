@@ -1,0 +1,353 @@
+// Ministry of Sports login and database-selection experience.
+
+$ministry-gold: #8B6F2A;
+$ministry-gold-dark: #6F561E;
+$ministry-ink: #1E293B;
+$ministry-muted: #64748B;
+$ministry-line: #E8DECB;
+$ministry-surface: #FFFFFF;
+$ministry-canvas: #F7F3EA;
+$ministry-red: #C8102E;
+$ministry-green: #00732F;
+
+body:has(.ministry_login_aside) {
+    min-block-size: 100vh;
+    background: $ministry-canvas !important;
+    color: $ministry-ink;
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body:has(.ministry_login_aside) #wrapwrap,
+body:has(.ministry_login_aside) main {
+    min-block-size: 100vh;
+}
+
+body:has(.ministry_login_aside) .container.py-5 {
+    display: grid;
+    grid-template-columns: 1fr 440px;
+    align-items: center;
+    gap: 72px;
+    inline-size: 100%;
+    max-inline-size: none !important;
+    min-block-size: 100vh;
+    padding: 72px !important;
+    position: relative;
+}
+
+body:has(.ministry_login_aside) .container.py-5::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background:
+        linear-gradient(90deg, rgba(139, 111, 42, .12), transparent 34%),
+        linear-gradient(135deg, transparent 0%, transparent 58%, rgba(139, 111, 42, .08) 58%, rgba(139, 111, 42, .08) 72%, transparent 72%, transparent 100%),
+        linear-gradient(135deg, transparent 0%, transparent 72%, rgba(0, 115, 47, .055) 72%, rgba(0, 115, 47, .055) 79%, transparent 79%, transparent 100%),
+        $ministry-canvas;
+}
+
+body:has(.ministry_login_aside) .ministry_login_aside,
+body:has(.ministry_login_aside) .o_database_list {
+    position: relative;
+    z-index: 1;
+}
+
+.ministry_login_aside {
+    min-block-size: auto;
+    padding: 0;
+    background: transparent !important;
+    border: 0;
+}
+
+.ministry_login_branding {
+    inline-size: 100%;
+    max-inline-size: 760px;
+    text-align: start;
+}
+
+.ministry_login_badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 13px;
+    margin-block-end: 28px;
+    border: 1px solid rgba(139, 111, 42, .28);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .72);
+    color: $ministry-gold-dark;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.ministry_login_badge_mark {
+    inline-size: 9px;
+    block-size: 9px;
+    border-radius: 999px;
+    background: $ministry-green;
+    box-shadow: 0 0 0 4px rgba(0, 115, 47, .12);
+}
+
+.ministry_logo_container {
+    margin-block-end: 26px;
+}
+
+.ministry_logo_image {
+    display: block;
+    inline-size: 58vw;
+    max-inline-size: 520px;
+    block-size: auto;
+    filter: drop-shadow(0 18px 24px rgba(30, 41, 59, .12));
+}
+
+.ministry_name_en,
+.ministry_name_ar {
+    margin: 0;
+    color: $ministry-gold-dark;
+    font-weight: 800;
+    line-height: 1.15;
+}
+
+.ministry_name_en {
+    font-size: 28px;
+}
+
+.ministry_name_ar {
+    margin-block-start: 6px;
+    font-family: "Dubai", "Noto Sans Arabic", Inter, system-ui, sans-serif;
+    font-size: 34px;
+    direction: rtl;
+}
+
+.ministry_system_name_en {
+    max-inline-size: 720px;
+    margin: 22px 0 0;
+    color: $ministry-ink;
+    font-size: 56px;
+    font-weight: 850;
+    line-height: 1.03;
+}
+
+.ministry_system_name_ar {
+    max-inline-size: 700px;
+    margin: 16px 0 0;
+    color: #334155;
+    font-family: "Dubai", "Noto Sans Arabic", Inter, system-ui, sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.25;
+    direction: rtl;
+}
+
+.ministry_login_stripe {
+    display: flex;
+    gap: 8px;
+    inline-size: 62vw;
+    max-inline-size: 340px;
+    margin-block: 34px 22px;
+
+    span {
+        display: block;
+        block-size: 5px;
+        border-radius: 999px;
+    }
+
+    .stripe_red {
+        inline-size: 25%;
+        background: $ministry-red;
+    }
+
+    .stripe_green {
+        inline-size: 25%;
+        background: $ministry-green;
+    }
+
+    .stripe_gold {
+        inline-size: 50%;
+        background: $ministry-gold;
+    }
+}
+
+.ministry_login_footer {
+    max-inline-size: 520px;
+    margin: 0;
+    color: $ministry-muted;
+    font-size: 13px;
+}
+
+body:has(.ministry_login_aside) .o_database_list {
+    width: 100% !important;
+    inline-size: 100%;
+    max-width: 440px !important;
+    max-inline-size: 440px !important;
+    border: 1px solid rgba(139, 111, 42, .22) !important;
+    border-radius: 8px !important;
+    background: rgba(255, 255, 255, .94) !important;
+    box-shadow: 0 28px 70px rgba(58, 45, 18, .18) !important;
+    overflow: hidden;
+}
+
+body:has(.ministry_login_aside) .o_database_list::before {
+    content: "";
+    display: block;
+    block-size: 5px;
+    background: $ministry-gold;
+}
+
+body:has(.ministry_login_aside) .o_database_list .card-body {
+    padding: 30px !important;
+}
+
+body:has(.ministry_login_aside) .o_database_list .text-center.pb-3 {
+    border-color: $ministry-line !important;
+    margin-block-end: 24px !important;
+    padding-block-end: 22px !important;
+}
+
+.ministry_login_card_header {
+    display: grid;
+    justify-items: center;
+    gap: 6px;
+}
+
+.ministry_login_card_logo {
+    inline-size: 240px;
+    max-inline-size: 88%;
+    block-size: auto;
+}
+
+.ministry_login_card_title {
+    margin-block-start: 8px;
+    color: $ministry-ink;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.ministry_login_card_subtitle {
+    color: $ministry-muted;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+body:has(.ministry_login_aside) .form-label,
+body:has(.ministry_login_aside) .col-form-label {
+    color: #334155;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+body:has(.ministry_login_aside) .form-control,
+body:has(.ministry_login_aside) .form-select,
+body:has(.ministry_login_aside) .input-group .btn {
+    min-block-size: 44px;
+    border-color: #D9D1C2;
+    border-radius: 7px;
+    color: $ministry-ink;
+}
+
+body:has(.ministry_login_aside) .input-group .form-control {
+    border-start-start-radius: 7px;
+    border-end-start-radius: 7px;
+}
+
+body:has(.ministry_login_aside) .input-group .btn {
+    border-start-end-radius: 7px;
+    border-end-end-radius: 7px;
+    color: $ministry-gold-dark;
+    font-weight: 700;
+}
+
+body:has(.ministry_login_aside) .form-control:focus,
+body:has(.ministry_login_aside) .form-select:focus {
+    border-color: $ministry-gold;
+    box-shadow: 0 0 0 3px rgba(139, 111, 42, .16);
+}
+
+body:has(.ministry_login_aside) .btn-primary {
+    min-block-size: 44px;
+    border-color: $ministry-gold !important;
+    background: $ministry-gold !important;
+    color: #FFFFFF !important;
+    border-radius: 7px;
+    font-weight: 800;
+}
+
+body:has(.ministry_login_aside) .btn-primary:hover,
+body:has(.ministry_login_aside) .btn-primary:focus {
+    border-color: $ministry-gold-dark !important;
+    background: $ministry-gold-dark !important;
+}
+
+body:has(.ministry_login_aside) .btn-link,
+body:has(.ministry_login_aside) .o_database_list a {
+    color: $ministry-gold-dark;
+    font-weight: 700;
+}
+
+body:has(.ministry_login_aside) .o_login_auth .list-group-item {
+    border-color: $ministry-line;
+    border-radius: 7px;
+}
+
+@media (max-width: 991.98px) {
+    body:has(.ministry_login_aside) .container.py-5 {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding: 28px 18px !important;
+    }
+
+    .ministry_login_branding {
+        justify-items: center;
+        text-align: center;
+    }
+
+    .ministry_logo_image {
+        margin-inline: auto;
+        inline-size: 72vw;
+        max-inline-size: 360px;
+    }
+
+    .ministry_system_name_en {
+        margin-inline: auto;
+        font-size: 36px;
+    }
+
+    .ministry_system_name_ar {
+        margin-inline: auto;
+        font-size: 26px;
+    }
+
+    .ministry_login_stripe {
+        margin-inline: auto;
+    }
+
+    .ministry_login_footer {
+        margin-inline: auto;
+    }
+
+    body:has(.ministry_login_aside) .o_database_list {
+        margin-inline: auto !important;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .ministry_name_en {
+        font-size: 22px;
+    }
+
+    .ministry_name_ar {
+        font-size: 24px;
+    }
+
+    .ministry_system_name_en {
+        font-size: 30px;
+    }
+
+    .ministry_system_name_ar {
+        font-size: 22px;
+    }
+
+    body:has(.ministry_login_aside) .o_database_list .card-body {
+        padding: 24px !important;
+    }
+}

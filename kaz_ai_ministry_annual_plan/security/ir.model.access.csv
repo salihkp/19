@@ -1,0 +1,14 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_annual_plan_manager,ministry.annual.plan manager,model_ministry_annual_plan,kaz_ai_ministry_branding.group_ministry_manager,1,1,1,1
+access_annual_plan_officer,ministry.annual.plan officer,model_ministry_annual_plan,base.group_user,1,1,1,0
+access_annual_plan_portal,ministry.annual.plan portal,model_ministry_annual_plan,kaz_ai_ministry_branding.group_ministry_portal,1,1,1,0
+access_annual_plan_line_manager,ministry.annual.plan.line manager,model_ministry_annual_plan_line,kaz_ai_ministry_branding.group_ministry_manager,1,1,1,1
+access_annual_plan_line_officer,ministry.annual.plan.line officer,model_ministry_annual_plan_line,base.group_user,1,1,1,0
+access_annual_plan_line_portal,ministry.annual.plan.line portal,model_ministry_annual_plan_line,kaz_ai_ministry_branding.group_ministry_portal,1,1,1,0
+access_annual_plan_kpi_manager,ministry.annual.plan.kpi manager,model_ministry_annual_plan_kpi,kaz_ai_ministry_branding.group_ministry_manager,1,1,1,1
+access_annual_plan_kpi_officer,ministry.annual.plan.kpi officer,model_ministry_annual_plan_kpi,base.group_user,1,1,1,0
+access_annual_plan_kpi_portal,ministry.annual.plan.kpi portal,model_ministry_annual_plan_kpi,kaz_ai_ministry_branding.group_ministry_portal,1,1,1,0
+access_ministry_budget_manager,budget.analytic ministry manager,account_budget.model_budget_analytic,kaz_ai_ministry_branding.group_ministry_manager,1,1,1,0
+access_ministry_budget_financial,budget.analytic ministry financial,account_budget.model_budget_analytic,kaz_ai_ministry_branding.group_ministry_officer_financial,1,1,1,0
+access_ministry_budget_dept_head,budget.analytic ministry dept head,account_budget.model_budget_analytic,kaz_ai_ministry_branding.group_ministry_dept_head,1,1,1,0
+access_ministry_budget_analyst,budget.analytic ministry analyst,account_budget.model_budget_analytic,kaz_ai_ministry_branding.group_ministry_analyst,1,0,0,0

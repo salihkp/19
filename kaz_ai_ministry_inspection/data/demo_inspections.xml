@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- ── Inspection 1: Football — Scheduled, Done ───────────────────── -->
+        <record id="inspection_football_q1" model="ministry.inspection">
+            <field name="name">INS/2026/0001</field>
+            <field name="federation_id" ref="kaz_ai_ministry_federation.federation_football"/>
+            <field name="visit_date">2026-02-15</field>
+            <field name="visit_type">scheduled</field>
+            <field name="performance_evaluation">good</field>
+            <field name="state">done</field>
+            <field name="notes">&lt;p&gt;Annual compliance inspection for Q1 2026. Facilities were in good condition. Financial records reviewed and found to be accurate. Minor administrative gaps noted but no violations issued.&lt;/p&gt;</field>
+        </record>
+
+        <!-- ── Inspection 2: Athletics — Surprise, Done, with violations ──── -->
+        <record id="inspection_athletics_surprise" model="ministry.inspection">
+            <field name="name">INS/2026/0002</field>
+            <field name="federation_id" ref="kaz_ai_ministry_federation.federation_athletics"/>
+            <field name="visit_date">2026-03-10</field>
+            <field name="visit_type">surprise</field>
+            <field name="performance_evaluation">acceptable</field>
+            <field name="state">done</field>
+            <field name="notes">&lt;p&gt;Unannounced inspection triggered by delay in post-event report submission. Two violations were identified: missing report and a governance concern regarding the board meeting schedule.&lt;/p&gt;</field>
+        </record>
+
+        <!-- Violation 1: Missing Report (moderate) -->
+        <record id="violation_athletics_missing_report" model="ministry.violation">
+            <field name="name">VIO/2026/0001</field>
+            <field name="inspection_id" ref="inspection_athletics_surprise"/>
+            <field name="violation_type">missing_report</field>
+            <field name="severity">moderate</field>
+            <field name="description">Post-event report for World Athletics Championships 2026 (Tokyo) was not submitted within the required 15-day window. Report was overdue by 22 days at the time of inspection.</field>
+        </record>
+
+        <!-- Violation 2: Governance failure (minor) -->
+        <record id="violation_athletics_governance" model="ministry.violation">
+            <field name="name">VIO/2026/0002</field>
+            <field name="inspection_id" ref="inspection_athletics_surprise"/>
+            <field name="violation_type">governance</field>
+            <field name="severity">minor</field>
+            <field name="description">Board meeting minutes for Q4 2025 were not properly recorded or filed as required by federation bylaws. Digital records were incomplete.</field>
+        </record>
+
+        <!-- ── Inspection 3: Chess — Scheduled, Done ──────────────────────── -->
+        <record id="inspection_chess_annual" model="ministry.inspection">
+            <field name="name">INS/2026/0003</field>
+            <field name="federation_id" ref="kaz_ai_ministry_federation.federation_chess"/>
+            <field name="visit_date">2026-01-20</field>
+            <field name="visit_type">scheduled</field>
+            <field name="performance_evaluation">excellent</field>
+            <field name="state">done</field>
+            <field name="notes">&lt;p&gt;Annual scheduled inspection. Chess Federation demonstrated exemplary record-keeping, financial transparency, and athlete welfare standards. No violations noted.&lt;/p&gt;</field>
+        </record>
+
+        <!-- ── Inspection 4: Athletics — Follow-Up, In Progress ───────────── -->
+        <record id="inspection_athletics_followup" model="ministry.inspection">
+            <field name="name">INS/2026/0004</field>
+            <field name="federation_id" ref="kaz_ai_ministry_federation.federation_athletics"/>
+            <field name="visit_date">2026-05-20</field>
+            <field name="visit_type">follow_up</field>
+            <field name="state">in_progress</field>
+            <field name="notes">&lt;p&gt;Follow-up inspection to verify remediation of violations from INS/2026/0002. Inspectors to confirm report submission and governance documentation updates.&lt;/p&gt;</field>
+        </record>
+
+    </data>
+</odoo>

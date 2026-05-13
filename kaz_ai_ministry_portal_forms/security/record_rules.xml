@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Portal users see only their own federation's participation applications -->
+    <record id="rule_participation_portal" model="ir.rule">
+        <field name="name">Participation: portal federation isolation</field>
+        <field name="model_id" ref="model_ministry_championship_participation"/>
+        <field name="domain_force">[('federation_id', '=', user.partner_id.commercial_partner_id.id)]</field>
+        <field name="groups" eval="[(4, ref('kaz_ai_ministry_branding.group_ministry_portal'))]"/>
+    </record>
+
+    <record id="rule_participation_budget_line_portal" model="ir.rule">
+        <field name="name">Participation budget line: portal federation isolation</field>
+        <field name="model_id" ref="model_ministry_championship_participation_budget_line"/>
+        <field name="domain_force">[('federation_id', '=', user.partner_id.commercial_partner_id.id)]</field>
+        <field name="groups" eval="[(4, ref('kaz_ai_ministry_branding.group_ministry_portal'))]"/>
+    </record>
+
+    <!-- Portal users see only their own federation's hosting applications -->
+    <record id="rule_hosting_portal" model="ir.rule">
+        <field name="name">Hosting: portal federation isolation</field>
+        <field name="model_id" ref="model_ministry_championship_hosting"/>
+        <field name="domain_force">[('federation_id', '=', user.partner_id.commercial_partner_id.id)]</field>
+        <field name="groups" eval="[(4, ref('kaz_ai_ministry_branding.group_ministry_portal'))]"/>
+    </record>
+
+    <!-- Portal users see only their own federation's post-event reports -->
+    <record id="rule_per_portal" model="ir.rule">
+        <field name="name">Post-Event Report: portal federation isolation</field>
+        <field name="model_id" ref="model_ministry_post_event_report"/>
+        <field name="domain_force">[('federation_id', '=', user.partner_id.commercial_partner_id.id)]</field>
+        <field name="groups" eval="[(4, ref('kaz_ai_ministry_branding.group_ministry_portal'))]"/>
+    </record>
+
+    <!-- Company isolation — participation -->
+    <record id="rule_participation_company" model="ir.rule">
+        <field name="name">Participation: company isolation</field>
+        <field name="model_id" ref="model_ministry_championship_participation"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+
+    <record id="rule_participation_budget_line_company" model="ir.rule">
+        <field name="name">Participation budget line: company isolation</field>
+        <field name="model_id" ref="model_ministry_championship_participation_budget_line"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+
+    <!-- Company isolation — hosting -->
+    <record id="rule_hosting_company" model="ir.rule">
+        <field name="name">Hosting: company isolation</field>
+        <field name="model_id" ref="model_ministry_championship_hosting"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+
+    <!-- Company isolation — post-event reports -->
+    <record id="rule_per_company" model="ir.rule">
+        <field name="name">Post-Event Report: company isolation</field>
+        <field name="model_id" ref="model_ministry_post_event_report"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+
+</odoo>

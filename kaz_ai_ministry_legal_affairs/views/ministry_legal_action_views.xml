@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- ── List View ──────────────────────────────────────────────────────── -->
+    <record id="view_legal_action_list" model="ir.ui.view">
+        <field name="name">ministry.legal.action.list</field>
+        <field name="model">ministry.legal.action</field>
+        <field name="arch" type="xml">
+            <list string="Legal Actions" default_order="issue_date desc">
+                <field name="name"/>
+                <field name="federation_id"/>
+                <field name="action_type" widget="badge"
+                    decoration-warning="action_type == 'warning'"
+                    decoration-danger="action_type in ('deduction', 'suspension')"/>
+                <field name="deduction_amount" string="Deduction (AED)"/>
+                <field name="issue_date"/>
+                <field name="issued_by" optional="show"/>
+                <field name="state" widget="badge"
+                    decoration-muted="state == 'draft'"
+                    decoration-warning="state == 'issued'"
+                    decoration-danger="state == 'applied'"
+                    decoration-success="state == 'closed'"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- ── Form View ──────────────────────────────────────────────────────── -->
+    <record id="view_legal_action_form" model="ir.ui.view">
+        <field name="name">ministry.legal.action.form</field>
+        <field name="model">ministry.legal.action</field>
+        <field name="arch" type="xml">
+            <form string="Legal Action">
+                <header>
+                    <button name="action_issue" string="Issue" type="object"
+                        class="btn-primary"
+                        invisible="state != 'draft'"
+                        groups="kaz_ai_ministry_branding.group_ministry_legal_officer,kaz_ai_ministry_branding.group_ministry_manager"/>
+                    <button name="action_apply" string="Apply" type="object"
+                        class="btn-danger"
+                        invisible="state != 'issued'"
+                        groups="kaz_ai_ministry_branding.group_ministry_dept_head,kaz_ai_ministry_branding.group_ministry_manager"/>
+                    <button name="action_close" string="Close" type="object"
+                        class="btn-success"
+                        invisible="state not in ('issued', 'applied')"/>
+                    <button name="action_reset_draft" string="Reset to Draft" type="object"
+                        invisible="state != 'issued'"/>
+                    <field name="state" widget="statusbar"
+                        statusbar_visible="draft,issued,applied,closed"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button class="oe_stat_button" icon="fa-balance-scale" type="object"
+                            name="action_view_pending_deduction"
+                            invisible="not pending_deduction_id">
+                            <div class="o_stat_info">
+                                <span class="o_stat_text">Pending Deduction</span>
+                            </div>
+                        </button>
+                    </div>
+
+                    <div class="oe_title">
+                        <h1><field name="name" readonly="1"/></h1>
+                    </div>
+
+                    <group>
+                        <group string="Action Details">
+                            <field name="federation_id"/>
+                            <field name="action_type"/>
+                            <field name="issue_date"/>
+                            <field name="effective_date"/>
+                            <field name="issued_by" readonly="1"/>
+                        </group>
+                        <group string="Related Records">
+                            <field name="inspection_id"
+                                domain="[('federation_id', '=', federation_id)]"/>
+                            <field name="violation_id"
+                                domain="[('inspection_id', '=', inspection_id)]"/>
+                            <field name="pending_deduction_id" readonly="1"/>
+                        </group>
+                    </group>
+
+                    <group string="Financial Deduction" invisible="action_type != 'deduction'">
+                        <field name="deduction_amount"/>
+                        <field name="deduction_reason"/>
+                    </group>
+
+                    <group string="Decision Text">
+                        <field name="decision_text" nolabel="1"
+                            />
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <!-- ── Search View ───────────────────────────────────────────────────── -->
+    <record id="view_legal_action_search" model="ir.ui.view">
+        <field name="name">ministry.legal.action.search</field>
+        <field name="model">ministry.legal.action</field>
+        <field name="arch" type="xml">
+            <search string="Legal Actions">
+                <field name="name" string="Reference"/>
+                <field name="federation_id"/>
+                <separator/>
+                <filter name="warnings" string="Warnings" domain="[('action_type','=','warning')]"/>
+                <filter name="deductions" string="Deductions" domain="[('action_type','=','deduction')]"/>
+                <filter name="suspensions" string="Suspensions" domain="[('action_type','=','suspension')]"/>
+                <separator/>
+                <filter name="issued" string="Issued" domain="[('state','=','issued')]"/>
+                <filter name="applied" string="Applied" domain="[('state','=','applied')]"/>
+                <filter name="open" string="Open" domain="[('state','in',['draft','issued'])]"/>
+                <group>
+                    <filter name="grp_federation" string="Federation" context="{'group_by': 'federation_id'}"/>
+                    <filter name="grp_type" string="Action Type" context="{'group_by': 'action_type'}"/>
+                    <filter name="grp_state" string="Status" context="{'group_by': 'state'}"/>
+                    <filter name="grp_month" string="Month" context="{'group_by': 'issue_date:month'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- ── Window Action ─────────────────────────────────────────────────── -->
+    <record id="action_ministry_legal_action" model="ir.actions.act_window">
+        <field name="name">Legal Actions</field>
+        <field name="res_model">ministry.legal.action</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="view_legal_action_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">No legal actions recorded</p>
+            <p>Legal actions are issued against federations following inspection violations or compliance failures.</p>
+        </field>
+    </record>
+
+</odoo>

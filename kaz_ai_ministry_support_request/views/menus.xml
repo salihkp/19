@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Support Requests under Operations -->
+    <menuitem id="menu_ministry_support_requests"
+        name="Support Requests"
+        parent="kaz_ai_ministry_federation.menu_ministry_operations"
+        action="action_ministry_support_request"
+        sequence="10"/>
+
+    <!-- Pending Deductions under Monitoring -->
+    <menuitem id="menu_ministry_pending_deductions"
+        name="Pending Deductions"
+        parent="kaz_ai_ministry_federation.menu_ministry_monitoring"
+        action="action_ministry_pending_deductions"
+        sequence="40"
+        groups="kaz_ai_ministry_branding.group_ministry_legal_officer,kaz_ai_ministry_branding.group_ministry_manager"/>
+
+</odoo>

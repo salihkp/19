@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="kaz_ai_ministry_dashboard.MinistryDashboard" owl="1">
+        <div class="o_ministry_dashboard" t-ref="dashboard">
+            <t t-if="state.loading">
+                <div class="o_ministry_dashboard__loading">
+                    <div t-foreach="[1, 2, 3, 4, 5, 6, 7, 8]" t-as="item" t-key="item" class="o_ministry_skeleton"/>
+                </div>
+            </t>
+
+            <t t-else="">
+                <header class="o_ministry_hero">
+                    <div class="o_ministry_hero__identity">
+                        <div class="o_ministry_shield" title="Ministry of Sports">
+                            <span>Ministry of Sports</span>
+                        </div>
+                        <div>
+                            <div class="o_ministry_eyebrow">Ministry Support Hub</div>
+                            <h1>Sports Federation Financial Support Management System</h1>
+                            <p lang="ar" dir="rtl">نظام إدارة الدعم المالي للاتحادات الرياضية</p>
+                        </div>
+                    </div>
+                    <div class="o_ministry_hero__tools">
+                        <span>FY <t t-esc="state.data.fiscal_year"/></span>
+                        <span>Updated <t t-esc="formatDateTime(state.data.last_updated)"/></span>
+                        <button class="btn btn-primary" t-on-click="loadData" t-att-disabled="state.refreshing">
+                            <i class="fa fa-refresh me-1"/>
+                            <t t-if="state.refreshing">Refreshing</t>
+                            <t t-else="">Refresh</t>
+                        </button>
+                    </div>
+                </header>
+
+                <div class="o_ministry_scroll_tools" aria-label="Dashboard scroll controls">
+                    <button class="o_ministry_scroll_button" type="button" title="Scroll to top" aria-label="Scroll to top" t-on-click="() => this.scrollDashboard('top')">
+                        <i class="fa fa-chevron-up"/>
+                    </button>
+                    <button class="o_ministry_scroll_button" type="button" title="Scroll to bottom" aria-label="Scroll to bottom" t-on-click="() => this.scrollDashboard('bottom')">
+                        <i class="fa fa-chevron-down"/>
+                    </button>
+                </div>
+
+                <section class="o_ministry_budget">
+                    <div class="o_ministry_budget__main">
+                        <span>Annual Budget Utilization</span>
+                        <strong t-esc="formatPercent(state.data.kpis.burn_pct)"/>
+                        <div class="o_ministry_budget__track">
+                            <i t-att-style="widthStyle(state.data.kpis.burn_pct)"/>
+                        </div>
+                    </div>
+                    <div class="o_ministry_budget__figures">
+                        <div>
+                            <span>Annual Budget</span>
+                            <strong t-esc="formatMoney(state.data.kpis.annual_budget)"/>
+                        </div>
+                        <div>
+                            <span>Total Spent</span>
+                            <strong t-esc="formatMoney(state.data.kpis.total_spent)"/>
+                        </div>
+                        <div>
+                            <span>Remaining</span>
+                            <strong t-esc="formatMoney(state.data.kpis.remaining)"/>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="o_ministry_kpi_grid">
+                    <button class="o_ministry_kpi" t-on-click="() => this.openAction('requests')">
+                        <span>Requests</span>
+                        <strong t-esc="formatNumber(state.data.kpis.request_count)"/>
+                        <small><t t-esc="formatNumber(state.data.kpis.open_request_count)"/> open</small>
+                    </button>
+                    <button class="o_ministry_kpi" t-on-click="() => this.openAction('review')">
+                        <span>Under Review</span>
+                        <strong t-esc="formatNumber(state.data.kpis.pending_review)"/>
+                        <small>Submitted and in review</small>
+                    </button>
+                    <button class="o_ministry_kpi" t-on-click="() => this.openAction('payments')">
+                        <span>Pending Payments</span>
+                        <strong t-esc="formatMoney(state.data.kpis.pending_payments)"/>
+                        <small>Approved or ready to pay</small>
+                    </button>
+                    <button class="o_ministry_kpi o_ministry_kpi--risk" t-on-click="() => this.openAction('risk')">
+                        <span>High Risk</span>
+                        <strong><t t-esc="formatNumber(state.data.kpis.risk_indicator)"/> requests</strong>
+                        <small>Needs management attention</small>
+                    </button>
+                    <button class="o_ministry_kpi" t-on-click="() => this.openAction('reports')">
+                        <span>Awaiting Reports</span>
+                        <strong t-esc="formatNumber(state.data.kpis.awaiting_reports)"/>
+                        <small>Post-event closure queue</small>
+                    </button>
+                    <button class="o_ministry_kpi" t-on-click="() => this.openAction('approved')">
+                        <span>Approval Rate</span>
+                        <strong t-esc="formatPercent(state.data.kpis.approval_rate)"/>
+                        <small>Approved versus decided</small>
+                    </button>
+                </section>
+
+                <section class="o_ministry_panel o_ministry_panel--pipeline">
+                    <div class="o_ministry_panel__header">
+                        <h2>Request Pipeline</h2>
+                        <span>Live lifecycle distribution</span>
+                    </div>
+                    <div class="o_ministry_pipeline">
+                        <div t-foreach="state.data.pipeline" t-as="stage" t-key="stage.key" t-attf-class="o_ministry_pipeline__item o_ministry_pipeline__item--{{ stage.key }}">
+                            <div>
+                                <strong t-esc="stage.value"/>
+                                <span t-esc="stage.label"/>
+                            </div>
+                            <i t-att-style="widthStyle(stage.pct)"/>
+                        </div>
+                    </div>
+                </section>
+
+                <main class="o_ministry_dashboard__layout">
+                    <section class="o_ministry_panel o_ministry_panel--wide">
+                        <div class="o_ministry_panel__header">
+                            <h2>Support by Federation</h2>
+                            <button class="btn btn-link" t-on-click="() => this.openAction('federations')">Open federations</button>
+                        </div>
+                        <div class="o_ministry_ranked">
+                            <div t-foreach="state.data.support_by_federation" t-as="row" t-key="row.label" class="o_ministry_ranked__row">
+                                <div>
+                                    <strong t-esc="row.label"/>
+                                    <span><t t-esc="formatNumber(row.request_count)"/> requests &#183; Risk <t t-esc="formatPercent(row.risk_score)"/></span>
+                                </div>
+                                <div class="o_ministry_ranked__bar"><i t-att-style="widthStyle(row.pct)"/></div>
+                                <span t-att-class="riskClass(row.risk_level)" t-esc="row.risk_level"/>
+                                <strong t-esc="formatMoney(row.value)"/>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="o_ministry_panel">
+                        <div class="o_ministry_panel__header">
+                            <h2>Support by Category</h2>
+                            <span>Approved spend mix</span>
+                        </div>
+                        <div class="o_ministry_category_mix">
+                            <div t-foreach="state.data.support_by_category" t-as="row" t-key="row.key" class="o_ministry_category_mix__row">
+                                <span t-att-style="'background:' + row.color"/>
+                                <div>
+                                    <strong t-esc="row.label"/>
+                                    <small><t t-esc="formatNumber(row.request_count)"/> records</small>
+                                    <i><b t-att-style="widthStyle(row.pct)"/></i>
+                                </div>
+                                <em t-esc="formatMoney(row.value)"/>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="o_ministry_panel o_ministry_panel--wide">
+                        <div class="o_ministry_panel__header">
+                            <h2>Monthly Spending Trend</h2>
+                            <span>Last 12 months</span>
+                        </div>
+                        <div class="o_ministry_trend">
+                            <div t-foreach="state.data.monthly_spending" t-as="row" t-key="row.label" class="o_ministry_trend__col" t-att-title="row.label + ': ' + formatMoney(row.value)">
+                                <i t-att-style="heightStyle(row.pct)"/>
+                                <span t-esc="row.label"/>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="o_ministry_panel">
+                        <div class="o_ministry_panel__header">
+                            <h2>Risk Distribution</h2>
+                            <span>Current requests</span>
+                        </div>
+                        <div class="o_ministry_risk_stack">
+                            <div class="o_ministry_risk_stack__low">
+                                <strong t-esc="state.data.risk_counts.low"/>
+                                <span>Low</span>
+                            </div>
+                            <div class="o_ministry_risk_stack__medium">
+                                <strong t-esc="state.data.risk_counts.medium"/>
+                                <span>Medium</span>
+                            </div>
+                            <div class="o_ministry_risk_stack__high">
+                                <strong t-esc="state.data.risk_counts.high"/>
+                                <span>High</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="o_ministry_panel o_ministry_panel--wide">
+                        <div class="o_ministry_panel__header">
+                            <h2>Decision Queue</h2>
+                            <button class="btn btn-link" t-on-click="() => this.openAction('review')">Open queue</button>
+                        </div>
+                        <div class="o_ministry_table">
+                            <div class="o_ministry_table__head">
+                                <span>Reference</span>
+                                <span>Federation</span>
+                                <span>Category</span>
+                                <span>Amount</span>
+                                <span>Status</span>
+                                <span>Risk</span>
+                            </div>
+                            <div t-foreach="state.data.recent_requests" t-as="req" t-key="req.id" class="o_ministry_table__row">
+                                <strong t-esc="req.name"/>
+                                <span t-esc="req.federation"/>
+                                <span t-esc="req.category"/>
+                                <span t-esc="formatMoney(req.amount)"/>
+                                <span t-att-class="stateClass(req.state)" t-esc="req.state_label"/>
+                                <span t-att-class="riskClass(req.risk_level)" t-esc="req.risk_level"/>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="o_ministry_panel">
+                        <div class="o_ministry_panel__header">
+                            <h2>Analytics Alerts</h2>
+                            <button class="btn btn-link" t-on-click="() => this.openAction('alerts')">Open alerts</button>
+                        </div>
+                        <div class="o_ministry_alerts" t-if="state.data.alerts.length">
+                            <article t-foreach="state.data.alerts" t-as="alert" t-key="alert.name" t-att-class="severityClass(alert.severity)">
+                                <strong t-esc="alert.name"/>
+                                <span t-if="alert.federation" t-esc="alert.federation"/>
+                                <p t-esc="alert.detail"/>
+                            </article>
+                        </div>
+                        <div class="o_ministry_empty" t-else="">
+                            <strong>No open analytics alerts</strong>
+                            <span>No risk anomalies are currently open.</span>
+                        </div>
+                    </section>
+                </main>
+            </t>
+        </div>
+    </t>
+</templates>
